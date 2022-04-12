@@ -8,6 +8,7 @@ export default function Home({ articles }) {
     <div className={styles.container}>
 
       <main>
+      <h1>ああああいういういういういう</h1>
         <div>
           {articles.map((articles) => (
             <ArticleCard
