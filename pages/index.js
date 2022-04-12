@@ -1,14 +1,17 @@
-import Head from 'next/head'
-import Image from 'next/image'
+// import Head from 'next/head'
+// import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import ArticleCard from '../components/article/ArticleCard'
+import ArticleCard from '../components/ArticleCard'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import Button from '../components/LinkButton'
 
 export default function Home({ articles }) {
   return (
     <div className={styles.container}>
-
+    <Header />
       <main>
-      <h1>ああああいういういういういう</h1>
+        <h1>ああああいういういういういう</h1>
         <div>
           {articles.map((articles) => (
             <ArticleCard
@@ -19,7 +22,10 @@ export default function Home({ articles }) {
           ))}
         </div>
       </main>
-
+      <Button 
+        button={'ボタンのサンプル'}
+      />
+      <Footer />
     </div>
   )
 }

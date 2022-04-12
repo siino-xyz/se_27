@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Articles from '../../types/articleTypes'
+import Articles from '../types/articleTypes'
 import Image from 'next/image' 
 
 

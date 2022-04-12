@@ -1,10 +1,11 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import Head from 'next/head'
 import Script from 'next/script'
 import { GA_TRACKING_ID, existsGaId } from '../libs/gtag'
 
 function MyApp({ Component, pageProps }) {
-  return (
+  const getLayout = Component.getLayout || ((page) => page)
+  return getLayout(
     <>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />

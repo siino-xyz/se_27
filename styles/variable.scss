@@ -1,0 +1,118 @@
+//media queries
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1100px,
+);
+
+@mixin mq($size) {
+  @media screen and (max-width: #{map-get($breakpoints, $size)}) {
+    @content;
+  }
+}
+
+
+//colors
+$main: #F39423;
+$accent: #80EF7E;
+
+$black: #121212;
+$white: #EDEDED;
+
+//gray-scale
+$lightGray: #EBEBEB;
+$midGray: #8E8E8E;
+$deepGray: #4a4a4a;
+
+//fonts
+@mixin h1() {
+  font-family: 'MuseoModerno';
+  font-size:  3rem;
+  // font-weight: 600;
+  font-display: optional;
+}
+
+@mixin h2En() {
+  font-family: 'MuseoModerno';
+  font-size:  2rem;
+  // font-weight: 600;
+  font-display: optional;
+}
+@mixin h2Jp() {
+  font-family: 'Zen Kaku Gothic New';
+  font-size:  2rem;
+  // font-weight: 600;
+  font-display: optional;
+}
+
+@mixin h3En() {
+  font-family: 'MuseoModerno';
+  font-size:  1.5rem;
+  // font-weight: 600;
+  font-display: optional;
+}
+@mixin h3Jp() {
+  font-family: 'Zen Kaku Gothic New';
+  font-size:  1.5rem;
+  // font-weight: 600;
+  font-display: optional;
+}
+
+@mixin h4En() {
+  font-family: 'MuseoModerno';
+  font-size:  1.5rem;
+  // font-weight: 600;
+  font-display: optional;
+}
+@mixin h4Jp() {
+  font-family: 'Zen Kaku Gothic New';
+  font-size:  1.5rem;
+  // font-weight: 600;
+  font-display: optional;
+}
+
+@mixin subtitle() {
+  font-family: "Zen Kaku Gothic New";
+  font-size:  1rem;
+  font-weight: 700;
+  font-display: optional;
+}
+
+@mixin subtitle-sm() {
+  font-family: "Zen Kaku Gothic New";
+  font-size:  0.8rem;
+  font-weight:  700;
+  font-display: optional;
+  margin: 0;
+}
+
+@mixin body() {
+  font-family: 'Zen Kaku Gothic New';
+  font-size:  1rem;
+  font-weight:  400;
+  line-height: 1.6rem;
+  font-display: optional;
+}
+
+
+//spaces
+
+
+//layouts
+@mixin wrapFlex($fd: row, $justify: center, $align: center) {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: $fd;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin noWrapFlex($fd: column, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+
