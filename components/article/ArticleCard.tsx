@@ -9,7 +9,7 @@ const ArticleCard = ({ articles }: {
   return (
     <>
     <div>
-      <Link href={`/article/${articles.id}`} passHref>
+      <Link href={`/articles/${articles.id}`} passHref>
         <a>
           <div>
             <Image
@@ -28,7 +28,7 @@ const ArticleCard = ({ articles }: {
           {articles.categories.name}
         </div>
         
-        <Link href={`/article/${articles.id}`} passHref>
+        <Link href={`/articles/${articles.id}`} passHref>
           <a>
             <h2>
             {articles.title}
