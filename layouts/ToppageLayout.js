@@ -7,7 +7,7 @@ import styles from '../styles/layouts/toppage-layout.module.scss'
 export default function ToppageLayout({children}) {
   return (
     <div className={styles.toppageLayout}>
-      {/* <Header /> */}
+      <Header />
       <FirstView />
         <main>
           {children}

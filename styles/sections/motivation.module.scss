@@ -22,12 +22,14 @@
     @include sectionInner(); 
   
       .twoColumns {
+        margin: 2rem auto;
         display: grid;
         gap: 0px;
         align-items: center;
     
-        @include mq(sm) {
+        @include mq(lg) {
           grid-template-columns: 1fr;
+          gap: 10px;
         }
     
         .scrollTextWrapper {
@@ -62,7 +64,7 @@
       .twoColumns:nth-child(1) {
         grid-template-columns: 1fr minmax(50%, 580px);
 
-        @include mq(sm) {
+        @include mq(lg) {
           @include noWrapFlex($fd: column-reverse);
         }
     
@@ -75,7 +77,7 @@
       .twoColumns:nth-child(2) {
         grid-template-columns: minmax(50%, 580px) 1fr;
 
-        @include mq(sm) {
+        @include mq(lg) {
           grid-template-columns: 1fr;
         }
     

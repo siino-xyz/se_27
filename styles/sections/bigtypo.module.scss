@@ -2,6 +2,7 @@
 
 .sectionContainer {
   @include sectionContainer();
+  padding-bottom: 5rem;
 
   .twoColumns {
     display: grid;
@@ -16,5 +17,9 @@
     margin-top: 3rem;
     width: 80%;
     text-align: left;
+    @include mq(sm) {
+      width: 100%;
+      margin: 2rem auto;
+    }
   }
 }

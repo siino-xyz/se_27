@@ -115,6 +115,16 @@ $deepGray: #4a4a4a;
   text-align: left;
   // font-weight: 700 !important;
 }
+@mixin subTitle-en() {
+  @include h3En();
+  background: $white;
+  color: $black;
+  padding:0.3rem 0.5rem;
+  display: inline-block !important;
+  border-radius: 0.2rem;
+  text-align: left;
+  // font-weight: 700 !important;
+}
 
 //layouts
 @mixin wrapFlex($fd: row, $justify: center, $align: center) {

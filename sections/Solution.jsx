@@ -27,10 +27,14 @@ export default function Solution() {
           </div>
 
           <div className={styles.noWrapFlex}>
-            <p>amstackアーキテクチャを用いた、高速かつ安全性の高いウェブサイト開発を専門としています。単に速いサイトを作るだけではありません。運用スタイルや規模感に合わせて柔軟に最も適切な構築方法のご提案からスタートします。</p>
-            <LinkButton 
-              button={'Jamstackについて知る'}
-            />
+            <div>
+              <p>amstackアーキテクチャを用いた、高速かつ安全性の高いウェブサイト開発を専門としています。単に速いサイトを作るだけではありません。運用スタイルや規模感に合わせて柔軟に最も適切な構築方法のご提案からスタートします。</p>
+            </div>
+            <div>
+              <LinkButton 
+                button={'Jamstackについて知る'}
+              />
+            </div>
           </div>     
         </div>
       </div>
