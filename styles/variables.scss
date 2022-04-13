@@ -43,7 +43,7 @@ $deepGray: #4a4a4a;
 
 @mixin h2En() {
   @include enfonts();
-  font-size:  2.2rem;
+  font-size:  2rem;
 }
 
 @mixin h2Jp() {
@@ -58,7 +58,7 @@ $deepGray: #4a4a4a;
 
 @mixin h3Jp() {
    @include jpfonts();
-  font-size:  1.25rem;
+  font-size:  1.15rem;
 }
 
 @mixin h4En() {
@@ -92,15 +92,15 @@ $deepGray: #4a4a4a;
   @include h2En();
   background: $white;
   color: $black;
-  padding: 0.5rem 0.8rem 0 0.8rem;
+  padding: 0.5rem 0.6rem 0 0.6rem;
   text-align: left;
-  line-height: 1.9rem;
+  line-height: 1.6rem;
   display: inline-block !important;
-  border-radius: 0.2rem;
+  border-radius: 0.1rem;
 }
 
 @mixin subscriptJp() {
-  @include subtitle();
+  @include subtitle-sm();
   color: $black;
 }
 
@@ -113,6 +113,7 @@ $deepGray: #4a4a4a;
   display: inline-block !important;
   border-radius: 0.2rem;
   text-align: left;
+  // font-weight: 700 !important;
 }
 
 //layouts
@@ -133,7 +134,7 @@ $deepGray: #4a4a4a;
 
 @mixin sectionContainer() {
   width: 100%;
-  margin: 0 auto;
+  margin: 5rem auto;
 }
 @mixin sectionInner() {
   max-width: 98%;

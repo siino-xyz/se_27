@@ -28,9 +28,17 @@
       align-items: center;
       grid-template-columns: 1fr  minmax(30%, 200px);
 
+      @include mq(sm) {
+        grid-template-columns: 1fr;
+      }
       .r {
         text-align: right;
+
+        @include mq(sm) {
+          text-align: center;
+        }
       }
+
     }
   }
 }

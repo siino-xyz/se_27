@@ -2,22 +2,19 @@
 
 .firstViewContainer {
   height: 100vh;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   max-width: 100%;
   overFlow: hidden;
   margin: auto;
-  z-index: -123;
   background: $black;
   user-select: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  
-
+  z-index: -1;
   .firstviewImage {
     margin: auto;
+    padding-top: 5rem;
   }
 }

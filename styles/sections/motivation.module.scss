@@ -61,6 +61,10 @@
     
       .twoColumns:nth-child(1) {
         grid-template-columns: 1fr minmax(50%, 580px);
+
+        @include mq(sm) {
+          @include noWrapFlex($fd: column-reverse);
+        }
     
         .scrollTextWrapper {
           ::after {
@@ -70,6 +74,10 @@
       }
       .twoColumns:nth-child(2) {
         grid-template-columns: minmax(50%, 580px) 1fr;
+
+        @include mq(sm) {
+          grid-template-columns: 1fr;
+        }
     
         .scrollTextWrapper {
           ::after {

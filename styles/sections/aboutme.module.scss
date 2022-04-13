@@ -12,7 +12,10 @@
       .subscriptJp {
         @include subscriptJp();
       }
-    }
+    }      
+    @include mq(sm) {
+        grid-template-columns: 1fr;
+      }
   }
   .subTitle {
     @include subTitle();
@@ -33,11 +36,21 @@
       color: $black;
       padding: 0.5rem;
 
+      @include mq(sm) {
+        grid-template-columns: 1fr;
+        // align-items: center;
+        text-align: center;
+      }
+
       .innerTwoColumns {
         display: grid;
         gap: 10px;
-        // align-items: center;
         grid-template-columns: minmax(25%, 190px) 1fr ;
+
+        @include mq(sm) {
+          grid-template-columns: 1fr;
+          justify-content: center;
+        }
         .noWrapFlex {
           @include noWrapFlex($fd:column , $justify: flex-start , $align:flex-start);
           

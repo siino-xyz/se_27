@@ -1,1 +1,32 @@
 @import 'variables';
+
+
+.footer {
+  background-color: $deepGray;
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+.noWrapFlex {
+  width: 100%;
+  margin:  0;
+  padding: 1rem;
+  @include noWrapFlex($fd: row , $justify: space-between);
+
+  .footerLogo {
+    width: 15%;
+
+    @include mq(sm) {
+      width: 50%;
+      margin: 1rem auto;
+    }
+  }
+
+  .twitterLogo {
+    // margin-right: 5rem;
+  }
+
+  @include mq(sm) {
+    @include noWrapFlex($fd: column);
+    padding: 0;
+  }
+}

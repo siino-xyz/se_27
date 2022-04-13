@@ -21,17 +21,27 @@
 
   .sectionInner {
     @include sectionInner();
+    margin-top: 2rem;
 
     .twoColumns {
       display: grid;
       gap: 20px;
       align-items: center;
       grid-template-columns: minmax(50%, 598px) 1fr;
+
+      @include mq(sm) {
+        grid-template-columns: 1fr;
+      }
     }
   
    .noWrapFlex {
      @include noWrapFlex($fd: column , $align: flex-end);
-     text-align: right;
+    //  text-align: right;
+
+      @include mq(sm) {
+        @include noWrapFlex($fd: column , $align: center);
+
+      }
   }
  }
 }
