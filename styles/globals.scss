@@ -1,17 +1,24 @@
+@import 'variables';
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
   font-size: 14px;
-  
+  background-color: $black;
+  color: $white;
 }
 
 a {
-  color: inherit;
+  color: $white;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+}
+
+ul,li {
+  list-style-type: none;
 }

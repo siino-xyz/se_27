@@ -1,0 +1,44 @@
+@import 'variables';
+
+
+.headerContainer {
+  max-width: 100%;
+  margin: 0;
+  background-color: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(2px);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+.headerBox {
+  @include noWrapFlex($justify: space-between, $align: center);
+  padding: 1rem 2rem;
+
+  .headerItem {
+    > ul {
+      @include noWrapFlex($justify: space-around, $align: center);
+      > li {
+        margin: 0 2rem;
+        
+        > a {
+          transition: all 0.2s;
+          &:hover {
+            color: $main;
+          }
+        }   
+      }
+    }
+  }
+}
+
+.svgLogo {
+  fill: #f4f4f4;
+  transition: all .3s;
+
+  &:hover {
+    fill: $main;
+  }
+}

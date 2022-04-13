@@ -1,5 +1,5 @@
 
-export function InnerWidth ({children}) {
+export default function InnerLayout ({children}) {
   return (
     <>
       <div>

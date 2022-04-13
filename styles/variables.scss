@@ -108,7 +108,7 @@ $deepGray: #4a4a4a;
   align-items: $align;
 }
 
-@mixin noWrapFlex($fd: column, $justify: center, $align: center) {
+@mixin noWrapFlex($fd: row, $justify: center, $align: center) {
   display: flex;
   flex-direction: $fd;
   justify-content: $justify;

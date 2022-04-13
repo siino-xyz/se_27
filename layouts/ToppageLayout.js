@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import FirstView from '../sections/FirstView'
 
 
-export default function topPageLayout({children}) {
+export default function ToppageLayout({children}) {
   return (
     <>
       <Header />

@@ -1,15 +1,13 @@
-// import Head from 'next/head'
-// import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import ArticleCard from '../components/ArticleCard'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 import Button from '../components/LinkButton'
+
+import ToppageLayout from '../layouts/ToppageLayout'
+import InnerLayout from '../layouts/InnerLayout'
 
 export default function Home({ articles }) {
   return (
     <div className={styles.container}>
-    <Header />
       <main>
         <h1>ああああいういういういういう</h1>
         <div>
@@ -25,11 +23,17 @@ export default function Home({ articles }) {
       <Button 
         button={'ボタンのサンプル'}
       />
-      <Footer />
     </div>
   )
 }
 
+Home.getLayout = function getLayout(home) {
+  return (
+    <ToppageLayout>
+      <InnerLayout>{home}</InnerLayout>
+    </ToppageLayout>
+  )
+}
 
 export const getStaticProps = async () => {
   const key = {
