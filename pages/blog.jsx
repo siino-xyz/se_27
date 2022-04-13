@@ -1,7 +1,8 @@
 import {client} from '../libs/client'
-import styles from '../styles/Home.module.css'
+// import styles from '../styles/Home.module.css'
 import ArticleCard from '../components/ArticleCard'
 import Categories from '../components/Categories'
+import styles from '../styles/pages/blog.module.scss'
 
 import Pagination from '../components/Pagination'
 

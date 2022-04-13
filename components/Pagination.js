@@ -1,5 +1,6 @@
 import Router from 'next/router'
 import Link from 'next/link'
+import styles from '../styles/components/pagination.module.scss'
 
 
 export const Pagination = ({ totalCount }) => {

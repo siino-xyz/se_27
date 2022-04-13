@@ -2,6 +2,8 @@ import Pagination from "../../../components/Pagination";
 import ArticleCard from "../../../components/ArticleCard";
 import { client } from '../../../libs/client';
 const PER_PAGE = 5; 
+import styles from '../../../styles/pages/articles/page/article-pages.module.scss'
+
 
 export const ArticlePageId = ({articles, totalCount}) => {
 

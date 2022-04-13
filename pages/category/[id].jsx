@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { client } from '../../libs/client'
 import Pagination from '../../components/Pagination'
+import styles from '../../styles/pages/category/category.module.scss'
 
 
 export const CategoryId = ({ articles ,totalCount}) => {

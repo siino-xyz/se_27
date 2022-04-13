@@ -1,3 +1,4 @@
+import styles from '../styles/sections/firstview.module.scss'
 
 export default function FirstView () {
   return (

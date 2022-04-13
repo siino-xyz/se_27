@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Articles from '../types/articleTypes'
 import Image from 'next/image' 
+import styles from '../styles/components/articlecard.module.scss'
 
 
 const ArticleCard = ({ articles }: {

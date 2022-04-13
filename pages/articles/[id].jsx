@@ -1,5 +1,6 @@
 import { client } from "../../libs/client"
 import Image from 'next/image'
+import styles from '../../styles/pages/articles/articles.module.scss'
 
 
 export default function ArticlesId({ articles ,categories}) {
