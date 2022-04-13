@@ -1,1 +1,61 @@
 @import 'variables';
+
+
+
+.sectionContainer {
+  @include sectionContainer();
+  
+  .ttlWrapper {
+    display: block;
+    .sectionTitle {
+      @include sectionTitle();
+      .subscriptJp {
+        @include subscriptJp();
+      }
+    }
+  }
+  .subTitle {
+    @include subTitle();
+  }
+
+
+  
+  .sectionInner {
+    @include sectionInner();
+
+    .twoColumns {
+      display: grid;
+      gap: 10px;
+      align-items: center;
+      grid-template-columns: 1fr  minmax(30%, 220px);
+      background-color: $white;
+      border-radius: 0.5rem;
+      color: $black;
+      padding: 0.5rem;
+
+      .innerTwoColumns {
+        display: grid;
+        gap: 10px;
+        // align-items: center;
+        grid-template-columns: minmax(25%, 190px) 1fr ;
+        .noWrapFlex {
+          @include noWrapFlex($fd:column , $justify: flex-start , $align:flex-start);
+          
+          > h4 {
+            @include h4En();
+          }
+        }
+      }
+    }
+
+    .socialLink {
+      @include noWrapFlex($fd:column);
+      >div {
+        width: 100%;
+        height: 50px;
+        background-color: aqua;
+        margin: 1rem 0;
+      }
+    }
+  }
+}

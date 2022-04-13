@@ -1,6 +1,7 @@
 @import 'variables';
 
 
+
 .sectionContainer {
   @include sectionContainer();
   
@@ -13,23 +14,24 @@
       }
     }
   }
-
   .subTitle {
     @include subTitle();
   }
+
+
   .sectionInner {
     @include sectionInner();
-    
-      .twoColumns {
-        display: grid;
-        gap: 20px;
-        align-items: center;
-        grid-template-columns: 1fr  minmax(30%, 200px);
 
-       .r {
-          text-align: right;
-        }
-      }
+    .twoColumns {
+      display: grid;
+      gap: 20px;
+      align-items: center;
+      grid-template-columns: minmax(50%, 598px) 1fr;
+    }
+  
+   .noWrapFlex {
+     @include noWrapFlex($fd: column , $align: flex-end);
+     text-align: right;
   }
-
+ }
 }

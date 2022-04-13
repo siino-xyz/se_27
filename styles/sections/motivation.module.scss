@@ -1,0 +1,91 @@
+@import 'variables';
+
+
+.sectionContainer {
+  @include sectionContainer();
+  
+  .ttlWrapper {
+    display: block;
+    .sectionTitle {
+      @include sectionTitle();
+      .subscriptJp {
+        @include subscriptJp();
+      }
+    }
+  }
+  .subTitle {
+    @include subTitle();
+  }
+
+
+  .sectionInner {
+    @include sectionInner(); 
+  
+      .twoColumns {
+        display: grid;
+        gap: 0px;
+        align-items: center;
+    
+        @include mq(sm) {
+          grid-template-columns: 1fr;
+        }
+    
+        .scrollTextWrapper {
+          position: relative;
+          ::after {
+            position: absolute;
+            top: -35px;
+            left: 0;
+            content: '';
+            color: $black;
+            background-color: $white;
+            padding: 0.2rem 0.5rem;
+            font-size: 1.2rem;
+            @include enfonts();
+          }
+    
+          // ::before {
+          //   content: '■';
+          //   line-height: 0.3rem;
+          //   position: absolute;
+          //   top: 50%;
+          //   right: -40%;
+          //   width: 220px;
+          //   height: 5px;
+          //   background-color: $white;
+          //   z-index: 999;
+          //   transform: rotate(180deg);
+          // }
+        }
+      }
+    
+      .twoColumns:nth-child(1) {
+        grid-template-columns: 1fr minmax(50%, 580px);
+    
+        .scrollTextWrapper {
+          ::after {
+            content: 'Performance';
+          }
+        }
+      }
+      .twoColumns:nth-child(2) {
+        grid-template-columns: minmax(50%, 580px) 1fr;
+    
+        .scrollTextWrapper {
+          ::after {
+            content: 'Security';
+          }
+        }
+      }
+    
+      .scrollText {
+        border: 3px solid $white;
+        border-radius: 0.2rem;
+        box-sizing: border-box;
+        height:  400px;
+        overflow: auto;
+        padding: 0.8rem;
+      }
+  }
+
+} 

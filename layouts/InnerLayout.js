@@ -3,7 +3,7 @@ import styles from '../styles/layouts/inner-layout.module.scss'
 export default function InnerLayout ({children}) {
   return (
     <>
-      <div>
+      <div className={styles.innerLayout}>
         {children}
       </div>
     </>

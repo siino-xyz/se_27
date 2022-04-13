@@ -1,9 +1,20 @@
 import styles from '../styles/sections/firstview.module.scss'
+import Image from 'next/image';
 
-export default function FirstView () {
+export default function Firstview () {
   return (
     <>
-      <h1>First View</h1>
+      <div className={styles.firstViewContainer}>
+        <div className={styles.firstviewImage}>
+          <Image 
+            src='/top/fv_logo.svg'
+            width={388}
+            height={486}
+            layout='intrinsic'
+            alt="se-27_logo"
+          />
+        </div>
+      </div>
     </>
   )
 }

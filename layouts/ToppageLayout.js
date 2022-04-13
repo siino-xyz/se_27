@@ -6,13 +6,13 @@ import styles from '../styles/layouts/toppage-layout.module.scss'
 
 export default function ToppageLayout({children}) {
   return (
-    <>
-      <Header />
+    <div className={styles.toppageLayout}>
+      {/* <Header /> */}
       <FirstView />
         <main>
           {children}
         </main>
       <Footer />
-    </>
+    </div>
   )
 }

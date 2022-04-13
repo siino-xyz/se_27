@@ -1,1 +1,14 @@
 @import 'variables';
+
+
+.linkBtnWrapper {
+  margin: 0 auto;
+  border: 1px solid $accent;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  display: inline-block;
+  color: $accent;
+  padding: 1rem;
+  letter-spacing: 0.1rem;
+}
+

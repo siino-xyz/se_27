@@ -1,1 +1,19 @@
 @import 'variables';
+
+.sectionContainer {
+  @include sectionContainer();
+
+  .twoColumns {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr minmax(20%, 352px);
+    align-items: center;
+    @include mq(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .singleColumns {
+    width: 80%;
+    text-align: left;
+  }
+}

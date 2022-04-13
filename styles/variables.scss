@@ -25,79 +25,95 @@ $lightGray: #EBEBEB;
 $midGray: #8E8E8E;
 $deepGray: #4a4a4a;
 
+
 //fonts
+@mixin jpfonts() {
+  font-family: 'Zen Kaku Gothic New' ,sans-serif;
+}
+
+@mixin enfonts() {
+  font-family: 'MuseoModerno' ,sans-serif;
+}
+
 @mixin h1() {
-  font-family: 'MuseoModerno';
+  @include enfonts();
   font-size:  3rem;
-  // font-weight: 600;
   font-display: optional;
 }
 
 @mixin h2En() {
-  font-family: 'MuseoModerno';
-  font-size:  2rem;
-  // font-weight: 600;
-  font-display: optional;
+  @include enfonts();
+  font-size:  2.2rem;
 }
+
 @mixin h2Jp() {
-  font-family: 'Zen Kaku Gothic New';
+  @include jpfonts();
   font-size:  2rem;
-  // font-weight: 600;
-  font-display: optional;
 }
 
 @mixin h3En() {
-  font-family: 'MuseoModerno';
+  @include enfonts();
   font-size:  1.5rem;
-  // font-weight: 600;
-  font-display: optional;
 }
+
 @mixin h3Jp() {
-  font-family: 'Zen Kaku Gothic New';
-  font-size:  1.5rem;
-  // font-weight: 600;
-  font-display: optional;
+   @include jpfonts();
+  font-size:  1.25rem;
 }
 
 @mixin h4En() {
-  font-family: 'MuseoModerno';
-  font-size:  1.5rem;
-  // font-weight: 600;
-  font-display: optional;
-}
-@mixin h4Jp() {
-  font-family: 'Zen Kaku Gothic New';
-  font-size:  1.5rem;
-  // font-weight: 600;
-  font-display: optional;
+   @include enfonts();
+  font-size:  1.25rem;
 }
 
 @mixin subtitle() {
-  font-family: "Zen Kaku Gothic New";
+  @include jpfonts();
   font-size:  1rem;
-  font-weight: 700;
-  font-display: optional;
 }
 
 @mixin subtitle-sm() {
-  font-family: "Zen Kaku Gothic New";
+  @include jpfonts();
   font-size:  0.8rem;
-  font-weight:  700;
-  font-display: optional;
   margin: 0;
 }
 
 @mixin body() {
-  font-family: 'Zen Kaku Gothic New';
+   @include jpfonts();
   font-size:  1rem;
   font-weight:  400;
   line-height: 1.6rem;
-  font-display: optional;
 }
 
 
 //spaces
 
+//components
+@mixin sectionTitle() {
+  @include h2En();
+  background: $white;
+  color: $black;
+  padding: 0.5rem 0.8rem 0 0.8rem;
+  text-align: left;
+  line-height: 1.9rem;
+  display: inline-block !important;
+  border-radius: 0.2rem;
+}
+
+@mixin subscriptJp() {
+  @include subtitle();
+  color: $black;
+}
+
+
+@mixin subTitle() {
+  @include h3Jp();
+  background: $white;
+  color: $black;
+  padding:0.3rem 0.5rem;
+  display: inline-block !important;
+  border-radius: 0.2rem;
+  text-align: left;
+}
 
 //layouts
 @mixin wrapFlex($fd: row, $justify: center, $align: center) {
@@ -115,4 +131,11 @@ $deepGray: #4a4a4a;
   align-items: $align;
 }
 
-
+@mixin sectionContainer() {
+  width: 100%;
+  margin: 0 auto;
+}
+@mixin sectionInner() {
+  max-width: 98%;
+  margin: 0 auto;
+}

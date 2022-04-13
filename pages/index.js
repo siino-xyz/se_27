@@ -1,30 +1,26 @@
-// import styles from '../styles/Home.module.css'
 import styles from '../styles/pages/index.module.scss'
-
-import ArticleCard from '../components/ArticleCard'
 import Button from '../components/LinkButton'
-
+import Services from '../sections/Services'
 import ToppageLayout from '../layouts/ToppageLayout'
 import InnerLayout from '../layouts/InnerLayout'
-
+import Bigtypo from '../sections/BigTypo'
+import Motivation from '../sections/Motivation'
+import Solution from '../sections/Solution'
+import Flow from '../sections/Flow';
+import Contact from '../sections/Contact';
+import AboutMe from '../sections/AboutMe'
 export default function Home({ articles }) {
   return (
     <div className={styles.container}>
       <main>
-        <h1>ああああいういういういういう</h1>
-        <div>
-          {articles.map((articles) => (
-            <ArticleCard
-            articles={articles}
-            key={articles.id}
-            >
-            </ArticleCard>
-          ))}
-        </div>
+        <Bigtypo />
+        <Services />
+        <Motivation />
+        <Solution />
+        <Flow />
+        <Contact />
+        <AboutMe />
       </main>
-      <Button 
-        button={'ボタンのサンプル'}
-      />
     </div>
   )
 }

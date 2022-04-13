@@ -4,12 +4,12 @@ import styles from '../styles/components/linkbutton.module.scss'
 
 export default function LinkButton(props) {
   return ( 
-    <div>
-      <Link href={`/${props.url}`} passHref>
-        <div>
-            {props.button}
+    <Link href={`/${props.url}`} passHref>
+      <a>
+        <div className={styles.linkBtnWrapper}>
+              {props.button}
         </div>
-      </Link>
-    </div>
+      </a>
+    </Link>
   )
 }

@@ -1,1 +1,34 @@
 @import 'variables';
+
+
+.sectionContainer {
+  @include sectionContainer();
+  
+  .ttlWrapper {
+    display: block;
+    .sectionTitle {
+      @include sectionTitle();
+      .subscriptJp {
+        @include subscriptJp();
+      }
+    }
+  }
+  .subTitle {
+    @include subTitle();
+  }
+
+  .sectionInner {
+    @include sectionInner(); 
+    .twoColumns {
+      display: grid;
+      gap: 50px;
+      grid-template-columns: 1fr minmax(25%, 300px);
+      align-items: center;
+
+      @include mq(sm) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+} 
