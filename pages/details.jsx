@@ -2,7 +2,7 @@ import UnderpageLayout from '../layouts/UnderpageLayout'
 import InnerLayout from '../layouts/InnerLayout'
 import FlowDetail from '../sections/details/FlowDedail'
 import QandA from '../sections/details/QandA'
-import Contact from '../sections/contact'
+// import Contact from '../sections/contact'
 
 
 export default function Details() {
@@ -10,7 +10,7 @@ export default function Details() {
     <>
       <FlowDetail />
       <QandA />
-      <Contact />
+      {/* <Contact /> */}
      
     </>
   )
