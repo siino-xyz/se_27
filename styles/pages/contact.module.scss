@@ -1,1 +1,29 @@
 @import 'variables';
+
+
+
+.sectionContainer {
+  @include sectionContainer();
+  margin: 23rem auto;
+  
+  .ttlWrapper {
+    display: block;
+    .sectionTitle {
+      @include sectionTitle();
+      .subscriptJp {
+        @include subscriptJp();
+      }
+    }
+  }
+  .subTitle {
+    @include subTitle();
+  }
+
+  .gotcha {
+    position:absolute!important;
+    height:1px;
+    width:1px;
+    overflow:hidden;
+  }
+
+}

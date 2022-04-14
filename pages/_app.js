@@ -9,7 +9,6 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
         {existsGaId && (
           <>
             <Script 
@@ -32,6 +31,9 @@ function MyApp({ Component, pageProps }) {
             />
           </>
         )}
+
+       
+
       </Head>
       <Component {...pageProps} />
     </>
