@@ -3,7 +3,7 @@ import InnerLayout from '../layouts/InnerLayout'
 import styles from '../styles/pages/contact.module.scss'
 import Script from 'next/script'
 
-export default function Contact() {
+export default function ContactForm() {
   return (
     <>
     <Script 
@@ -41,10 +41,10 @@ export default function Contact() {
 }
 
 
-Contact.getLayout = function getLayout(contact) {
+ContactForm.getLayout = function getLayout(contactform) {
   return (
     <UnderpageLayout>
-      <InnerLayout>{contact}</InnerLayout>
+      <InnerLayout>{contactform}</InnerLayout>
     </UnderpageLayout>
   )
 }
