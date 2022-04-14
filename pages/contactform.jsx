@@ -7,7 +7,9 @@ export default function ContactForm() {
     <>
 
     <div className={styles.sectionContainer}>
-      <div action="https://form.run/api/v1/r/sskm17wkftlu48frlce0axxw" method="post">
+    {/* <!-- class, action, methodを変更しないでください --> */}
+      <form  action="https://form.run/api/v1/r/sskm17wkftlu48frlce0axxw" method="post">
+        {/* <!-- ↓自由に要素を追加・編集することができます --> */}
         <div>
           <label>お名前</label>
           <input name="お名前" type="text" />
@@ -25,10 +27,22 @@ export default function ContactForm() {
           <div data-formrun-show-if-error="お問い合わせ">お問い合わせ入力してください</div>
         </div>
 
+        <div>
+          <label>個人情報利用同意 [必須]</label>
+          <input type="checkbox" name="個人情報利用同意" data-formrun-required />
+          <div data-formrun-show-if-error="個人情報利用同意">同意してください</div>
+        </div>
 
+        {/* <!-- ボット投稿をブロックするためのタグ --> */}
+        {/* <div >
+          <style media="screen">._formrun_gotcha </style>
+          <label for="_formrun_gotcha">If you are a human, ignore this field</label>
+          <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1" />
+        </div> */}
 
         <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信</button>
-      </div>
+      </form>
+
 
     </div>
     </>
