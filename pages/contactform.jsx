@@ -1,15 +1,10 @@
 import UnderpageLayout from '../layouts/UnderpageLayout'
 import InnerLayout from '../layouts/InnerLayout'
 import styles from '../styles/pages/contact.module.scss'
-import Script from 'next/script'
 
 export default function ContactForm() {
   return (
     <>
-    <Script 
-      src="https://sdk.form.run/js/v2/formrun.js"
-      strategy='lazyOnLoad'
-    />
 
     <div className={styles.sectionContainer}>
       <div action="https://form.run/api/v1/r/sskm17wkftlu48frlce0axxw" method="post">
