@@ -32,11 +32,11 @@ function MyApp({ Component, pageProps }) {
           </>
         )}
 
+      </Head>
         <Script 
           src="https://sdk.form.run/js/v2/formrun.js"
           strategy='lazyOnLoad'
         />
-      </Head>
       <Component {...pageProps} />
     </>
   )
