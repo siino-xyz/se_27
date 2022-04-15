@@ -19,11 +19,12 @@
     @include subTitle();
   }
 
-  .gotcha {
-    position:absolute!important;
-    height:1px;
-    width:1px;
-    overflow:hidden;
+  .formContainer {
+    @include noWrapFlex($fd:column);
+
+      > input {
+      margin: 1rem auto;
+    }
   }
 
 }

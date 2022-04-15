@@ -76,6 +76,12 @@ $deepGray: #4a4a4a;
   font-size:  0.8rem;
   margin: 0;
 }
+@mixin subtitle-sm-en() {
+  @include enfonts();
+  font-size:  0.8rem;
+  letter-spacing: 0.05rem;
+  margin: 0;
+}
 
 @mixin body() {
    @include jpfonts();

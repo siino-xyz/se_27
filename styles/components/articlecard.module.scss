@@ -1,1 +1,31 @@
 @import 'variables';
+
+.cardContainer {
+  // @include noWrapFlex($fd: column);
+  // background-color: $white;
+  border-radius: 0.2rem;
+  margin: 0;
+
+  .eyeCatch {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .sumallyWrapper {
+    background-color: $white;
+    color: $black;
+    padding: 0.5rem;
+    min-height: 150px;
+    max-height: 150px;
+    @include noWrapFlex($fd: column, $justify: flex-start ,$align: flex-start);
+
+    .categoryTag {
+        
+    }
+
+     .title {
+       color: $black;
+       margin: 0;
+     }
+  }
+}

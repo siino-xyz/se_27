@@ -1,12 +1,13 @@
 import { client } from "../../libs/client"
 import Image from 'next/image'
 import styles from '../../styles/pages/articles/articles.module.scss'
-
+import UnderpageLayout from "../../layouts/UnderpageLayout"
+import InnerLayout from "../../layouts/InnerLayout"
 
 export default function ArticlesId({ articles ,categories}) {
   return (
-    <>
-      <div>
+    <div className={styles.innerWrapper}>
+      <div className={styles.eyeCatch}>
         <Image
           src={articles.eye_catch.url}
           width={944}
@@ -15,7 +16,37 @@ export default function ArticlesId({ articles ,categories}) {
           alt="eye_catch"
         />
       </div>
-    </>
+
+      <div className={styles.sumallyWrapper}>
+          <div className={styles.categoryTag}>
+            {articles.categories.name}
+          </div>
+
+          <h2 className={styles.title}>
+            {articles.title}
+          </h2>
+
+          <div className={styles.date}>
+            {articles.publishedAt}
+          </div>
+          
+          <div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `${articles.body}`,
+              }}
+            />
+          </div>
+      </div>
+    </div>
+  )
+}
+
+ArticlesId.getLayout = function getLayout(articlesid) {
+  return (
+    <UnderpageLayout>
+      <InnerLayout>{articlesid}</InnerLayout>
+    </UnderpageLayout>
   )
 }
 

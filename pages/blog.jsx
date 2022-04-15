@@ -3,6 +3,8 @@ import {client} from '../libs/client'
 import ArticleCard from '../components/ArticleCard'
 import Categories from '../components/Categories'
 import styles from '../styles/pages/blog.module.scss'
+import UnderpageLayout from '../layouts/UnderpageLayout'
+import InnerLayout from '../layouts/InnerLayout'
 
 import Pagination from '../components/Pagination'
 
@@ -13,7 +15,7 @@ export default function Blog({ articles , categories , totalCount }) {
         <Categories 
           categories={categories} 
         />
-        <div>
+        <div className={styles.gridWrapper}>
           {articles.map((articles) => (
             <ArticleCard
               articles={articles}
@@ -22,10 +24,18 @@ export default function Blog({ articles , categories , totalCount }) {
             </ArticleCard>
           ))}
         </div>
-
         <Pagination totalCount={totalCount} />
       </main>
     </div>
+  )
+}
+
+
+Blog.getLayout = function getLayout(blog) {
+  return (
+    <UnderpageLayout>
+      <InnerLayout>{blog}</InnerLayout>
+    </UnderpageLayout>
   )
 }
 

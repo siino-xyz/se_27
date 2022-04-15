@@ -1,5 +1,6 @@
 import styles from '../styles/pages/index.module.scss'
 import Button from '../components/LinkButton'
+import ArticleCard from '../components/ArticleCard'
 import Services from '../sections/Services'
 import ToppageLayout from '../layouts/ToppageLayout'
 import InnerLayout from '../layouts/InnerLayout'
@@ -9,6 +10,10 @@ import Solution from '../sections/Solution'
 import Flow from '../sections/Flow';
 import Contact from '../sections/Contact';
 import AboutMe from '../sections/AboutMe'
+
+
+
+
 export default function Home({ articles }) {
   return (
     <div className={styles.container}>
@@ -20,6 +25,17 @@ export default function Home({ articles }) {
         <Flow />
         <Contact />
         <AboutMe />
+
+        <div className={styles.articlesContainer}>
+          {articles.map((articles) => (
+            <ArticleCard
+              articles={articles}
+              key={articles.id}
+            >
+            </ArticleCard>
+          ))}
+        </div>
+
       </main>
     </div>
   )

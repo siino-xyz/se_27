@@ -16,6 +16,9 @@ const nextConfig = {
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
+  },
+  env: {
+    STATIC_FORMS_ACCESS_KEY: process.env.STATIC_FORMS_ACCESS_KEY,
   }
 }
 

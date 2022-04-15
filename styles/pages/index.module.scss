@@ -1,1 +1,10 @@
 @import 'variables';
+
+
+.articlesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  align-items: center;
+  // grid-auto-rows: 200px;
+  gap: 20px;
+}
