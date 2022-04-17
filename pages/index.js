@@ -25,17 +25,7 @@ export default function Home({ articles }) {
         <Flow />
         <Contact />
         <AboutMe />
-
-        <div className={styles.articlesContainer}>
-          {articles.map((articles) => (
-            <ArticleCard
-              articles={articles}
-              key={articles.id}
-            >
-            </ArticleCard>
-          ))}
-        </div>
-
+        <ArticleCard  articles={articles}/>
       </main>
     </div>
   )

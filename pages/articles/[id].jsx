@@ -1,11 +1,16 @@
 import { client } from "../../libs/client"
 import Image from 'next/image'
 import styles from '../../styles/pages/articles/articles.module.scss'
-import UnderpageLayout from "../../layouts/UnderpageLayout"
 import InnerLayout from "../../layouts/InnerLayout"
+import BlogHeader from '../../components/blogHeader'
+import BlogLayout from '../../layouts/BlogLayout'
 
 export default function ArticlesId({ articles ,categories}) {
   return (
+    <>
+    <BlogHeader 
+      categories={categories}
+    />
     <div className={styles.innerWrapper}>
       <div className={styles.eyeCatch}>
         <Image
@@ -39,14 +44,15 @@ export default function ArticlesId({ articles ,categories}) {
           </div>
       </div>
     </div>
+    </>
   )
 }
 
 ArticlesId.getLayout = function getLayout(articlesid) {
   return (
-    <UnderpageLayout>
+    <BlogLayout>
       <InnerLayout>{articlesid}</InnerLayout>
-    </UnderpageLayout>
+    </BlogLayout>
   )
 }
 

@@ -1,53 +1,46 @@
 import {client} from '../libs/client'
-// import styles from '../styles/Home.module.css'
 import ArticleCard from '../components/ArticleCard'
-import Categories from '../components/Categories'
 import styles from '../styles/pages/blog.module.scss'
-import UnderpageLayout from '../layouts/UnderpageLayout'
 import InnerLayout from '../layouts/InnerLayout'
-
-import Pagination from '../components/Pagination'
+import { PER_PAGE } from './api/pager';
+import PaginationArrow from '../components/Pagination'
+import BlogLayout from '../layouts/BlogLayout'
+import BlogHeader from '../components/blogHeader'
 
 export default function Blog({ articles , categories , totalCount }) {
   return (
+    <>
+    <BlogHeader 
+      categories={categories}
+    />
     <div className={styles.container}>
-      <main>
-        <Categories 
-          categories={categories} 
-        />
-        <div className={styles.gridWrapper}>
-          {articles.map((articles) => (
-            <ArticleCard
-              articles={articles}
-              key={articles.id}
-            >
-            </ArticleCard>
-          ))}
-        </div>
-        <Pagination totalCount={totalCount} />
-      </main>
+  
+      <ArticleCard  articles={articles}/>
+      <PaginationArrow
+        currentPageNumber={1}
+        maxPageNumber={Math.ceil(totalCount / PER_PAGE)}
+      />
     </div>
+    </>
   )
 }
 
 
 Blog.getLayout = function getLayout(blog) {
   return (
-    <UnderpageLayout>
+    <BlogLayout>
       <InnerLayout>{blog}</InnerLayout>
-    </UnderpageLayout>
+    </BlogLayout>
   )
 }
 
 export const getStaticProps = async () => {
-  // const data = await client.get({ endpoint: 'articles' });
   const categoryData = await client.get({ endpoint: 'categories'});
 
-  //get pagination props
   const key = {
     headers: {'X-MICROCMS-API-KEY': process.env.MICROCMS_API_KEY},
   }
-  const data = await fetch('https://kp822wg687.microcms.io/api/v1/articles?offset=0&limit=5', key)
+  const data = await fetch('https://kp822wg687.microcms.io/api/v1/articles?offset=0&limit=2', key)
   .then(res => res.json())
   .catch(() => null);
 

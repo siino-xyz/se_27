@@ -1,30 +1,43 @@
-import Link from 'next/link'
 import { client } from '../../libs/client'
 import Pagination from '../../components/Pagination'
-import styles from '../../styles/pages/category/category.module.scss'
-
-
-export const CategoryId = ({ articles ,totalCount}) => {
+import styles from '../../styles/pages/blog.module.scss'
+import ArticleCard from '../../components/ArticleCard'
+import InnerLayout from '../../layouts/InnerLayout'
+import Categories from '../../components/Categories'
+import BlogLayout from '../../layouts/BlogLayout'
+import BlogHeader from '../../components/blogHeader'
+export const CategoryId = ({ articles ,totalCount ,categories}) => {
   if(articles.length === 0) {
-    return <div>no blog contents</div>
+    return (
+      <>
+        <BlogHeader 
+          categories={categories}
+        />
+        <div className={styles.container}>
+          <div>このカテゴリには記事がありません</div>
+        </div>
+      </>
+    )
   }
   return (
-    <div>
-      <ul>
-        {articles.map((articles) => (
-          <li key={articles.id}>
-            <Link href={`/articles/${articles.id}`}>
-              <a>{articles.title}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <Pagination totalCount={totalCount} />
+    <div className={styles.container}>
+      <Categories 
+        categories={categories}
+      />
+      <ArticleCard  articles={articles}/>
     </div>
   )
 }
 
 export default CategoryId;
+
+CategoryId.getLayout = function getLayout(categoryid) {
+  return (
+    <BlogLayout>
+      <InnerLayout>{categoryid}</InnerLayout>
+    </BlogLayout>
+  )
+}
 
 export const getStaticPaths = async () => {
   const data = await client.get({endpoint: 'categories'})

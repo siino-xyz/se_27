@@ -1,1 +1,23 @@
 @import 'variables';
+
+
+.paginationWrapper {
+  @include noWrapFlex($justify: space-around);
+  margin: 2rem auto;
+  max-width: 500px;
+
+  .paginationItem {
+    width:50%;
+    @include noWrapFlex();
+  }
+}
+
+
+
+.prevPageBtn {
+  @include pagerBtn($direction:"left");
+}
+
+.nextPageBtn {
+  @include pagerBtn($direction: "right")
+}

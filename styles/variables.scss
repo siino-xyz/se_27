@@ -156,3 +156,44 @@ $deepGray: #4a4a4a;
   max-width: 98%;
   margin: 0 auto;
 }
+
+//pager button
+@mixin pagerArrow() {
+  content: "";
+  position: absolute;
+  top: 50%;   
+  border: 7px solid transparent;
+  transform: translateY(-50%);   
+}
+
+@mixin pagerBtn($direction: "left") {
+  position: relative;
+  border: 1px solid $white;
+  border-radius: 0.25rem;
+  transition: all .2s;
+  width: 200px;
+  text-align: center;
+  display: inline-block;
+  padding: 0.5rem;
+
+  &:hover {
+    border-color: $accent;
+    color: $accent
+  }
+
+  @if $direction == "left" {
+    padding-left: 1rem;
+    &::before {
+      @include pagerArrow();
+      left: 15%;
+      border-right: 10px solid; 
+    } 
+  } @else if $direction == "right"  {
+    padding-right: 1.5rem;
+    &::after {
+      @include pagerArrow();
+      right: 16%;
+      border-left: 10px solid;
+    }
+  }
+}
