@@ -90,7 +90,7 @@
 }
 
 .drawerMenu {
-  // display: none;
+  // opacity: 0;
 
   @include mq(lg) {
     height: 100vh;
@@ -100,14 +100,11 @@
     z-index: 2;
     background-color: $main;
     width: 100%;
-    display: none;
-    opacity: 0;
   }
-}
-
-.open {
-  display: block;
-  opacity: 1;
+  // &.open {
+  //   display: block;
+  //   opacity: 1;
+  // }
 }
 
 .svgLogo {

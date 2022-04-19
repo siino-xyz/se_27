@@ -1,58 +1,38 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/components/header.module.scss";
-import {
-  useRef,
-  useEffect,
-  useState,
-  useLayoutEffect,
-  forwardRef,
-} from "react";
+import { useRef, useEffect, useState, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 
 export default function Header() {
-  const [openMenu, setOpenMenu] = useState(false);
-  const openAnime = useRef(false);
-  const target = useRef(false);
+  const [click, setClick] = useState(false);
+  const toggle = () => setClick(!click);
 
-  const toggleOpen = () => {
-    setOpenMenu(!openMenu);
-  };
+  const spMenuContent = useRef(false);
+  const openAnimation = useRef(false);
 
   useEffect(() => {
-    if (openMenu === true) {
-      console.log("openAnime called");
-      openAnime.current = gsap
-        .to(target.current, {
-          ease: "power2.out",
-          opacity: 1,
-          display: "block",
-        })
-        .reverse();
-      return () => {
-        openAnime.current.kill();
-      };
+    if (click === true) {
+      console.log("display: block");
+      spMenuContent.current.style.display = "block";
+      openAnimation.current = gsap.to(spMenuContent.current, {
+        opacity: 1,
+        ease: "power1.out",
+      });
     } else {
-      openAnime.current = gsap.to(target.current, {
+      openAnimation.current = gsap.to(spMenuContent.current, {
         opacity: 0,
         display: "none",
+        ease: "power1.out",
       });
     }
-  }, []);
-
-  useEffect(() => {
-    openAnime.current.reversed(!openMenu);
-  }, [openMenu]);
+  }, [click]);
 
   return (
     <>
       {/* ドロワー開閉ボタン */}
       <div className={styles.container}>
-        <button
-          className={styles.humMenuBtn}
-          // onClick={() => setOpenMenu(!openMenu)}
-          onClick={toggleOpen}
-        >
+        <button className={styles.humMenuBtn} onClick={toggle}>
           <div className={styles.humburger}>
             <span></span>
             <span></span>
@@ -129,8 +109,9 @@ export default function Header() {
 
       {/* ドロワーメニュー本体 */}
       <div
-        className={`${styles.drawerMenu} ${openMenu ? styles.open : undefined}`}
-        ref={target}
+        className={`${styles.drawerMenu}`}
+        ref={spMenuContent}
+        style={{ display: "none", opacity: 0 }}
       >
         <ul className={styles.ul}>
           <li>
