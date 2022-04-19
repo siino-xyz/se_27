@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -22,9 +18,11 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "pages/contactform.tsx", "components/blogHeader.jsx", "pages/articles/page/[id].js"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "**/*.tsx",
+    "pages/contactform.tsx",
+    "components/blogHeader.jsx",
+    "pages/articles/page/[id].js",
+    "components/Header.jsx"
+  ],
+  "exclude": ["node_modules"]
 }

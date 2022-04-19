@@ -1,10 +1,9 @@
-import styles from '../styles/sections/contact.module.scss'
-import LinkButton from '../components/LinkButton';
+import styles from "../styles/sections/contact.module.scss";
+import LinkButton from "../components/LinkButton";
 
 export default function Contact() {
   return (
     <div className={styles.sectionContainer}>
-      
       <div className={styles.ttlWrapper}>
         <h2 className={styles.sectionTitle}>
           Contact
@@ -16,15 +15,15 @@ export default function Contact() {
       <div className={styles.sectionInner}>
         <div className={styles.twoColumns}>
           <div>
-            <p>amstackアーキテクチャを用いた、高速かつ安全性の高いウェブサイト開発を専門としています。単に速いサイトを作るだけではありません。運用スタイルや規模感に合わせて柔軟に最も適切な構築方法のご提案からスタートします。</p>
-          </div>     
+            <p>
+              amstackアーキテクチャを用いた、高速かつ安全性の高いウェブサイト開発を専門としています。単に速いサイトを作るだけではありません。運用スタイルや規模感に合わせて柔軟に最も適切な構築方法のご提案からスタートします。
+            </p>
+          </div>
           <div className={styles.r}>
-            <LinkButton 
-              button={'お問い合わせ'}
-            />
+            <LinkButton button={"お問い合わせ"} />
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
