@@ -4,28 +4,30 @@
   background-color: $deepGray;
   width: 100%;
   margin: 0 auto 0 auto;
+  padding: 1rem 0;
 }
 .noWrapFlex {
   width: 100%;
   margin: 0;
   padding: 1rem;
-  @include noWrapFlex($fd: row, $justify: space-between);
+  @include noWrapFlex($fd: column, $justify: right, $align: center);
 
   .footerLogo {
-    width: 15%;
-
+    max-width: 230px;
+    cursor: pointer;
     @include mq(sm) {
       width: 50%;
-      margin: 1rem auto;
+      padding: 1rem 0 0.5rem 0;
     }
-  }
-
-  .twitterLogo {
-    // margin-right: 5rem;
   }
 
   @include mq(sm) {
     @include noWrapFlex($fd: column);
     padding: 0;
+  }
+
+  .copylight {
+    @include subtitle-sm();
+    padding-right: 1rem;
   }
 }

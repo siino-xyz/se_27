@@ -15,7 +15,11 @@
 
 .headerBox {
   @include noWrapFlex($justify: space-between, $align: center);
-  padding: 1rem 2rem;
+  padding: 0.5rem 0.8rem;
+
+  @include mq(sm) {
+    padding: 0.5rem 0.3rem;
+  }
 
   .pcContent {
     @include noWrapFlex($fd: row, $justify: space-around, $align: center);
@@ -45,8 +49,8 @@
 
 .container {
   position: fixed;
-  bottom: 3%;
-  right: 3%;
+  bottom: 1%;
+  right: 5%;
   z-index: 1111;
 }
 
