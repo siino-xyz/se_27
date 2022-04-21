@@ -4,6 +4,7 @@ import styles from "../../styles/pages/articles/articles.module.scss";
 import InnerLayout from "../../layouts/InnerLayout";
 import BlogLayout from "../../layouts/BlogLayout";
 import dayjs from "dayjs";
+import ShareButtons from "../../components/ShareButtons";
 
 export default function ArticlesId({ articles, categories }) {
   return (
@@ -35,6 +36,8 @@ export default function ArticlesId({ articles, categories }) {
               }}
             />
           </div>
+
+          <ShareButtons articles={articles} />
         </div>
       </div>
     </>

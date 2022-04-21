@@ -59,9 +59,9 @@ $deepGray: #4a4a4a;
   font-size: 1.15rem;
 }
 
-@mixin h4En() {
+@mixin h4En($fz: 1.25rem) {
   @include enfonts();
-  font-size: 1.25rem;
+  font-size: $fz;
 }
 
 @mixin subtitle() {
@@ -146,7 +146,8 @@ $deepGray: #4a4a4a;
 
 @mixin sectionContainer() {
   width: 100%;
-  margin: 5rem auto;
+  margin: 0 auto;
+  padding-top: 6rem;
 }
 @mixin sectionInner() {
   max-width: 98%;

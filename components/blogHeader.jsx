@@ -42,7 +42,7 @@ export default function Header() {
       <header className={styles.headerContainer}>
         <div className={styles.headerBox}>
           <div className={styles.headerLogo}>
-            <Link href="/" passHref>
+            <Link href="/blog" passHref>
               <div>
                 <svg
                   className={styles.svgLogo}
@@ -66,40 +66,29 @@ export default function Header() {
             <div className={styles.headerItem}>
               <ul>
                 <li>
-                  <Link href="/" passHref>
-                    <a>Services</a>
+                  <Link href="http://localhost:3000/#services" passHref>
+                    <a className={styles.menuItem}>Services</a>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/flow" passHref>
+                    <a className={styles.menuItem}>Flow/Q&A</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" passHref>
-                    <a>Services</a>
+                  <Link href="/blog" passHref>
+                    <a className={styles.menuItem}>Blog</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" passHref>
-                    <a>Services</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" passHref>
-                    <a>Services</a>
+                  <Link href="/contactform" passHref>
+                    <a>
+                      <div className={styles.contactBtn}>Contact</div>
+                    </a>
                   </Link>
                 </li>
               </ul>
-            </div>
-
-            <div className={styles.headerItem}>
-              <Link href="https://twitter.com/siino_webdev" passHref>
-                <a target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src="/global/twitter_icon.svg"
-                    width={35}
-                    height={35}
-                    alt="twitter_icon"
-                    layout="intrinsic"
-                  />
-                </a>
-              </Link>
             </div>
           </div>
         </div>
@@ -113,50 +102,31 @@ export default function Header() {
       >
         <ul className={styles.ul}>
           <li>
-            <Link href="/">
+            <Link href="http://localhost:3000/#services">
               <a>
-                <p className={styles.mainTitle}>メニュー</p>
-                <p className={styles.subTitle}>私のメニュー</p>
+                <p className={styles.mainTitle}>Services</p>
               </a>
             </Link>
           </li>
           <li>
             <Link href="/">
               <a>
-                <p className={styles.mainTitle}>メニュー</p>
-                <p className={styles.subTitle}>私のメニュー</p>
+                <p className={styles.mainTitle}>Flow/Q&A</p>
               </a>
             </Link>
           </li>
           <li>
-            <Link href="/">
-              <a>
-                <p className={styles.mainTitle}>メニュー</p>
-                <p className={styles.subTitle}>私のメニュー</p>
+            <Link href="/blog">
+              <a target="_blank" rel="noopener">
+                <p className={styles.mainTitle}>Blog</p>
               </a>
             </Link>
           </li>
+
           <li>
-            <Link href="/">
+            <Link href="/contactform">
               <a>
-                <p className={styles.mainTitle}>メニュー</p>
-                <p className={styles.subTitle}>私のメニュー</p>
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <a>
-                <p className={styles.mainTitle}>メニュー</p>
-                <p className={styles.subTitle}>私のメニュー</p>
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact">
-              <a>
-                <p className={styles.mainTitle}>メニュー</p>
-                <p className={styles.subTitle}>私のメニュー</p>
+                <p className={styles.mainTitle}>Contact</p>
               </a>
             </Link>
           </li>

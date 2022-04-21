@@ -1,0 +1,17 @@
+@import "variables";
+
+.shareWrapper {
+  margin: 3rem auto;
+}
+.h4 {
+  @include h3Jp();
+  text-align: center;
+  margin: 1rem auto;
+}
+.shareBtns {
+  @include noWrapFlex($fd: row);
+
+  .item {
+    margin: 0.5rem;
+  }
+}

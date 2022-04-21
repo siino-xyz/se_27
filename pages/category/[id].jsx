@@ -1,23 +1,26 @@
 import { client } from "../../libs/client";
-import Pagination from "../../components/Pagination";
 import styles from "../../styles/pages/blog.module.scss";
 import ArticleCard from "../../components/ArticleCard";
 import InnerLayout from "../../layouts/InnerLayout";
 import Categories from "../../components/Categories";
 import BlogLayout from "../../layouts/BlogLayout";
-import BlogHeader from "../../components/blogHeader";
-export const CategoryId = ({ articles, totalCount, categories }) => {
+import LinkButton from "../../components/LinkButton";
+export const CategoryId = ({ articles, categories }) => {
   if (articles.length === 0) {
     return (
       <>
-        <div className={styles.container}>
-          <div>このカテゴリには記事がありません</div>
+        <div className={styles.noArticles}>
+          <div>このカテゴリにはまだ記事がありません。ゴメンネ。</div>
+          <LinkButton url={""} button="ブログ一覧へもどる" />
         </div>
       </>
     );
   }
   return (
     <div className={styles.container}>
+      <div className={styles.ttlWrapper}>
+        <h2 className={styles.sectionTitle}>a{}</h2>
+      </div>
       <Categories categories={categories} />
       <ArticleCard articles={articles} />
     </div>
@@ -49,23 +52,10 @@ export const getStaticProps = async (context) => {
   });
   const categoryData = await client.get({ endpoint: "categories" });
 
-  //get pagination props
-  const key = {
-    headers: { "X-MICROCMS-API-KEY": process.env.MICROCMS_API_KEY },
-  };
-  const pagination = await fetch(
-    "https://kp822wg687.microcms.io/api/v1/categories?offset=0&limit=3",
-    key
-  )
-    .then((res) => res.json())
-    .catch(() => null);
-
-  // console.log(id);
   return {
     props: {
-      articles: data.contents,
       categories: categoryData.contents,
-      totalCount: pagination.totalCount,
+      articles: data.contents,
     },
   };
 };

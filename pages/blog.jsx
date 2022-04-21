@@ -5,8 +5,7 @@ import InnerLayout from "../layouts/InnerLayout";
 import { PER_PAGE } from "./api/pager";
 import PaginationArrow from "../components/Pagination";
 import BlogLayout from "../layouts/BlogLayout";
-import BlogHeader from "../components/blogHeader";
-
+import Categories from "../components/Categories";
 export default function Blog({ articles, categories, totalCount }) {
   return (
     <>
@@ -18,6 +17,7 @@ export default function Blog({ articles, categories, totalCount }) {
             <div className={styles.subscriptJp}>記事一覧</div>
           </h2>
         </div>
+        <Categories categories={categories} />
         <ArticleCard articles={articles} />
         <PaginationArrow
           currentPageNumber={1}

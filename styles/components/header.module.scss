@@ -25,7 +25,7 @@
     @include noWrapFlex($fd: row, $justify: space-around, $align: center);
     // flex-grow: 1;
 
-    @include mq(lg) {
+    @include mq(md) {
       display: none;
     }
   }
@@ -36,11 +36,24 @@
       > li {
         margin: 0 2rem;
 
-        > a {
+        .menuItem {
           transition: all 0.2s;
+          @include h4En($fz: 1rem);
+          letter-spacing: 0.1rem;
+          font-weight: 500;
+
           &:hover {
             color: $main;
           }
+        }
+
+        .contactBtn {
+          padding: 0.5rem 1rem;
+          background-color: $main;
+          border-radius: 0.2rem;
+          @include h4En($fz: 1rem);
+          letter-spacing: 0.1rem;
+          font-weight: 500;
         }
       }
     }
@@ -57,7 +70,7 @@
 .humMenuBtn {
   display: none;
   cursor: pointer;
-  @include mq(lg) {
+  @include mq(md) {
     // position: absolute;
     // bottom: 0%;
     // left: 90%;
@@ -98,13 +111,17 @@
 .drawerMenu {
   // opacity: 0;
 
-  @include mq(lg) {
+  .ul {
+    padding-top: 8rem;
+  }
+
+  @include mq(md) {
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
-    background-color: $main;
+    background-color: $deepGray;
     width: 100%;
   }
   // &.open {

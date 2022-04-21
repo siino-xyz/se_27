@@ -33,7 +33,7 @@ export default function Home({ articles }) {
           </div>
           <ArticleCard articles={articles} />
           <div className={styles.btnWrapper}>
-            <LinkButton button="記事一覧" />
+            <LinkButton url={"/blog"} button="記事一覧" />
           </div>
         </main>
       </div>

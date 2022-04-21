@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <div className={styles.sectionContainer}>
+    <div id="services" className={styles.sectionContainer}>
       <div className={styles.ttlWrapper}>
         <h2 className={styles.sectionTitle}>
           Services
@@ -25,6 +25,7 @@ export default function Services() {
 
           <div className={styles.image}>
             <Image
+              className={styles.imageInner}
               src="/top/top-design.svg"
               width={300}
               height={200}
@@ -48,6 +49,7 @@ export default function Services() {
 
           <div className={styles.image}>
             <Image
+              className={styles.imageInner}
               src="/top/top-code.svg"
               width={300}
               height={200}

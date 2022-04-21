@@ -2,11 +2,10 @@ import PaginationArrow from "../../../components/Pagination";
 import ArticleCard from "../../../components/ArticleCard";
 import { client } from "../../../libs/client";
 import styles from "../../../styles/pages/blog.module.scss";
-import UnderpageLayout from "../../../layouts/UnderpageLayout";
 import InnerLayout from "../../../layouts/InnerLayout";
 import { PER_PAGE } from "../../api/pager";
-import Categories from "../../../components/Categories";
 import BlogLayout from "../../../layouts/BlogLayout";
+import Categories from "../../../components/Categories";
 
 export const ArticlePageId = ({
   totalCount,
@@ -17,6 +16,15 @@ export const ArticlePageId = ({
   return (
     <>
       <div className={styles.container}>
+        <div className={styles.ttlWrapper}>
+          <h2 className={styles.sectionTitle}>
+            Blog
+            <br />
+            <div className={styles.subscriptJp}>記事一覧</div>
+          </h2>
+        </div>
+        <Categories categories={categories} />
+
         <ArticleCard articles={articles} />
         <PaginationArrow
           currentPageNumber={currentPageNumber}
@@ -48,7 +56,6 @@ export const getStaticPaths = async () => {
   );
 
   const repos = await res.json();
-  // const pageNumbers = [];
 
   const range = (start, end) =>
     [...Array(end - start + 1)].map((_, i) => start + i);
@@ -68,7 +75,6 @@ export const getStaticProps = async (context) => {
   };
   const numId = Number(id);
 
-  //offsetっていうのは、「何個目のコンテンツから取得するか」を指定してる。
   const data = await fetch(
     `https://kp822wg687.microcms.io/api/v1/articles?offset=${
       (numId - 1) * PER_PAGE

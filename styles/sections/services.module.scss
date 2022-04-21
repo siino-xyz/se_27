@@ -25,8 +25,14 @@
       grid-template-columns: 1fr minmax(25%, 300px);
       align-items: center;
 
+      .imageInner {
+        border-radius: 0.2rem;
+      }
+
       @include mq(sm) {
         flex-direction: column-reverse;
+        // margin-bottom: 2rem;
+
         .image {
           text-align: center;
           grid-row: 1;

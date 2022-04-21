@@ -18,19 +18,6 @@ export default function Footer() {
           </Link>
         </div>
 
-        {/* <div className={styles.twitterLogo}>
-          <Link href="https://twitter.com/siino_webdev" passHref>
-            <a target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/global/twitter_icon.svg"
-                width={35}
-                height={35}
-                alt="twitter_icon"
-                layout="intrinsic"
-              />
-            </a>
-          </Link>
-        </div> */}
         <div className={styles.copylight}>© 2022 SE-27</div>
       </div>
     </div>

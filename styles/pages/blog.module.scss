@@ -17,10 +17,17 @@
   @include subTitle();
 }
 
+.noArticles {
+  min-height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .container {
   margin: 1rem auto 1rem auto;
   width: 100%;
-  // min-height: 100vh !important;
 
   @include mq(lg) {
     width: 90%;

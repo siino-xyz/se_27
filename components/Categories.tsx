@@ -1,29 +1,32 @@
-import Link from 'next/link'
-import Category from '../types/category'
-import styles from '../styles/components/categories.module.scss'
+import Link from "next/link";
+import Category from "../types/category";
+import styles from "../styles/components/categories.module.scss";
 
 type CategoriesProps = {
   categories: Array<Category>;
-}
+};
 
-
-export const Categories = ({categories}:CategoriesProps) => {
+export const Categories = ({ categories }: CategoriesProps) => {
   return (
-    <div>
-      <h1>カテゴリー</h1>
-      <ul>
-        {categories.map((categories) => {
-          return (
-            <li key={categories.id}>
-              <Link href={`/category/${categories.id}`}>
-                <a>{categories.name}</a>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <>
+      <div className={styles.categoriesContainer}>
+        <h3>Category</h3>
+        <div className={styles.categoriesList}>
+          {categories.map((categories) => {
+            return (
+              <div className={styles.categoryItem} key={categories.id}>
+                <Link href={`/category/${categories.id}`}>
+                  <a>
+                    <div className={styles.categoryName}>{categories.name}</div>
+                  </a>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </>
   );
 };
 
-export default Categories
+export default Categories;

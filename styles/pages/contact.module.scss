@@ -2,7 +2,6 @@
 
 .sectionContainer {
   @include sectionContainer();
-  margin: 5rem auto;
 
   .ttlWrapper {
     display: block;
