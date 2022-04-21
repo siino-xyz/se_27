@@ -13,7 +13,6 @@ export default function Header() {
 
   useEffect(() => {
     if (click === true) {
-      console.log("display: block");
       spMenuContent.current.style.display = "block";
       openAnimation.current = gsap.to(spMenuContent.current, {
         opacity: 1,

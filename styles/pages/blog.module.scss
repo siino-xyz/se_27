@@ -1,9 +1,26 @@
-@import 'variables';
+@import "variables";
+
+.ttlWrapper {
+  display: block;
+  .sectionTitle {
+    @include sectionTitle();
+    .subscriptJp {
+      @include subscriptJp();
+    }
+  }
+  @include mq(sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.subTitle {
+  @include subTitle();
+}
 
 .container {
-  margin: 10rem auto 5rem auto;
-  width:100%;
-  min-height: 100vh !important;
+  margin: 1rem auto 1rem auto;
+  width: 100%;
+  // min-height: 100vh !important;
 
   @include mq(lg) {
     width: 90%;
@@ -23,6 +40,5 @@
     @include mq(sm) {
       grid-template-columns: repeat(1, 300px);
     }
-    
   }
 }

@@ -1,9 +1,9 @@
 //media queries
 $breakpoints: (
-  'sm': 576px,
-  'md': 768px,
-  'lg': 992px,
-  'xl': 1100px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1100px,
 );
 
 @mixin mq($size) {
@@ -12,84 +12,81 @@ $breakpoints: (
   }
 }
 
-
 //colors
-$main: #F39423;
-$accent: #80EF7E;
+$main: #f39423;
+$accent: #80ef7e;
 
 $black: #121212;
-$white: #EDEDED;
+$white: #ededed;
 
 //gray-scale
-$lightGray: #EBEBEB;
-$midGray: #8E8E8E;
+$lightGray: #ebebeb;
+$midGray: #8e8e8e;
 $deepGray: #4a4a4a;
-
 
 //fonts
 @mixin jpfonts() {
-  font-family: 'Zen Kaku Gothic New' ,sans-serif;
+  font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
 @mixin enfonts() {
-  font-family: 'MuseoModerno' ,sans-serif;
+  font-family: "MuseoModerno", sans-serif;
 }
 
 @mixin h1() {
   @include enfonts();
-  font-size:  3rem;
+  font-size: 3rem;
   font-display: optional;
 }
 
 @mixin h2En() {
   @include enfonts();
-  font-size:  2rem;
+  font-size: 2rem;
 }
 
 @mixin h2Jp() {
   @include jpfonts();
-  font-size:  2rem;
+  font-size: 2rem;
 }
 
 @mixin h3En() {
   @include enfonts();
-  font-size:  1.5rem;
+  font-size: 1.5rem;
 }
 
 @mixin h3Jp() {
-   @include jpfonts();
-  font-size:  1.15rem;
+  @include jpfonts();
+  font-size: 1.15rem;
 }
 
 @mixin h4En() {
-   @include enfonts();
-  font-size:  1.25rem;
+  @include enfonts();
+  font-size: 1.25rem;
 }
 
 @mixin subtitle() {
   @include jpfonts();
-  font-size:  1rem;
+  font-size: 1rem;
 }
 
 @mixin subtitle-sm() {
   @include jpfonts();
-  font-size:  0.8rem;
+  font-size: 0.8rem;
   margin: 0;
 }
 @mixin subtitle-sm-en() {
   @include enfonts();
-  font-size:  0.8rem;
+  font-size: 0.8rem;
   letter-spacing: 0.05rem;
   margin: 0;
 }
 
 @mixin body() {
-   @include jpfonts();
-  font-size:  1rem;
-  font-weight:  400;
+  @include jpfonts();
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1.6rem;
 }
-
 
 //spaces
 
@@ -110,12 +107,11 @@ $deepGray: #4a4a4a;
   color: $black;
 }
 
-
 @mixin subTitle() {
   @include h3Jp();
   background: $white;
   color: $black;
-  padding:0.3rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   display: inline-block !important;
   border-radius: 0.2rem;
   text-align: left;
@@ -125,7 +121,7 @@ $deepGray: #4a4a4a;
   @include h3En();
   background: $white;
   color: $black;
-  padding:0.3rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   display: inline-block !important;
   border-radius: 0.2rem;
   text-align: left;
@@ -161,16 +157,16 @@ $deepGray: #4a4a4a;
 @mixin pagerArrow() {
   content: "";
   position: absolute;
-  top: 50%;   
+  top: 50%;
   border: 7px solid transparent;
-  transform: translateY(-50%);   
+  transform: translateY(-50%);
 }
 
 @mixin pagerBtn($direction: "left") {
   position: relative;
   border: 1px solid $white;
   border-radius: 0.25rem;
-  transition: all .2s;
+  transition: all 0.2s;
   width: 200px;
   text-align: center;
   display: inline-block;
@@ -178,7 +174,7 @@ $deepGray: #4a4a4a;
 
   &:hover {
     border-color: $accent;
-    color: $accent
+    color: $accent;
   }
 
   @if $direction == "left" {
@@ -186,9 +182,9 @@ $deepGray: #4a4a4a;
     &::before {
       @include pagerArrow();
       left: 15%;
-      border-right: 10px solid; 
-    } 
-  } @else if $direction == "right"  {
+      border-right: 10px solid;
+    }
+  } @else if $direction == "right" {
     padding-right: 1.5rem;
     &::after {
       @include pagerArrow();
@@ -196,4 +192,19 @@ $deepGray: #4a4a4a;
       border-left: 10px solid;
     }
   }
+}
+
+//記事カード
+@mixin categoryTag($bgColor: $white, $fColor: $black) {
+  background: $bgColor;
+  // border: 1px solid $black;
+  color: $fColor;
+  display: inline-block;
+  padding: 0rem 0.5rem;
+  border-radius: 0.2rem;
+  @include subtitle-sm-en();
+}
+
+@mixin borderRadius($lt: 0, $rt: 0, $rb: 0, $lb: 0) {
+  border-radius: $lt $rt $rb $lb;
 }

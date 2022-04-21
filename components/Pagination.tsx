@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import styles from '../styles/components/pagination.module.scss'
+import Link from "next/link";
+import styles from "../styles/components/pagination.module.scss";
 
 type P = {
   maxPageNumber: number;
@@ -15,14 +15,11 @@ export const PaginationArrow: React.FC<P> = ({
 
   return (
     <div className={styles.paginationWrapper}>
-
       <div className={styles.paginationItem}>
         {currentPageNumber !== 1 && (
           <Link href={`/articles/page/${prevPage}`}>
             <a data-testid="previous">
-              <div className={styles.prevPageBtn}>
-                  もどる
-              </div>
+              <div className={styles.prevPageBtn}>もどる</div>
             </a>
           </Link>
         )}
@@ -31,9 +28,7 @@ export const PaginationArrow: React.FC<P> = ({
         {currentPageNumber !== maxPageNumber && (
           <Link href={`/articles/page/${nextPage}`}>
             <a data-testid="next">
-              <div className={styles.nextPageBtn}>
-                すすむ 
-              </div>
+              <div className={styles.nextPageBtn}>すすむ</div>
             </a>
           </Link>
         )}
@@ -42,4 +37,4 @@ export const PaginationArrow: React.FC<P> = ({
   );
 };
 
-export default PaginationArrow
+export default PaginationArrow;

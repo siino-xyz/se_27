@@ -1,23 +1,30 @@
-@import 'variables';
-
+@import "variables";
 
 .paginationWrapper {
-  @include noWrapFlex($justify: space-around);
-  margin: 2rem auto;
+  @include noWrapFlex($justify: center);
+  margin: 5rem auto 2rem auto;
   max-width: 500px;
 
+  @include mq(sm) {
+    flex-wrap: wrap;
+  }
+
   .paginationItem {
-    width:50%;
+    // width: 50%;
+    margin: 1rem;
     @include noWrapFlex();
+
+    @include mq(sm) {
+      width: 100%;
+      margin: 1rem auto;
+    }
   }
 }
 
-
-
 .prevPageBtn {
-  @include pagerBtn($direction:"left");
+  @include pagerBtn($direction: "left");
 }
 
 .nextPageBtn {
-  @include pagerBtn($direction: "right")
+  @include pagerBtn($direction: "right");
 }

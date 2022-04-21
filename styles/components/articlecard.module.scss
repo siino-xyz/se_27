@@ -1,37 +1,53 @@
-@import 'variables';
+@import "variables";
+
+.articlesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 
 .cardContainer {
-  border-radius: 0.2rem;
+  border-radius: 1rem;
   margin: 0;
 
   .eyeCatch {
     width: 100%;
     margin: 0 auto;
+
+    .eyeCatchImg {
+      border-radius: 0.5rem 0.5rem 0rem 0rem;
+      @include borderRadius($rt: 0.5rem, $lt: 0.5rem);
+    }
   }
 
   .sumallyWrapper {
-    background-color: $white;
+    background-color: $lightGray;
     color: $black;
     padding: 0.5rem;
     min-height: 150px;
     max-height: 150px;
-    @include noWrapFlex($fd: column, $justify: flex-start ,$align: flex-start);
+    @include borderRadius($rb: 0.5rem, $lb: 0.5rem);
+    @include noWrapFlex(
+      $fd: column,
+      $justify: space-between,
+      $align: flex-start
+    );
 
     .categoryTag {
-        
+      @include categoryTag($fColor: $black);
     }
 
-     .title {
-       color: $black;
-       margin: 0;
-     }
+    .title {
+      color: $black;
+      margin: 0;
+      @include h2Jp();
+      font-size: 1.25rem;
+    }
+
+    .date {
+      @include subtitle-sm-en();
+    }
   }
-}
-
-
-.articlesContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  align-items: center;
-  gap: 20px;
 }

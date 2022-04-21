@@ -9,6 +9,7 @@ import Solution from "../sections/Solution";
 import Flow from "../sections/Flow";
 import Contact from "../sections/Contact";
 import AboutMe from "../sections/AboutMe";
+import LinkButton from "../components/LinkButton";
 
 export default function Home({ articles }) {
   return (
@@ -22,7 +23,18 @@ export default function Home({ articles }) {
           <Flow />
           <Contact />
           <AboutMe />
+
+          <div className={styles.ttlWrapper}>
+            <h2 className={styles.sectionTitle}>
+              Blog
+              <br />
+              <div className={styles.subscriptJp}>お知らせと技術ブログ</div>
+            </h2>
+          </div>
           <ArticleCard articles={articles} />
+          <div className={styles.btnWrapper}>
+            <LinkButton url={"/"} button="記事一覧" />
+          </div>
         </main>
       </div>
     </>

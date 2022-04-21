@@ -1,40 +1,33 @@
-import { client } from "../../libs/client"
-import Image from 'next/image'
-import styles from '../../styles/pages/articles/articles.module.scss'
-import InnerLayout from "../../layouts/InnerLayout"
-import BlogHeader from '../../components/blogHeader'
-import BlogLayout from '../../layouts/BlogLayout'
+import { client } from "../../libs/client";
+import Image from "next/image";
+import styles from "../../styles/pages/articles/articles.module.scss";
+import InnerLayout from "../../layouts/InnerLayout";
+import BlogLayout from "../../layouts/BlogLayout";
+import dayjs from "dayjs";
 
-export default function ArticlesId({ articles ,categories}) {
+export default function ArticlesId({ articles, categories }) {
   return (
     <>
-    <BlogHeader 
-      categories={categories}
-    />
-    <div className={styles.innerWrapper}>
-      <div className={styles.eyeCatch}>
-        <Image
-          src={articles.eye_catch.url}
-          width={944}
-          height={531}
-          layout='intrinsic'
-          alt="eye_catch"
-        />
-      </div>
+      <div className={styles.innerWrapper}>
+        <div className={styles.eyeCatch}>
+          <Image
+            src={articles.eye_catch.url}
+            width={944}
+            height={531}
+            layout="intrinsic"
+            alt="eye_catch"
+          />
+        </div>
 
-      <div className={styles.sumallyWrapper}>
-          <div className={styles.categoryTag}>
-            {articles.categories.name}
-          </div>
+        <div className={styles.sumallyWrapper}>
+          <div className={styles.categoryTag}>{articles.categories.name}</div>
 
-          <h2 className={styles.title}>
-            {articles.title}
-          </h2>
+          <h2 className={styles.title}>{articles.title}</h2>
 
           <div className={styles.date}>
-            {articles.publishedAt}
+            {dayjs(articles.publishedAt).locale("ja").format("YYYY/MM/DD")}
           </div>
-          
+
           <div>
             <div
               dangerouslySetInnerHTML={{
@@ -42,10 +35,10 @@ export default function ArticlesId({ articles ,categories}) {
               }}
             />
           </div>
+        </div>
       </div>
-    </div>
     </>
-  )
+  );
 }
 
 ArticlesId.getLayout = function getLayout(articlesid) {
@@ -53,14 +46,12 @@ ArticlesId.getLayout = function getLayout(articlesid) {
     <BlogLayout>
       <InnerLayout>{articlesid}</InnerLayout>
     </BlogLayout>
-  )
-}
-
+  );
+};
 
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "articles" });
-  
-  
+
   const paths = data.contents.map((content) => `/articles/${content.id}`);
   return { paths, fallback: false };
 };
@@ -68,14 +59,12 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const id = context.params.id;
   const data = await client.get({ endpoint: "articles", contentId: id });
-  const categoryData = await client.get({ endpoint: 'categories'});
-  
+  const categoryData = await client.get({ endpoint: "categories" });
 
   return {
     props: {
       articles: data,
       categories: categoryData.contents,
     },
-  }
-
-}
+  };
+};

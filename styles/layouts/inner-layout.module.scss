@@ -1,14 +1,14 @@
-@import 'variables';
+@import "variables";
 
 .innerLayout {
   max-width: 1100px;
-  width:100%;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem 0;
   background-color: rgba(18, 18, 18, 0.97);
   backdrop-filter: blur(2px);
 
-  @include mq(sm) {
-    padding: 1.5rem;
+  @include mq(lg) {
+    padding: 0 1.5rem;
   }
 }

@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 .firstViewContainer {
   height: 100vh;
@@ -7,7 +7,7 @@
   left: 0;
   width: 100%;
   max-width: 100%;
-  overFlow: hidden;
+  overflow: hidden;
   margin: auto;
   background: $black;
   user-select: none;
@@ -16,5 +16,12 @@
   .firstviewImage {
     margin: auto;
     padding-top: 5rem;
+  }
+
+  @include mq(sm) {
+    padding: 0 3rem;
+    .firstviewImage {
+      padding-top: 0;
+    }
   }
 }

@@ -1,3 +1,22 @@
-@import 'variables';
+@import "variables";
 
+.btnWrapper {
+  text-align: center;
+  margin: 2rem auto;
+}
 
+.ttlWrapper {
+  display: block;
+  .sectionTitle {
+    @include sectionTitle();
+    .subscriptJp {
+      @include subscriptJp();
+    }
+  }
+  @include mq(sm) {
+    grid-template-columns: 1fr;
+  }
+}
+.subTitle {
+  @include subTitle();
+}

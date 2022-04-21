@@ -1,8 +1,7 @@
-@import 'variables';
-
+@import "variables";
 
 .innerWrapper {
-  margin: 7rem auto 5rem auto;
+  margin: 1rem auto 1rem auto;
   max-width: 900px;
 
   @include mq(lg) {
@@ -13,13 +12,13 @@
   }
 
   .eyeCatch {
-    width:100%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
   }
 
   .sumallyWrapper {
-    max-width:810px;
+    max-width: 810px;
     width: 100%;
     margin: 1rem auto;
 
@@ -35,12 +34,7 @@
     }
 
     .categoryTag {
-      background: $white;
-      color: $black;
-      display: inline-block;
-      padding: 0rem 0.5rem;
-      border-radius: 0.2rem;
-      @include subtitle-sm-en();
+      @include categoryTag();
     }
 
     .date {

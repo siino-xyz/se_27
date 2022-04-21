@@ -1,5 +1,4 @@
-@import 'variables';
-
+@import "variables";
 
 .linkBtnWrapper {
   margin: 0 auto;
@@ -8,7 +7,6 @@
   cursor: pointer;
   display: inline-block;
   color: $accent;
-  padding: 1rem;
+  padding: 0.7rem 1rem;
   letter-spacing: 0.1rem;
 }
-
