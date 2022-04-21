@@ -18,71 +18,41 @@
 
   .sectionInner {
     @include sectionInner();
-
     .twoColumns {
-      margin: 2rem auto;
+      margin: 0 auto 2rem auto;
       display: grid;
-      gap: 0px;
       align-items: center;
+      grid-template-columns: 1fr minmax(50%, 462px);
+      justify-content: space-between;
+      gap: 50px;
 
       @include mq(lg) {
-        margin: 0rem auto 4rem auto;
+        margin: 1rem auto 4rem auto;
         grid-template-columns: 1fr;
         gap: 30px;
       }
 
-      @include mq(sm) {
-        gap: 53px;
+      // @include mq(sm) {
+      //   // gap: 30px;
+      // }
+
+      .imageWrapper {
+        text-align: center;
       }
 
       .scrollTextWrapper {
         position: relative;
-        ::after {
-          position: absolute;
-          top: -35px;
-          left: 0;
-          content: "";
-          color: $black;
-          background-color: $white;
-          padding: 0.2rem 0.5rem;
-          font-size: 1.2rem;
-          @include enfonts();
-        }
-
         @include mq(sm) {
-          padding: 0 1rem;
-
-          ::after {
-            left: 4.8%;
-            top: -36px;
-          }
+          padding: 0 0.5rem;
         }
       }
     }
 
-    .twoColumns:nth-child(1) {
-      grid-template-columns: 1fr minmax(50%, 580px);
-
-      @include mq(lg) {
-        @include noWrapFlex($fd: column-reverse);
-      }
-
-      .scrollTextWrapper {
-        ::after {
-          content: "Performance";
-        }
-      }
-    }
-    .twoColumns:nth-child(2) {
-      grid-template-columns: minmax(50%, 580px) 1fr;
-
-      @include mq(lg) {
-        grid-template-columns: 1fr;
-      }
-
-      .scrollTextWrapper {
-        ::after {
-          content: "Security";
+    @include mq(lg) {
+      .twoColumns:nth-child(2) {
+        .imageWrapper {
+          grid-row: 1;
+          grid-column: 1;
         }
       }
     }

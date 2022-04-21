@@ -16,6 +16,9 @@ export default function Motivation() {
 
       <div className={styles.sectionInner}>
         <div>
+          <div className={styles.ttlWrapper}>
+            <h3 className={styles.subTitle}>パフォーマンスのトラブル</h3>
+          </div>
           <div className={styles.twoColumns}>
             <div className={styles.scrollTextWrapper}>
               <div className={styles.scrollText}>
@@ -25,27 +28,29 @@ export default function Motivation() {
               </div>
             </div>
 
-            <div>
+            <div className={styles.imageWrapper}>
               <Image
-                src="/top/top-performance.png"
-                width={580}
-                height={580}
+                src="/top/lazyphone.png"
+                width={462}
+                height={463}
                 layout="intrinsic"
                 alt="top-largeTypo"
               />
             </div>
           </div>
+          <div className={styles.ttlWrapper}>
+            <h3 className={styles.subTitle}>セキュリティのトラブル</h3>
+          </div>
           <div className={styles.twoColumns}>
-            <div>
+            <div className={styles.imageWrapper}>
               <Image
-                src="/top/top-security.png"
-                width={580}
-                height={580}
+                src="/top/cautionpc.png"
+                width={524}
+                height={452}
                 layout="intrinsic"
                 alt="top-largeTypo"
               />
             </div>
-
             <div className={styles.scrollTextWrapper}>
               <div className={styles.scrollText}>
                 <p>
