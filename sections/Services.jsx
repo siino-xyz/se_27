@@ -8,7 +8,7 @@ export default function Services() {
         <h2 className={styles.sectionTitle}>
           Services
           <br />
-          <div className={styles.subscriptJp}>サービス</div>
+          <div className={styles.subscriptJp}>SE-27のサービス</div>
         </h2>
       </div>
 
