@@ -1,10 +1,8 @@
-@import 'variables';
-
-
+@import "variables";
 
 .sectionContainer {
   @include sectionContainer();
-  
+
   .ttlWrapper {
     display: block;
     .sectionTitle {
@@ -18,7 +16,6 @@
     @include subTitle();
   }
 
-
   .sectionInner {
     @include sectionInner();
     margin-top: 2rem;
@@ -31,24 +28,23 @@
 
       @include mq(lg) {
         grid-template-columns: 1fr;
-
+        gap: 0;
         > div {
           margin: 0 auto;
         }
       }
     }
-  
-   .noWrapFlex {
-     @include noWrapFlex($fd: column , $align: flex-end);
-    //  text-align: right;
-    > div { 
-      margin: 0.8rem 0;
-    }
+
+    .noWrapFlex {
+      @include noWrapFlex($fd: column, $align: flex-end);
+      //  text-align: right;
+      > div {
+        margin: 0.8rem 0;
+      }
 
       @include mq(lg) {
-        @include noWrapFlex($fd: column , $align: center);
-
+        @include noWrapFlex($fd: column, $align: center);
       }
+    }
   }
- }
 }

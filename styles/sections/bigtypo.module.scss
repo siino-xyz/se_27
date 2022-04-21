@@ -1,8 +1,19 @@
-@import 'variables';
+@import "variables";
 
 .sectionContainer {
   @include sectionContainer();
   padding-bottom: 5rem;
+  padding-top: 3rem;
+
+  @include mq(sm) {
+    padding-bottom: 0;
+
+    .arrow {
+      transform: rotate(90deg);
+      padding: 5rem;
+      margin: 0 auto;
+    }
+  }
 
   .twoColumns {
     display: grid;

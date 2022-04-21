@@ -1,9 +1,8 @@
-@import 'variables';
-
+@import "variables";
 
 .sectionContainer {
   @include sectionContainer();
-  
+
   .ttlWrapper {
     display: block;
     .sectionTitle {
@@ -18,7 +17,8 @@
   }
 
   .sectionInner {
-    @include sectionInner(); 
+    @include sectionInner();
+
     .twoColumns {
       display: grid;
       gap: 50px;
@@ -26,10 +26,20 @@
       align-items: center;
 
       @include mq(sm) {
+        flex-direction: column-reverse;
+        .image {
+          text-align: center;
+          grid-row: 1;
+          grid-column: 1;
+        }
+
+        p {
+          margin: 1rem auto 2rem auto;
+        }
+
         grid-template-columns: 1fr;
         gap: 0px;
       }
     }
   }
-
-} 
+}

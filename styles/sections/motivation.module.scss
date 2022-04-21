@@ -26,8 +26,9 @@
       align-items: center;
 
       @include mq(lg) {
+        margin: 4rem auto;
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 30px;
       }
 
       .scrollTextWrapper {

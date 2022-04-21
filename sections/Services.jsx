@@ -13,23 +13,21 @@ export default function Services() {
       </div>
 
       <div className={styles.sectionInner}>
+        <div className={styles.ttlWrapper}>
+          <h3 className={styles.subTitle}>Jamstackを用いたウェブサイト開発</h3>
+        </div>
         <div className={styles.twoColumns}>
-          <div className={styles.sectionItem}>
-            <div className={styles.ttlWrapper}>
-              <h3 className={styles.subTitle}>
-                Jamstackを用いたウェブサイト開発
-              </h3>
-            </div>
+          <div>
             <p className={styles.paragraph}>
               SE-27ではJamstackアーキテクチャを用いた、高速かつ安全性の高いウェブサイト開発を専門としています。単に速いサイトを作るだけではありません。運用スタイルや規模感に合わせて柔軟に最も適切な構築方法のご提案からスタートします。
             </p>
           </div>
 
-          <div className={styles.sectionItem}>
+          <div className={styles.image}>
             <Image
-              src="/top/top-code.png"
+              src="/top/top-design.svg"
               width={300}
-              height={300}
+              height={200}
               layout="intrinsic"
               alt="codeTag_Image"
             />
@@ -38,21 +36,21 @@ export default function Services() {
       </div>
 
       <div className={styles.sectionInner}>
+        <div className={styles.ttlWrapper}>
+          <h3 className={styles.subTitle}>WEBデザイン</h3>
+        </div>
         <div className={styles.twoColumns}>
           <div>
-            <div className={styles.ttlWrapper}>
-              <h3 className={styles.subTitle}>WEBデザイン</h3>
-            </div>
             <p>
               SE-27ではJamstackアーキテクチャを用いた、高速かつ安全性の高いウェブサイト開発を専門としています。単に速いサイトを作るだけではありません。運用スタイルや規模感に合わせて柔軟に最も適切な構築方法のご提案からスタートします。
             </p>
           </div>
 
-          <div>
+          <div className={styles.image}>
             <Image
-              src="/top/top-design.png"
+              src="/top/top-code.svg"
               width={300}
-              height={300}
+              height={200}
               layout="intrinsic"
               alt="codeTag_Image"
             />

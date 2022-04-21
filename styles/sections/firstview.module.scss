@@ -19,9 +19,9 @@
   }
 
   @include mq(sm) {
-    padding: 0 3rem;
+    padding: 0 4rem;
     .firstviewImage {
-      padding-top: 0;
+      padding-top: 4rem;
     }
   }
 }
