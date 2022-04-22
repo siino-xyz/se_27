@@ -73,6 +73,7 @@ $deepGray: #4a4a4a;
   @include jpfonts();
   font-size: 0.8rem;
   margin: 0;
+  font-weight: 400;
 }
 @mixin subtitle-sm-en() {
   @include enfonts();
@@ -93,38 +94,35 @@ $deepGray: #4a4a4a;
 //components
 @mixin sectionTitle() {
   @include h2En();
-  background: $white;
-  color: $black;
-  padding: 0.5rem 0.6rem 0 0.6rem;
+  // background: $white;
+  padding: 0.6rem 0.8rem 0 0.8rem;
   text-align: left;
-  line-height: 1.6rem;
+  line-height: 2rem;
   display: inline-block !important;
   border-radius: 0.1rem;
+  border: 1px dashed $main;
 }
 @mixin sectionTitleJp() {
-  @include h2Jp();
-  background: $white;
-  color: $black;
-  padding: 0.5rem 0.6rem;
-  text-align: left;
-  line-height: 1.6rem;
-  display: inline-block !important;
-  border-radius: 0.1rem;
-  font-weight: bold;
-  letter-spacing: 0rem;
-  margin: 0.8rem 0;
+  font-size: 2.3rem;
+  border: 1px dashed $main;
+  color: $white;
+  display: inline-block;
+  padding: 1rem;
+  line-height: 2.7rem;
 }
 
 @mixin subscriptJp() {
   @include subtitle-sm();
-  color: $black;
+  color: $white;
 }
 
 @mixin subTitle() {
   @include h3Jp();
-  background: $white;
-  color: $black;
-  padding: 0.1rem 0.3rem;
+  // background: $white;
+  // color: $black;
+  border: 1px dashed $main;
+
+  padding: 0.2rem 0.5rem;
   display: inline-block !important;
   border-radius: 0.1rem;
   text-align: left;

@@ -34,24 +34,24 @@ const JamstackContent = () => {
               alt="jamstackLogo"
             />
           </div>
-          <div className="innerTopic">
-            <h3>ウェブページを事前に生成するため、高速</h3>
+          <div className={styles.innerTopic}>
+            <h3>特徴１.ウェブページを事前に生成するため、高速</h3>
             <p>
               SE-27ではJamstackアーキテクチャを用いた、高速かつ安全性の高いウェブサイト開発を専門としています。
               単に速いサイトを作るだけではありません。運用スタイルや規模感に合わせて柔軟に
               最も適切な構築方法のご提案からスタートします。
             </p>
           </div>
-          <div className="innerTopic">
-            <h3>CDNを用いたサーバレスホスティング</h3>
+          <div className={styles.innerTopic}>
+            <h3>特徴２.CDNを用いたサーバレスホスティング</h3>
             <p>
               SE-27ではJamstackアーキテクチャを用いた、高速かつ安全性の高いウェブサイト開発を専門としています。
               単に速いサイトを作るだけではありません。運用スタイルや規模感に合わせて柔軟に
               最も適切な構築方法のご提案からスタートします。
             </p>
           </div>
-          <div className="innerTopic">
-            <h3>ヘッドレスCMSを用いればコンテンツ管理も可能</h3>
+          <div className={styles.innerTopic}>
+            <h3>特徴３.ヘッドレスCMSを用いればコンテンツ管理も可能</h3>
             <p>
               SE-27ではJamstackアーキテクチャを用いた、高速かつ安全性の高いウェブサイト開発を専門としています。
               単に速いサイトを作るだけではありません。運用スタイルや規模感に合わせて柔軟に

@@ -49,11 +49,12 @@
 
         .contactBtn {
           padding: 0.5rem 1rem;
-          background-color: $main;
-          border-radius: 0.2rem;
+          border-radius: 0.1rem;
           @include h4En($fz: 1rem);
           letter-spacing: 0.1rem;
           font-weight: 500;
+          border: 1px solid $main;
+          color: $main;
         }
       }
     }
