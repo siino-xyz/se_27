@@ -11,7 +11,7 @@ export const CategoryId = ({ articles, categories }) => {
       <>
         <div className={styles.noArticles}>
           <div>このカテゴリにはまだ記事がありません。ゴメンネ。</div>
-          <LinkButton url={""} button="ブログ一覧へもどる" />
+          <LinkButton url={"/blog"} button="ブログ一覧へもどる" />
         </div>
       </>
     );
