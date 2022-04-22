@@ -101,6 +101,19 @@ $deepGray: #4a4a4a;
   display: inline-block !important;
   border-radius: 0.1rem;
 }
+@mixin sectionTitleJp() {
+  @include h2Jp();
+  background: $white;
+  color: $black;
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  line-height: 1.6rem;
+  display: inline-block !important;
+  border-radius: 0.1rem;
+  font-weight: bold;
+  letter-spacing: 0rem;
+  margin: 0.8rem 0;
+}
 
 @mixin subscriptJp() {
   @include subtitle-sm();
@@ -111,12 +124,14 @@ $deepGray: #4a4a4a;
   @include h3Jp();
   background: $white;
   color: $black;
-  padding: 0.3rem 0.5rem;
+  padding: 0.1rem 0.3rem;
   display: inline-block !important;
-  border-radius: 0.2rem;
+  border-radius: 0.1rem;
   text-align: left;
-  // font-weight: 700 !important;
+  font-weight: 700;
+  margin: 0.5rem 0;
 }
+
 @mixin subTitle-en() {
   @include h3En();
   background: $white;
@@ -129,6 +144,13 @@ $deepGray: #4a4a4a;
 }
 
 //layouts
+@mixin responsiveGrid() {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include mq(sm) {
+    grid-template-columns: 1fr;
+  }
+}
 @mixin wrapFlex($fd: row, $justify: center, $align: center) {
   display: flex;
   flex-wrap: wrap;

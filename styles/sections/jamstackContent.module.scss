@@ -1,0 +1,67 @@
+@import "variables";
+
+.sectionContainer {
+  @include sectionContainer();
+
+  .ttlWrapper {
+    display: block;
+    .sectionTitle {
+      @include sectionTitleJp();
+    }
+  }
+  .subTitle {
+    @include subTitle();
+  }
+  .sectionInner {
+    margin: 5rem auto;
+  }
+
+  .summary {
+    @include responsiveGrid();
+    margin: 1rem auto 2rem auto;
+  }
+  .diff {
+    margin: 5rem auto;
+
+    .diffContent {
+      @include responsiveGrid();
+      margin: 2rem auto;
+    }
+  }
+  .shouldbe {
+    .shouldbeContent {
+      margin: 2rem auto 5rem auto;
+      @include responsiveGrid();
+      justify-content: space-around;
+      .imageWrapper {
+        text-align: center;
+
+        @include mq(sm) {
+          width: 75%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .melitDemelitContent {
+    @include noWrapFlex($fd: column, $align: flex-start);
+
+    // @include mq(sm) {
+    //   align-items: center;
+    // }
+  }
+
+  .cta {
+    @include responsiveGrid();
+    justify-content: space-between;
+
+    > div {
+      @include wrapFlex($fd: row);
+    }
+  }
+
+  h3 {
+    @include subTitle();
+  }
+}
