@@ -22,7 +22,9 @@
     "pages/contactform.tsx",
     "components/blogHeader.jsx",
     "pages/articles/page/[id].js",
-    "components/Header.jsx"
+    "components/Header.jsx",
+    "pages/_app.js",
+    "pages/OgpTest.jsx"
   ],
   "exclude": ["node_modules"]
 }

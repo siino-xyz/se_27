@@ -5,10 +5,20 @@ import InnerLayout from "../../layouts/InnerLayout";
 import BlogLayout from "../../layouts/BlogLayout";
 import dayjs from "dayjs";
 import ShareButtons from "../../components/ShareButtons";
+import CustomImage from "../../components/CustomImage";
+import NextOgp from "../../components/NextOgp";
 
 export default function ArticlesId({ articles, categories }) {
+  const { ogImageUrl } = CustomImage(articles.ogp_image.url, articles.title);
   return (
     <>
+      <NextOgp
+        pagetitle={articles.title}
+        pagedescription={articles.title}
+        pagepath="articles"
+        postimg={ogImageUrl}
+      />
+
       <div className={styles.innerWrapper}>
         <div className={styles.eyeCatch}>
           <Image

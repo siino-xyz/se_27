@@ -122,14 +122,14 @@ export default function Header() {
               </a>
             </Link>
           </li>
-          <li>
+          <li onClick={toggle}>
             <Link href="/flow">
               <a>
                 <p className={styles.menuText}>Flow/Q&A</p>
               </a>
             </Link>
           </li>
-          <li>
+          <li onClick={toggle}>
             <Link href="/jamstack">
               <a>
                 <p className={styles.menuText}>What&apos;s Jamstack?</p>
@@ -144,7 +144,7 @@ export default function Header() {
             </Link>
           </li>
 
-          <li>
+          <li onClick={toggle}>
             <Link href="/contactform">
               <a>
                 <p className={styles.menuText}>Contact</p>

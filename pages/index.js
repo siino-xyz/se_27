@@ -10,13 +10,13 @@ import Flow from "../sections/Flow";
 import Contact from "../sections/Contact";
 import AboutMe from "../sections/AboutMe";
 import LinkButton from "../components/LinkButton";
-
 export default function Home({ articles }) {
   return (
     <>
       <div className={styles.container}>
         <main>
           <Bigtypo />
+
           <Services />
           <Motivation />
           <Solution />
@@ -59,7 +59,6 @@ export const getStaticProps = async () => {
   )
     .then((res) => res.json())
     .catch(() => null);
-
   return {
     props: {
       articles: data.contents,
