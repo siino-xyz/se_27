@@ -39,7 +39,7 @@
     > ul {
       @include noWrapFlex($justify: space-around, $align: center);
       > li {
-        margin: 0 2rem;
+        margin: 0 1rem;
 
         .menuItem {
           transition: all 0.2s;

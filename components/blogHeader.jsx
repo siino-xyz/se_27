@@ -77,6 +77,12 @@ export default function Header() {
                     <a className={styles.menuItem}>Flow/Q&A</a>
                   </Link>
                 </li>
+
+                <li>
+                  <Link href="/jamstack" passHref>
+                    <a className={styles.menuItem}>What&apos;s Jamstack?</a>
+                  </Link>
+                </li>
                 <li>
                   <Link href="/blog" passHref>
                     <a className={styles.menuItem}>Blog</a>
@@ -117,9 +123,16 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/flow">
               <a>
                 <p className={styles.menuText}>Flow/Q&A</p>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/jamstack">
+              <a>
+                <p className={styles.menuText}>What&apos;s Jamstack?</p>
               </a>
             </Link>
           </li>

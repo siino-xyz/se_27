@@ -34,7 +34,7 @@ export default function Solution() {
               </p>
             </div>
             <div>
-              <LinkButton button={"Jamstackについて知る"} />
+              <LinkButton url={"/jamstack"} button="Jamstackについて知る" />
             </div>
           </div>
         </div>

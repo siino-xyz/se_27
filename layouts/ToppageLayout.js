@@ -1,18 +1,22 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import FirstView from '../sections/FirstView'
-import styles from '../styles/layouts/toppage-layout.module.scss'
+import FirstView from "../sections/FirstView";
+import styles from "../styles/layouts/toppage-layout.module.scss";
+import { pageFadein } from "../hooks/fadeIn";
 
-
-export default function ToppageLayout({children}) {
+export default function ToppageLayout({ children }) {
+  const { fadeTargetRef, domId } = pageFadein();
   return (
-    <div className={styles.toppageLayout}>
+    <div
+      className={styles.toppageLayout}
+      ref={fadeTargetRef}
+      id={domId}
+      style={{ opacity: 0 }}
+    >
       <Header />
       <FirstView />
-        <main>
-          {children}
-        </main>
+      <main>{children}</main>
       <Footer />
     </div>
-  )
+  );
 }
