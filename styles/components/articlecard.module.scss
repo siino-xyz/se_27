@@ -6,29 +6,34 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  margin: 2rem auto;
 }
 
 .cardContainer {
-  border-radius: 1rem;
   margin: 0;
+  border: 1px solid $white;
+  transition: all 0.2s;
 
   .eyeCatch {
     width: 100%;
     margin: 0 auto;
+    transition: all 0.2s;
 
     .eyeCatchImg {
       border-radius: 0.5rem 0.5rem 0rem 0rem;
-      @include borderRadius($rt: 0.5rem, $lt: 0.5rem);
+      @include borderRadius($rt: 0.1rem, $lt: 0.1rem);
     }
   }
 
   .sumallyWrapper {
-    background-color: $lightGray;
-    color: $black;
+    background-color: $black;
+    border-top: 1px solid $white;
+    color: $white;
     padding: 0.5rem;
     min-height: 150px;
     max-height: 150px;
-    @include borderRadius($rb: 0.5rem, $lb: 0.5rem);
+
+    @include borderRadius($rb: 0.1rem, $lb: 0.1rem);
     @include noWrapFlex(
       $fd: column,
       $justify: space-between,
@@ -36,14 +41,19 @@
     );
 
     .categoryTag {
-      @include categoryTag($fColor: $black);
+      @include categoryTag();
     }
 
     .title {
-      color: $black;
-      margin: 0;
+      color: $white;
+      margin: 0.5rem 0;
       @include h2Jp();
       font-size: 1.25rem;
+      transition: all 0.2s;
+
+      &:hover {
+        color: $main;
+      }
     }
 
     .date {

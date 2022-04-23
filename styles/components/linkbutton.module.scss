@@ -9,4 +9,9 @@
   color: $accent;
   padding: 0.7rem 1rem;
   letter-spacing: 0.1rem;
+  transition: all 0.2s;
+
+  &:hover {
+    border-style: dashed;
+  }
 }

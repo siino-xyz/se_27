@@ -21,6 +21,7 @@
 
   .sectionInner {
     @include sectionInner();
+    margin: 1rem auto 4rem auto;
 
     .twoColumns {
       display: grid;

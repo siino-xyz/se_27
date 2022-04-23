@@ -26,13 +26,15 @@ const JamstackContent = () => {
               単に速いサイトを作るだけではありません。運用スタイルや規模感に合わせて柔軟に
               最も適切な構築方法のご提案からスタートします。
             </p>
-            <Image
-              src="/jamstack/jamstackLogo.svg"
-              width={383}
-              height={129}
-              layout="intrinsic"
-              alt="jamstackLogo"
-            />
+            <div className={styles.jamstackLogo}>
+              <Image
+                src="/jamstack/jamstackLogo.svg"
+                width={383}
+                height={129}
+                layout="intrinsic"
+                alt="jamstackLogo"
+              />
+            </div>
           </div>
           <div className={styles.innerTopic}>
             <h3>特徴１.ウェブページを事前に生成するため、高速</h3>

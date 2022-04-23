@@ -3,6 +3,10 @@
 .sectionContainer {
   @include sectionContainer();
 
+  @include mq(sm) {
+    padding-top: 8rem;
+  }
+
   .ttlWrapper {
     display: block;
     .sectionTitle {
@@ -20,6 +24,11 @@
     margin: 1rem auto 4rem auto;
   }
 
+  .jamstackLogo {
+    @include mq(sm) {
+      padding: 0 2rem;
+    }
+  }
   .innerTopic {
     margin-top: 2rem;
   }

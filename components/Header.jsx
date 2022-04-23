@@ -36,6 +36,7 @@ export default function Header() {
           <div className={styles.humburger}>
             <span></span>
             <span></span>
+            <span></span>
           </div>
         </button>
       </div>
@@ -106,21 +107,21 @@ export default function Header() {
           <li>
             <Link href="http://localhost:3000/#services">
               <a>
-                <p className={styles.mainTitle}>Services</p>
+                <p className={styles.menuText}>Services</p>
               </a>
             </Link>
           </li>
           <li>
             <Link href="/">
               <a>
-                <p className={styles.mainTitle}>Flow/Q&A</p>
+                <p className={styles.menuText}>Flow/Q&A</p>
               </a>
             </Link>
           </li>
           <li>
             <Link href="/blog">
               <a target="_blank" rel="noopener">
-                <p className={styles.mainTitle}>Blog</p>
+                <p className={styles.menuText}>Blog</p>
               </a>
             </Link>
           </li>
@@ -128,7 +129,7 @@ export default function Header() {
           <li>
             <Link href="/contactform">
               <a>
-                <p className={styles.mainTitle}>Contact</p>
+                <p className={styles.menuText}>Contact</p>
               </a>
             </Link>
           </li>

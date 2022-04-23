@@ -2,7 +2,7 @@
 
 .categoriesContainer {
   max-width: 500px;
-  margin: 3rem auto;
+  margin: 0.5rem auto;
   color: $white;
 }
 
@@ -19,7 +19,7 @@
       padding: 1rem;
       color: $white;
       transition: all 0.2s;
-      border-radius: 0.3rem;
+      border-radius: 0.1rem;
 
       &:hover {
         border-color: $accent;

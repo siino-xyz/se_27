@@ -18,10 +18,10 @@ export const CategoryId = ({ articles, categories }) => {
   }
   return (
     <div className={styles.container}>
+      <Categories categories={categories} />
       <div className={styles.ttlWrapper}>
         <h2 className={styles.sectionTitle}>a{}</h2>
       </div>
-      <Categories categories={categories} />
       <ArticleCard articles={articles} />
     </div>
   );

@@ -16,6 +16,7 @@ export const ArticlePageId = ({
   return (
     <>
       <div className={styles.container}>
+        <Categories categories={categories} />
         <div className={styles.ttlWrapper}>
           <h2 className={styles.sectionTitle}>
             Blog
@@ -23,7 +24,6 @@ export const ArticlePageId = ({
             <div className={styles.subscriptJp}>記事一覧</div>
           </h2>
         </div>
-        <Categories categories={categories} />
 
         <ArticleCard articles={articles} />
         <PaginationArrow
