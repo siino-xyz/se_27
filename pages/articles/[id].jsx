@@ -1,67 +1,62 @@
 import { client } from "../../libs/client";
 import Image from "next/image";
 import styles from "../../styles/pages/articles/articles.module.scss";
-import InnerLayout from "../../layouts/InnerLayout";
-import BlogLayout from "../../layouts/BlogLayout";
 import dayjs from "dayjs";
 import ShareButtons from "../../components/ShareButtons";
 import CustomImage from "../../components/CustomImage";
 import NextOgp from "../../components/NextOgp";
-// import ArticleHeader from "../../layouts/ArticleHeader";
-
+import Breadcrumb from "../../components/Breadcrumb";
+import BlogHeader from "../../components/blogHeader";
 export default function ArticlesId({ articles, categories }) {
   const { ogImageUrl } = CustomImage(articles.ogp_image.url, articles.title);
+
   return (
     <>
       <NextOgp
         pagetitle={articles.title}
-        pagedescription={articles.title}
+        pagedescription={articles.description}
         pagepath={`articles/${articles.id}`}
         postimg={ogImageUrl}
       />
 
-      <div className={styles.innerWrapper}>
-        <div className={styles.eyeCatch}>
-          <Image
-            src={articles.eye_catch.url}
-            width={944}
-            height={531}
-            layout="intrinsic"
-            alt="eye_catch"
-          />
-        </div>
-
-        <div className={styles.sumallyWrapper}>
-          <div className={styles.categoryTag}>{articles.categories.name}</div>
-
-          <h2 className={styles.title}>{articles.title}</h2>
-
-          <div className={styles.date}>
-            {dayjs(articles.publishedAt).locale("ja").format("YYYY/MM/DD")}
-          </div>
-
-          <div>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: `${articles.body}`,
-              }}
+      <BlogHeader />
+      <div className={styles.innerLayout}>
+        <div className={styles.innerWrapper}>
+          <Breadcrumb articles={articles} categories={categories} />
+          <div className={styles.eyeCatch}>
+            <Image
+              src={articles.eye_catch.url}
+              width={944}
+              height={531}
+              layout="intrinsic"
+              alt="eye_catch"
             />
           </div>
 
-          <ShareButtons articles={articles} />
+          <div className={styles.sumallyWrapper}>
+            <div className={styles.categoryTag}>{articles.categories.name}</div>
+
+            <h2 className={styles.title}>{articles.title}</h2>
+
+            <div className={styles.date}>
+              {dayjs(articles.publishedAt).locale("ja").format("YYYY/MM/DD")}
+            </div>
+
+            <div>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: `${articles.body}`,
+                }}
+              />
+            </div>
+
+            <ShareButtons articles={articles} />
+          </div>
         </div>
       </div>
     </>
   );
 }
-
-ArticlesId.getLayout = function getLayout(articlesid) {
-  return (
-    <BlogLayout>
-      <InnerLayout>{articlesid}</InnerLayout>
-    </BlogLayout>
-  );
-};
 
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "articles" });

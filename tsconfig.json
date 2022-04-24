@@ -23,6 +23,7 @@
     "components/blogHeader.jsx",
     "pages/articles/page/[id].js",
     "components/Header.jsx",
+    "components/Breadcrumb.jsx",
     "pages/_app.js",
     "pages/OgpTest.jsx"
   ],

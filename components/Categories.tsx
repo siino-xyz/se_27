@@ -15,7 +15,7 @@ export const Categories = ({ categories }: CategoriesProps) => {
           {categories.map((categories) => {
             return (
               <div className={styles.categoryItem} key={categories.id}>
-                <Link href={`/category/${categories.id}`}>
+                <Link href={`/category/page/${categories.id}`}>
                   <a>
                     <div className={styles.categoryName}>{categories.name}</div>
                   </a>

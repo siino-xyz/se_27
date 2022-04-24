@@ -1,0 +1,22 @@
+@import "variables";
+
+.breadcrumbContainer {
+  @include noWrapFlex($justify: flex-start, $align: flex-start);
+  margin: 0 auto 0.5rem auto;
+
+  a > div {
+    transition: all 0.2s;
+  }
+  a > div:hover {
+    color: $main;
+  }
+
+  .torightArrow {
+    line-height: 1.4rem;
+  }
+  .breadcrumbItem {
+    padding: 0 0.2rem;
+    @include subtitle-sm();
+    color: $lightGray;
+  }
+}

@@ -1,10 +1,11 @@
-import { client } from "../../libs/client";
-import styles from "../../styles/pages/blog.module.scss";
-import ArticleCard from "../../components/ArticleCard";
-import InnerLayout from "../../layouts/InnerLayout";
-import Categories from "../../components/Categories";
-import BlogLayout from "../../layouts/BlogLayout";
-import LinkButton from "../../components/LinkButton";
+import { client } from "../../../libs/client";
+import styles from "../../../styles/pages/blog.module.scss";
+import ArticleCard from "../../../components/ArticleCard";
+import InnerLayout from "../../../layouts/InnerLayout";
+import Categories from "../../../components/Categories";
+import BlogLayout from "../../../layouts/BlogLayout";
+import LinkButton from "../../../components/LinkButton";
+import Breadcrumb from "../../../components/Breadcrumb";
 export const CategoryId = ({ articles, categories }) => {
   if (articles.length === 0) {
     return (
@@ -18,6 +19,7 @@ export const CategoryId = ({ articles, categories }) => {
   }
   return (
     <div className={styles.container}>
+      <Breadcrumb articles={articles} categories={categories} />
       <Categories categories={categories} />
       <div className={styles.ttlWrapper}>
         <h2 className={styles.sectionTitle}>a{}</h2>
@@ -40,7 +42,7 @@ CategoryId.getLayout = function getLayout(categoryid) {
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "categories" });
 
-  const paths = data.contents.map((content) => `/category/${content.id}`);
+  const paths = data.contents.map((content) => `/category/page/${content.id}`);
   return { paths, fallback: false };
 };
 
