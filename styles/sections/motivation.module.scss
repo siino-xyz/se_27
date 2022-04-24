@@ -38,12 +38,96 @@
 
       .imageWrapper {
         text-align: center;
+        z-index: -5;
       }
 
       .scrollTextWrapper {
         position: relative;
+
+        //テキスト→画像を指す棒
+        &::before {
+          content: "";
+          position: absolute;
+          top: 40%;
+          right: -55%;
+          width: 60%;
+          height: 2px;
+          background-color: $white;
+          z-index: -1;
+        }
+
+        @include mq(lg) {
+          &::before {
+            transform: rotate(90deg);
+            top: 10%;
+            // right: 50%;
+            left: 20%;
+          }
+        }
+
+        //テキスト→画像を指す棒の先端
+        &::after {
+          content: "";
+          position: absolute;
+          top: 38.82%;
+          right: -55%;
+          width: 2.3%;
+          height: 3%;
+          background-color: $white;
+          z-index: -1;
+          transform: rotate(45deg);
+        }
+
+        @include mq(lg) {
+          &::after {
+            // top: -44%;
+            // width: 1.7%;
+            // left: 49.1%;
+            display: none;
+          }
+        }
+
         @include mq(sm) {
           padding: 0 0.5rem;
+        }
+      }
+      .scrollTextWrapper:nth-child(2) {
+        //テキスト→画像を指す棒
+        &::before {
+          right: 0%;
+          left: -30%;
+          top: 60%;
+          width: 53%;
+        }
+        @include mq(lg) {
+          &::before {
+            transform: rotate(90deg);
+            top: 13%;
+            // right: 50%;
+            left: 24%;
+          }
+        }
+
+        //テキスト→画像を指す棒の先端
+        &::after {
+          content: "";
+          position: absolute;
+          top: 58.79%;
+          left: -30%;
+          width: 2.3%;
+          height: 3%;
+          background-color: $white;
+          z-index: -1;
+          transform: rotate(45deg);
+        }
+
+        @include mq(lg) {
+          &::after {
+            // top: -35%;
+            // width: 1.7%;
+            // left: 49.6%;
+            display: none;
+          }
         }
       }
     }
@@ -58,12 +142,26 @@
     }
 
     .scrollText {
-      border: 2px solid $white;
+      border: 1.5px solid $white;
       border-radius: 0.1rem;
       box-sizing: border-box;
       height: 400px;
-      overflow: auto;
+      overflow-y: scroll;
       padding: 0.8rem;
+      background-color: $black;
+
+      //scrollbar customization
+
+      //for Chrome,Edge,Safari
+      &::-webkit-scrollbar {
+        background-color: $lightGray;
+        width: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $deepGray;
+      }
+      //for Firefox:   $thumbColor $trackColor
+      scrollbar-color: $deepGray $lightGray;
     }
   }
 }

@@ -7,8 +7,11 @@ import CustomImage from "../../components/CustomImage";
 import NextOgp from "../../components/NextOgp";
 import Breadcrumb from "../../components/Breadcrumb";
 import BlogHeader from "../../components/blogHeader";
+import { pageFadein } from "../../hooks/fadeIn";
+
 export default function ArticlesId({ articles, categories }) {
   const { ogImageUrl } = CustomImage(articles.ogp_image.url, articles.title);
+  const { fadeTargetRef, domId } = pageFadein();
 
   return (
     <>
@@ -20,7 +23,12 @@ export default function ArticlesId({ articles, categories }) {
       />
 
       <BlogHeader />
-      <div className={styles.innerLayout}>
+      <div
+        className={styles.innerLayout}
+        ref={fadeTargetRef}
+        id={domId}
+        style={{ opacity: 0 }}
+      >
         <div className={styles.innerWrapper}>
           <Breadcrumb articles={articles} categories={categories} />
           <div className={styles.eyeCatch}>
