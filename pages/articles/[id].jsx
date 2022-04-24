@@ -7,6 +7,7 @@ import dayjs from "dayjs";
 import ShareButtons from "../../components/ShareButtons";
 import CustomImage from "../../components/CustomImage";
 import NextOgp from "../../components/NextOgp";
+// import ArticleHeader from "../../layouts/ArticleHeader";
 
 export default function ArticlesId({ articles, categories }) {
   const { ogImageUrl } = CustomImage(articles.ogp_image.url, articles.title);
@@ -15,7 +16,7 @@ export default function ArticlesId({ articles, categories }) {
       <NextOgp
         pagetitle={articles.title}
         pagedescription={articles.title}
-        pagepath="articles"
+        pagepath={`articles/${articles.id}`}
         postimg={ogImageUrl}
       />
 
