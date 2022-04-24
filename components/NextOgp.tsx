@@ -32,8 +32,8 @@ export const HeadTemplate: React.FC<HeadType> = ({
   const imgurl = pageimg
     ? `${process.env.NEXT_PUBLIC_URL}${pageimg}`
     : postimg || `${process.env.NEXT_PUBLIC_URL}vercel.svg`;
-  const imgw = pageimgw || "640px";
-  const imgh = pageimgh || "400px";
+  const imgw = pageimgw || "1200px";
+  const imgh = pageimgh || "630px";
   const fbAppId = `${process.env.FB_APP_ID}`;
 
   return (
