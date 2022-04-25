@@ -67,6 +67,11 @@ export default function Header() {
             <div className={styles.headerItem}>
               <ul>
                 <li>
+                  <Link href="/" passHref>
+                    <a className={styles.menuItem}>SE-27 TOP</a>
+                  </Link>
+                </li>
+                <li>
                   <Link href="http://localhost:3000/#services" passHref>
                     <a className={styles.menuItem}>Services</a>
                   </Link>
@@ -111,7 +116,7 @@ export default function Header() {
           <li>
             <Link href="/">
               <a>
-                <p className={styles.menuText}>Top</p>
+                <p className={styles.menuText}>SE-27 TOP</p>
               </a>
             </Link>
           </li>

@@ -64,7 +64,7 @@ const JamstackContent = () => {
 
         <div className={styles.sectionInner}>
           <div className={styles.ttlWrapper}>
-            <h2 className={styles.sectionTitle}>図で見る従来との違い</h2>
+            <h2 className={styles.sectionTitle}>図で見る、従来との違い</h2>
           </div>
           <p>
             SE-27ではJamstackアーキテクチャを用いた、高速かつ安全性の高いウェブサイト開発を専門としています。

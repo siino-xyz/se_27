@@ -19,6 +19,7 @@
     "next-sitemap": "^2.5.20",
     "node-fetch": "^3.2.3",
     "nodemailer": "^6.7.3",
+    "prettier-plugin-md-nocjsp": "^1.2.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-hook-form": "^7.29.0",
