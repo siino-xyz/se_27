@@ -22,9 +22,14 @@
   .summary {
     @include responsiveGrid();
     margin: 1rem auto 4rem auto;
+    align-items: center;
+    @include mq(lg) {
+      gap: 10px;
+    }
   }
 
   .jamstackLogo {
+    text-align: center;
     @include mq(sm) {
       padding: 0 2rem;
     }
@@ -49,10 +54,12 @@
       justify-content: space-around;
       .imageWrapper {
         text-align: center;
+        width: 55%;
+        margin: auto;
 
         @include mq(sm) {
-          width: 75%;
-          margin: 0 auto;
+          width: 55%;
+          margin-top: 2rem;
         }
       }
     }
@@ -81,6 +88,11 @@
   }
 
   ul {
-    padding-left: 0;
+    padding-left: 2rem;
+
+    li {
+      list-style-type: disc;
+      margin: 0.5rem 0;
+    }
   }
 }

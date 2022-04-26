@@ -18,8 +18,9 @@
 
   .sectionInner {
     @include sectionInner();
+    margin-top: 2rem;
     .twoColumns {
-      margin: 0 auto 2rem auto;
+      margin: 1rem auto 2rem auto;
       display: grid;
       align-items: center;
       grid-template-columns: 1fr minmax(50%, 462px);
@@ -162,6 +163,15 @@
       }
       //for Firefox:   $thumbColor $trackColor
       scrollbar-color: $deepGray $lightGray;
+
+      h4 {
+        @include h4Jp();
+        background-color: $white;
+        // border: 1px solid $mainTrans;
+        padding: 0.2rem 0.5rem;
+        display: inline-block;
+        color: $black;
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
 
 .sectionContainer {
   @include sectionContainer();
-  padding-bottom: 5rem;
+  // padding-bottom: 2rem;
   padding-top: 3rem;
 
   @include mq(sm) {

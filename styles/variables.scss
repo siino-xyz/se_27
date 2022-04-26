@@ -13,11 +13,12 @@ $breakpoints: (
 }
 
 //colors
-$main: #f39423;
+$mainTrans: rgba(243, 149, 35, 0.702);
+$main: rgba(243, 149, 35, 1);
 $accent: #80ef7e;
 
 $black: #121212;
-$white: #ededed;
+$white: #dedede;
 
 //gray-scale
 $lightGray: #ebebeb;
@@ -56,12 +57,17 @@ $deepGray: #4a4a4a;
 
 @mixin h3Jp() {
   @include jpfonts();
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
 
 @mixin h4En($fz: 1.25rem) {
   @include enfonts();
   font-size: $fz;
+}
+@mixin h4Jp($fz: 1.05rem) {
+  @include jpfonts();
+  font-size: $fz;
+  margin: 0.2rem 0;
 }
 
 @mixin subtitle() {
@@ -75,6 +81,7 @@ $deepGray: #4a4a4a;
   margin: 0;
   font-weight: 400;
 }
+
 @mixin subtitle-sm-en() {
   @include enfonts();
   font-size: 0.8rem;
@@ -95,6 +102,7 @@ $deepGray: #4a4a4a;
 @mixin sectionTitle() {
   @include h2En();
   // background: $white;
+  color: $mainTrans;
   padding: 0.6rem 0.8rem 0 0.8rem;
   text-align: left;
   line-height: 2rem;
@@ -103,24 +111,25 @@ $deepGray: #4a4a4a;
   border: 1px dashed $main;
 }
 @mixin sectionTitleJp() {
-  font-size: 2.3rem;
+  font-size: 2rem;
   border: 1px dashed $main;
-  color: $white;
+  color: $mainTrans;
   display: inline-block;
-  padding: 1rem;
+  padding: 0.5rem;
   line-height: 2.7rem;
 }
 
 @mixin subscriptJp() {
   @include subtitle-sm();
-  color: $white;
+  color: $mainTrans;
 }
 
 @mixin subTitle() {
   @include h3Jp();
-  // background: $white;
-  // color: $black;
-  border: 1px dashed $main;
+  background: $white;
+  color: $black;
+  font-weight: 700;
+  // border: 1px dashed $main;
 
   padding: 0.2rem 0.5rem;
   display: inline-block !important;
