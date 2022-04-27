@@ -15,15 +15,16 @@ $breakpoints: (
 //colors
 $mainTrans: rgba(243, 149, 35, 0.702);
 $main: rgba(243, 149, 35, 1);
-$accent: #80ef7e;
+$accent: #5088f1;
 
 $black: #121212;
 $white: #dedede;
+$btn: #31ff9f;
 
 //gray-scale
 $lightGray: #ebebeb;
 $midGray: #8e8e8e;
-$deepGray: #4a4a4a;
+$deepGray: #303030;
 
 //fonts
 @mixin jpfonts() {
@@ -42,7 +43,8 @@ $deepGray: #4a4a4a;
 
 @mixin h2En() {
   @include enfonts();
-  font-size: 2rem;
+  font-size: 4rem;
+  letter-spacing: 0.09rem;
 }
 
 @mixin h2Jp() {
@@ -57,7 +59,8 @@ $deepGray: #4a4a4a;
 
 @mixin h3Jp() {
   @include jpfonts();
-  font-size: 1.25rem;
+  font-size: 1.35rem;
+  font-weight: 700;
 }
 
 @mixin h4En($fz: 1.25rem) {
@@ -101,22 +104,42 @@ $deepGray: #4a4a4a;
 //components
 @mixin sectionTitle() {
   @include h2En();
-  // background: $white;
   color: $mainTrans;
   padding: 0.6rem 0.8rem 0 0.8rem;
   text-align: left;
-  line-height: 2rem;
-  display: inline-block !important;
+  line-height: 3rem;
   border-radius: 0.1rem;
-  border: 1px dashed $main;
+  border-bottom: 1px solid $main;
+
+  @include mq(sm) {
+    padding: 0.6rem 0 0 0;
+    line-height: 3.5rem;
+    width: 100%;
+  }
 }
 @mixin sectionTitleJp() {
-  font-size: 2rem;
-  border: 1px dashed $main;
+  font-size: 2.8rem;
   color: $mainTrans;
-  display: inline-block;
-  padding: 0.5rem;
-  line-height: 2.7rem;
+  padding: 0.5rem 0rem;
+  line-height: 2.9rem;
+  border-bottom: 1px solid $main;
+  margin: 1rem 0;
+  letter-spacing: 0.09rem;
+
+  &::first-letter {
+    font-size: 4rem;
+  }
+
+  @include mq(sm) {
+    font-size: 2.5rem;
+
+    padding: 0.6rem 0 0.5rem 0;
+    line-height: 3.5rem;
+    width: 100%;
+    &::first-letter {
+      font-size: 2.5rem;
+    }
+  }
 }
 
 @mixin subscriptJp() {
@@ -126,12 +149,11 @@ $deepGray: #4a4a4a;
 
 @mixin subTitle() {
   @include h3Jp();
-  background: $white;
-  color: $black;
-  font-weight: 700;
-  // border: 1px dashed $main;
-
-  padding: 0.2rem 0.5rem;
+  // background: $white;
+  border-left: 8px solid $mainTrans;
+  color: $white;
+  margin-bottom: 0;
+  padding: 0.4rem 0.7rem;
   display: inline-block !important;
   border-radius: 0.1rem;
   text-align: left;

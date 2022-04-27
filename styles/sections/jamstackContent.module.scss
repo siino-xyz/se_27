@@ -8,10 +8,10 @@
   }
 
   .ttlWrapper {
+    margin-bottom: 2.5rem;
     display: block;
     .sectionTitle {
       @include sectionTitleJp();
-      margin-bottom: 0.5rem;
     }
   }
 

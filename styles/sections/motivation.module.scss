@@ -20,7 +20,7 @@
     @include sectionInner();
     margin-top: 2rem;
     .twoColumns {
-      margin: 1rem auto 2rem auto;
+      margin: 2rem auto 5rem auto;
       display: grid;
       align-items: center;
       grid-template-columns: 1fr minmax(50%, 462px);
@@ -53,7 +53,7 @@
           right: -55%;
           width: 60%;
           height: 2px;
-          background-color: $white;
+          background-color: $accent;
           z-index: -1;
         }
 
@@ -74,7 +74,7 @@
           right: -55%;
           width: 2.3%;
           height: 3%;
-          background-color: $white;
+          background-color: $accent;
           z-index: -1;
           transform: rotate(45deg);
         }
@@ -89,7 +89,7 @@
         }
 
         @include mq(sm) {
-          padding: 0 0.5rem;
+          // padding: 0 0rem;
         }
       }
       .scrollTextWrapper:nth-child(2) {
@@ -117,7 +117,7 @@
           left: -30%;
           width: 2.3%;
           height: 3%;
-          background-color: $white;
+          background-color: $accent;
           z-index: -1;
           transform: rotate(45deg);
         }
@@ -143,7 +143,7 @@
     }
 
     .scrollText {
-      border: 1.5px solid $white;
+      border: 1.5px solid $accent;
       border-radius: 0.1rem;
       box-sizing: border-box;
       height: 400px;
@@ -155,22 +155,24 @@
 
       //for Chrome,Edge,Safari
       &::-webkit-scrollbar {
-        background-color: $lightGray;
+        background-color: $deepGray;
         width: 10px;
       }
       &::-webkit-scrollbar-thumb {
-        background-color: $deepGray;
+        background-color: $accent;
+        border-radius: 1rem;
       }
       //for Firefox:   $thumbColor $trackColor
-      scrollbar-color: $deepGray $lightGray;
+      scrollbar-color: $accent $deepGray;
 
       h4 {
-        @include h4Jp();
         background-color: $white;
-        // border: 1px solid $mainTrans;
+        @include h4Jp();
         padding: 0.2rem 0.5rem;
         display: inline-block;
         color: $black;
+        position: relative;
+        // border-bottom: 1px solid $accent;
       }
     }
   }

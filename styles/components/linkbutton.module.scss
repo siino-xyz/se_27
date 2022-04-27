@@ -2,16 +2,19 @@
 
 .linkBtnWrapper {
   margin: 0 auto;
-  border: 1px solid $accent;
+  border: 1px solid $main;
   border-radius: 0.1rem;
   cursor: pointer;
   display: inline-block;
-  color: $accent;
+  color: $main;
   padding: 0.7rem 1rem;
   letter-spacing: 0.1rem;
   transition: all 0.2s;
+  @include h4Jp();
+  font-weight: bold;
 
   &:hover {
-    border-style: dashed;
+    background-color: $main;
+    color: $black;
   }
 }

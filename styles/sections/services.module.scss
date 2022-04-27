@@ -18,12 +18,13 @@
 
   .sectionInner {
     @include sectionInner();
-
+    margin-top: 2rem;
+    margin-bottom: 5rem;
     .twoColumns {
       display: grid;
       gap: 50px;
       grid-template-columns: 1fr minmax(25%, 300px);
-      align-items: center;
+      align-items: flex-start;
 
       .imageInner {
         border-radius: 0.2rem;

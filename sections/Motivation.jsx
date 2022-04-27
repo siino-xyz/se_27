@@ -6,7 +6,7 @@ export default function Motivation() {
     <div className={styles.sectionContainer}>
       <div className={styles.ttlWrapper}>
         <h2 className={styles.sectionTitle}>
-          Our Motivation
+          More
           <br />
           <div className={styles.subscriptJp}>
             ウェブサイトを取り巻くトラブル
