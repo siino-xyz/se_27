@@ -20,7 +20,7 @@ export default function Contact() {
             </p>
           </div>
           <div className={styles.r}>
-            <LinkButton url={"/contactform"} button="お問い合わせ" />
+            <LinkButton url={"/contactform"} button="SE-27に相談する" />
           </div>
         </div>
       </div>
