@@ -17,7 +17,7 @@ const JamstackContent = () => {
         </div>
         <div className={styles.sectionInner}>
           <div className={styles.ttlWrapper}>
-            <h2 className={styles.sectionTitle}>Jamstackとはなにか？</h2>
+            <h2 className={styles.sectionTitle}>Jamstackとは何か</h2>
           </div>
 
           <div className={styles.summary}>
@@ -78,9 +78,9 @@ const JamstackContent = () => {
             簡単な図で解説しています。
           </p>
           <div className={styles.diff}>
+            <h3>現在主流のウェブサイト配信</h3>
             <div className={styles.diffContent}>
               <div>
-                <h3>現在主流のウェブサイト配信</h3>
                 <p>
                   サーバは、ユーザーからのリクエストがあるたびに必要なデータをデータベースへ取得しに行き、ブラウザに返却するという流れです。この配信方法には、大きく2つのネックがあります。
                 </p>
@@ -97,17 +97,19 @@ const JamstackContent = () => {
                   パフォーマンスチューニングやセキュリティ施策を正しく行っていれば基本的には問題ないものの、維持管理のコストがかかってくることもあり、十分な対策が行えていないウェブサイトも少なくありません。
                 </p>
               </div>
-              <Image
-                src="/jamstack/lampstack.svg"
-                width={456}
-                height={497}
-                layout="intrinsic"
-                alt="lanpstack"
-              />
-            </div>
-            <div className={styles.diffContent}>
               <div className={styles.gridReverse}>
-                <h3>Jamstackのウェブサイト配信</h3>
+                <Image
+                  src="/jamstack/lampstack.svg"
+                  width={456}
+                  height={497}
+                  layout="intrinsic"
+                  alt="lanpstack"
+                />
+              </div>
+            </div>
+            <h3>Jamstackのウェブサイト配信</h3>
+            <div className={styles.diffContent}>
+              <div>
                 <div>
                   <p>
                     現在主流のウェブサイト配信と大きく異なるのは、事前にすべてのページを構築してしまい、それをCDN経由で配信している点です。
@@ -124,13 +126,15 @@ const JamstackContent = () => {
                   </p>
                 </div>
               </div>
-              <Image
-                src="/jamstack/serverLessStack.svg"
-                width={455}
-                height={497}
-                layout="intrinsic"
-                alt="lanpstack"
-              />
+              <div className={styles.gridReverse}>
+                <Image
+                  src="/jamstack/serverLessStack.svg"
+                  width={455}
+                  height={497}
+                  layout="intrinsic"
+                  alt="lanpstack"
+                />
+              </div>
             </div>
           </div>
         </div>

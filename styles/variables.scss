@@ -121,11 +121,12 @@ $deepGray: #303030;
 @mixin sectionTitleJp() {
   font-size: 2.8rem;
   color: $mainTrans;
-  padding: 0.5rem 0rem;
+  padding: 0.5rem 0rem 0.8rem 0;
   line-height: 2.9rem;
-  border-bottom: 2px solid $main;
+  border-bottom: 2px dashed $mainTrans;
   margin: 0 0 0.5rem 0;
-  letter-spacing: 0.09rem;
+
+  letter-spacing: 0.06rem;
 
   @include mq(sm) {
     font-size: 2.5rem;
@@ -174,7 +175,7 @@ $deepGray: #303030;
 @mixin responsiveGrid() {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  @include mq(sm) {
+  @include mq(md) {
     grid-template-columns: 1fr;
   }
 }

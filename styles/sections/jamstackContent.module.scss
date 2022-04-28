@@ -2,11 +2,9 @@
 
 .sectionContainer {
   @include sectionContainer();
-  max-width: 90%;
 
   @include mq(sm) {
-    padding-top: 8rem;
-    max-width: 95%;
+    max-width: 100%;
   }
 
   .ttlWrapper {
@@ -18,6 +16,12 @@
 
   .sectionInner {
     margin: 5rem auto;
+    max-width: 90%;
+
+    @include mq(sm) {
+      margin: 2rem auto 4rem auto;
+      max-width: 100%;
+    }
   }
 
   .summary {
@@ -40,11 +44,22 @@
   }
 
   .diff {
-    margin: 5rem auto;
-
+    margin: 1rem auto;
+    h3 {
+      margin: 4.5rem 0 1rem 0;
+    }
     .diffContent {
       @include responsiveGrid();
-      margin: 2rem auto;
+      margin: 0 auto;
+      gap: 20px;
+
+      @include mq(lg) {
+        .gridReverse {
+          text-align: center;
+          grid-row: 1;
+          grid-column: 1;
+        }
+      }
     }
   }
 
