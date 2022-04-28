@@ -99,8 +99,6 @@ $deepGray: #303030;
   line-height: 1.6rem;
 }
 
-//spaces
-
 //components
 @mixin sectionTitle() {
   @include h2En();
@@ -119,19 +117,15 @@ $deepGray: #303030;
     margin-bottom: 0.5rem;
   }
 }
+
 @mixin sectionTitleJp() {
   font-size: 2.8rem;
   color: $mainTrans;
   padding: 0.5rem 0rem;
   line-height: 2.9rem;
-  border-bottom: 1px solid $main;
-  margin: 1rem 0;
+  border-bottom: 2px solid $main;
+  margin: 0 0 0.5rem 0;
   letter-spacing: 0.09rem;
-  margin-bottom: 2.5rem;
-
-  &::first-letter {
-    font-size: 4rem;
-  }
 
   @include mq(sm) {
     font-size: 2.5rem;
@@ -139,9 +133,6 @@ $deepGray: #303030;
     padding: 0.6rem 0 0.5rem 0;
     line-height: 3rem;
     width: 100%;
-    &::first-letter {
-      font-size: 2.5rem;
-    }
   }
 }
 
@@ -152,7 +143,6 @@ $deepGray: #303030;
 
 @mixin subTitle() {
   @include h3Jp();
-  // background: $white;
   border-left: 8px solid $mainTrans;
   color: $white;
   margin-bottom: 0;
@@ -178,7 +168,6 @@ $deepGray: #303030;
   display: inline-block !important;
   border-radius: 0.2rem;
   text-align: left;
-  // font-weight: 700 !important;
 }
 
 //layouts
