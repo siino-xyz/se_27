@@ -1,0 +1,13 @@
+@import "variables";
+
+.firstViewContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstviewImage {
+  margin: auto;
+  width: 75%;
+}

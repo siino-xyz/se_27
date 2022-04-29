@@ -1,14 +1,17 @@
 @import "variables";
 
 .cardContainer {
+  @include mtLg();
+  @include mbLg();
   @include grid();
   @include gapMd();
 }
 
 .card {
-  background-color: $basicWhite;
+  background-color: $base;
   @include borderRadius;
-  padding: 0.3rem;
+  padding: 0.2rem;
+  @include border($color: $sub);
 }
 
 .eyeCatchImg {
@@ -16,12 +19,13 @@
 }
 
 .sumallyWrapper {
-  color: $base;
-  @include pbSm();
-  @include ptSm();
+  color: $sub;
+
+  padding: 1rem 0.5rem;
   .tag {
-    background: $base;
-    color: $basicWhite;
+    background: $sub;
+    color: $base;
+    @include boldParagrah();
     display: inline-block;
     @include borderRadius;
     padding: 0.1rem 0.5rem;
@@ -29,7 +33,7 @@
   h1 {
     margin-top: 0.5rem;
     font-size: 1.5rem;
-    color: $base;
+    color: $sub;
     min-height: 70px;
     max-height: 70px;
   }

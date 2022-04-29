@@ -6,7 +6,7 @@ export default function Isuues() {
     <section className={styles.sectionContainer}>
       <div className={styles.sectionTitle}>
         <h2 className={styles.h2}>Issues</h2>
-        <div className={styles.subscript}>自己紹介</div>
+        <div className={styles.subscript}>ウェブサイトを取り巻く問題</div>
       </div>
 
       <main className={styles.sectionInner}>
@@ -16,8 +16,8 @@ export default function Isuues() {
           <br />
           これらの問題を放置すると具体的にどのようなリスクがあるのかを簡単にご紹介します。
         </p>
-        <div className={styles.h3Title}>
-          <h3>表示速度が遅いと何がおきるのか</h3>
+        <div className={styles.issuesH3}>
+          <h3>Performance</h3>
         </div>
         <div className={styles.grid}>
           <Image
@@ -52,8 +52,8 @@ export default function Isuues() {
             </p>
           </div>
         </div>
-        <div className={styles.h3Title}>
-          <h3>サイバー攻撃</h3>
+        <div className={styles.issuesH3}>
+          <h3>Security</h3>
         </div>
         <div className={styles.grid}>
           <Image

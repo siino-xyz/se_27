@@ -7,14 +7,14 @@
 .linkBtnWrapper {
   text-align: center;
   color: $base;
-  // padding: 0.2rem 0;
+  padding: 0.8rem 0;
   max-width: 80%;
   background-color: $basicWhite;
   @include mCenter;
   @include mtMd();
   @include mbSm();
   @include h4();
-  // @include border($color: $basicWhite);
+  @include border($color: $basicWhite);
   @include borderRadius();
 
   // &:hover {

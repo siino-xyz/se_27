@@ -1,13 +1,16 @@
 @import "variables";
 
 .headerContainer {
-  @include flexRow($justify: space-around);
+  @include flexRow($justify: flex-start);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
-  background-color: $sub;
+  background-color: $subTrans;
+  backdrop-filter: blur(2px);
   width: 100%;
+  @include ptSm;
+  padding-right: 0.5rem;
 }
 
 .svgLogo {
@@ -15,7 +18,7 @@
   @include toggleFade();
 
   &:hover {
-    fill: $main;
+    fill: $sub;
   }
 }
 

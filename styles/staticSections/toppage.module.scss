@@ -10,6 +10,7 @@
   @include h3Title();
 }
 .grid {
+  @include gapSm();
   @include grid();
 }
 .flexCol {
@@ -33,6 +34,22 @@
   color: $main;
   border-bottom: 1px solid $main;
 }
+.issuesH3 > h3 {
+  font-size: 2.8rem !important;
+  color: $main;
+  font-family: "MuseoModerno";
+  text-align: center;
+  @include mtMd();
+  @include mbSm();
+  border-bottom: 1px solid $main;
+}
+
+//solution
+.solutionImage {
+  @include mtMd();
+  @include mbSm();
+}
+
 //aboutme
 .snsLink {
   @include flexRow($justify: space-around);

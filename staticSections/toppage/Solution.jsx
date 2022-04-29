@@ -13,13 +13,15 @@ export default function Solution() {
 
       <main className={styles.sectionInner}>
         <div className={styles.grid}>
-          <Image
-            src="/top/top-solution.png"
-            width={598}
-            height={243}
-            layout="intrinsic"
-            alt="solution_image"
-          />
+          <div className={styles.solutionImage}>
+            <Image
+              src="/top/top-solution.png"
+              width={598}
+              height={243}
+              layout="intrinsic"
+              alt="solution_image"
+            />
+          </div>
 
           <div>
             <p>

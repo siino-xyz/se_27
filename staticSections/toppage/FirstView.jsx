@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import styles from "../../styles/staticSections/toppage.module.scss";
+import styles from "../../styles/staticSections/firstview.module.scss";
 export default function Firstview() {
   return (
     <>

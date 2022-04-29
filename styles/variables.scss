@@ -32,6 +32,9 @@ $breakpoints: (
 @mixin mbLg() {
   margin-bottom: 4rem;
 }
+@mixin mbLr() {
+  margin-bottom: 6rem;
+}
 
 @mixin mtZero() {
   margin-top: 0;
@@ -44,6 +47,9 @@ $breakpoints: (
 }
 @mixin mtLg() {
   margin-top: 4rem;
+}
+@mixin mtLr() {
+  margin-top: 6rem;
 }
 
 //padding
@@ -87,6 +93,7 @@ $main: #f39423;
 $accent: #80ef7e;
 $sub: #7e8bef;
 $base: #121212;
+$subTrans: rgba(126, 139, 239, 0.151);
 
 //grayScale
 $basicWhite: #ededed;
@@ -105,7 +112,7 @@ $deepGray: #444444;
   font-weight: bolder;
 }
 @mixin h3() {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bolder;
 }
 @mixin h4() {
@@ -116,7 +123,7 @@ $deepGray: #444444;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5rem;
-  @include ptSm();
+  @include pbSm();
 }
 @mixin boldParagrah() {
   font-size: 1rem;
@@ -157,8 +164,8 @@ $deepGray: #444444;
 
 //sectionParts
 @mixin sectionContainer() {
-  @include mtLg();
-  @include mbLg();
+  @include mtLr();
+  @include mbLr();
   max-width: 94%;
   @include mCenter();
 }
@@ -183,7 +190,6 @@ $deepGray: #444444;
   text-align: center;
   display: block;
   color: $basicWhite;
-  background-color: $deepGray;
   @include mtLg();
   @include mbSm();
 }
