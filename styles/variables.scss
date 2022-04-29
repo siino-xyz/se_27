@@ -10,6 +10,77 @@ $breakpoints: (
     @content;
   }
 }
+//margin
+@mixin mCenter() {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin mZero() {
+  margin: 0;
+}
+
+@mixin mbZero() {
+  margin-bottom: 0;
+}
+@mixin mbSm() {
+  margin-bottom: 1rem;
+}
+@mixin mbMd() {
+  margin-bottom: 2rem;
+}
+@mixin mbLg() {
+  margin-bottom: 4rem;
+}
+
+@mixin mtZero() {
+  margin-top: 0;
+}
+@mixin mtSm() {
+  margin-top: 1rem;
+}
+@mixin mtMd() {
+  margin-top: 2rem;
+}
+@mixin mtLg() {
+  margin-top: 4rem;
+}
+
+//padding
+@mixin pCenter() {
+  padding-right: auto;
+  padding-left: auto;
+}
+
+@mixin pZero() {
+  padding: 0;
+}
+
+@mixin pbZero() {
+  padding-bottom: 0;
+}
+@mixin pbSm() {
+  padding-bottom: 1rem;
+}
+@mixin pbMd() {
+  padding-bottom: 2rem;
+}
+@mixin pbLg() {
+  padding-bottom: 4rem;
+}
+
+@mixin ptZero() {
+  padding-top: 0;
+}
+@mixin ptSm() {
+  padding-top: 1rem;
+}
+@mixin ptMd() {
+  padding-top: 2rem;
+}
+@mixin ptLg() {
+  padding-top: 4rem;
+}
 
 //color
 $main: #f39423;
@@ -28,7 +99,8 @@ $deepGray: #444444;
   font-weight: bolder;
 }
 @mixin h2() {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
   font-weight: bolder;
 }
 @mixin h3() {
@@ -38,10 +110,13 @@ $deepGray: #444444;
 @mixin h4() {
   font-size: 1.25rem;
   font-weight: bolder;
+  @include ptSm();
+  @include pbSm();
 }
 @mixin normalParagraph() {
   font-size: 1rem;
   font-weight: normal;
+  line-height: 1.5rem;
 }
 @mixin boldParagrah() {
   font-size: 1rem;
@@ -52,20 +127,52 @@ $deepGray: #444444;
   font-weight: bold;
 }
 
-//sectionParts
-
-//margin
-@mixin sectionMargin() {
-  margin: 2rem auto;
-}
-//padding
-
 //layout
-@mixin basicFlex($fd: row, $justify: center, $align: center) {
+@mixin flexRow($justify: center, $align: center) {
   display: flex;
-  flex-direction: $fd;
+  flex-direction: row;
   justify-content: $justify;
   align-items: $align;
 }
-@mixin basicGrid() {
+@mixin flexCol($justify: center, $align: center) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin grid() {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+//sectionParts
+@mixin sectionContainer() {
+  @include mtLg();
+  @include mbLg();
+}
+
+@mixin sectionTitle() {
+  text-align: center;
+  @include mtLg();
+  @include mbSm();
+  display: block;
+  color: $base;
+  background-color: $basicWhite;
+  .h2 {
+    font-family: "MuseoModerno";
+  }
+  .subscript {
+    @include smallTitle();
+    font-family: "Zen Kaku Gothic New";
+  }
+}
+
+@mixin h3Title() {
+  text-align: center;
+  display: block;
+  color: $base;
+  background-color: $basicWhite;
+  @include mtLg();
+  @include mbSm();
 }

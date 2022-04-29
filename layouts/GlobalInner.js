@@ -1,11 +1,9 @@
-import styles from '../styles/layouts/inner-layout.module.scss'
+import styles from "../styles/layouts/inner-layout.module.scss";
 
-export default function InnerLayout ({children}) {
+export default function InnerLayout({ children }) {
   return (
     <>
-      <div className={styles.innerLayout}>
-        {children}
-      </div>
+      <div className={styles.innerLayout}>{children}</div>
     </>
-  )
+  );
 }

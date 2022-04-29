@@ -3,29 +3,23 @@ import Image from "next/image";
 
 export default function AboutMe() {
   return (
-    <div className={styles.sectionContainer}>
-      <div className={styles.ttlWrapper}>
-        <h2 className={styles.sectionTitle}>
-          Aboutme
-          <br />
-          <div className={styles.subscriptJp}>自己紹介</div>
-        </h2>
+    <section className={styles.sectionContainer}>
+      <div className={styles.sectionTitle}>
+        <h2 className={styles.h2}>Aboutme</h2>
+        <div className={styles.subscript}>自己紹介</div>
       </div>
 
-      <div className={styles.sectionInner}>
-        <div className={styles.twoColumns}>
-          <div className={styles.innerTwoColumns}>
+      <main className={styles.sectionInner}>
+        <div className={styles.grid}>
+          <div className={styles.flexCol}>
+            <Image
+              src="/top/top-mypic.png"
+              width={190}
+              height={175}
+              layout="intrinsic"
+              alt="siino_picture"
+            />
             <div>
-              <Image
-                src="/top/top-mypic.png"
-                width={190}
-                height={175}
-                layout="intrinsic"
-                alt="siino_picture"
-              />
-            </div>
-
-            <div className={styles.noWrapFlex}>
               <h4>siino</h4>
               <div>
                 鳥取県出身の1995/04/27生まれ。大坂在住のフリーランスエンジニア/デザイナー。昔はテレビ局の報道部門で働いていたりした。
@@ -33,13 +27,13 @@ export default function AboutMe() {
             </div>
           </div>
 
-          <div className={styles.socialLinkWrapper}>
+          <div className={styles.flexCol}>
             <a
               href="https://twitter.com/SE_27_Jamstack"
               target="_blank"
               rel="noopener"
             >
-              <div className={styles.socialLinkItem}>
+              <div className={styles.flexRow}>
                 <p>Twitter</p>
                 <Image
                   src="/top/twitterIcon.svg"
@@ -55,7 +49,7 @@ export default function AboutMe() {
               target="_blank"
               rel="noopener"
             >
-              <div className={styles.socialLinkItem}>
+              <div className={styles.flexRow}>
                 <p>github</p>
                 <Image
                   src="/top/githubIcon.svg"
@@ -68,7 +62,7 @@ export default function AboutMe() {
             </a>
           </div>
         </div>
-      </div>
-    </div>
+      </main>
+    </section>
   );
 }

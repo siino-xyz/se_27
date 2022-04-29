@@ -3,25 +3,20 @@ import LinkButton from "../../components/LinkButton";
 
 export default function Flow() {
   return (
-    <div className={styles.sectionContainer}>
-      <div className={styles.ttlWrapper}>
-        <h2 className={styles.sectionTitle}>
-          Flow
-          <br />
-          <div className={styles.subscriptJp}>制作の流れ</div>
-        </h2>
+    <section className={styles.sectionContainer}>
+      <div className={styles.sectionTitle}>
+        <h2 className={styles.h2}>Flow</h2>
+        <div className={styles.subscript}>制作の流れとQ&A</div>
       </div>
 
-      <div className={styles.sectionInner}>
-        <div className={styles.twoColumns}>
+      <main className={styles.sectionInner}>
+        <div>
+          <p>制作の流れとよくあるご質問をここにまとめています。</p>
           <div>
-            <p>制作の流れとよくあるご質問をここにまとめています。</p>
-          </div>
-          <div className={styles.r}>
             <LinkButton url={"/flow"} button="制作の流れを見る" />
           </div>
         </div>
-      </div>
-    </div>
+      </main>
+    </section>
   );
 }

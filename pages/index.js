@@ -8,7 +8,7 @@ import InnerLayout from "../layouts/GlobalInner";
 //staticSections
 import Bigtypo from "../staticSections/toppage/BigTypo";
 import Services from "../staticSections/toppage/Services";
-import Motivation from "../staticSections/toppage/Motivation";
+import Isuues from "../staticSections/toppage/Issues";
 import Solution from "../staticSections/toppage/Solution";
 import Flow from "../staticSections/toppage/Flow";
 import AboutMe from "../staticSections/toppage/AboutMe";
@@ -21,7 +21,7 @@ export default function Home({ articles }) {
         <main>
           <Bigtypo />
           <Services />
-          <Motivation />
+          <Isuues />
           <Solution />
           <Flow />
           <Cta />

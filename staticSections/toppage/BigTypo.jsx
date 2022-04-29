@@ -3,26 +3,24 @@ import Image from "next/image";
 
 export default function Bigtypo() {
   return (
-    <div className={styles.sectionContainer}>
-      <div className={styles.twoColumns}>
-        <div>
-          <Image
-            src="/top/top-largeTypo.svg"
-            width={588}
-            height={355}
-            layout="intrinsic"
-            alt="top-largeTypo"
-          />
-        </div>
-      </div>
+    <section className={styles.sectionContainer}>
+      <main className={styles.sectionInner}>
+        <Image
+          src="/top/top-largeTypo.svg"
+          width={588}
+          height={355}
+          layout="intrinsic"
+          alt="top-largeTypo"
+        />
 
-      <div className={styles.singleColumns}>
-        <p>
-          大量の情報がめまぐるしいスピードで消化されていく現代ネット社会では、ユーザーが1つのコンテンツに使える時間は限られており、そんなに待ってくれない。
-          <br />
-          SE-27は、「ユーザーにいちばん伝えたいことをできる限りシンプルに、そして刹那の速さで届ける」というコンセプトのもと、高速で安全なウェブサイトをデザイン・開発します。
-        </p>
-      </div>
-    </div>
+        <div>
+          <p>
+            大量の情報がめまぐるしいスピードで消化されていく現代ネット社会では、ユーザーが1つのコンテンツに使える時間は限られており、そんなに待ってくれない。
+            <br />
+            SE-27は、「ユーザーにいちばん伝えたいことをできる限りシンプルに、そして刹那の速さで届ける」というコンセプトのもと、高速で安全なウェブサイトをデザイン・開発します。
+          </p>
+        </div>
+      </main>
+    </section>
   );
 }
