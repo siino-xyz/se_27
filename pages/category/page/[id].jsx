@@ -1,9 +1,9 @@
 import { client } from "../../../libs/client";
 import styles from "../../../styles/pages/blog.module.scss";
 import ArticleCard from "../../../components/ArticleCard";
-import InnerLayout from "../../../layouts/InnerLayout";
+import InnerLayout from "../layouts/GlobalInner";
 import Categories from "../../../components/Categories";
-import BlogLayout from "../../../layouts/BlogLayout";
+import BlogLayout from "../../../layouts/BlogOuter";
 import LinkButton from "../../../components/LinkButton";
 import Breadcrumb from "../../../components/Breadcrumb";
 export const CategoryId = ({ articles, categories }) => {

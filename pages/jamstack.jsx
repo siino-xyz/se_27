@@ -1,5 +1,5 @@
-import UnderpageLayout from "../layouts/UnderpageLayout";
-import InnerLayout from "../layouts/InnerLayout";
+import UnderpageLayout from "../layouts/UnderpageOuter";
+import InnerLayout from "../layouts/GlobalInner";
 import JamstackContent from "../sections/jamstackContent";
 const JamstackDetail = () => {
   return (

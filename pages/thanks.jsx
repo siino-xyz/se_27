@@ -1,5 +1,5 @@
 import ThankspageLayout from "../layouts/ThankspageLayout";
-import InnerLayout from "../layouts/InnerLayout";
+import InnerLayout from "../layouts/GlobalInner";
 import styles from "../styles/pages/thanks.module.scss";
 import Image from "next/image";
 import LinkButton from "../components/LinkButton";

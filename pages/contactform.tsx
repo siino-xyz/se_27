@@ -1,5 +1,5 @@
-import UnderpageLayout from "../layouts/UnderpageLayout";
-import InnerLayout from "../layouts/InnerLayout";
+import UnderpageLayout from "../layouts/UnderpageOuter";
+import InnerLayout from "../layouts/GlobalInner";
 import styles from "../styles/pages/contact.module.scss";
 import { useForm } from "react-hook-form";
 // import { useEffect, useState, useRef } from "react";

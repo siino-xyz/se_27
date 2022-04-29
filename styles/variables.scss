@@ -1,261 +1,71 @@
-//media queries
 $breakpoints: (
   "sm": 576px,
   "md": 768px,
   "lg": 992px,
-  "xl": 1100px,
+  "xl": 1200px,
 );
 
 @mixin mq($size) {
-  @media screen and (max-width: #{map-get($breakpoints, $size)}) {
+  @media screen and (min-width: #{map-get($breakpoints, $size)}) {
     @content;
   }
 }
 
-//colors
-$mainTrans: rgba(243, 149, 35, 0.702);
-$main: rgba(243, 149, 35, 1);
-$accent: #5088f1;
+//color
+$main: #f39423;
+$accent: #80ef7e;
+$base: #121212;
 
-$black: #121212;
-$white: #dedede;
-$btn: #31ff9f;
-
-//gray-scale
-$lightGray: #ebebeb;
-$midGray: #8e8e8e;
-$deepGray: #303030;
+//grayScale
+$basicWhite: #ededed;
+$lightGray: #bbbbbb;
+$midGray: #6d6d6d;
+$deepGray: #444444;
 
 //fonts
-@mixin jpfonts() {
-  font-family: "Zen Kaku Gothic New", sans-serif;
-}
-
-@mixin enfonts() {
-  font-family: "MuseoModerno", sans-serif;
-}
-
 @mixin h1() {
-  @include enfonts();
-  font-size: 3rem;
-  font-display: optional;
+  font-size: 2.5rem;
+  font-weight: bolder;
 }
-
-@mixin h2En() {
-  @include enfonts();
-  font-size: 4rem;
-  letter-spacing: 0.09rem;
-}
-
-@mixin h2Jp() {
-  @include jpfonts();
+@mixin h2() {
   font-size: 2rem;
+  font-weight: bolder;
 }
-
-@mixin h3En() {
-  @include enfonts();
+@mixin h3() {
   font-size: 1.5rem;
+  font-weight: bolder;
 }
-
-@mixin h3Jp() {
-  @include jpfonts();
-  font-size: 1.35rem;
-  font-weight: 700;
+@mixin h4() {
+  font-size: 1.25rem;
+  font-weight: bolder;
 }
-
-@mixin h4En($fz: 1.25rem) {
-  @include enfonts();
-  font-size: $fz;
-}
-@mixin h4Jp($fz: 1.05rem) {
-  @include jpfonts();
-  font-size: $fz;
-  margin: 0.2rem 0;
-}
-
-@mixin subtitle() {
-  @include jpfonts();
+@mixin normalParagraph() {
   font-size: 1rem;
+  font-weight: normal;
 }
-
-@mixin subtitle-sm() {
-  @include jpfonts();
-  font-size: 0.8rem;
-  margin: 0;
-  font-weight: 400;
-}
-
-@mixin subtitle-sm-en() {
-  @include enfonts();
-  font-size: 0.8rem;
-  letter-spacing: 0.05rem;
-  margin: 0;
-}
-
-@mixin body() {
-  @include jpfonts();
+@mixin boldParagrah() {
   font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.6rem;
+  font-weight: bold;
+}
+@mixin smallTitle() {
+  font-size: 0.85rem;
+  font-weight: bold;
 }
 
-//components
-@mixin sectionTitle() {
-  @include h2En();
-  color: $mainTrans;
-  padding: 0.6rem 0.8rem 0 0.8rem;
-  text-align: left;
-  line-height: 2.5rem;
-  border-radius: 0.1rem;
-  border-bottom: 1px solid $main;
-  margin: 0.5rem 0;
+//sectionParts
 
-  @include mq(sm) {
-    padding: 0.6rem 0 0 0;
-    line-height: 2.5rem;
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
+//margin
+@mixin sectionMargin() {
+  margin: 2rem auto;
 }
+//padding
 
-@mixin sectionTitleJp() {
-  font-size: 2.8rem;
-  color: $mainTrans;
-  padding: 0.5rem 0rem 0.8rem 0;
-  line-height: 2.9rem;
-  border-bottom: 2px dashed $mainTrans;
-  margin: 0 0 0.5rem 0;
-
-  letter-spacing: 0.06rem;
-
-  @include mq(sm) {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    padding: 0.6rem 0 0.5rem 0;
-    line-height: 3rem;
-    width: 100%;
-  }
-}
-
-@mixin subscriptJp() {
-  @include subtitle-sm();
-  color: $mainTrans;
-}
-
-@mixin subTitle() {
-  @include h3Jp();
-  border-left: 8px solid $mainTrans;
-  color: $white;
-  margin-bottom: 0;
-  padding: 0.4rem 0.7rem;
-  display: inline-block !important;
-  border-radius: 0.1rem;
-  text-align: left;
-  font-weight: 700;
-  margin: 0.5rem 0;
-  line-height: 2rem;
-
-  @include mq(sm) {
-    padding: 0.4rem 0.4rem;
-    margin: 0 0 1.5rem 0;
-  }
-}
-
-@mixin subTitle-en() {
-  @include h3En();
-  background: $white;
-  color: $black;
-  padding: 0.3rem 0.5rem;
-  display: inline-block !important;
-  border-radius: 0.2rem;
-  text-align: left;
-}
-
-//layouts
-@mixin responsiveGrid() {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  @include mq(md) {
-    grid-template-columns: 1fr;
-  }
-}
-@mixin wrapFlex($fd: row, $justify: center, $align: center) {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: $fd;
-  justify-content: $justify;
-  align-items: $align;
-}
-
-@mixin noWrapFlex($fd: row, $justify: center, $align: center) {
+//layout
+@mixin basicFlex($fd: row, $justify: center, $align: center) {
   display: flex;
   flex-direction: $fd;
   justify-content: $justify;
   align-items: $align;
 }
-
-@mixin sectionContainer() {
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 6rem;
-}
-@mixin sectionInner() {
-  max-width: 98%;
-  margin: 0 auto;
-}
-
-//pager button
-@mixin pagerArrow() {
-  content: "";
-  position: absolute;
-  top: 50%;
-  border: 7px solid transparent;
-  transform: translateY(-50%);
-}
-
-@mixin pagerBtn($direction: "left") {
-  position: relative;
-  border: 1px solid $white;
-  border-radius: 0.25rem;
-  transition: all 0.2s;
-  width: 200px;
-  text-align: center;
-  display: inline-block;
-  padding: 0.5rem;
-
-  &:hover {
-    border-color: $accent;
-    color: $accent;
-  }
-
-  @if $direction == "left" {
-    padding-left: 1rem;
-    &::before {
-      @include pagerArrow();
-      left: 15%;
-      border-right: 10px solid;
-    }
-  } @else if $direction == "right" {
-    padding-right: 1.5rem;
-    &::after {
-      @include pagerArrow();
-      right: 16%;
-      border-left: 10px solid;
-    }
-  }
-}
-
-//記事カード
-@mixin categoryTag($bgColor: none, $fColor: $main) {
-  background: $bgColor;
-  border: 1px dashed $main;
-  color: $fColor;
-  display: inline-block;
-  padding: 0rem 0.5rem;
-  border-radius: 0.1rem;
-  @include subtitle-sm-en();
-}
-
-@mixin borderRadius($lt: 0, $rt: 0, $rb: 0, $lb: 0) {
-  border-radius: $lt $rt $rb $lb;
+@mixin basicGrid() {
 }

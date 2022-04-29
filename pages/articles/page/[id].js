@@ -2,9 +2,9 @@ import PaginationArrow from "../../../components/Pagination";
 import ArticleCard from "../../../components/ArticleCard";
 import { client } from "../../../libs/client";
 import styles from "../../../styles/pages/blog.module.scss";
-import InnerLayout from "../../../layouts/InnerLayout";
+import InnerLayout from "../layouts/GlobalInner";
 import { PER_PAGE } from "../../api/pager";
-import BlogLayout from "../../../layouts/BlogLayout";
+import BlogLayout from "../../../layouts/BlogOuter";
 import Categories from "../../../components/Categories";
 
 export const ArticlePageId = ({

@@ -1,4 +1,5 @@
 import "../styles/globals.scss";
+import "../styles/reset.css";
 import Head from "next/head";
 import GoogleAnalytics from "../components/GoogleAnalytics";
 function MyApp({ Component, pageProps }) {
