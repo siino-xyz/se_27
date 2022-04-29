@@ -33,8 +33,8 @@ export default function AboutMe() {
               target="_blank"
               rel="noopener"
             >
-              <div className={styles.flexRow}>
-                <p>Twitter</p>
+              <div className={styles.snsLink}>
+                <span>Twitter</span>
                 <Image
                   src="/top/twitterIcon.svg"
                   width={40}
@@ -49,8 +49,8 @@ export default function AboutMe() {
               target="_blank"
               rel="noopener"
             >
-              <div className={styles.flexRow}>
-                <p>github</p>
+              <div className={styles.snsLink}>
+                <span>github</span>
                 <Image
                   src="/top/githubIcon.svg"
                   width={40}

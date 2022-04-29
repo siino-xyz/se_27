@@ -31,7 +31,7 @@ export default function Header() {
   return (
     <>
       {/* ドロワー開閉ボタン */}
-      <div className={styles.container}>
+      <div className={styles.btnContainer}>
         <button className={styles.humMenuBtn} onClick={toggle}>
           <div className={styles.humburger}>
             <span></span>

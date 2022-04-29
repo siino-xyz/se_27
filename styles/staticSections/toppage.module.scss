@@ -18,3 +18,31 @@
 .flexRow {
   @include flexRow();
 }
+
+//issues
+.scrollText {
+  overflow-y: auto;
+  height: 433px;
+  @include mtMd();
+  @include border($color: $main);
+  @include borderRadius();
+  padding: 0 0.5rem;
+}
+.scrollTextH4 {
+  @include ptMd();
+  color: $main;
+  border-bottom: 1px solid $main;
+}
+//aboutme
+.snsLink {
+  @include flexRow($justify: space-around);
+  background: $lightGray;
+  width: 250px;
+  @include mtSm();
+  @include borderRadius();
+  @include mCenter();
+  color: $base;
+  span {
+    @include h4();
+  }
+}

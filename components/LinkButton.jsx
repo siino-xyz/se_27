@@ -1,15 +1,12 @@
-import Link from 'next/link'
-import styles from '../styles/components/linkbutton.module.scss'
-
+import Link from "next/link";
+import styles from "../styles/components/linkbutton.module.scss";
 
 export default function LinkButton(props) {
-  return ( 
+  return (
     <Link href={`/${props.url}`} passHref>
-      <a>
-        <div className={styles.linkBtnWrapper}>
-              {props.button}
-        </div>
+      <a className={styles.buttonLink}>
+        <div className={styles.linkBtnWrapper}>{props.button}</div>
       </a>
     </Link>
-  )
+  );
 }

@@ -13,6 +13,7 @@ import Solution from "../staticSections/toppage/Solution";
 import Flow from "../staticSections/toppage/Flow";
 import AboutMe from "../staticSections/toppage/AboutMe";
 import Cta from "../staticSections/toppage/Cta";
+import NewPost from "../staticSections/toppage/NewPost";
 
 export default function Home({ articles }) {
   return (
@@ -26,18 +27,13 @@ export default function Home({ articles }) {
           <Flow />
           <Cta />
           <AboutMe />
-
-          <div className={styles.ttlWrapper}>
-            <h2 className={styles.sectionTitle}>
-              Blog
-              <br />
-              <div className={styles.subscriptJp}>お知らせと技術ブログ</div>
-            </h2>
-          </div>
-          <ArticleCard articles={articles} />
-          <div className={styles.btnWrapper}>
-            <LinkButton url={"/blog"} button="記事一覧" />
-          </div>
+          <main className={styles.sectionContainer}>
+            <NewPost />
+            <ArticleCard articles={articles} />
+            <div className={styles.btnWrapper}>
+              <LinkButton url={"/blog"} button="記事一覧" />
+            </div>
+          </main>
         </main>
       </div>
     </>

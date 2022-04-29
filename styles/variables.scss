@@ -60,7 +60,7 @@ $breakpoints: (
   padding-bottom: 0;
 }
 @mixin pbSm() {
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 @mixin pbMd() {
   padding-bottom: 2rem;
@@ -73,7 +73,7 @@ $breakpoints: (
   padding-top: 0;
 }
 @mixin ptSm() {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 @mixin ptMd() {
   padding-top: 2rem;
@@ -85,6 +85,7 @@ $breakpoints: (
 //color
 $main: #f39423;
 $accent: #80ef7e;
+$sub: #7e8bef;
 $base: #121212;
 
 //grayScale
@@ -99,8 +100,8 @@ $deepGray: #444444;
   font-weight: bolder;
 }
 @mixin h2() {
-  font-size: 2.5rem;
-  line-height: 2.5rem;
+  font-size: 5rem;
+  line-height: 5rem;
   font-weight: bolder;
 }
 @mixin h3() {
@@ -110,13 +111,12 @@ $deepGray: #444444;
 @mixin h4() {
   font-size: 1.25rem;
   font-weight: bolder;
-  @include ptSm();
-  @include pbSm();
 }
 @mixin normalParagraph() {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5rem;
+  @include ptSm();
 }
 @mixin boldParagrah() {
   font-size: 1rem;
@@ -145,20 +145,31 @@ $deepGray: #444444;
   grid-template-columns: 1fr;
   align-items: center;
 }
+@mixin gapSm() {
+  gap: 1rem;
+}
+@mixin gapMd() {
+  gap: 2rem;
+}
+@mixin gapLr() {
+  gap: 3rem;
+}
 
 //sectionParts
 @mixin sectionContainer() {
   @include mtLg();
   @include mbLg();
+  max-width: 94%;
+  @include mCenter();
 }
 
 @mixin sectionTitle() {
-  text-align: center;
+  // text-align: center;
   @include mtLg();
   @include mbSm();
+  // background-color: $deepGray;
   display: block;
-  color: $base;
-  background-color: $basicWhite;
+  color: $sub;
   .h2 {
     font-family: "MuseoModerno";
   }
@@ -171,8 +182,21 @@ $deepGray: #444444;
 @mixin h3Title() {
   text-align: center;
   display: block;
-  color: $base;
-  background-color: $basicWhite;
+  color: $basicWhite;
+  background-color: $deepGray;
   @include mtLg();
   @include mbSm();
+}
+
+//components
+@mixin border($color: $accent) {
+  border: 1px solid $color;
+}
+@mixin borderRadius() {
+  border-radius: 0.2rem;
+}
+
+//animation
+@mixin toggleFade() {
+  transition: all 0.2s;
 }

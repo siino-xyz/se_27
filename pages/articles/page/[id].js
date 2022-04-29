@@ -4,7 +4,7 @@ import { PER_PAGE } from "../../api/pager";
 import styles from "../../../styles/pages/blog.module.scss";
 
 import BlogLayout from "../../../layouts/BlogOuter";
-import InnerLayout from "../layouts/GlobalInner";
+import InnerLayout from "../../../layouts/GlobalInner";
 
 import PaginationArrow from "../../../components/Pagination";
 import ArticleCard from "../../../components/ArticleCard";

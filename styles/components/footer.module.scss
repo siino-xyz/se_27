@@ -1,0 +1,12 @@
+@import "variables";
+
+.footer {
+  @include ptMd();
+  @include pbSm();
+  @include flexCol();
+  background-color: $deepGray;
+}
+.footerLogo {
+  width: 50%;
+  @include pbSm();
+}

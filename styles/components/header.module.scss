@@ -1,0 +1,90 @@
+@import "variables";
+
+.headerContainer {
+  @include flexRow($justify: space-around);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: $sub;
+  width: 100%;
+}
+
+.svgLogo {
+  fill: $basicWhite;
+  @include toggleFade();
+
+  &:hover {
+    fill: $main;
+  }
+}
+
+.pcContent {
+  display: none;
+}
+
+.btnContainer {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  z-index: 999;
+
+  .humMenuBtn {
+    outline: none;
+    border: none;
+    background-color: $sub;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    .humburger {
+      @include mCenter();
+
+      span {
+        width: 66%;
+        height: 7px;
+        background-color: $basicWhite;
+        position: absolute;
+        top: 22%;
+        left: 16%;
+        @include borderRadius;
+      }
+      span:nth-child(2) {
+        top: 45%;
+      }
+      span:nth-child(3) {
+        top: 69%;
+      }
+    }
+  }
+}
+
+.drawerMenu {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $base;
+  z-index: 5;
+
+  .ul {
+    padding-top: 8rem;
+    list-style-type: none;
+
+    li {
+      a {
+        color: $sub;
+      }
+
+      .menuText {
+        background-color: $basicWhite;
+        display: inline-block;
+        @include mtSm();
+        padding: 0.5rem;
+        text-align: center;
+        @include h4();
+      }
+    }
+  }
+}

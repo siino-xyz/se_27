@@ -1,0 +1,39 @@
+@import "variables";
+
+.cardContainer {
+  @include grid();
+  @include gapMd();
+}
+
+.card {
+  background-color: $basicWhite;
+  @include borderRadius;
+  padding: 0.3rem;
+}
+
+.eyeCatchImg {
+  @include borderRadius;
+}
+
+.sumallyWrapper {
+  color: $base;
+  @include pbSm();
+  @include ptSm();
+  .tag {
+    background: $base;
+    color: $basicWhite;
+    display: inline-block;
+    @include borderRadius;
+    padding: 0.1rem 0.5rem;
+  }
+  h1 {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    color: $base;
+    min-height: 70px;
+    max-height: 70px;
+  }
+  .date {
+    @include boldParagrah();
+  }
+}

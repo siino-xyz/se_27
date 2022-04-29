@@ -8,9 +8,9 @@ import dayjs from "dayjs";
 const ArticleCard = ({ articles }: { articles: Articles[] }) => {
   return (
     <>
-      <div className={styles.articlesContainer}>
+      <div className={styles.cardContainer}>
         {articles.map((articles) => (
-          <div key={articles.id} className={styles.cardContainer}>
+          <div key={articles.id} className={styles.card}>
             <Link href={`/articles/${articles.id}`} passHref>
               <a>
                 <div className={styles.eyeCatch}>
@@ -28,17 +28,13 @@ const ArticleCard = ({ articles }: { articles: Articles[] }) => {
 
             <div className={styles.sumallyWrapper}>
               <div>
-                <div className={styles.categoryTag}>
-                  {articles.categories.name}
-                </div>
-
+                <div className={styles.tag}>{articles.categories.name}</div>
                 <Link href={`/articles/${articles.id}`} passHref>
                   <a>
-                    <h2 className={styles.title}>{articles.title}</h2>
+                    <h1>{articles.title}</h1>
                   </a>
                 </Link>
               </div>
-
               <div>
                 <div className={styles.date}>
                   {dayjs(articles.publishedAt)

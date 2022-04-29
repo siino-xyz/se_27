@@ -1,4 +1,4 @@
-import styles from "../styles/staticSections/jamstack.module.scss";
+import styles from "../../styles/staticSections/jamstack.module.scss";
 import LinkButton from "../../components/LinkButton";
 import Image from "next/image";
 

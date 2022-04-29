@@ -1,7 +1,7 @@
 import { client } from "../../../libs/client";
 import styles from "../../../styles/pages/blog.module.scss";
 
-import InnerLayout from "../layouts/GlobalInner";
+import InnerLayout from "../../../layouts/GlobalInner";
 import BlogLayout from "../../../layouts/BlogOuter";
 
 import Categories from "../../../components/Categories";
