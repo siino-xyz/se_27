@@ -1,5 +1,5 @@
-import styles from "../styles/sections/flow.module.scss";
-import LinkButton from "../components/LinkButton";
+import styles from "../../styles/staticSections/toppage.module.scss";
+import LinkButton from "../../components/LinkButton";
 
 export default function Flow() {
   return (

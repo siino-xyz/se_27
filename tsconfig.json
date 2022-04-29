@@ -19,7 +19,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/contactform.tsx",
+    "pages/contact.tsx",
     "components/blogHeader.jsx",
     "pages/articles/page/[id].js",
     "components/Header.jsx",

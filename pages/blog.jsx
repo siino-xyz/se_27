@@ -1,11 +1,15 @@
 import { client } from "../libs/client";
-import ArticleCard from "../components/ArticleCard";
-import styles from "../styles/pages/blog.module.scss";
-import InnerLayout from "../layouts/GlobalInner";
 import { PER_PAGE } from "./api/pager";
-import PaginationArrow from "../components/Pagination";
+
+import styles from "../styles/pages/blog.module.scss";
+
+import InnerLayout from "../layouts/GlobalInner";
 import BlogLayout from "../layouts/BlogOuter";
+
+import ArticleCard from "../components/ArticleCard";
+import PaginationArrow from "../components/Pagination";
 import Categories from "../components/Categories";
+
 export default function Blog({ articles, categories, totalCount }) {
   return (
     <>

@@ -1,7 +1,7 @@
-import styles from "../styles/sections/contact.module.scss";
-import LinkButton from "../components/LinkButton";
+import styles from "../../styles/staticSections/toppage.module.scss";
+import LinkButton from "../../components/LinkButton";
 
-export default function Contact() {
+export default function Cta() {
   return (
     <div className={styles.sectionContainer}>
       <div className={styles.ttlWrapper}>

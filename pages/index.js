@@ -1,27 +1,30 @@
 import styles from "../styles/pages/index.module.scss";
+//components
 import ArticleCard from "../components/ArticleCard";
-import Services from "../sections/Services";
+import LinkButton from "../components/LinkButton";
+//layouts
 import ToppageLayout from "../layouts/ToppageOuter";
 import InnerLayout from "../layouts/GlobalInner";
-import Bigtypo from "../sections/BigTypo";
-import Motivation from "../sections/Motivation";
-import Solution from "../sections/Solution";
-import Flow from "../sections/Flow";
-import Contact from "../sections/Contact";
-import AboutMe from "../sections/AboutMe";
-import LinkButton from "../components/LinkButton";
+//staticSections
+import Bigtypo from "../staticSections/toppage/BigTypo";
+import Services from "../staticSections/toppage/Services";
+import Motivation from "../staticSections/toppage/Motivation";
+import Solution from "../staticSections/toppage/Solution";
+import Flow from "../staticSections/toppage/Flow";
+import AboutMe from "../staticSections/toppage/AboutMe";
+import Cta from "../staticSections/toppage/Cta";
+
 export default function Home({ articles }) {
   return (
     <>
       <div className={styles.container}>
         <main>
           <Bigtypo />
-
           <Services />
           <Motivation />
           <Solution />
           <Flow />
-          <Contact />
+          <Cta />
           <AboutMe />
 
           <div className={styles.ttlWrapper}>

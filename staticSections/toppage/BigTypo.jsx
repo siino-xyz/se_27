@@ -1,4 +1,4 @@
-import styles from "../styles/sections/bigtypo.module.scss";
+import styles from "../../styles/staticSections/toppage.module.scss";
 import Image from "next/image";
 
 export default function Bigtypo() {
@@ -12,16 +12,6 @@ export default function Bigtypo() {
             height={355}
             layout="intrinsic"
             alt="top-largeTypo"
-          />
-        </div>
-
-        <div className={styles.arrow}>
-          <Image
-            src="/top/top-largeArrow.svg"
-            width={352}
-            height={147}
-            layout="intrinsic"
-            alt="/"
           />
         </div>
       </div>

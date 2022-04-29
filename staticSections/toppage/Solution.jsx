@@ -1,7 +1,6 @@
 import Image from "next/image";
-import styles from "../styles/sections/solution.module.scss";
-
-import LinkButton from "../components/LinkButton";
+import styles from "../../styles/staticSections/toppage.module.scss";
+import LinkButton from "../../components/LinkButton";
 export default function Solution() {
   return (
     <div className={styles.sectionContainer}>

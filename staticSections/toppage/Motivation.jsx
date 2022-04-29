@@ -1,4 +1,4 @@
-import styles from "../styles/sections/motivation.module.scss";
+import styles from "../../styles/staticSections/toppage.module.scss";
 import Image from "next/image";
 
 export default function Motivation() {

@@ -1,8 +1,8 @@
-import styles from "../styles/sections/jamstackContent.module.scss";
-import LinkButton from "../components/LinkButton";
+import styles from "../styles/staticSections/jamstack.module.scss";
+import LinkButton from "../../components/LinkButton";
 import Image from "next/image";
 
-const JamstackContent = () => {
+const JamstackDetail = () => {
   return (
     <>
       <div className={styles.sectionContainer}>
@@ -215,4 +215,4 @@ const JamstackContent = () => {
   );
 };
 
-export default JamstackContent;
+export default JamstackDetail;

@@ -1,4 +1,4 @@
-import styles from "../styles/sections/services.module.scss";
+import styles from "../../styles/staticSections/toppage.module.scss";
 import Image from "next/image";
 
 export default function Services() {
@@ -27,7 +27,7 @@ export default function Services() {
           <div className={styles.image}>
             <Image
               className={styles.imageInner}
-              src="/top/top-design.svg"
+              src="/top/des.svg"
               width={300}
               height={200}
               layout="intrinsic"
@@ -59,7 +59,7 @@ export default function Services() {
           <div className={styles.image}>
             <Image
               className={styles.imageInner}
-              src="/top/top-code.svg"
+              src="/top/tag.svg"
               width={300}
               height={200}
               layout="intrinsic"

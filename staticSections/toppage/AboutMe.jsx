@@ -1,4 +1,4 @@
-import styles from "../styles/sections/aboutme.module.scss";
+import styles from "../../styles/staticSections/toppage.module.scss";
 import Image from "next/image";
 
 export default function AboutMe() {

@@ -1,10 +1,5 @@
-import UnderpageLayout from "../layouts/UnderpageOuter";
-import InnerLayout from "../layouts/GlobalInner";
-import styles from "../styles/pages/contact.module.scss";
+import styles from "../../styles/staticSections/contact.module.scss";
 import { useForm } from "react-hook-form";
-// import { useEffect, useState, useRef } from "react";
-// import { gsap } from "gsap";
-import LinkButton from "../components/LinkButton";
 
 type formInputs = {
   name: string;
@@ -13,7 +8,7 @@ type formInputs = {
   message: string;
 };
 
-export default function ContactForm() {
+export default function Contact() {
   const {
     register,
     handleSubmit,
@@ -132,11 +127,3 @@ export default function ContactForm() {
     </>
   );
 }
-
-ContactForm.getLayout = function getLayout(contactform) {
-  return (
-    <UnderpageLayout>
-      <InnerLayout>{contactform}</InnerLayout>
-    </UnderpageLayout>
-  );
-};

@@ -1,20 +1,19 @@
 import UnderpageLayout from "../layouts/UnderpageOuter";
 import InnerLayout from "../layouts/GlobalInner";
-import FlowDetail from "../sections/details/FlowDedail";
-import QandA from "../sections/details/QandA";
-// import Contact from '../sections/contact'
+//staticSections
+import FlowDetail from "../staticSections/flow/FlowDedail";
+import QandA from "../staticSections/flow/QandA";
 
-export default function Details() {
+export default function Flow() {
   return (
     <>
       <FlowDetail />
       <QandA />
-      {/* <Contact /> */}
     </>
   );
 }
 
-Details.getLayout = function getLayout(flow) {
+Flow.getLayout = function getLayout(flow) {
   return (
     <UnderpageLayout>
       <InnerLayout>{flow}</InnerLayout>

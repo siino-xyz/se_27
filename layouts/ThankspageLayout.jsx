@@ -1,14 +1,9 @@
-import styles from '../styles/layouts/underpage-layout.module.scss'
+import styles from "../styles/layouts/underpage-layout.module.scss";
 
-
-export default function ThankspageLayout({children}) {
+export default function ThankspageLayout({ children }) {
   return (
     <div className={styles.container}>
-    
-        <main>
-          {children}
-        </main>
-      
+      <main>{children}</main>
     </div>
-  )
+  );
 }

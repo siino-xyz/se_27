@@ -1,8 +1,11 @@
+import { pageFadein } from "../hooks/fadeIn";
+
+import styles from "../styles/layouts/toppage-outer.module.scss";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import FirstView from "../sections/FirstView";
-import styles from "../styles/layouts/toppage-outer.module.scss";
-import { pageFadein } from "../hooks/fadeIn";
+
+import FirstView from "../staticSections/toppage/FirstView";
 
 export default function ToppageLayout({ children }) {
   const { fadeTargetRef, domId } = pageFadein();

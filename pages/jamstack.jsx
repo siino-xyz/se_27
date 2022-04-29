@@ -1,20 +1,22 @@
 import UnderpageLayout from "../layouts/UnderpageOuter";
 import InnerLayout from "../layouts/GlobalInner";
-import JamstackContent from "../sections/jamstackContent";
-const JamstackDetail = () => {
+//staticSections
+import JamstackDetail from "../staticSection/jamstack/jamstackDetail";
+
+const Jamstack = () => {
   return (
     <>
-      <JamstackContent />
+      <JamstackDetail />
     </>
   );
 };
 
-export default JamstackDetail;
+export default Jamstack;
 
-JamstackDetail.getLayout = function getLayout(jamstackdetail) {
+Jamstack.getLayout = function getLayout(jamstack) {
   return (
     <UnderpageLayout>
-      <InnerLayout>{jamstackdetail}</InnerLayout>
+      <InnerLayout>{jamstack}</InnerLayout>
     </UnderpageLayout>
   );
 };
