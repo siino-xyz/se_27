@@ -107,12 +107,10 @@ $deepGray: #444444;
   font-weight: bolder;
 }
 @mixin h2() {
-  font-size: 5rem;
-  line-height: 5rem;
   font-weight: bolder;
 }
 @mixin h3() {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bolder;
 }
 @mixin h4() {
@@ -164,21 +162,22 @@ $deepGray: #444444;
 
 //sectionParts
 @mixin sectionContainer() {
+  max-width: 94%;
   @include mtLr();
   @include mbLr();
-  max-width: 94%;
   @include mCenter();
 }
 
-@mixin sectionTitle() {
-  // text-align: center;
+@mixin sectionTitle($ff: "MuseoModerno", $fz: 5rem, $lh: 5rem) {
   @include mtLg();
   @include mbSm();
-  // background-color: $deepGray;
   display: block;
   color: $sub;
   .h2 {
-    font-family: "MuseoModerno";
+    font-family: $ff;
+    font-size: $fz;
+    line-height: $lh;
+    @include pbSm();
   }
   .subscript {
     @include smallTitle();
@@ -190,7 +189,7 @@ $deepGray: #444444;
   text-align: center;
   display: block;
   color: $basicWhite;
-  @include mtLg();
+  @include mtMd();
   @include mbSm();
 }
 

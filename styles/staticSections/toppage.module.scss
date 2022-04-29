@@ -20,6 +20,12 @@
   @include flexRow();
 }
 
+//bigTypo
+.bigTypo {
+  @include grid();
+  @include gapLr();
+}
+
 //issues
 .scrollText {
   overflow-y: auto;

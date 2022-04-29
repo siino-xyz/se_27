@@ -1,0 +1,33 @@
+@import "variables";
+
+.sectionContainer {
+  @include sectionContainer();
+}
+.sectionTitle {
+  @include sectionTitle($fz: 4rem, $lh: 4rem);
+}
+.h3Title {
+  @include h3Title();
+}
+.grid {
+  @include gapSm();
+  @include grid();
+}
+.flexCol {
+  @include flexCol();
+}
+.flexRow {
+  @include flexRow();
+}
+
+.featureTitle {
+  @include mtMd();
+  @include mbSm();
+  @include flexCol();
+  background-color: $sub;
+  color: $base;
+  @include borderRadius();
+  span {
+    @include boldParagrah();
+  }
+}
