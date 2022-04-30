@@ -1,12 +1,24 @@
 @import "variables";
 
 .footer {
+  width: 100%;
   @include ptMd();
   @include pbSm();
   @include flexCol();
-  background-color: $deepGray;
+  background-color: base;
 }
 .footerLogo {
+  cursor: pointer;
   width: 50%;
+  max-width: 250px;
   @include pbSm();
+  text-align: center;
+
+  // @include mq(md) {
+  //   width:
+  // }
+}
+
+.copylight {
+  @include smallText();
 }

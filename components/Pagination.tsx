@@ -19,7 +19,7 @@ export const PaginationArrow: React.FC<P> = ({
         {currentPageNumber !== 1 && (
           <Link href={`/articles/page/${prevPage}`}>
             <a data-testid="previous">
-              <div className={styles.prevPageBtn}>もどる</div>
+              <div className={styles.prevPageBtn}>前のページ</div>
             </a>
           </Link>
         )}
@@ -28,7 +28,7 @@ export const PaginationArrow: React.FC<P> = ({
         {currentPageNumber !== maxPageNumber && (
           <Link href={`/articles/page/${nextPage}`}>
             <a data-testid="next">
-              <div className={styles.nextPageBtn}>すすむ</div>
+              <div className={styles.nextPageBtn}>次のページ</div>
             </a>
           </Link>
         )}

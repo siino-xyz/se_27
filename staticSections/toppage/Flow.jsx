@@ -10,7 +10,7 @@ export default function Flow() {
       </div>
 
       <main className={styles.sectionInner}>
-        <div>
+        <div className={styles.grid}>
           <p>制作の流れとよくあるご質問をここにまとめています。</p>
           <div>
             <LinkButton url={"/flow"} button="制作の流れを見る" />

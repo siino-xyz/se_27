@@ -1,6 +1,5 @@
 import { client } from "../../../libs/client";
 import styles from "../../../styles/pages/blog.module.scss";
-
 import InnerLayout from "../../../layouts/GlobalInner";
 import BlogLayout from "../../../layouts/BlogOuter";
 
@@ -8,7 +7,7 @@ import Categories from "../../../components/Categories";
 import ArticleCard from "../../../components/ArticleCard";
 import LinkButton from "../../../components/LinkButton";
 import Breadcrumb from "../../../components/Breadcrumb";
-export const CategoryId = ({ articles, categories }) => {
+export const CategoryId = ({ articles, categories, name }) => {
   if (articles.length === 0) {
     return (
       <>
@@ -24,7 +23,7 @@ export const CategoryId = ({ articles, categories }) => {
       <Breadcrumb articles={articles} categories={categories} />
       <Categories categories={categories} />
       <div className={styles.ttlWrapper}>
-        <h2 className={styles.sectionTitle}>a{}</h2>
+        <h2 className={styles.sectionTitle}>{name}</h2>
       </div>
       <ArticleCard articles={articles} />
     </div>
@@ -54,6 +53,7 @@ export const getStaticProps = async (context) => {
     endpoint: "articles",
     queries: { filters: `categories[equals]${id}` },
   });
+
   const categoryData = await client.get({ endpoint: "categories" });
 
   return {

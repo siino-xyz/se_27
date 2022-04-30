@@ -126,6 +126,11 @@ $deepGray: #444444;
 @mixin boldParagrah() {
   font-size: 1rem;
   font-weight: bold;
+  letter-spacing: 0.09rem;
+}
+@mixin smallText() {
+  font-size: 0.85rem;
+  font-weight: normal;
 }
 @mixin smallTitle() {
   font-size: 0.85rem;
@@ -145,10 +150,14 @@ $deepGray: #444444;
   justify-content: $justify;
   align-items: $align;
 }
-@mixin grid() {
+@mixin grid($colLeft: 1fr, $colRight: 1fr) {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
+
+  @include mq(md) {
+    grid-template-columns: $colLeft $colRight;
+  }
 }
 @mixin gapSm() {
   gap: 1rem;
@@ -162,7 +171,7 @@ $deepGray: #444444;
 
 //sectionParts
 @mixin sectionContainer() {
-  max-width: 94%;
+  width: 94%;
   @include mtLr();
   @include mbLr();
   @include mCenter();
@@ -191,6 +200,10 @@ $deepGray: #444444;
   color: $basicWhite;
   @include mtMd();
   @include mbSm();
+
+  @include mq(md) {
+    text-align: left;
+  }
 }
 
 //components
@@ -204,4 +217,14 @@ $deepGray: #444444;
 //animation
 @mixin toggleFade() {
   transition: all 0.2s;
+}
+
+//blog
+@mixin tag() {
+  background: $sub;
+  color: $base;
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  @include smallTitle();
+  @include borderRadius;
 }

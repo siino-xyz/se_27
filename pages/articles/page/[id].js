@@ -20,12 +20,9 @@ export const ArticlePageId = ({
     <>
       <div className={styles.container}>
         <Categories categories={categories} />
-        <div className={styles.ttlWrapper}>
-          <h2 className={styles.sectionTitle}>
-            Blog
-            <br />
-            <div className={styles.subscriptJp}>記事一覧</div>
-          </h2>
+        <div className={styles.sectionTitle}>
+          <h2 className={styles.h2}>Blog</h2>
+          <div className={styles.subscript}>ブログ記事一覧</div>
         </div>
 
         <ArticleCard articles={articles} />

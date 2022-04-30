@@ -2,22 +2,18 @@
 
 .buttonLink {
   text-decoration: none;
+  color: $base;
 }
 
 .linkBtnWrapper {
   text-align: center;
-  color: $base;
-  padding: 0.8rem 0;
-  max-width: 80%;
+  padding: 0.6rem 0;
+  max-width: 240px;
   background-color: $basicWhite;
   @include mCenter;
   @include mtMd();
   @include mbSm();
   @include h4();
-  @include border($color: $basicWhite);
   @include borderRadius();
-
-  // &:hover {
-  //   color: $basicWhite;
-  // }
+  @include toggleFade;
 }

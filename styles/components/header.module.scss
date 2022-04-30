@@ -1,7 +1,7 @@
 @import "variables";
 
 .headerContainer {
-  @include flexRow($justify: flex-start);
+  @include flexRow($justify: space-between);
   position: fixed;
   top: 0;
   left: 0;
@@ -15,6 +15,8 @@
 
 .svgLogo {
   fill: $basicWhite;
+  margin-left: 0.2rem;
+  padding: 0.2rem;
   @include toggleFade();
 
   &:hover {
@@ -22,8 +24,45 @@
   }
 }
 
-.pcContent {
-  display: none;
+.headerItem {
+  // display: none;
+
+  @include mq(md) {
+    display: block;
+    @include flexRow($justify: space-around);
+  }
+
+  .pcMenu {
+    display: none;
+    @include mq(md) {
+      display: block;
+      @include flexRow($justify: space-around);
+      list-style-type: none;
+      li {
+        margin: 0 1rem;
+      }
+      a {
+        color: $basicWhite;
+        @include boldParagrah;
+      }
+    }
+  }
+
+  .contactBtn {
+    background-color: $basicWhite;
+    color: $base;
+    @include borderRadius;
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+    @include boldParagrah;
+    @include toggleFade;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: $sub;
+      color: $basicWhite;
+    }
+  }
 }
 
 .btnContainer {
@@ -31,6 +70,10 @@
   bottom: 3%;
   right: 3%;
   z-index: 999;
+
+  @include mq(md) {
+    display: none;
+  }
 
   .humMenuBtn {
     outline: none;
@@ -70,6 +113,9 @@
   left: 0;
   background-color: $base;
   z-index: 5;
+  @include mq(md) {
+    display: none;
+  }
 
   .ul {
     padding-top: 8rem;
@@ -82,6 +128,7 @@
 
       .menuText {
         background-color: $basicWhite;
+        @include borderRadius;
         display: inline-block;
         @include mtSm();
         padding: 0.5rem;

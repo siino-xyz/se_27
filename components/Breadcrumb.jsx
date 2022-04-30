@@ -12,16 +12,16 @@ const Breadcrumb = ({ categories, articles }) => {
   return (
     <>
       <div className={styles.breadcrumbContainer}>
-        <div>
-          <Link href="/blog">
-            <a>
-              <div className={styles.breadcrumbItem}>ブログトップ</div>
-            </a>
-          </Link>
-        </div>
+        <Link className={styles.colorChange} href="/blog">
+          <a>
+            <div className={`${styles.changeColor} ${styles.item}`}>
+              ブログトップ
+            </div>
+          </a>
+        </Link>
         {isCategoryPage && (
           <>
-            <div className={styles.breadcrumbItem}>
+            <div className={styles.item}>
               <Link href={path} as={path} passHref>
                 <a>
                   <div>{categories.name}</div>
@@ -32,10 +32,8 @@ const Breadcrumb = ({ categories, articles }) => {
         )}
         {articles && (
           <>
-            <div className={`${styles.torightArrow} ${styles.breadcrumbItem}`}>
-              &gt;
-            </div>
-            <div className={styles.breadcrumbItem}>{articles.title}</div>
+            <div className={`${styles.torightArrow} ${styles.item}`}>&gt;</div>
+            <div className={styles.item}>{articles.title}</div>
           </>
         )}
       </div>

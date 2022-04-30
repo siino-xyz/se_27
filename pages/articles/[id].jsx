@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../../styles/pages/articles/articles.module.scss";
 import dayjs from "dayjs";
 
+import LinkButton from "../../components/LinkButton";
 import ShareButtons from "../../components/ShareButtons";
 import CustomImage from "../../components/CustomImage";
 import NextOgp from "../../components/NextOgp";
@@ -42,13 +43,13 @@ export default function ArticlesId({ articles, categories }) {
             />
           </div>
 
-          <div className={styles.sumallyWrapper}>
-            <div className={styles.categoryTag}>{articles.categories.name}</div>
-
-            <h2 className={styles.title}>{articles.title}</h2>
-
-            <div className={styles.date}>
-              {dayjs(articles.publishedAt).locale("ja").format("YYYY/MM/DD")}
+          <div className={styles.contentWrapper}>
+            <div className={styles.sumally}>
+              <div className={styles.tag}>{articles.categories.name}</div>
+              <h2 className={styles.title}>{articles.title}</h2>
+              <div className={styles.date}>
+                {dayjs(articles.publishedAt).locale("ja").format("YYYY/MM/DD")}
+              </div>
             </div>
 
             <div>
@@ -60,6 +61,7 @@ export default function ArticlesId({ articles, categories }) {
             </div>
 
             <ShareButtons articles={articles} />
+            <LinkButton url={"/blog"} button="他の記事も読む" />
           </div>
         </div>
       </div>

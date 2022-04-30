@@ -1,0 +1,32 @@
+@import "variables";
+
+.innerLayout {
+  @include sectionContainer();
+
+  @include mq(md) {
+    max-width: 944px;
+  }
+}
+
+.contentWrapper {
+  @include mq(md) {
+    max-width: 850px;
+    @include mCenter();
+  }
+}
+.sumally {
+  @include mbMd();
+  .title {
+    @include ptSm();
+  }
+  .date {
+    @include ptSm();
+  }
+}
+.tag {
+  @include tag();
+}
+.contentWrapper {
+  @include mtMd();
+  @include mbMd();
+}

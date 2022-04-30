@@ -1,0 +1,35 @@
+@import "variables";
+
+.sectionContainer {
+  @include sectionContainer();
+}
+
+.sectionTitle {
+  @include sectionTitle;
+}
+
+.flowContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 1rem;
+  // @include gapSm;
+  align-items: center;
+  justify-content: center;
+  @include mtMd();
+  @include mbMd();
+
+  @include mq(md) {
+    padding: 0;
+    grid-template-columns: repeat(auto-fill, 335px);
+  }
+}
+
+.flowItem {
+  padding: 0.5rem 1rem;
+  @include border($color: $sub);
+
+  h3 {
+    @include pbSm();
+    color: $sub;
+  }
+}

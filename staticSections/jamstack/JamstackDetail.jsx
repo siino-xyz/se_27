@@ -91,7 +91,7 @@ const JamstackDetail = () => {
             <div className={styles.featureTitle}>
               <h3>現在主流のウェブサイト配信</h3>
             </div>
-            <div>
+            <div className={styles.differenceGrid}>
               <div>
                 <Image
                   src="/jamstack/lampstack.svg"
@@ -123,7 +123,7 @@ const JamstackDetail = () => {
             <div className={styles.featureTitle}>
               <h3>Jamstackのウェブサイト配信</h3>
             </div>
-            <div>
+            <div className={styles.differenceGrid}>
               <div>
                 <Image
                   src="/jamstack/serverLessStack.svg"

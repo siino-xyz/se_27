@@ -14,7 +14,7 @@ const ShareButtons = ({ articles }) => {
   return (
     <>
       <div className={styles.shareWrapper}>
-        <div className={styles.h4}>この記事をシェアする</div>
+        <h4>この記事をシェアする</h4>
         <div className={styles.shareBtns}>
           <div className={styles.item}>
             <TwitterShareButton

@@ -25,7 +25,7 @@ export default function Home({ articles }) {
           <Isuues />
           <Solution />
           <Flow />
-          <Cta />
+          <Cta title="Contact" subscript="お問い合わせ" body="sdfsdf" />
           <AboutMe />
           <main className={styles.sectionContainer}>
             <NewPost />

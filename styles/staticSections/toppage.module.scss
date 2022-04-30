@@ -27,6 +27,23 @@
 }
 
 //issues
+.issuesGrid {
+  @include mtLr();
+  @include mbLr();
+  @include grid();
+  @include gapMd();
+
+  div {
+    text-align: center;
+    margin: auto;
+  }
+}
+@include mq(md) {
+  .gridReverce {
+    grid-row: 1;
+    grid-column: 2;
+  }
+}
 .scrollText {
   overflow-y: auto;
   height: 433px;
@@ -34,6 +51,7 @@
   @include border($color: $main);
   @include borderRadius();
   padding: 0 0.5rem;
+  text-align: left !important;
 }
 .scrollTextH4 {
   @include ptMd();
@@ -48,6 +66,10 @@
   @include mtMd();
   @include mbSm();
   border-bottom: 1px solid $main;
+
+  @include mq(md) {
+    text-align: left;
+  }
 }
 
 //solution

@@ -1,0 +1,17 @@
+@import "variables";
+
+.shareWrapper {
+  text-align: center;
+  @include mCenter();
+  @include mtLr();
+  @include mbMd();
+}
+
+.shareBtns {
+  @include mtSm();
+  @include flexRow();
+
+  .item {
+    margin: 0.5rem;
+  }
+}

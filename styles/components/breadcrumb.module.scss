@@ -1,0 +1,16 @@
+@import "variables";
+
+.breadcrumbContainer {
+  @include flexRow($justify: flex-start);
+  @include mtSm();
+  @include mbSm();
+  .item {
+    margin: 0 0.5rem;
+    color: $basicWhite;
+    @include smallText();
+    @include toggleFade();
+  }
+  .changeColor:hover {
+    color: $sub;
+  }
+}

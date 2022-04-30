@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../styles/components/blogHeader.module.scss";
-import { useRef, useEffect, useState, useLayoutEffect } from "react";
+import styles from "../styles/components/header.module.scss";
+import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
+import LinkButton from "./LinkButton";
 
 export default function Header() {
   const [click, setClick] = useState(false);
@@ -30,7 +31,7 @@ export default function Header() {
   return (
     <>
       {/* ドロワー開閉ボタン */}
-      <div className={styles.container}>
+      <div className={styles.btnContainer}>
         <button className={styles.humMenuBtn} onClick={toggle}>
           <div className={styles.humburger}>
             <span></span>
@@ -39,10 +40,11 @@ export default function Header() {
           </div>
         </button>
       </div>
+
       {/* ヘッダー */}
       <header className={styles.headerContainer}>
         <div className={styles.headerBox}>
-          <div className={styles.headerLogo}>
+          <div className={styles.headerItem}>
             <Link href="/blog" passHref>
               <div>
                 <svg
@@ -66,11 +68,6 @@ export default function Header() {
           <div className={styles.pcContent}>
             <div className={styles.headerItem}>
               <ul>
-                <li>
-                  <Link href="/" passHref>
-                    <a className={styles.menuItem}>SE-27 TOP</a>
-                  </Link>
-                </li>
                 <li>
                   <Link href="http://localhost:3000/#services" passHref>
                     <a className={styles.menuItem}>Services</a>
@@ -113,13 +110,6 @@ export default function Header() {
         style={{ display: "none", opacity: 0 }}
       >
         <ul className={styles.ul}>
-          <li>
-            <Link href="/">
-              <a>
-                <p className={styles.menuText}>SE-27 TOP</p>
-              </a>
-            </Link>
-          </li>
           <li>
             <Link href="http://localhost:3000/#services">
               <a>

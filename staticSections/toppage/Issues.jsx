@@ -19,14 +19,16 @@ export default function Isuues() {
         <div className={styles.issuesH3}>
           <h3>Performance</h3>
         </div>
-        <div className={styles.grid}>
-          <Image
-            src="/top/lazyphone.png"
-            width={462}
-            height={463}
-            layout="intrinsic"
-            alt="top-largeTypo"
-          />
+        <div className={styles.issuesGrid}>
+          <div className={styles.gridReverce}>
+            <Image
+              src="/top/lazyphone.png"
+              width={462}
+              height={463}
+              layout="intrinsic"
+              alt="top-largeTypo"
+            />
+          </div>
           <div className={styles.scrollText}>
             <div className={styles.scrollTextH4}>
               <h4>ユーザー直帰率の増加</h4>
@@ -55,14 +57,16 @@ export default function Isuues() {
         <div className={styles.issuesH3}>
           <h3>Security</h3>
         </div>
-        <div className={styles.grid}>
-          <Image
-            src="/top/cautionpc.png"
-            width={524}
-            height={452}
-            layout="intrinsic"
-            alt="top-largeTypo"
-          />
+        <div className={styles.issuesGrid}>
+          <div>
+            <Image
+              src="/top/cautionpc.png"
+              width={524}
+              height={452}
+              layout="intrinsic"
+              alt="top-largeTypo"
+            />
+          </div>
           <div className={styles.scrollText}>
             <div className={styles.scrollTextH4}>
               <h4>不正アクセス・改ざん</h4>

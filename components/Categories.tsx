@@ -10,8 +10,15 @@ export const Categories = ({ categories }: CategoriesProps) => {
   return (
     <>
       <div className={styles.categoriesContainer}>
-        <h3>Category</h3>
+        {/* <h3>Category</h3> */}
         <div className={styles.categoriesList}>
+          <div className={styles.categoryItem}>
+            <Link href={"/blog"}>
+              <a>
+                <div className={styles.categoryName}>All</div>
+              </a>
+            </Link>
+          </div>
           {categories.map((categories) => {
             return (
               <div className={styles.categoryItem} key={categories.id}>
