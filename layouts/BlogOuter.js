@@ -1,9 +1,9 @@
 import styles from "../styles/layouts/blog-layout.module.scss";
 import Footer from "../components/Footer";
-import BlogHeader from "../components/blogHeader";
 import { pageFadein } from "../hooks/fadeIn";
+import Header from "../components/Header";
 
-export function BlogContainer({ children, categories }) {
+export function BlogContainer({ children }) {
   const { fadeTargetRef, domId } = pageFadein();
 
   return (
@@ -14,7 +14,7 @@ export function BlogContainer({ children, categories }) {
         id={domId}
         style={{ opacity: 0 }}
       >
-        <BlogHeader categories={categories} />
+        <Header />
         <div>{children}</div>
         <Footer />
       </div>

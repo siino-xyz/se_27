@@ -15,7 +15,7 @@ import AboutMe from "../staticSections/toppage/AboutMe";
 import Cta from "../staticSections/toppage/Cta";
 import NewPost from "../staticSections/toppage/NewPost";
 
-export default function Home({ articles }) {
+export default function Top({ articles }) {
   return (
     <>
       <div className={styles.container}>
@@ -40,10 +40,10 @@ export default function Home({ articles }) {
   );
 }
 
-Home.getLayout = function getLayout(home) {
+Top.getLayout = function getLayout(top) {
   return (
     <ToppageLayout>
-      <InnerLayout>{home}</InnerLayout>
+      <InnerLayout>{top}</InnerLayout>
     </ToppageLayout>
   );
 };
