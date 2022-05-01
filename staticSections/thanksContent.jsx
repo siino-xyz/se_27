@@ -20,9 +20,9 @@ export const ThanksContent = () => {
           <p>
             SE-27へお問い合わせいただき、ありがとうございます。1営業日以内に折り返しご連絡致しますので、今しばらくお待ちくださいませ。
           </p>
-          <LinkButton url={"/"} button={"トップーページに戻る"} />
         </main>
       </section>
+      <LinkButton url={"/"} button={"トップーページに戻る"} />
     </>
   );
 };

@@ -3,12 +3,18 @@
 .sectionContainer {
   @include sectionContainer();
   margin-top: 0;
-  @include ptLg();
+  margin-bottom: 1rem;
+  @include border($color: $sub);
+  @include borderRadius;
+  padding: 1rem;
+  max-width: 500px;
 }
 
 .sectionTitle {
-  @include sectionTitle($fz: 3rem, $lh: 3rem);
-  @include mbLg();
+  color: $sub;
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 .sectionInner {

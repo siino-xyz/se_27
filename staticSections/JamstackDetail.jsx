@@ -93,7 +93,7 @@ const JamstackDetail = () => {
             <div className={styles.differenceGrid}>
               <div>
                 <Image
-                  src="/jamstack/lampstack.svg"
+                  src="/jamstack/lampStack-io.png"
                   width={456}
                   height={497}
                   layout="intrinsic"
