@@ -1,0 +1,22 @@
+@import "variables";
+
+.sectionContainer {
+  @include sectionContainer();
+  margin-top: 0;
+  @include ptLg();
+}
+
+.sectionTitle {
+  @include sectionTitle($fz: 3rem, $lh: 3rem);
+  @include mbLg();
+}
+
+.sectionInner {
+  @include flexCol();
+  max-width: 85%;
+  @include mCenter;
+
+  p {
+    @include ptMd();
+  }
+}

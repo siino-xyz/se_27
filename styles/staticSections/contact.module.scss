@@ -26,6 +26,7 @@
   width: 90%;
   position: relative;
   padding: 0.4rem;
+  box-sizing: border-box !important;
 
   @include mq(md) {
     width: 75%;
@@ -52,10 +53,10 @@
   }
 
   input {
-    box-sizing: border-box !important;
     padding: 0.5rem;
     @include borderRadius();
     background-color: $basicWhite;
+    box-sizing: border-box !important;
   }
   textarea {
     background-color: $basicWhite;

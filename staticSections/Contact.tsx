@@ -1,5 +1,5 @@
-import styles from "../../styles/staticSections/contact.module.scss";
-import { GetForm } from "../../hooks/getForm";
+import styles from "../styles/staticSections/contact.module.scss";
+import { GetForm } from "../hooks/getForm";
 
 export const Contact = () => {
   const { register, handleSubmit, onSubmit, errors } = GetForm();

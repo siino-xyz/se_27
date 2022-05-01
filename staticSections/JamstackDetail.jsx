@@ -1,5 +1,5 @@
-import styles from "../../styles/staticSections/jamstack.module.scss";
-import LinkButton from "../../components/LinkButton";
+import styles from "../styles/staticSections/jamstack.module.scss";
+import LinkButton from "../components/LinkButton";
 import Image from "next/image";
 
 const JamstackDetail = () => {
@@ -15,12 +15,11 @@ const JamstackDetail = () => {
             alt="jamstackざっくり解説"
           />
         </div> */}
+        <div className={styles.sectionTitle}>
+          <h2 className={styles.h2}>What's Jamstack?</h2>
+          <div className={styles.subscript}>Jamstackとはなにか</div>
+        </div>
         <main className={styles.sectionInner}>
-          <div className={styles.sectionTitle}>
-            <h2 className={styles.h2}>What's Jamstack?</h2>
-            <div className={styles.subscript}>Jamstackとはなにか</div>
-          </div>
-
           <div className={styles.grid}>
             <Image
               src="/jamstack/jamstackLogo.svg"

@@ -1,0 +1,6 @@
+@import "variables";
+
+.thankspage {
+  height: 100vh;
+  @include flexCol();
+}

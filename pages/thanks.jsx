@@ -1,48 +1,15 @@
-// import ThankspageLayout from "../layouts/ThankspageLayout";
-// import InnerLayout from "../layouts/GlobalInner";
-import styles from "../styles/pages/thanks.module.scss";
-import Image from "next/image";
-import LinkButton from "../components/LinkButton";
-
-export default function Thanks() {
+import Thankspage from "../layouts/Thankspage";
+import ThanksContent from "../staticSections/thanksContent";
+export const Thanks = () => {
   return (
     <>
-      <div className={styles.sectionContainer}>
-        <div className={styles.sectionInner}>
-          <div className={styles.noWrapFlex}>
-            <div>
-              <div className={styles.ttlWrapper}>
-                <h3 className={styles.subTitle}>SEND COMPLETED!</h3>
-              </div>
-            </div>
-            <div>
-              <Image
-                src="/thanks/thanks-plane.svg"
-                width={335}
-                height={148}
-                layout="intrinsic"
-                alt="send-completed"
-              />
-            </div>
-            <div>
-              <p>
-                SE-27へお問い合わせいただき、ありがとうございます。1営業日以内に折り返しご連絡致しますので、今しばらくお待ちくださいませ。
-              </p>
-            </div>
-            <div>
-              <LinkButton button={"トップーページに戻る"} />
-            </div>
-          </div>
-        </div>
-      </div>
+      <ThanksContent />
     </>
   );
-}
+};
 
-// Thanks.getLayout = function getLayout(thanks) {
-//   return (
-//     <ThankspageLayout>
-//       <InnerLayout>{thanks}</InnerLayout>
-//     </ThankspageLayout>
-//   );
-// };
+export default Thanks;
+
+Thanks.getLayout = function getLayout(thanks) {
+  return <Thankspage>{thanks}</Thankspage>;
+};
