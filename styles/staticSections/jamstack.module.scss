@@ -24,7 +24,7 @@
 .featureTitle {
   @include mtMd();
   @include mbSm();
-  // @include flexCol();
+  @include flexCol();
   background-color: $sub;
   color: $base;
   @include borderRadius();

@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   z-index: 999;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
   width: 100%;
   @include ptSm;
   padding-right: 0.5rem;
@@ -124,7 +124,7 @@
   }
 
   .ul {
-    padding-top: 3rem;
+    padding-top: 4rem;
     list-style-type: none;
     padding-left: 0;
 

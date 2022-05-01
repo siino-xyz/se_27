@@ -111,7 +111,7 @@ $deepGray: #444444;
   font-weight: bolder;
 }
 @mixin h3() {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: bolder;
 }
 @mixin h4() {
@@ -234,6 +234,7 @@ $deepGray: #444444;
   cursor: pointer !important;
   text-align: center;
   padding: 0.6rem $py;
+  max-width: 90%;
   color: $base;
   background-color: $basicWhite;
   @include mCenter;
