@@ -5,7 +5,7 @@ export default function AboutMe() {
   return (
     <section className={styles.sectionContainer}>
       <div className={styles.sectionTitle}>
-        <h2 className={styles.h2}>Aboutme</h2>
+        <h2 className={styles.h2}>About me</h2>
         <div className={styles.subscript}>自己紹介</div>
       </div>
 

@@ -176,15 +176,6 @@ const JamstackDetail = () => {
                 </ul>
               </div>
               <div></div>
-              {/* <div className={styles.imageWrapper}>
-                <Image
-                  src="/jamstack/midori-maru.png"
-                  width={362}
-                  height={362}
-                  layout="intrinsic"
-                  alt="/"
-                />
-              </div> */}
             </div>
             <div>
               <div>
@@ -201,15 +192,6 @@ const JamstackDetail = () => {
                   <li>会員制サイトなど、動的な要件の多いウェブサイト</li>
                 </ul>
               </div>
-              {/* <div className={styles.imageWrapper}>
-                <Image
-                  src="/jamstack/orangetri.png"
-                  width={362}
-                  height={362}
-                  layout="intrinsic"
-                  alt="/"
-                />
-              </div> */}
             </div>
           </div>
         </main>
@@ -227,7 +209,7 @@ const JamstackDetail = () => {
               最も適切な構築方法のご提案からスタートします。
             </p>
             <div>
-              <LinkButton url={"/contactform"} button="SE-27に相談してみる" />
+              <LinkButton url={"/contact"} button="SE-27に相談してみる" />
             </div>
           </div>
         </main>

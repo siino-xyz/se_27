@@ -2,7 +2,8 @@ import Link from "next/link";
 import styles from "../styles/components/header.module.scss";
 import HeaderLogoChanger from "../hooks/headerLogoChanger";
 import MobileMenuOpener from "../hooks/mobileMenuOpener";
-export default function Header() {
+
+export const Header = () => {
   const { isBlogPage } = HeaderLogoChanger();
   const { toggle, spMenuContent } = MobileMenuOpener();
 
@@ -66,7 +67,7 @@ export default function Header() {
             </>
           )}
         </div>
-        <div className={styles.headerItem}>
+        <nav className={styles.headerItem}>
           <ul className={styles.pcMenu}>
             <li>
               <Link href="http://localhost:3000/#services" passHref>
@@ -98,11 +99,11 @@ export default function Header() {
               </Link>
             </li>
           </ul>
-        </div>
+        </nav>
       </header>
 
       {/* ドロワーメニュー本体 */}
-      <div
+      <nav
         className={`${styles.drawerMenu}`}
         ref={spMenuContent}
         style={{ display: "none", opacity: 0 }}
@@ -152,7 +153,9 @@ export default function Header() {
             </Link>
           </li>
         </ul>
-      </div>
+      </nav>
     </>
   );
-}
+};
+
+export default Header;

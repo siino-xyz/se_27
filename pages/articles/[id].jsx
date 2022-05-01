@@ -8,7 +8,7 @@ import ShareButtons from "../../components/ShareButtons";
 import CustomImage from "../../components/CustomImage";
 import NextOgp from "../../components/NextOgp";
 import Breadcrumb from "../../components/Breadcrumb";
-import BlogHeader from "../../components/blogHeader";
+import Header from "../../components/Header";
 import { pageFadein } from "../../hooks/fadeIn";
 
 export default function ArticlesId({ articles, categories }) {
@@ -24,7 +24,7 @@ export default function ArticlesId({ articles, categories }) {
         postimg={ogImageUrl}
       />
 
-      <BlogHeader />
+      <Header />
       <div
         className={styles.innerLayout}
         ref={fadeTargetRef}

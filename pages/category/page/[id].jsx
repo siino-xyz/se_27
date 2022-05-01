@@ -11,22 +11,30 @@ export const CategoryId = ({ articles, categories, name }) => {
   if (articles.length === 0) {
     return (
       <>
-        <div className={styles.noArticles}>
-          <div>このカテゴリにはまだ記事がありません。ゴメンネ。</div>
-          <LinkButton url={"/blog"} button="ブログ一覧へもどる" />
+        <div className={styles.sectionContainer}>
+          <main className={styles.sectionInner}>
+            <div className={styles.noArticles}>
+              <div>このカテゴリにはまだ記事がありません。ゴメンネ。</div>
+              <LinkButton url={"/blog"} button="ブログ一覧へもどる" />
+            </div>
+          </main>
         </div>
       </>
     );
   }
   return (
-    <div className={styles.container}>
-      <Breadcrumb articles={articles} categories={categories} />
-      <Categories categories={categories} />
-      <div className={styles.ttlWrapper}>
-        <h2 className={styles.sectionTitle}>{name}</h2>
+    <>
+      <div className={styles.sectionContainer}>
+        <main className={styles.sectionInner}>
+          <Breadcrumb articles={articles} categories={categories} />
+          <Categories categories={categories} />
+          <div className={styles.ttlWrapper}>
+            <h2 className={styles.sectionTitle}>{name}</h2>
+          </div>
+          <ArticleCard articles={articles} />
+        </main>
       </div>
-      <ArticleCard articles={articles} />
-    </div>
+    </>
   );
 };
 

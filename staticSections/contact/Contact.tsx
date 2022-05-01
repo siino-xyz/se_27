@@ -1,60 +1,30 @@
 import styles from "../../styles/staticSections/contact.module.scss";
-import { useForm } from "react-hook-form";
+import { GetForm } from "../../hooks/getForm";
 
-type formInputs = {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-};
-
-export default function Contact() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<formInputs>();
-
-  const onSubmit = (data: formInputs, e: any) => {
-    const formData = new FormData();
-    formData.append("name", data.name);
-    formData.append("email", data.email);
-    formData.append("subject", data.subject);
-    formData.append("message", data.message);
-    fetch("https://getform.io/f/6e829c97-4064-4818-bdb4-1c3b491869c5", {
-      method: "POST",
-      body: formData,
-    })
-      .then(() => {
-        e.target.reset();
-      })
-      .catch((error) => {
-        alert(error);
-        console.error(error);
-      });
-  };
+export const Contact = () => {
+  const { register, handleSubmit, onSubmit, errors } = GetForm();
 
   return (
     <>
-      <div className={styles.sectionContainer}>
-        <div className={styles.ttlWrapper}>
-          <h2 className={styles.sectionTitle}>
-            Contact
-            <br />
-            <div className={styles.subscriptJp}>お問い合わせ</div>
-          </h2>
+      <main className={styles.sectionContainer}>
+        <div className={styles.sectionTitle}>
+          <h2 className={styles.h2}>Contact</h2>
+          <h2 className={styles.subscript}>お問い合わせフォーム</h2>
         </div>
+
         <p>
-          お気軽にお問い合わせ下しあ。原則２営業日以内に折り返しご連絡いたします。
+          以下のフォームをご入力のうえ、今しばらくお待ちくださいませ。（全項目必須）
         </p>
+        <p>原則2営業日以内に折り返しご連絡いたします。</p>
+
         <form
           onSubmit={handleSubmit(onSubmit)}
           className={styles.formContainer}
         >
-          <div className={styles.inputBox}>
-            <p>
-              <span className={styles.must}>*</span>お名前
-            </p>
+          <div className={styles.inputItem}>
+            <label className={styles.inputLabel} htmlFor="お名前:name">
+              お名前
+            </label>
             <input
               {...register("name", {
                 required: true,
@@ -62,14 +32,22 @@ export default function Contact() {
               })}
             />
             {errors.name && (
-              <div className={styles.validation}>*お名前をご入力下さい。</div>
+              <label
+                className={styles.validationMessage}
+                htmlFor="名前を入力してください"
+              >
+                名前を入力してください
+              </label>
             )}
           </div>
 
-          <div className={styles.inputBox}>
-            <p>
-              <span className={styles.must}>*</span>メールアドレス
-            </p>
+          <div className={styles.inputItem}>
+            <label
+              className={styles.inputLabel}
+              htmlFor="メールアドレス:emailAddress"
+            >
+              メールアドレス
+            </label>
             <input
               {...register("email", {
                 required: true,
@@ -80,19 +58,27 @@ export default function Contact() {
               })}
             />
             {errors.email?.type === "required" && (
-              <div className={styles.validation}>
-                *メールアドレスを入力して下さい
-              </div>
+              <label
+                className={styles.validationMessage}
+                htmlFor="メールアドレスが空欄です"
+              >
+                メールアドレスが空欄です
+              </label>
             )}
             {errors.email?.type === "pattern" && (
-              <div className={styles.validation}>*お名前をご入力下さい。</div>
+              <label
+                className={styles.validationMessage}
+                htmlFor="正しいメールアドレスの形式で入力してください。"
+              >
+                正しいメールアドレスの形式で入力してください。
+              </label>
             )}
           </div>
 
-          <div className={styles.inputBox}>
-            <p>
-              <span className={styles.must}>*</span>ご用件
-            </p>
+          <div className={styles.inputItem}>
+            <label className={styles.inputLabel} htmlFor="用件のタイトル:Title">
+              用件のタイトル
+            </label>
             <input
               {...register("subject", {
                 required: true,
@@ -100,30 +86,41 @@ export default function Contact() {
               })}
             />
             {errors.subject && (
-              <div className={styles.validation}>
-                *用件のタイトルを入力して下さい
-              </div>
+              <label
+                className={styles.validationMessage}
+                htmlFor="用件のタイトルが空欄です"
+              >
+                用件のタイトルが空欄です
+              </label>
             )}
           </div>
-          <div className={styles.textAreaBox}>
-            <p>
-              <span className={styles.must}>*</span>ご用件の内容
-            </p>
+
+          <div className={styles.inputItem}>
+            <label className={styles.inputLabel} htmlFor="用件の本文:Body">
+              用件の本文
+            </label>
             <textarea
               {...register("message", {
                 required: true,
               })}
             />
             {errors.message && (
-              <div className={styles.validation}>*要件の内容をご記入下さい</div>
+              <label
+                className={styles.validationMessage}
+                htmlFor="用件の本文が空欄です。"
+              >
+                用件の本文が空欄です。
+              </label>
             )}
           </div>
 
-          <button className={styles.linkBtnWrapper} type="submit">
-            送信
+          <button className={styles.linkBtn} type="submit">
+            上記の内容で送信する
           </button>
         </form>
-      </div>
+      </main>
     </>
   );
-}
+};
+
+export default Contact;

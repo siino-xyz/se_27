@@ -14,6 +14,7 @@
 }
 
 .svgLogo {
+  cursor: pointer;
   fill: $basicWhite;
   margin-left: 0.2rem;
   padding: 0.2rem;
@@ -44,6 +45,10 @@
       a {
         color: $basicWhite;
         @include boldParagrah;
+        @include toggleFade;
+      }
+      a:hover {
+        color: $sub;
       }
     }
   }

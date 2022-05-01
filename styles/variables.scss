@@ -94,6 +94,7 @@ $accent: #80ef7e;
 $sub: #7e8bef;
 $base: #121212;
 $subTrans: rgba(126, 139, 239, 0.151);
+$error: rgba(255, 101, 116, 0.442);
 
 //grayScale
 $basicWhite: #ededed;
@@ -227,4 +228,19 @@ $deepGray: #444444;
   padding: 0.1rem 0.5rem;
   @include smallTitle();
   @include borderRadius;
+}
+
+@mixin linkBtn($py: 0) {
+  cursor: pointer !important;
+  text-align: center;
+  padding: 0.6rem $py;
+  max-width: 70%;
+  color: $base;
+  background-color: $basicWhite;
+  @include mCenter;
+  @include mtMd();
+  @include mbSm();
+  @include h4();
+  @include borderRadius();
+  @include toggleFade;
 }

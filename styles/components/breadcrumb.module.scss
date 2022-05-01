@@ -2,15 +2,19 @@
 
 .breadcrumbContainer {
   @include flexRow($justify: flex-start);
-  @include mtSm();
+  @include ptMd();
   @include mbSm();
   .item {
-    margin: 0 0.5rem;
+    margin: 0 0.2rem;
     color: $basicWhite;
     @include smallText();
     @include toggleFade();
   }
   .changeColor:hover {
     color: $sub;
+  }
+
+  .torightArrow {
+    padding-bottom: 0.2rem;
   }
 }
