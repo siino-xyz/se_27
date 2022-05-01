@@ -18,7 +18,7 @@ const ShareButtons = ({ articles }) => {
         <div className={styles.shareBtns}>
           <div className={styles.item}>
             <TwitterShareButton
-              url={[`https://localhost:3000/articles/${articles.id}`]}
+              url={[`https://se-27.com/articles/${articles.id}`]}
               title={[articles.title]}
             >
               <TwitterIcon size={32} round />
@@ -26,14 +26,14 @@ const ShareButtons = ({ articles }) => {
           </div>
           <div className={styles.item}>
             <FacebookShareButton
-              url={[`https://localhost:3000/articles/${articles.id}`]}
+              url={[`https://se-27.com/articles/${articles.id}`]}
             >
               <FacebookIcon size={32} round />
             </FacebookShareButton>
           </div>
           <div className={styles.item}>
             <LineShareButton
-              url={[`https://localhost:3000/articles/${articles.id}`]}
+              url={[`https://se-27.com/articles/${articles.id}`]}
               title={[articles.title]}
             >
               <LineIcon size={32} round />
@@ -41,7 +41,7 @@ const ShareButtons = ({ articles }) => {
           </div>
           <div className={styles.item}>
             <PinterestShareButton
-              url={[`https://localhost:3000/articles/articles/${articles.id}`]}
+              url={[`https://se-27.com/articles/articles/${articles.id}`]}
               media={[`http://localhost:8080/${articles.eye_catch.url}`]}
               description={[articles.title]}
             >

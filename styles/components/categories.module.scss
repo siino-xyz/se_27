@@ -16,9 +16,13 @@
   background-color: $basicWhite;
   padding: 0.1rem 1rem;
   border-radius: 0.8rem;
-
+  @include toggleFade();
   a {
     color: $base;
     @include boldParagrah();
+  }
+
+  &:hover {
+    background-color: $accent;
   }
 }

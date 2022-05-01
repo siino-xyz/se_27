@@ -39,6 +39,7 @@
     color: $sub;
     min-height: 70px;
     max-height: 70px;
+    @include toggleFade();
 
     &:hover {
       color: $basicWhite;

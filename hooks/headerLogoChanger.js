@@ -4,7 +4,8 @@ export const HeaderLogoChanger = () => {
   const router = useRouter();
   const path = router.asPath;
   const isBlogPage = /blog/.test(path);
-  return { path, isBlogPage };
+  const isCategoryPage = /category/.test(path);
+  return { path, isBlogPage, isCategoryPage };
 };
 
 export default HeaderLogoChanger;

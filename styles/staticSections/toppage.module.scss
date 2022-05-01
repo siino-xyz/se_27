@@ -86,8 +86,13 @@
   @include mtSm();
   @include borderRadius();
   @include mCenter();
+  @include toggleFade();
   color: $base;
   span {
     @include h4();
+  }
+
+  &:hover {
+    background-color: $basicWhite;
   }
 }

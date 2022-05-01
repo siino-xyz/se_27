@@ -9,11 +9,16 @@
 .paginationItem {
   background-color: $basicWhite;
   @include borderRadius;
+  @include toggleFade();
   a {
     color: $base;
     @include h4();
   }
   div {
     padding: 0.5rem 1rem;
+  }
+
+  &:hover {
+    background-color: $accent;
   }
 }

@@ -4,7 +4,7 @@ import HeaderLogoChanger from "../hooks/headerLogoChanger";
 import MobileMenuOpener from "../hooks/mobileMenuOpener";
 
 export const Header = () => {
-  const { isBlogPage } = HeaderLogoChanger();
+  const { isBlogPage, isCategoryPage } = HeaderLogoChanger();
   const { toggle, spMenuContent } = MobileMenuOpener();
 
   return (
@@ -23,7 +23,7 @@ export const Header = () => {
       {/* ヘッダー */}
       <header className={styles.headerContainer}>
         <div className={styles.headerItem}>
-          {isBlogPage ? (
+          {isBlogPage || isCategoryPage ? (
             <>
               <Link href="/blog" passHref>
                 <div>
@@ -70,7 +70,12 @@ export const Header = () => {
         <nav className={styles.headerItem}>
           <ul className={styles.pcMenu}>
             <li>
-              <Link href="http://localhost:3000/#services" passHref>
+              <Link href="/" passHref>
+                <a className={styles.menuItem}>Top</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://se-27.com/#services" passHref>
                 <a className={styles.menuItem}>Services</a>
               </Link>
             </li>
@@ -117,7 +122,7 @@ export const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="http://localhost:3000/#services">
+            <Link href="https://se-27.com/#services">
               <a>
                 <p className={styles.menuText}>Services</p>
               </a>
