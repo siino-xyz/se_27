@@ -86,8 +86,8 @@ export default function QandA() {
       </div>
 
       <Cta
-        title="More details"
-        subscript="さらに詳しく知るなら"
+        title="Contact us"
+        subscript="SE-27に相談してみる？"
         body="より詳しい制作の流れを知りたい、気になることがあれば、お気軽にお問い合わせください。"
       />
     </>

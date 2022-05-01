@@ -10,7 +10,6 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <GoogleAnalytics />
 
-        <link rel="icon" href="public/favicon.svg" type="image/svg+xml" />
         <title>Jamstack専門のホームページ制作 | SE-27.com</title>
       </Head>
       <Component {...pageProps} />
