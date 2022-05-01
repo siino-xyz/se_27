@@ -6,11 +6,13 @@
   top: 0;
   left: 0;
   z-index: 999;
-  background-color: $subTrans;
   backdrop-filter: blur(2px);
   width: 100%;
   @include ptSm;
   padding-right: 0.5rem;
+  @include mq(md) {
+    background-color: $subTrans;
+  }
 }
 
 .svgLogo {
@@ -124,6 +126,7 @@
   .ul {
     padding-top: 8rem;
     list-style-type: none;
+    padding-left: 0;
 
     li {
       a {

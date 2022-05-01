@@ -2,11 +2,11 @@
 
 .breadcrumbContainer {
   @include flexRow($justify: flex-start);
-  @include ptMd();
+  // @include ptSm();
   @include mbSm();
   .item {
     margin: 0 0.2rem;
-    color: $basicWhite;
+    color: $lightGray;
     @include smallText();
     @include toggleFade();
   }
