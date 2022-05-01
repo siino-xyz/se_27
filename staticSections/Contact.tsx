@@ -25,12 +25,14 @@ export const Contact = () => {
             <label className={styles.inputLabel} htmlFor="お名前:name">
               お名前
             </label>
-            <input
-              {...register("name", {
-                required: true,
-                maxLength: 50,
-              })}
-            />
+            <div>
+              <input
+                {...register("name", {
+                  required: true,
+                  maxLength: 50,
+                })}
+              />
+            </div>
             {errors.name && (
               <label
                 className={styles.validationMessage}

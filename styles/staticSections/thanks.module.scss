@@ -13,7 +13,7 @@
 
 .sectionInner {
   @include flexCol();
-  max-width: 85%;
+  max-width: 100%;
   @include mCenter;
 
   p {

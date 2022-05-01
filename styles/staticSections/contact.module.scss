@@ -54,6 +54,7 @@
 
   input {
     padding: 0.5rem;
+    width: 100%;
     @include borderRadius();
     background-color: $basicWhite;
     box-sizing: border-box !important;
