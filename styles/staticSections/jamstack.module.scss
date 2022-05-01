@@ -54,3 +54,14 @@
   @include gapSm();
   @include mbMd();
 }
+
+.memoCard {
+  @include memocard();
+}
+.memoCardNum {
+  @include memocard($lst: decimal);
+  @include mCenter();
+}
+.memoCardList {
+  @include memocard;
+}

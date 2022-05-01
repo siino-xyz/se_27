@@ -23,7 +23,19 @@
 //bigTypo
 .bigTypo {
   @include grid();
+  padding: 2rem 1rem;
+  @include borderRadius;
   @include gapLr();
+  background-color: rgba(126, 139, 239, 0.386);
+
+  @include mq(md) {
+    div {
+      @include flexCol();
+      padding-left: 1.5rem;
+      height: 100%;
+      border-left: 2px solid $sub;
+    }
+  }
 }
 
 //issues
@@ -52,9 +64,14 @@
   @include borderRadius();
   padding: 0 0.5rem;
   text-align: left !important;
+
+  p {
+    @include ptSm();
+  }
 }
 .scrollTextH4 {
   @include ptMd();
+  @include pbSm();
   color: $main;
   border-bottom: 1px solid $main;
 }

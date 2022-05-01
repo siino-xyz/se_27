@@ -92,7 +92,7 @@ $breakpoints: (
 $main: #f39423;
 $accent: #80ef7e;
 $sub: #7e8bef;
-$base: #121212;
+$base: #1a1a1a;
 $subTrans: rgba(126, 139, 239, 0.151);
 $error: rgba(255, 101, 116, 0.442);
 
@@ -121,7 +121,7 @@ $deepGray: #444444;
 @mixin normalParagraph() {
   font-size: 1rem;
   font-weight: normal;
-  line-height: 1.5rem;
+  line-height: 1.7rem;
   @include pbSm();
 }
 @mixin boldParagrah() {
@@ -213,6 +213,23 @@ $deepGray: #444444;
 }
 @mixin borderRadius() {
   border-radius: 0.2rem;
+}
+
+@mixin memocard($lst: circle) {
+  @include border($color: $sub);
+  @include borderRadius();
+  @include mtSm();
+  max-width: 500px;
+  background-color: $base;
+  @include border($color: sub);
+  padding-left: 30px;
+  li {
+    padding: 0.5rem 0.5rem;
+    list-style-type: $lst;
+  }
+  p {
+    @include smallText();
+  }
 }
 
 //animation
