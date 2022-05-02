@@ -25,7 +25,8 @@
     "components/Header.jsx",
     "components/Breadcrumb.jsx",
     "pages/_app.js",
-    "pages/OgpTest.jsx"
+    "pages/OgpTest.jsx",
+    "components/GoogleAnalytics.js"
   ],
   "exclude": ["node_modules"]
 }
