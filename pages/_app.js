@@ -1,29 +1,27 @@
 import "../styles/globals.scss";
 import "../styles/reset.css";
 import Head from "next/head";
-import { useEffect } from "react";
-import { useRouter } from "next/router";
+// import { useEffect } from "react";
+// import { useRouter } from "next/router";
 import GoogleAnalytics from "../components/GoogleAnalytics";
-import Gtag from "../libs/gtag";
+// import { existsGaId, pageview } from "../libs/gtag";
 function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
 
-  const { existsGaId, pageview } = Gtag();
+  // const router = useRouter();
+  // useEffect(() => {
+  //   if (!existsGaId) {
+  //     return;
+  //   }
+  //   const handleRouteChange = (path) => {
+  //     pageview(path);
+  //   };
+  //   router.events.on("routeChangeComplete", handleRouteChange);
 
-  const router = useRouter();
-  useEffect(() => {
-    if (!existsGaId) {
-      return;
-    }
-    const handleRouteChange = (path) => {
-      pageview(path);
-    };
-    router.events.on("routeChangeComplete", handleRouteChange);
-
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
+  //   return () => {
+  //     router.events.off("routeChangeComplete", handleRouteChange);
+  //   };
+  // }, [router.events]);
 
   return getLayout(
     <>

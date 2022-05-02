@@ -1,5 +1,5 @@
 import Script from "next/script";
-import { GA_TRACKING_ID, existsGaId } from "../libs/gtag";
+import { GA_ID, existsGaId } from "../libs/gtag";
 
 const GoogleAnalytics = () => {
   <>
@@ -7,7 +7,7 @@ const GoogleAnalytics = () => {
       <>
         <Script
           defer
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
         />
         <Script
@@ -18,7 +18,7 @@ const GoogleAnalytics = () => {
             __html: `window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', '${GA_TRACKING_ID}', {
+      gtag('config', '${GA_ID}', {
         page_path: window.location.pathname,
       })`,
           }}
