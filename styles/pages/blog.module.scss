@@ -6,3 +6,13 @@
 .sectionTitle {
   @include sectionTitle();
 }
+
+.noArticles {
+  padding-top: 8rem;
+
+  div {
+    @include mbLr();
+    text-align: center;
+    @include mCenter();
+  }
+}
