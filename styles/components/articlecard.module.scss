@@ -40,6 +40,8 @@
     min-height: 70px;
     max-height: 70px;
     @include toggleFade();
+    max-width: 100%;
+    overflow-x: hidden !important;
 
     &:hover {
       color: $basicWhite;
