@@ -1,19 +1,30 @@
-export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
+export const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
-export const existsGaId = GA_TRACKING_ID !== ''
+export const Gtag = () => {
+  // IDが取得できない場合を想定する
+  const existsGaId = GA_ID !== "";
 
-// https://developers.google.com/analytics/devguides/collection/gtagjs/pages
-export const pageview = (url) => {
-  window.gtag('config', GA_TRACKING_ID, {
-    page_path: url,
-  })
-}
+  // PVを測定する
+  const pageview = (path) => {
+    window.gtag("config", GA_ID, {
+      page_path: path,
+    });
+  };
 
-// https://developers.google.com/analytics/devguides/collection/gtagjs/events
-export const event = ({ action, category, label, value }) => {
-  window.gtag('event', action, {
-    event_category: category,
-    event_label: label,
-    value: value,
-  })
-}
+  // GAイベントを発火させる
+  const event = ({ action, category, label, value = "" }) => {
+    if (!existsGaId) {
+      return;
+    }
+
+    window.gtag("event", action, {
+      event_category: category,
+      event_label: JSON.stringify(label),
+      value,
+    });
+  };
+
+  return { existsGaId, pageview, event };
+};
+
+export default Gtag;
