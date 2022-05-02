@@ -270,3 +270,12 @@ $deepGray: #444444;
     background-color: $accent;
   }
 }
+
+@mixin hiLight() {
+  p > span {
+    background-color: $basicWhite;
+    color: $base;
+    @include boldParagrah();
+    margin: 0 0.2rem;
+  }
+}

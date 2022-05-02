@@ -27,6 +27,7 @@
   @include borderRadius;
   @include gapLr();
   background-color: rgba(126, 139, 239, 0.386);
+  @include hiLight();
 
   @include mq(md) {
     div {
@@ -112,4 +113,7 @@
   &:hover {
     background-color: $basicWhite;
   }
+}
+.pt {
+  @include ptSm();
 }

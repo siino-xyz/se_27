@@ -2,6 +2,8 @@
 
 .sectionContainer {
   @include sectionContainer();
+
+  @include hiLight();
 }
 .sectionTitle {
   @include sectionTitle($fz: 4rem, $lh: 4rem);

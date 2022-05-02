@@ -25,7 +25,11 @@ export default function Top({ articles }) {
           <Isuues />
           <Solution />
           <Flow />
-          <Cta title="Contact" subscript="お問い合わせ" body="sdfsdf" />
+          <Cta
+            title="Contact"
+            subscript="お問い合わせ"
+            body="詳しい話を聞いてみたいと思ったら、このサイトのContactページ、もしくは当方のTwitterアカウント（@SE_27_Jamstack）のDMからお気軽にお声がけ下さい。"
+          />
           <AboutMe />
           <main className={styles.sectionContainer}>
             <NewPost />
