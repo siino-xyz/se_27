@@ -2,7 +2,6 @@ import { client } from "../../libs/client";
 import Image from "next/image";
 import styles from "../../styles/pages/articles/articles.module.scss";
 import dayjs from "dayjs";
-
 import LinkButton from "../../components/LinkButton";
 import ShareButtons from "../../components/ShareButtons";
 import CustomImage from "../../components/CustomImage";

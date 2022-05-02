@@ -1,3 +1,4 @@
+import Meta from "../layouts/Meta";
 import UnderpageLayout from "../layouts/UnderpageOuter";
 import InnerLayout from "../layouts/GlobalInner";
 //staticSections
@@ -15,8 +16,10 @@ export default function Flow() {
 
 Flow.getLayout = function getLayout(flow) {
   return (
-    <UnderpageLayout>
-      <InnerLayout>{flow}</InnerLayout>
-    </UnderpageLayout>
+    <Meta>
+      <UnderpageLayout>
+        <InnerLayout>{flow}</InnerLayout>
+      </UnderpageLayout>
+    </Meta>
   );
 };

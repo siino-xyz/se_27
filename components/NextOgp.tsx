@@ -11,7 +11,7 @@ export type HeadType = {
   keyword?: string;
 };
 
-export const HeadTemplate: React.FC<HeadType> = ({
+export const NextOgp: React.FC<HeadType> = ({
   pagetitle,
   pagedescription,
   pagepath,
@@ -31,7 +31,7 @@ export const HeadTemplate: React.FC<HeadType> = ({
     : `${process.env.NEXT_PUBLIC_URL}`;
   const imgurl = pageimg
     ? `${process.env.NEXT_PUBLIC_URL}${pageimg}`
-    : postimg || `${process.env.NEXT_PUBLIC_URL}vercel.svg`;
+    : postimg || `${process.env.NEXT_PUBLIC_URL}defaultogp.svg`;
   const imgw = pageimgw || "1200px";
   const imgh = pageimgh || "630px";
   const fbAppId = `${process.env.FB_APP_ID}`;
@@ -39,10 +39,9 @@ export const HeadTemplate: React.FC<HeadType> = ({
   return (
     <>
       <Head>
-        <html lang="ja" />
         <title>{title}</title>
         <meta charSet="utf-8" />
-        {/* <meta name="viewport" content="width=device-width,initial-scale=1" /> */}
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta property="og:description" content={description} />
         <meta property="og:site_name" content={title} />
         <meta property="og:title" content={title} />
@@ -52,7 +51,6 @@ export const HeadTemplate: React.FC<HeadType> = ({
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ja_JP" />
         <meta property="fb:app_id" content={fbAppId} />
-        {/* // 動的画像のURLをこのように指定することによって、OGPに適用されます。 */}
         <meta property="og:image" content={imgurl} />
         <meta property="og:image:width" content={imgw} />
         <meta property="og:image:height" content={imgh} />
@@ -67,4 +65,4 @@ export const HeadTemplate: React.FC<HeadType> = ({
   );
 };
 
-export default HeadTemplate;
+export default NextOgp;

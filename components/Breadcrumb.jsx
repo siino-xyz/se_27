@@ -5,9 +5,7 @@ import styles from "../styles/components/breadcrumb.module.scss";
 const Breadcrumb = ({ categories, articles }) => {
   const router = useRouter();
   const path = router.asPath;
-  console.log(router.asPath);
   const isCategoryPage = /\/category\/.+$/.test(path);
-  console.log(isCategoryPage);
 
   return (
     <>

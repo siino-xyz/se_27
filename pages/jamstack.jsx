@@ -1,3 +1,4 @@
+import Meta from "../layouts/Meta";
 import UnderpageLayout from "../layouts/UnderpageOuter";
 import InnerLayout from "../layouts/GlobalInner";
 //staticSections
@@ -14,8 +15,10 @@ export default Jamstack;
 
 Jamstack.getLayout = function getLayout(jamstack) {
   return (
-    <UnderpageLayout>
-      <InnerLayout>{jamstack}</InnerLayout>
-    </UnderpageLayout>
+    <Meta>
+      <UnderpageLayout>
+        <InnerLayout>{jamstack}</InnerLayout>
+      </UnderpageLayout>
+    </Meta>
   );
 };

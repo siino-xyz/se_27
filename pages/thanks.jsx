@@ -1,3 +1,4 @@
+import Meta from "../layouts/Meta";
 import Thankspage from "../layouts/Thankspage";
 import ThanksContent from "../staticSections/thanksContent";
 export const Thanks = () => {
@@ -11,5 +12,9 @@ export const Thanks = () => {
 export default Thanks;
 
 Thanks.getLayout = function getLayout(thanks) {
-  return <Thankspage>{thanks}</Thankspage>;
+  return (
+    <Meta>
+      <Thankspage>{thanks}</Thankspage>;
+    </Meta>
+  );
 };

@@ -3,6 +3,7 @@ import styles from "../styles/pages/index.module.scss";
 import ArticleCard from "../components/ArticleCard";
 import LinkButton from "../components/LinkButton";
 //layouts
+import Meta from "../layouts/Meta";
 import ToppageLayout from "../layouts/ToppageOuter";
 import InnerLayout from "../layouts/GlobalInner";
 //staticSections
@@ -46,9 +47,11 @@ export default function Top({ articles }) {
 
 Top.getLayout = function getLayout(top) {
   return (
-    <ToppageLayout>
-      <InnerLayout>{top}</InnerLayout>
-    </ToppageLayout>
+    <Meta>
+      <ToppageLayout>
+        <InnerLayout>{top}</InnerLayout>
+      </ToppageLayout>
+    </Meta>
   );
 };
 

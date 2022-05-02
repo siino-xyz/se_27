@@ -10,10 +10,6 @@ function MyApp({ Component, pageProps }) {
   usePageView();
   return getLayout(
     <>
-      <Head>
-        <title>Jamstack専門のホームページ制作 | SE-27.com</title>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
-      </Head>
       <GoogleAnalytics />
 
       <Component {...pageProps} />
