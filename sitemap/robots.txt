@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://se-27.com/
+
+# Sitemaps
+Sitemap: https://se-27.com/sitemap.xml
