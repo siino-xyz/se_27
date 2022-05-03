@@ -5,6 +5,11 @@
   @include mCenter();
   @include mtLr();
   @include mbMd();
+
+  span {
+    color: $basicWhite;
+    @include h4();
+  }
 }
 
 .shareBtns {

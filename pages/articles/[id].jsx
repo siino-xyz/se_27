@@ -36,32 +36,32 @@ export default function ArticlesId({ articles, categories }) {
             <Image
               src={articles.eye_catch.url}
               width={944}
-              height={531}
-              layout="intrinsic"
+              height={465}
+              layout="responsive"
               alt="eye_catch"
             />
           </div>
 
-          <div className={styles.contentWrapper}>
+          <section className={styles.contentWrapper}>
             <div className={styles.sumally}>
               <div className={styles.tag}>{articles.categories.name}</div>
-              <h2 className={styles.title}>{articles.title}</h2>
+              <h1 className={styles.title}>{articles.title}</h1>
               <div className={styles.date}>
                 {dayjs(articles.publishedAt).locale("ja").format("YYYY/MM/DD")}
               </div>
             </div>
 
-            <div>
+            <main className={styles.richEditor}>
               <div
                 dangerouslySetInnerHTML={{
                   __html: `${articles.body}`,
                 }}
               />
-            </div>
+            </main>
 
             <ShareButtons articles={articles} />
             <LinkButton url={"/blog"} button="他の記事も読む" />
-          </div>
+          </section>
         </div>
       </div>
     </>

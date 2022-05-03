@@ -18,7 +18,7 @@ const ArticleCard = ({ articles }: { articles: Articles[] }) => {
                     className={styles.eyeCatchImg}
                     src={articles.eye_catch.url}
                     width={330}
-                    height={190}
+                    height={163}
                     layout="responsive"
                     alt="eye_catch"
                   />

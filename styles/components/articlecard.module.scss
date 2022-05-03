@@ -27,6 +27,7 @@
 }
 
 .sumallyWrapper {
+  border-top: 1px solid $sub;
   color: $sub;
 
   padding: 1rem 0.5rem;
@@ -35,16 +36,16 @@
   }
   h1 {
     margin-top: 0.5rem;
-    font-size: 1.2rem;
-    color: $sub;
-    min-height: 70px;
-    max-height: 70px;
+    font-size: 1.1rem;
+    min-height: 78px;
+    max-height: 78px;
+    color: $basicWhite;
     @include toggleFade();
     max-width: 100%;
     overflow-x: hidden !important;
 
     &:hover {
-      color: $basicWhite;
+      color: $sub;
     }
   }
   .date {

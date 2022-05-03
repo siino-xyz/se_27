@@ -9,18 +9,54 @@
 }
 
 .contentWrapper {
+  h1 {
+    font-size: 1.85rem;
+  }
+  h2 {
+    color: $sub;
+    background-color: $base;
+    @include border($color: $sub);
+    font-size: 1.65rem;
+    padding: 0.3rem 0.5rem;
+    @include mbSm();
+    @include mtMd();
+    @include borderRadius();
+  }
+  h3 {
+    font-size: 1.45rem;
+    color: $sub;
+    padding: 0.3rem;
+    @include mbSm();
+    @include mtSm();
+  }
+  h4 {
+    font-size: 1.3rem;
+    color: $sub;
+    padding: 0.3rem;
+    @include mbSm();
+    @include mtSm();
+  }
+  ul {
+    @include border($color: $accent);
+    padding: 0.5rem;
+    padding-left: 2rem;
+    color: $accent;
+    li {
+      list-style-type: square;
+      margin: 0.5rem 0;
+    }
+  }
   @include mq(md) {
-    max-width: 850px;
+    max-width: 730px;
     @include mCenter();
   }
 }
 .sumally {
-  @include mbMd();
-  .title {
-    @include ptSm();
-  }
+  @include mbLg();
   .date {
     @include ptSm();
+    @include smallText();
+    color: $sub;
   }
 }
 .tag {
@@ -29,4 +65,21 @@
 .contentWrapper {
   @include mtMd();
   @include mbMd();
+}
+
+.richEditor {
+  img {
+    @include mCenter();
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  strong {
+    background-color: $basicWhite;
+    color: $base;
+    @include boldParagrah();
+    margin: 0 0.2rem;
+  }
+  p {
+    @include mtSm();
+  }
 }

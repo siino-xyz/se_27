@@ -14,21 +14,21 @@ const ShareButtons = ({ articles }) => {
   return (
     <>
       <div className={styles.shareWrapper}>
-        <h4>この記事をシェアする</h4>
+        <span>この記事をシェアする</span>
         <div className={styles.shareBtns}>
           <div className={styles.item}>
             <TwitterShareButton
               url={[`https://se-27.com/articles/${articles.id}`]}
               title={[articles.title]}
             >
-              <TwitterIcon size={32} round />
+              <TwitterIcon size={38} round />
             </TwitterShareButton>
           </div>
           <div className={styles.item}>
             <FacebookShareButton
               url={[`https://se-27.com/articles/${articles.id}`]}
             >
-              <FacebookIcon size={32} round />
+              <FacebookIcon size={38} round />
             </FacebookShareButton>
           </div>
           <div className={styles.item}>
@@ -36,7 +36,7 @@ const ShareButtons = ({ articles }) => {
               url={[`https://se-27.com/articles/${articles.id}`]}
               title={[articles.title]}
             >
-              <LineIcon size={32} round />
+              <LineIcon size={38} round />
             </LineShareButton>
           </div>
           <div className={styles.item}>
@@ -45,7 +45,7 @@ const ShareButtons = ({ articles }) => {
               media={[`http://localhost:8080/${articles.eye_catch.url}`]}
               description={[articles.title]}
             >
-              <PinterestIcon size={32} round />
+              <PinterestIcon size={38} round />
             </PinterestShareButton>
           </div>
         </div>
