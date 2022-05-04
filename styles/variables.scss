@@ -121,7 +121,8 @@ $deepGray: #444444;
 @mixin normalParagraph() {
   font-size: 1.05rem;
   font-weight: normal;
-  line-height: 1.7rem;
+  line-height: 1.73rem;
+  letter-spacing: 0.09rem;
   @include pbSm();
 }
 @mixin boldParagrah() {
