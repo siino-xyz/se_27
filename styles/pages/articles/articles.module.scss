@@ -47,7 +47,7 @@
     }
   }
   @include mq(md) {
-    max-width: 730px;
+    max-width: 775px;
     @include mCenter();
   }
 }
