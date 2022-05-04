@@ -40,7 +40,7 @@ export default function AboutMe() {
 
           <div className={styles.flexCol}>
             <a
-              href="https://twitter.com/SE_27_Jamstack"
+              href="https://twitter.com/siino_SE_27"
               target="_blank"
               rel="noopener"
             >
