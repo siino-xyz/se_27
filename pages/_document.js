@@ -4,6 +4,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="jp">
         <Head>
+          <title>SE-27 | Jamstack専門のホームページ制作</title>
           <link
             href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&family=Zen+Kaku+Gothic+New:wght@400;700&&display=swap"
             rel="stylesheet"
