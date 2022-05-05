@@ -5,7 +5,6 @@ export default function Meta({ children }) {
   return (
     <>
       <NextOgp
-        title={"SE-27 | Jamstack専門のホームページ制作"}
         pagedescription={"Jamstack専門のホームページ制作 SE-27（せつな）"}
         pagepath={path}
       />
