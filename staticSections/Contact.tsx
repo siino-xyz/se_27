@@ -59,20 +59,20 @@ export const Contact = () => {
                 },
               })}
             />
-            {errors.email?.type === "required" && (
-              <label
-                className={styles.validationMessage}
-                htmlFor="メールアドレスが空欄です"
-              >
-                メールアドレスが空欄です
-              </label>
-            )}
             {errors.email?.type === "pattern" && (
               <label
                 className={styles.validationMessage}
                 htmlFor="正しいメールアドレスの形式で入力してください。"
               >
                 正しいメールアドレスの形式で入力してください。
+              </label>
+            )}
+            {errors.email?.type === "required" && (
+              <label
+                className={styles.validationMessage}
+                htmlFor="メールアドレスが空欄です"
+              >
+                メールアドレスが空欄です
               </label>
             )}
           </div>
