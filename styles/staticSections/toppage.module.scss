@@ -94,6 +94,7 @@
 .solutionImage {
   @include mtMd();
   @include mbSm();
+  @include mCenter();
 }
 
 //aboutme

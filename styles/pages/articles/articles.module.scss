@@ -9,6 +9,11 @@
 }
 
 .contentWrapper {
+  font-family: sans-serif;
+  p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
   h1 {
     font-size: 1.85rem;
   }
@@ -37,12 +42,17 @@
     @include mtSm();
   }
   ul {
-    @include border($color: $accent);
     padding: 0.5rem;
     padding-left: 2rem;
-    color: $accent;
+    @include border($color: $basicWhite);
+    background-color: $lightGray;
+    border-style: dotted;
+    @include borderRadius();
+    font-weight: bolder;
+    color: $base;
     li {
-      list-style-type: square;
+      list-style-type: circle;
+      line-height: 2.3rem;
       margin: 0.5rem 0;
     }
   }
@@ -72,12 +82,6 @@
     @include mCenter();
     max-width: 100%;
     overflow-x: hidden;
-  }
-  strong {
-    background-color: $basicWhite;
-    color: $base;
-    @include boldParagrah();
-    margin: 0 0.2rem;
   }
   p {
     @include mtSm();

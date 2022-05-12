@@ -45,7 +45,7 @@ export const getStaticProps = async () => {
     headers: { "X-MICROCMS-API-KEY": process.env.MICROCMS_API_KEY },
   };
   const data = await fetch(
-    "https://kp822wg687.microcms.io/api/v1/articles?offset=0&limit=3",
+    "https://kp822wg687.microcms.io/api/v1/articles?offset=0&limit=20",
     key
   )
     .then((res) => res.json())

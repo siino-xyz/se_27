@@ -1,2 +1,2 @@
-export const PER_PAGE = 3;
-export const LIST_OFFSET = 3;
+export const PER_PAGE = 20;
+export const LIST_OFFSET = 20;
