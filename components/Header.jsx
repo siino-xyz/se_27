@@ -9,7 +9,6 @@ export const Header = () => {
 
   return (
     <>
-      {/* ドロワー開閉ボタン */}
       <div className={styles.btnContainer}>
         <button className={styles.humMenuBtn} onClick={toggle}>
           <div className={styles.humburger}>
@@ -20,7 +19,6 @@ export const Header = () => {
         </button>
       </div>
 
-      {/* ヘッダー */}
       <header className={styles.headerContainer}>
         <div className={styles.headerItem}>
           {isBlogPage || isCategoryPage || isArticlesPage ? (

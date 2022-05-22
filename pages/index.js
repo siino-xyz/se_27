@@ -21,7 +21,7 @@ export default function Top({ articles }) {
     <>
       <div className={styles.container}>
         <main>
-          <Bigtypo />
+          {/* <Bigtypo /> */}
           <Services />
           <Isuues />
           <Solution />
