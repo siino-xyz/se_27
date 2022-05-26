@@ -9,54 +9,59 @@
 }
 
 .contentWrapper {
-  font-family: sans-serif;
   p {
-    font-size: 1rem;
-    line-height: 2rem;
+    font-size: 1.08rem;
+    line-height: 2.3rem;
+    letter-spacing: 0.05rem;
+
+    & > span {
+      line-height: 0.2rem;
+    }
   }
+
   h1 {
     font-size: 1.85rem;
   }
   h2 {
-    color: $base;
-    background-color: $basicWhite;
-    // @include border($color: $sub);
-    font-size: 1.7rem;
-    padding: 0.3rem 0.5rem;
-    line-height: 2.5rem;
-    @include mbSm();
-    @include mtMd();
-    @include borderRadius();
+    display: inline-block;
+    font-size: 2.6rem;
+    padding: 0.3rem 0;
+    line-height: 3rem;
+    @include mtLg();
   }
   h3 {
+    font-size: 1.45rem;
+    color: $base;
+    padding: 0.1rem 0.8rem;
+    @include mtLg();
+    display: inline-block;
+    background-color: $basicWhite;
+    @include borderRadius();
+  }
+  h4 {
     font-size: 1.45rem;
     color: $sub;
     padding: 0.3rem;
     @include mbSm();
     @include mtSm();
   }
-  h4 {
-    font-size: 1.3rem;
-    color: $sub;
-    padding: 0.3rem;
-    @include mbSm();
-    @include mtSm();
-  }
+
   ul {
-    padding: 0.5rem;
-    padding-left: 2rem;
-    @include border($color: $basicWhite);
-    // background-color: $lightGray;
-    border-style: dotted;
+    background-color: #7e8bef21;
+    @include ptSm();
     @include borderRadius();
-    font-weight: bolder;
-    color: $basicWhite;
+    margin: 1rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
     li {
-      list-style-type: circle;
-      line-height: 2.3rem;
-      margin: 0.5rem 0;
+      @include normalParagraph();
+      @include ptSm();
     }
   }
+  a {
+    color: $main;
+  }
+
   @include mq(md) {
     max-width: 775px;
     @include mCenter();
@@ -83,6 +88,7 @@
     @include mCenter();
     max-width: 100%;
     overflow-x: hidden;
+    @include borderRadius();
   }
   p {
     @include mtSm();
