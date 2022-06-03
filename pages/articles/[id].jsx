@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../../styles/pages/articles/articles.module.scss";
 import dayjs from "dayjs";
 import LinkButton from "../../components/LinkButton";
-import ShareButtons from "../../components/ShareButtons";
+// import ShareButtons from "../../components/ShareButtons";
 import CustomImage from "../../components/CustomImage";
 import NextOgp from "../../components/NextOgp";
 import Breadcrumb from "../../components/Breadcrumb";
@@ -59,7 +59,7 @@ export default function ArticlesId({ articles, categories }) {
               />
             </main>
 
-            <ShareButtons articles={articles} />
+            {/* <ShareButtons articles={articles} /> */}
             <LinkButton url={"/blog"} button="他の記事も読む" />
           </section>
         </div>

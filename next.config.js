@@ -2,7 +2,6 @@
 const path = require("path");
 
 const nextConfig = {
-  swcMinify: false,
   reactStrictMode: true,
   watchers: {
     webpack: {
