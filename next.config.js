@@ -1,25 +1,26 @@
 /** @type {import('next').NextConfig} */
-const path = require('path');
+const path = require("path");
 
 const nextConfig = {
+  swcMinify: false,
   reactStrictMode: true,
   watchers: {
     webpack: {
-      poll: true
-    }
+      poll: true,
+    },
   },
   experimental: {
     optimizeFonts: true,
   },
   images: {
-   domains: ['images.microcms-assets.io'],
+    domains: ["images.microcms-assets.io"],
   },
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, "styles")],
   },
   env: {
     STATIC_FORMS_ACCESS_KEY: process.env.STATIC_FORMS_ACCESS_KEY,
-  }
-}
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
