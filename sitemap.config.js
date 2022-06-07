@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: "https://se-27.com/",
+  siteUrl: "/",
   generateRobotsTxt: true,
   sitemapSize: 7000,
   outDir: "./public",

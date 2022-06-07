@@ -10,8 +10,8 @@
     "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
+    "moduleResolution": "node",
     "isolatedModules": true,
     "jsx": "preserve"
   },
@@ -19,14 +19,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/contact.tsx",
-    "components/blogHeader.jsx",
-    "pages/articles/page/[id].js",
-    "components/Header.jsx",
-    "components/Breadcrumb.jsx",
-    "pages/_app.js",
-    "pages/OgpTest.jsx",
-    "components/GoogleAnalytics.js"
+    "src/layouts/documentLayout.tslx"
   ],
   "exclude": ["node_modules"]
 }
