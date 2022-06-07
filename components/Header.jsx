@@ -73,7 +73,7 @@ export const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href="https://se-27.com/#services" passHref>
+              <Link href="https://se-27.vercel.app/#services" passHref>
                 <a className={styles.menuItem}>Services</a>
               </Link>
             </li>
@@ -120,7 +120,7 @@ export const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="https://se-27.com/#services">
+            <Link href="https://se-27.vercel.app/#services">
               <a>
                 <p className={styles.menuText}>Services</p>
               </a>

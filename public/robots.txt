@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://se-27.com/
+Host: /
 
 # Sitemaps
-Sitemap: https://se-27.com/sitemap.xml
+Sitemap: //sitemap.xml

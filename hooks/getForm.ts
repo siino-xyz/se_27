@@ -26,7 +26,7 @@ export const GetForm = () => {
     })
       .then(() => {
         e.target.reset();
-        location.href = "https://se-27.com/thanks";
+        location.href = "https://se-27.vercel.app/thanks";
       })
       .catch((error) => {
         alert(error);
