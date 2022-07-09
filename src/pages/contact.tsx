@@ -1,6 +1,6 @@
-import Meta from "../layouts/Meta";
-import UnderpageLayout from "../layouts/UnderpageOuter";
-import InnerLayout from "../layouts/GlobalInner";
+import Meta from "../../layouts/Meta";
+import UnderpageLayout from "../../layouts/UnderpageOuter";
+import InnerLayout from "../../layouts/GlobalInner";
 import Contact from "../staticSections/Contact";
 export default function ContactForm() {
   return (
