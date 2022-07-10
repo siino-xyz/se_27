@@ -1,6 +1,8 @@
 import styles from "../../styles/staticSections/toppage.module.scss";
 import Image from "next/image";
 import * as React from "react";
+import { sprinkles } from "../../css-utils/sprinkles.css";
+import SectionTitle from "../../components/sectionTitle/SectionTitle";
 
 type Props = {
   title: string;
@@ -14,10 +16,23 @@ type Props = {
 const Items: React.FC<Props> = (props) => {
   return (
     <div>
-      <div className={styles.h3Title}>
+      <div
+        className={sprinkles({
+          fontSize: "xl",
+        })}
+      >
         <h3>{props.title}</h3>
       </div>
-      <div className={styles.grid}>
+      <div
+        className={sprinkles({
+          display: "grid",
+          gridTemplateColumns: {
+            mobile: "grid-cols-1",
+            desktop: "grid-cols-2",
+          },
+          alignItems: "center",
+        })}
+      >
         <Image
           src={props.src}
           width={props.width}
@@ -34,11 +49,7 @@ const Items: React.FC<Props> = (props) => {
 const Services = () => {
   return (
     <section id="services" className={styles.sectionContainer}>
-      <div className={styles.sectionTitle}>
-        <h2 className={styles.h2}>Services</h2>
-        <div className={styles.subscript}>SE-27のサービス</div>
-      </div>
-
+      <SectionTitle largeText="Services" smallText="SE-27のサービス" />
       <main className={styles.sectionInner}>
         <Items
           title="ウェブサイト制作"

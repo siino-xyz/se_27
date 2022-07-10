@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Category from "../types/category";
+import Category from "../../types/category";
 import styles from "../styles/components/categories.module.scss";
 
 type CategoriesProps = {

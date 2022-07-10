@@ -1,4 +1,4 @@
-import { existsGaId, pageview } from "../libs/gtag";
+import { existsGaId, pageview } from "../../libs/gtag";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 

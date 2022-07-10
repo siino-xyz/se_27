@@ -1,6 +1,4 @@
-import "../styles/globals.scss";
 import "../styles/reset.css";
-import Head from "next/head";
 import GoogleAnalytics from "../components/GoogleAnalytics";
 import usePageView from "../hooks/usePageView";
 

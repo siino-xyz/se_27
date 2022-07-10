@@ -1,4 +1,4 @@
-@import "variables";
+@import "../variables";
 
 .breadcrumbContainer {
   @include flexRow($justify: flex-start);

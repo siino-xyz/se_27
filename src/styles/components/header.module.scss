@@ -1,4 +1,4 @@
-@import "variables";
+@import "../variables";
 
 .headerContainer {
   @include flexRow($justify: space-between);
