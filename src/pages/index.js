@@ -1,7 +1,7 @@
 import styles from "../styles/pages/index.module.scss";
 //components
 import ArticleCard from "../components/ArticleCard";
-import LinkButton from "../components/LinkButton";
+import LinkButton from "../components/linkButton/LinkButton";
 //layouts
 import Meta from "../layouts/Meta";
 import ToppageLayout from "../layouts/ToppageOuter";

@@ -52,6 +52,9 @@ const responsiveStyles = defineProperties({
     top: vars.sizes,
     bottom: vars.sizes,
     lineHeight: vars.lineHeight,
+    textDecoration: vars.textDecoration,
+    borderRadius: vars.sizes,
+    fontWeight: vars.fontWeight,
   },
   shorthands: {
     padding: ["paddingTop", "paddingBottom", "paddingLeft", "paddingRight"],

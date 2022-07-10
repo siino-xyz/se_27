@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LinkButton from "../components/LinkButton";
+import LinkButton from "../components/linkButton/LinkButton";
 import styles from "../styles/staticSections/thanks.module.scss";
 export const ThanksContent = () => {
   return (
@@ -22,7 +22,7 @@ export const ThanksContent = () => {
           </p>
         </main>
       </section>
-      <LinkButton url={"/"} button={"トップーページに戻る"} />
+      <LinkButton url={"/"} text={"トップーページに戻る"} />
     </>
   );
 };

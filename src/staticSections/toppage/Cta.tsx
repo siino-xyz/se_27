@@ -1,5 +1,5 @@
 import styles from "../../styles/staticSections/toppage.module.scss";
-import LinkButton from "../../components/LinkButton";
+import LinkButton from "../../components/linkButton/LinkButton";
 
 export default function Cta(props) {
   return (
@@ -12,7 +12,7 @@ export default function Cta(props) {
       <main className={styles.sectionInner}>
         <div className={styles.grid}>
           <p>{props.body}</p>
-          <LinkButton url={"/contact"} button="SE-27に相談する" />
+          <LinkButton url={"/contact"} text="SE-27に相談する" />
         </div>
       </main>
     </section>
