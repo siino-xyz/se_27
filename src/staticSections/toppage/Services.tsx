@@ -21,6 +21,7 @@ const Services = React.memo(() => {
         height={200}
         alt="ウェブサイト制作"
         src="/top/tag.svg"
+        layout="intrinsic"
         url={null}
         text={null}
         buttonDisplay="none"
@@ -32,6 +33,7 @@ const Services = React.memo(() => {
         height={200}
         alt="ウェブデザイン"
         src="/top/des.svg"
+        layout="intrinsic"
         url={null}
         text={null}
         buttonDisplay="none"
