@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Articles } from "types";
+import { Articles } from "src/types";
 import Image from "next/image";
 import styles from "../styles/components/articlecard.module.scss";
 

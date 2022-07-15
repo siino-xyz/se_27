@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "../styles/components/categories.module.scss";
 import * as React from "react";
-import { Category } from "types";
+import { Category } from "src/types";
 
 type CategoriesProps = {
   categories: Array<Category>;

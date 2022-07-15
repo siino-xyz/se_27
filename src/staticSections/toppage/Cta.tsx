@@ -1,24 +1,20 @@
 import styles from "../../styles/staticSections/toppage.module.scss";
-import LinkButton from "../../components/linkButton/LinkButton";
+import TextAndButtonBlock from "src/components/textAndButtonBlock/TextAndButtonBlock";
+import SectionTitle from "../../components/sectionTitle/SectionTitle";
 
-export default function Cta(props) {
+const Cta = () => {
   return (
     <section className={styles.sectionContainer}>
-      <div className={styles.sectionTitle}>
-        <h2 className={styles.h2}>{props.title}</h2>
-        <div className={styles.subscript}>{props.subscript}</div>
-      </div>
+      <SectionTitle largeText="Contact" smallText="お問い合わせ" />
 
-      <main className={styles.sectionInner}>
-        <div className={styles.grid}>
-          <p>{props.body}</p>
-          <LinkButton
-            url={"/contact"}
-            text={"SE-27に相談する"}
-            buttonDisplay={"block"}
-          />
-        </div>
-      </main>
+      <TextAndButtonBlock
+        paragraph="詳しい話を聞いてみたいと思ったら、このサイトのContactページ、もしくは当方のTwitterアカウント（@SE_27_Jamstack）のDMからお気軽にお声がけ下さい。"
+        url="/contact"
+        buttonText="SE-27に相談する"
+        buttonDisplay="block"
+      />
     </section>
   );
-}
+};
+
+export default Cta;

@@ -7,7 +7,7 @@ import StaticImage from "../staticImage/StaticImage";
 
 type ComponentProps = {
   title: string | null;
-  para: string;
+  para: string | null;
   src: string;
   width: number;
   height: number;
@@ -19,21 +19,10 @@ type ComponentProps = {
 };
 
 const StaticContentUtilBlock: React.FC<ComponentProps> = React.memo(
-  function StaticContentUtilBlockMemo({
-    title,
-    para,
-    src,
-    width,
-    height,
-    alt,
-    layout,
-    url,
-    text,
-    buttonDisplay,
-  }) {
+  function StaticContentUtilBlockMemo(props) {
     return (
       <>
-        <InnerTitile title={title} />
+        <InnerTitile title={props.title} />
         <div
           className={sprinkles({
             display: "grid",
@@ -45,15 +34,19 @@ const StaticContentUtilBlock: React.FC<ComponentProps> = React.memo(
           })}
         >
           <StaticImage
-            src={src}
-            width={width}
-            height={height}
-            layout={layout}
-            alt={alt}
+            src={props.src}
+            width={props.width}
+            height={props.height}
+            layout={props.layout}
+            alt={props.alt}
           />
           <div>
-            <Paragraph paragraph={para} />
-            <LinkButton url={url} text={text} buttonDisplay={buttonDisplay} />
+            <Paragraph paragraph={props.para} />
+            <LinkButton
+              url={props.url}
+              text={props.text}
+              buttonDisplay={props.buttonDisplay}
+            />
           </div>
         </div>
       </>
