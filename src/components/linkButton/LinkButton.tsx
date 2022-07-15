@@ -2,13 +2,13 @@ import Link from "next/link";
 import * as React from "react";
 import { sprinkles } from "../../css-utils/sprinkles.css";
 
-type Props = {
+type ButtonTypes = {
   url: string | null;
   text: string | null;
   buttonDisplay: "none" | "block";
 };
 
-const Button: React.FC<Props> = (props) => {
+const Button: React.FC<ButtonTypes> = (props) => {
   return (
     <div
       className={sprinkles({
@@ -41,7 +41,9 @@ const Button: React.FC<Props> = (props) => {
   );
 };
 
-const LinkButton: React.FC<Props> = React.memo(function LinkButtonMemo(props) {
+const LinkButton: React.FC<ButtonTypes> = React.memo(function LinkButtonMemo(
+  props
+) {
   return (
     <>
       <Button

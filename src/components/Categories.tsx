@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Category from "../../types/category";
 import styles from "../styles/components/categories.module.scss";
+import * as React from "react";
+import { Category } from "types";
 
 type CategoriesProps = {
   categories: Array<Category>;
 };
-
 export const Categories = ({ categories }: CategoriesProps) => {
   return (
     <>

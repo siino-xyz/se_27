@@ -2,7 +2,7 @@
 import Image from "next/image";
 import * as React from "react";
 
-type Props = {
+type ImageTypes = {
   src: string;
   alt: string;
   width: number;
@@ -10,11 +10,11 @@ type Props = {
   layout: "fixed" | "fill" | "intrinsic" | "responsive";
 };
 
-const StaticImage: React.FC<Props> = React.memo(function StaticImageMemo({
+const StaticImage: React.FC<ImageTypes> = React.memo(function StaticImageMemo({
   src,
-  alt,
   width,
   height,
+  alt,
   layout,
 }) {
   return (

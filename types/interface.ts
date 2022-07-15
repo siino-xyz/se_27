@@ -1,4 +1,4 @@
-export default interface Articles {
+export interface Articles {
   id: string;
   createdAt: string;
   updatedAt: string;
@@ -26,4 +26,14 @@ export default interface Articles {
     height: number;
     width: number;
   };
+}
+
+export interface Category {
+  id: string;
+  name: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  revisedAt: string;
+  categories: string;
 }
