@@ -13,7 +13,11 @@ export default function Flow() {
             安心してご依頼頂けるよう、制作の流れとよくあるご質問について紹介しています。
           </p>
           <div>
-            <LinkButton url={"/flow"} text="制作の流れを見る" />
+            <LinkButton
+              url={"/flow"}
+              text={"制作の流れを見る"}
+              buttonDisplay={"block"}
+            />
           </div>
         </div>
       </main>

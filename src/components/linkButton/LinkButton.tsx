@@ -41,7 +41,7 @@ const Button: React.FC<Props> = (props) => {
   );
 };
 
-const LinkButton: React.FC<Props> = React.memo((props) => {
+const LinkButton: React.FC<Props> = React.memo(function LinkButtonMemo(props) {
   return (
     <>
       <Button

@@ -12,7 +12,11 @@ export default function Cta(props) {
       <main className={styles.sectionInner}>
         <div className={styles.grid}>
           <p>{props.body}</p>
-          <LinkButton url={"/contact"} text="SE-27に相談する" />
+          <LinkButton
+            url={"/contact"}
+            text={"SE-27に相談する"}
+            buttonDisplay={"block"}
+          />
         </div>
       </main>
     </section>

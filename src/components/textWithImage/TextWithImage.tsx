@@ -15,20 +15,9 @@ type Props = {
   buttonDisplay: "none" | "block";
 };
 
-const NotUsing = () => {
-  console.log("ノットユージングコンポーネント 呼び出された");
-  return (
-    <div
-      className={sprinkles({
-        background: "accent",
-        width: "size-2",
-        height: "size-12",
-      })}
-    ></div>
-  );
-};
-
-const TextWithImage: React.FC<Props> = React.memo((props) => {
+const TextWithImage: React.FC<Props> = React.memo(function TextWithImageMemo(
+  props
+) {
   return (
     <>
       <div

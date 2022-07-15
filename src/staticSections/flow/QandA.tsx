@@ -1,5 +1,4 @@
 import styles from "../../styles/staticSections/flow.module.scss";
-import LinkButton from "../../components/linkButton/LinkButton";
 import Cta from "../toppage/Cta";
 
 export default function QandA() {

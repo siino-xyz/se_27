@@ -22,7 +22,11 @@ export const ThanksContent = () => {
           </p>
         </main>
       </section>
-      <LinkButton url={"/"} text={"トップーページに戻る"} />
+      <LinkButton
+        url={"/"}
+        text={"トップーページに戻る"}
+        buttonDisplay={"block"}
+      />
     </>
   );
 };

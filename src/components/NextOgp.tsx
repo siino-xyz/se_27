@@ -34,7 +34,6 @@ export const NextOgp: React.FC<HeadType> = ({
     : postimg || `${process.env.NEXT_PUBLIC_URL}defaultogp.svg`;
   const imgw = pageimgw || "1200px";
   const imgh = pageimgh || "630px";
-  const fbAppId = `${process.env.FB_APP_ID}`;
 
   return (
     <>
@@ -51,7 +50,6 @@ export const NextOgp: React.FC<HeadType> = ({
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ja_JP" />
-        <meta property="fb:app_id" content={fbAppId} />
         <meta property="og:image" content={imgurl} />
         <meta property="og:image:width" content={imgw} />
         <meta property="og:image:height" content={imgh} />

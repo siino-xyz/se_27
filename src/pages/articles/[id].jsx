@@ -1,8 +1,8 @@
-import { client } from "../../libs/client";
+import { client } from "../../../libs/client";
 import Image from "next/image";
 import styles from "../../styles/pages/articles/articles.module.scss";
 import dayjs from "dayjs";
-import LinkButton from "../../components/LinkButton";
+import LinkButton from "../../components/linkButton/LinkButton";
 // import ShareButtons from "../../components/ShareButtons";
 import CustomImage from "../../components/CustomImage";
 import NextOgp from "../../components/NextOgp";
@@ -60,7 +60,11 @@ export default function ArticlesId({ articles, categories }) {
             </main>
 
             {/* <ShareButtons articles={articles} /> */}
-            <LinkButton url={"/blog"} button="他の記事も読む" />
+            <LinkButton
+              url={"/blog"}
+              text={"S他の記事も読む"}
+              buttonDisplay={"block"}
+            />
           </section>
         </div>
       </div>

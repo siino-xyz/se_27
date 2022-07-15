@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import baseStyles from "./styles/_ducument.css";
+import baseStyles from "../styles/document.css";
 
 const Document = () => {
   return (
