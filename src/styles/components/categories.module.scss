@@ -1,0 +1,28 @@
+@import "../variables";
+
+.categoriesContainer {
+  padding-top: 6rem;
+}
+
+.categoriesList {
+  @include flexRow($justify: center, $align: center);
+  flex-wrap: wrap;
+  max-width: 90%;
+  @include mCenter;
+}
+
+.categoryItem {
+  margin: 0.5rem;
+  background-color: $basicWhite;
+  padding: 0.1rem 1rem;
+  border-radius: 0.8rem;
+  @include toggleFade();
+  a {
+    color: $base;
+    @include boldParagrah();
+  }
+
+  &:hover {
+    background-color: $accent;
+  }
+}

@@ -1,0 +1,10 @@
+@import "../variables";
+
+.buttonLink {
+  text-decoration: none;
+  color: $base;
+}
+
+.linkBtnWrapper {
+  @include linkBtn();
+}

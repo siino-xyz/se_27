@@ -1,0 +1,120 @@
+@import "../variables";
+
+.sectionContainer {
+  @include sectionContainer();
+}
+.sectionTitle {
+  @include sectionTitle();
+}
+.h3Title {
+  @include h3Title();
+}
+.grid {
+  @include gapSm();
+  @include grid();
+}
+.flexCol {
+  @include flexCol();
+}
+.flexRow {
+  @include flexRow();
+}
+
+//bigTypo
+.bigTypo {
+  @include grid();
+  padding: 2rem 1rem;
+  @include borderRadius;
+  @include gapLr();
+  background-color: rgba(126, 139, 239, 0.386);
+  @include hiLight();
+
+  @include mq(md) {
+    div {
+      @include flexCol();
+      padding-left: 1.5rem;
+      height: 100%;
+      border-left: 2px solid $sub;
+    }
+  }
+}
+
+//issues
+.issuesGrid {
+  @include mtLr();
+  @include mbLr();
+  @include grid();
+  @include gapMd();
+
+  div {
+    text-align: center;
+    margin: auto;
+  }
+}
+@include mq(md) {
+  .gridReverce {
+    grid-row: 1;
+    grid-column: 2;
+  }
+}
+.scrollText {
+  overflow-y: auto;
+  height: 433px;
+  @include mtMd();
+  @include border($color: $main);
+  @include borderRadius();
+  padding: 0 0.5rem;
+  text-align: left !important;
+
+  p {
+    @include ptSm();
+  }
+}
+.scrollTextH4 {
+  @include ptMd();
+  @include pbSm();
+  color: $main;
+  border-bottom: 1px solid $main;
+}
+.issuesH3 > h3 {
+  font-size: 2.8rem !important;
+  color: $main;
+  font-family: "MuseoModerno";
+  text-align: center;
+  @include mtMd();
+  @include mbSm();
+  border-bottom: 1px solid $main;
+
+  @include mq(md) {
+    text-align: left;
+  }
+}
+
+//solution
+.solutionImage {
+  @include mtMd();
+  @include mbSm();
+  @include mCenter();
+}
+
+//aboutme
+.snsLink {
+  @include flexRow($justify: space-around);
+  background: $lightGray;
+  width: 250px;
+  @include mtSm();
+  @include borderRadius();
+  @include mCenter();
+  @include toggleFade();
+  color: $base;
+  span {
+    @include h4();
+  }
+
+  &:hover {
+    background-color: $basicWhite;
+  }
+}
+.pt {
+  @include ptSm();
+}

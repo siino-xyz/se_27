@@ -1,0 +1,54 @@
+@import "../variables";
+
+.cardContainer {
+  @include mtLg();
+  @include mbLg();
+  @include gapMd();
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 300px);
+}
+
+.card {
+  background-color: $base;
+  @include borderRadius;
+  padding: 0.2rem;
+  @include border($color: $sub);
+}
+
+.eyeCatchImg {
+  @include borderRadius;
+  @include toggleFade;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.sumallyWrapper {
+  border-top: 1px solid $sub;
+  color: $sub;
+
+  padding: 1rem 0.5rem;
+  .tag {
+    @include tag();
+  }
+  h1 {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    min-height: 78px;
+    max-height: 78px;
+    color: $basicWhite;
+    @include toggleFade();
+    max-width: 100%;
+    overflow-x: hidden !important;
+
+    &:hover {
+      color: $sub;
+    }
+  }
+  .date {
+    @include smallText();
+  }
+}

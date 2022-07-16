@@ -1,0 +1,28 @@
+@import "../variables";
+
+.sectionContainer {
+  @include sectionContainer();
+  margin-top: 0;
+  margin-bottom: 1rem;
+  @include border($color: $sub);
+  @include borderRadius;
+  padding: 1rem;
+  max-width: 500px;
+}
+
+.sectionTitle {
+  color: $sub;
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+.sectionInner {
+  @include flexCol();
+  max-width: 100%;
+  @include mCenter;
+
+  p {
+    @include ptMd();
+  }
+}

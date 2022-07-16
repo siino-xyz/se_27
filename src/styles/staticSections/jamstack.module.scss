@@ -1,0 +1,69 @@
+@import "../variables";
+
+.sectionContainer {
+  @include sectionContainer();
+
+  @include hiLight();
+}
+.sectionTitle {
+  @include sectionTitle($fz: 4rem, $lh: 4rem);
+}
+.h3Title {
+  @include h3Title();
+}
+.grid {
+  @include mtLg();
+  @include gapSm();
+  @include grid();
+}
+.flexCol {
+  @include flexCol();
+}
+.flexRow {
+  @include flexRow();
+}
+
+.featureTitle {
+  @include mtMd();
+  @include mbSm();
+  @include flexCol();
+  background-color: $sub;
+  color: $base;
+  @include borderRadius();
+  span {
+    @include boldParagrah();
+  }
+
+  @include mq(md) {
+    @include flexRow($justify: flex-start, $align: center);
+
+    background-color: $base;
+    color: $sub;
+
+    span {
+      background-color: $sub;
+      color: $base;
+      @include borderRadius();
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.differenceGrid {
+  @include grid();
+  @include mtSm();
+  @include gapSm();
+  @include mbMd();
+}
+
+.memoCard {
+  @include memocard();
+}
+.memoCardNum {
+  @include memocard($lst: decimal);
+  @include mCenter();
+}
+.memoCardList {
+  @include memocard;
+}

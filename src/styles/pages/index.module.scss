@@ -1,0 +1,5 @@
+@import "../variables";
+
+.sectionContainer {
+  @include sectionContainer();
+}

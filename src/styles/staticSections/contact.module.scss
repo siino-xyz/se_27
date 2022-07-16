@@ -1,0 +1,71 @@
+@import "../variables";
+
+.sectionContainer {
+  @include sectionContainer();
+}
+
+.sectionTitle {
+  @include sectionTitle();
+}
+
+.formContainer {
+  @include mCenter();
+  width: 100%;
+  @include flexCol();
+  @include mtMd();
+}
+
+.inputItem {
+  @include grid();
+  @include mtSm();
+  @include mbMd();
+  @include borderRadius;
+  text-align: center;
+  @include border($color: $sub);
+  background-color: $base;
+  width: 90%;
+  position: relative;
+  padding: 0.4rem;
+  box-sizing: border-box !important;
+
+  @include mq(md) {
+    width: 75%;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .inputLabel {
+    @include boldParagrah();
+    color: $sub;
+    font-size: 1rem;
+    @include ptSm();
+    @include pbSm();
+  }
+
+  .validationMessage {
+    color: $basicWhite;
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    background-color: $error;
+    backdrop-filter: blur(2px);
+    padding: 0.5rem 1rem;
+    @include borderRadius;
+  }
+
+  input {
+    padding: 0.5rem;
+    width: 100%;
+    @include borderRadius();
+    background-color: $basicWhite;
+    box-sizing: border-box !important;
+  }
+  textarea {
+    background-color: $basicWhite;
+    min-height: 250px;
+  }
+}
+
+.linkBtn {
+  @include linkBtn($py: 0.5rem);
+  @include mtMd();
+}

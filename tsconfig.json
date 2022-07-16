@@ -13,19 +13,23 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@*": ["src/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/contact.tsx",
+    "src/pages/contact.tsx",
     "components/blogHeader.jsx",
-    "pages/articles/page/[id].js",
+    "src/pages/articles/page/[id].js",
     "components/Header.jsx",
     "components/Breadcrumb.jsx",
-    "pages/_app.js",
-    "pages/OgpTest.jsx",
+    "src/pages/_app.js",
+    "src/pages/OgpTest.jsx",
     "components/GoogleAnalytics.js"
   ],
   "exclude": ["node_modules"]
