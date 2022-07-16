@@ -1,15 +1,24 @@
 import Image from "next/image";
 import LinkButton from "../../components/linkButton/LinkButton";
-import styles from "../styles/staticSections/thanks.module.scss";
+import SectionTitle from "@components/sectionTitle/SectionTitle";
+import { sprinkles } from "@css-utils/sprinkles.css";
+
 export const ThanksContent = () => {
   return (
     <>
-      <section className={styles.sectionContainer}>
-        <div className={styles.sectionTitle}>
-          <h2 className={styles.h2}>Send Completed</h2>
-          <div className={styles.subscript}>送信完了</div>
-        </div>
-        <main className={styles.sectionInner}>
+      <main>
+        <SectionTitle largeText="Send Completed." smallText="送信完了" />
+
+        <section
+          className={sprinkles({
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            // justifyContent
+            maxWidth: "size-full",
+            marginX: "size-auto",
+          })}
+        >
           <Image
             src="/thanks/thanks-plane.svg"
             width={335}
@@ -17,16 +26,20 @@ export const ThanksContent = () => {
             layout="intrinsic"
             alt="send-completed"
           />
-          <p>
+          <p
+            className={sprinkles({
+              paddingTop: "size-4",
+            })}
+          >
             SE-27へお問い合わせいただき、ありがとうございます。1営業日以内に折り返しご連絡致しますので、今しばらくお待ちくださいませ。
           </p>
-        </main>
-      </section>
-      <LinkButton
-        url={"/"}
-        text={"トップーページに戻る"}
-        buttonDisplay={"block"}
-      />
+        </section>
+        <LinkButton
+          url={"/"}
+          text={"トップーページに戻る"}
+          buttonDisplay={"block"}
+        />
+      </main>
     </>
   );
 };
