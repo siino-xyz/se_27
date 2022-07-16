@@ -113,6 +113,7 @@ export const vars = createGlobalTheme(":root", {
     main: "#f39423",
     sub: "#7e8bef",
     accent: "#80ef7e",
+    error: "rgba(255, 101, 116, 0.442)",
   },
   fontFamily: {
     body: 'Zen kaku Gothic New, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
