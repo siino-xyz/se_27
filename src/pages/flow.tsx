@@ -1,25 +1,23 @@
 import Meta from "../layouts/Meta";
-import UnderpageLayout from "../layouts/UnderpageOuter";
-import InnerLayout from "../layouts/GlobalInner";
-//staticSections
+import WithoutFV from "@layouts/WithoutFV";
 import FlowDetail from "../staticSections/flow/FlowDedail";
 import QandA from "../staticSections/flow/QandA";
 
-export default function Flow() {
+const Flow = () => {
   return (
     <>
       <FlowDetail />
       <QandA />
     </>
   );
-}
+};
 
 Flow.getLayout = function getLayout(flow) {
   return (
     <Meta>
-      <UnderpageLayout>
-        <InnerLayout>{flow}</InnerLayout>
-      </UnderpageLayout>
+      <WithoutFV>{flow}</WithoutFV>
     </Meta>
   );
 };
+
+export default Flow;

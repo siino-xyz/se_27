@@ -1,7 +1,6 @@
 import styles from "../styles/staticSections/jamstack.module.scss";
 import Image from "next/image";
-import Cta from "./toppage/Cta";
-
+import TextAndButtonBlock from "@components/textAndButtonBlock/TextAndButtonBlock";
 const JamstackDetail = () => {
   return (
     <>
@@ -71,7 +70,6 @@ const JamstackDetail = () => {
             </p>
           </div>
         </main>
-
         <main className={styles.sectionInner}>
           <div className={styles.sectionTitle}>
             <h2 className={styles.h2}>Difference</h2>
@@ -177,7 +175,6 @@ const JamstackDetail = () => {
             </div>
           </div>
         </main>
-
         <main className={styles.sectionInner}>
           <div className={styles.sectionTitle}>
             <h2 className={styles.h2}>When to use Jamstack?</h2>
@@ -224,10 +221,11 @@ const JamstackDetail = () => {
           </div>
         </main>
 
-        <Cta
-          title="More details"
-          subscript="さらに詳しく知るなら"
-          body="より詳しい制作の流れを知りたい、気になることがあれば、お気軽にお問い合わせください。"
+        <TextAndButtonBlock
+          paragraph="より詳しい制作の流れを知りたい、気になることがあれば、お気軽にお問い合わせください。"
+          buttonDisplay="block"
+          buttonText="More Details"
+          url="/contact"
         />
       </section>
     </>

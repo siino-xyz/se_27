@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LinkButton from "../components/linkButton/LinkButton";
+import LinkButton from "../../components/linkButton/LinkButton";
 import styles from "../styles/staticSections/thanks.module.scss";
 export const ThanksContent = () => {
   return (

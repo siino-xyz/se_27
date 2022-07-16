@@ -1,7 +1,7 @@
 import styles from "../styles/staticSections/contact.module.scss";
-import { GetForm } from "../hooks/getForm";
+import { GetForm } from "../../hooks/getForm";
 
-export const Contact = () => {
+export const ContactForm = () => {
   const { register, handleSubmit, onSubmit, errors } = GetForm();
 
   return (
@@ -125,4 +125,4 @@ export const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactForm;
