@@ -7,7 +7,7 @@ import BlogLayout from "../../../layouts/BlogOuter";
 import InnerLayout from "../../../layouts/GlobalInner";
 
 import PaginationArrow from "../../../components/Pagination";
-import ArticleCard from "../../../components/ArticleCard";
+import ArticleCard from "../../../components/articleCard/ArticleCard";
 import Categories from "../../../components/Categories";
 
 export const ArticlePageId = ({

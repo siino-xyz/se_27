@@ -1,4 +1,4 @@
-import ArticleCard from "../components/ArticleCard";
+import ArticleCard from "../components/articleCard/ArticleCard";
 import LinkButton from "../components/linkButton/LinkButton";
 import SectionTitle from "../components/sectionTitle/SectionTitle";
 import TextAndButtonBlock from "../components/textAndButtonBlock/TextAndButtonBlock";

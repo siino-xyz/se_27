@@ -1,4 +1,4 @@
-export * from "./ArticleCard";
+export * from "./articleCard/ArticleCard";
 export * from "./Breadcrumb";
 export * from "./Categories";
 export * from "./CustomImage";
@@ -7,11 +7,7 @@ export * from "./GoogleAnalytics";
 export * from "./Header";
 export * from "./NextOgp";
 export * from "./Pagination";
-export * from "./SectionTitle";
-export * from "./innerTitle/InnerTitle";
 export * from "./linkButton/LinkButton";
-export * from "./paragraph/Paragraph";
 export * from "./sectionTitle/SectionTitle";
 export * from "./staticContentUtilBlock/StaticContentUtilBlock";
-export * from "./staticImage/StaticImage";
 export * from "./textAndButtonBlock/TextAndButtonBlock";

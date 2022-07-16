@@ -33,7 +33,7 @@ export default function Isuues() {
               src="/top/lazyphone.png"
               width={462}
               height={463}
-              layout="intrinsic"
+              layout="responsive"
               alt="top-largeTypo"
             />
             <div className={ScrollBox}>
@@ -74,7 +74,7 @@ export default function Isuues() {
               src="/top/cautionpc.png"
               width={524}
               height={452}
-              layout="intrinsic"
+              layout="responsive"
               alt="top-largeTypo"
             />
             <div className={ScrollBox}>
