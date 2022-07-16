@@ -1,5 +1,4 @@
 import { sprinkles } from "src/css-utils/sprinkles.css";
-import Paragraph from "../paragraph/Paragraph";
 import LinkButton from "../linkButton/LinkButton";
 import * as React from "react";
 
@@ -23,7 +22,7 @@ const TextAndButtonBlock: React.FC<Props> = (props) => {
         alignItems: "center",
       })}
     >
-      <Paragraph paragraph={props.paragraph} />
+      <p>{props.paragraph}</p>
       <LinkButton
         url={props.url}
         text={props.buttonText}

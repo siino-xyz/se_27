@@ -1,9 +1,7 @@
 import * as React from "react";
 import { sprinkles } from "../../css-utils/sprinkles.css";
 import LinkButton from "../linkButton/LinkButton";
-import Paragraph from "../paragraph/Paragraph";
-import InnerTitile from "../innerTitle/InnerTitle";
-import StaticImage from "../staticImage/StaticImage";
+import Image from "next/image";
 
 type ComponentProps = {
   title: string | null;
@@ -22,7 +20,13 @@ const StaticContentUtilBlock: React.FC<ComponentProps> = React.memo(
   function StaticContentUtilBlockMemo(props) {
     return (
       <>
-        <InnerTitile title={props.title} />
+        <h3
+          className={sprinkles({
+            fontSize: "xl",
+          })}
+        >
+          {props.title}
+        </h3>
         <div
           className={sprinkles({
             display: "grid",
@@ -33,7 +37,7 @@ const StaticContentUtilBlock: React.FC<ComponentProps> = React.memo(
             alignItems: "center",
           })}
         >
-          <StaticImage
+          <Image
             src={props.src}
             width={props.width}
             height={props.height}
@@ -41,7 +45,7 @@ const StaticContentUtilBlock: React.FC<ComponentProps> = React.memo(
             alt={props.alt}
           />
           <div>
-            <Paragraph paragraph={props.para} />
+            <p>{props.para}</p>
             <LinkButton
               url={props.url}
               text={props.text}
