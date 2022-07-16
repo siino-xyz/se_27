@@ -14,7 +14,6 @@ export const ThanksContent = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            // justifyContent
             maxWidth: "size-full",
             marginX: "size-auto",
           })}
