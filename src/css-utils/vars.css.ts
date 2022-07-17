@@ -158,4 +158,7 @@ export const vars = createGlobalTheme(":root", {
   textDecoration: {
     none: "none",
   },
+  transition: {
+    easing: "all 0.5s ease-out ",
+  },
 });

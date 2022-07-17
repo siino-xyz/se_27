@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { Articles } from "src/types";
 import Image from "next/image";
-import styles from "../../styles/components/articlecard.module.scss";
-import { Card } from "./ArticleCard.css";
 import dayjs from "dayjs";
 import { sprinkles } from "@css-utils/sprinkles.css";
+import { Card, Captions, PostTitle, DateTag } from "./ArticleCard.css";
 
 const ArticleCard = ({ articles }: { articles: Articles[] }) => {
   return (
@@ -23,7 +22,7 @@ const ArticleCard = ({ articles }: { articles: Articles[] }) => {
         })}
       >
         {articles.map((articles) => (
-          <div key={articles.id} className={Card}>
+          <article key={articles.id} className={Card}>
             <Link href={`/articles/${articles.id}`} passHref>
               <a>
                 <Image
@@ -33,40 +32,32 @@ const ArticleCard = ({ articles }: { articles: Articles[] }) => {
                   layout="responsive"
                   alt="eye_catch"
                 />
+
+                <div className={Captions}>
+                  <div
+                    className={sprinkles({
+                      background: "sub",
+                      color: "black",
+                      display: "inline-block",
+                      paddingX: "size-1.5",
+                      paddingY: "size-1",
+                      fontSize: "sm",
+                      fontWeight: "bold",
+                      borderRadius: "size-1",
+                    })}
+                  >
+                    {articles.categories.name}
+                  </div>
+                  <h2 className={PostTitle}>{articles.title}</h2>
+                  <div className={DateTag}>
+                    {dayjs(articles.publishedAt)
+                      .locale("ja")
+                      .format("YYYY/MM/DD")}
+                  </div>
+                </div>
               </a>
             </Link>
-
-            <div className={styles.sumallyWrapper}>
-              <div>
-                <div
-                  className={sprinkles({
-                    background: "sub",
-                    color: "black",
-                    display: "inline-block",
-                    paddingX: "size-1.5",
-                    paddingY: "size-1",
-                    fontSize: "sm",
-                    fontWeight: "bold",
-                    borderRadius: "size-1",
-                  })}
-                >
-                  {articles.categories.name}
-                </div>
-                <Link href={`/articles/${articles.id}`} passHref>
-                  <a>
-                    <h1>{articles.title}</h1>
-                  </a>
-                </Link>
-              </div>
-              <div>
-                <div className={styles.date}>
-                  {dayjs(articles.publishedAt)
-                    .locale("ja")
-                    .format("YYYY/MM/DD")}
-                </div>
-              </div>
-            </div>
-          </div>
+          </article>
         ))}
       </div>
     </>

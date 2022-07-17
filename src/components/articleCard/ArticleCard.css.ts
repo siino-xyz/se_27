@@ -14,7 +14,7 @@ export const Card = style([
   },
 ]);
 
-export const PostCaptions = style([
+export const Captions = style([
   sprinkles({ borderColor: "sub", paddingY: "size-2", paddingX: "size-1" }),
   {
     borderWidth: 1,
@@ -29,5 +29,36 @@ export const Tag = style([
     display: "inline-block",
     paddingX: "size-1",
     paddingY: "size-4",
+    fontSize: "sm",
+    fontWeight: "bold",
+    borderRadius: "size-1",
+  }),
+]);
+
+export const PostTitle = style([
+  sprinkles({
+    marginTop: "size-1",
+    fontSize: "base",
+    minHeight: "size-12",
+    maxHeight: "size-12",
+    color: "white",
+    maxWidth: "size-full",
+    transition: "easing",
+  }),
+  {
+    overflowX: "hidden",
+
+    selectors: {
+      "&:hover": {
+        color: "sub",
+      },
+    },
+  },
+]);
+
+export const DateTag = style([
+  sprinkles({
+    fontSize: "sm",
+    color: "white",
   }),
 ]);
