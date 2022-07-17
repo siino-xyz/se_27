@@ -3,7 +3,7 @@ import styles from "../../../styles/pages/blog.module.scss";
 import InnerLayout from "../../../layouts/GlobalInner";
 import BlogLayout from "../../../layouts/BlogOuter";
 
-import Categories from "../../../components/Categories";
+import Categories from "../../../components/categories/Categories";
 import ArticleCard from "../../../components/articleCard/ArticleCard";
 import LinkButton from "../../../components/linkButton/LinkButton";
 import Breadcrumb from "../../../components/breadCrumb/Breadcrumb";

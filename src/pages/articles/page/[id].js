@@ -8,7 +8,7 @@ import InnerLayout from "../../../layouts/GlobalInner";
 
 import PaginationArrow from "../../../components/Pagination";
 import ArticleCard from "../../../components/articleCard/ArticleCard";
-import Categories from "../../../components/Categories";
+import Categories from "../../../components/categories/Categories";
 
 export const ArticlePageId = ({
   totalCount,

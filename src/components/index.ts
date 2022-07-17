@@ -1,6 +1,6 @@
 export * from "./articleCard/ArticleCard";
 export * from "./breadCrumb/Breadcrumb";
-export * from "./Categories";
+export * from "./categories/Categories";
 export * from "./CustomImage";
 export * from "./Footer";
 export * from "./GoogleAnalytics";

@@ -8,7 +8,7 @@ import BlogLayout from "../layouts/BlogOuter";
 
 import ArticleCard from "../components/articleCard/ArticleCard";
 import PaginationArrow from "../components/Pagination";
-import Categories from "../components/Categories";
+import Categories from "../components/categories/Categories";
 
 export default function Blog({ articles, categories, totalCount }) {
   return (

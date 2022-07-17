@@ -15,6 +15,7 @@ const Breadcrumb = ({ categories, articles }) => {
         flexDirection: "row",
         justifyContent: "flex-start",
         gap: "size-2",
+        marginY: "size-4",
       })}
     >
       <Link href="/blog">
@@ -22,28 +23,17 @@ const Breadcrumb = ({ categories, articles }) => {
       </Link>
 
       {isCategoryPage && (
-        <div>
-          <span
-            className={sprinkles({
-              color: "gray1",
-              paddingBottom: "size-1",
-              fontSize: "sm",
-            })}
-          >
-            &gt;
-          </span>
-          <Link
-            className={sprinkles({
-              color: "gray1",
-              fontSize: "sm",
-            })}
-            href={path}
-            as={path}
-            passHref
-          >
-            <a>{categories.name}</a>
-          </Link>
-        </div>
+        <Link
+          className={sprinkles({
+            color: "gray1",
+            fontSize: "sm",
+          })}
+          href={path}
+          as={path}
+          passHref
+        >
+          <a>{categories.name}</a>
+        </Link>
       )}
 
       <span
