@@ -4,9 +4,9 @@ import InnerLayout from "../../../layouts/GlobalInner";
 import BlogLayout from "../../../layouts/BlogOuter";
 
 import Categories from "../../../components/Categories";
-import ArticleCard from "../../../components/ArticleCard";
+import ArticleCard from "../../../components/articleCard/ArticleCard";
 import LinkButton from "../../../components/linkButton/LinkButton";
-import Breadcrumb from "../../../components/Breadcrumb";
+import Breadcrumb from "../../../components/breadCrumb/Breadcrumb";
 export const CategoryId = ({ articles, categories, name }) => {
   if (articles.length === 0) {
     return (

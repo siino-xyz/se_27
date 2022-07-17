@@ -6,7 +6,7 @@ import LinkButton from "../../components/linkButton/LinkButton";
 // import ShareButtons from "../../components/ShareButtons";
 import CustomImage from "../../components/CustomImage";
 import NextOgp from "../../components/NextOgp";
-import Breadcrumb from "../../components/Breadcrumb";
+import Breadcrumb from "../../components/breadCrumb/BreadCrumb";
 import Header from "../../components/Header";
 import { pageFadein } from "../../hooks/fadeIn";
 

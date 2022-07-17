@@ -1,5 +1,5 @@
 import styles from "../../styles/staticSections/flow.module.scss";
-import Cta from "../toppage/Cta";
+// import Cta from "../toppage/Cta";
 
 export default function QandA() {
   return (
@@ -104,11 +104,11 @@ export default function QandA() {
         </main>
       </div>
 
-      <Cta
+      {/* <Cta
         title="Contact us"
         subscript="SE-27に相談してみる？"
         body="その他のご質問があれば、お気軽にお問い合わせください。"
-      />
+      /> */}
     </>
   );
 }

@@ -1,5 +1,5 @@
 export * from "./articleCard/ArticleCard";
-export * from "./Breadcrumb";
+export * from "./breadCrumb/Breadcrumb";
 export * from "./Categories";
 export * from "./CustomImage";
 export * from "./Footer";

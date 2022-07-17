@@ -6,7 +6,7 @@ import styles from "../styles/pages/blog.module.scss";
 import InnerLayout from "../layouts/GlobalInner";
 import BlogLayout from "../layouts/BlogOuter";
 
-import ArticleCard from "../components/ArticleCard";
+import ArticleCard from "../components/articleCard/ArticleCard";
 import PaginationArrow from "../components/Pagination";
 import Categories from "../components/Categories";
 
