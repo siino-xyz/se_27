@@ -6,7 +6,7 @@ export * from "./footer/Footer";
 export * from "./GoogleAnalytics";
 export * from "./header/Header";
 export * from "./NextOgp";
-export * from "./Pagination";
+export * from "./pagination/Pagination";
 export * from "./linkButton/LinkButton";
 export * from "./sectionTitle/SectionTitle";
 export * from "./staticContentUtilBlock/StaticContentUtilBlock";

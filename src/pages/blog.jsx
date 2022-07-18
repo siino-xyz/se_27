@@ -7,7 +7,7 @@ import InnerLayout from "../layouts/GlobalInner";
 import BlogLayout from "../layouts/BlogOuter";
 
 import ArticleCard from "../components/articleCard/ArticleCard";
-import PaginationArrow from "../components/Pagination";
+// import PaginationArrow from "../components/pagination/Pagination";
 import Categories from "../components/categories/Categories";
 
 export default function Blog({ articles, categories, totalCount }) {
@@ -21,10 +21,10 @@ export default function Blog({ articles, categories, totalCount }) {
           <div className={styles.subscript}>ブログ記事一覧</div>
         </div>
         <ArticleCard articles={articles} />
-        <PaginationArrow
+        {/* <PaginationArrow
           currentPageNumber={1}
           maxPageNumber={Math.ceil(totalCount / PER_PAGE)}
-        />
+        /> */}
       </div>
     </>
   );

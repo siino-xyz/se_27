@@ -2,8 +2,9 @@ import HeaderLogo from "@components/headerLogo/HeaderLogo";
 import HeaderNav from "@components/headerNav/HeaderNav";
 import { MobileHader, DrawerButton, DrawerLine } from "./MobileHeader.css";
 import { DrawerMenuOpener } from "@hooks/DrawerMenuOpener";
+import * as React from "react";
 
-const MobileHeader = () => {
+const MobileHeader = React.memo(() => {
   const { toggleContent, open } = DrawerMenuOpener();
   return (
     <>
@@ -27,6 +28,6 @@ const MobileHeader = () => {
       </div>
     </>
   );
-};
+});
 
 export default MobileHeader;
