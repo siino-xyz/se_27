@@ -4,7 +4,7 @@ import { MobileHader, DrawerButton, DrawerLine } from "./MobileHeader.css";
 import { DrawerMenuOpener } from "@hooks/DrawerMenuOpener";
 import * as React from "react";
 
-const MobileHeader = React.memo(() => {
+const MobileHeader = React.memo(function MobileHeaderMemo() {
   const { toggleContent, open } = DrawerMenuOpener();
   return (
     <>

@@ -1,5 +1,5 @@
 import "../styles/reset.css";
-import GoogleAnalytics from "../components/GoogleAnalytics";
+import GoogleAnalytics from "../components/googleAnalytics/GoogleAnalytics";
 import usePageView from "../hooks/usePageView";
 
 function MyApp({ Component, pageProps }) {

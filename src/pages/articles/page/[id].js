@@ -26,10 +26,10 @@ export const ArticlePageId = ({
         </div>
 
         <ArticleCard articles={articles} />
-        <PaginationArrow
+        {/* <PaginationArrow
           currentPageNumber={currentPageNumber}
           maxPageNumber={Math.ceil(totalCount / PER_PAGE)}
-        />
+        /> */}
       </div>
     </>
   );

@@ -4,10 +4,10 @@ import styles from "../../styles/pages/articles/articles.module.scss";
 import dayjs from "dayjs";
 import LinkButton from "../../components/linkButton/LinkButton";
 // import ShareButtons from "../../components/ShareButtons";
-import CustomImage from "../../components/CustomImage";
-import NextOgp from "../../components/NextOgp";
+import CustomImage from "../../components/customImage/CustomImage";
+import NextOgp from "../../components/nextOgp/NextOgp";
 import Breadcrumb from "../../components/breadCrumb/BreadCrumb";
-import Header from "../../components/Header";
+import Header from "../../components/header/Header";
 import { pageFadein } from "../../hooks/fadeIn";
 
 export default function ArticlesId({ articles, categories }) {
