@@ -1,55 +1,10 @@
-import { sprinkles } from "@css-utils/sprinkles.css";
 import DesktopHeader from "@components/desktopHeader/DesktopHeader";
 import MobileHeader from "@components/mobileHeader/MobileHeader";
-import HeaderNav from "@components/headerNav/HeaderNav";
-import { MobileMenuContent } from "./Header.css";
-
-import { useState, useRef, CSSProperties, useEffect } from "react";
-import { style } from "@vanilla-extract/css";
-import { setElementVars } from "@vanilla-extract/dynamic";
-import { vars } from "@css-utils/vars.css";
-
-export const isHidden = sprinkles({
-  display: "none",
-});
-export const isShow = sprinkles({
-  display: "block",
-});
 
 const Header = () => {
-  // const [red, setRed] = useState(redColor);
-
-  // const changeStyle = () => {
-  //   console.log("changed");
-  //   setRed(subColor);
-  // };
-
-  const [display, setDisplay] = useState(isHidden);
-  // useEffect(() => {
-  //   switch (display) {
-  //     case isHidden: {
-  //       break;
-  //     }
-  //     case !isHidden : {
-  //       setDisplay(isShow);
-  //       break;
-  //     }
-  //   }
-  // }, [display]);
-
-  const toggleDisplay = () =>
-    setDisplay((event) => (event === isHidden ? isShow : isHidden));
-
   return (
     // <DesktopHeader />
-    // <MobileHeader />
-    // <button onClick={changeStyle}>
-    //   <div className={red}>この文字の色を変えてみましょう</div>
-    // </button>
-    <>
-      <button onClick={toggleDisplay}>click</button>
-      <div className={display}>このmojiを表示したりしなかったり</div>
-    </>
+    <MobileHeader />
   );
 };
 

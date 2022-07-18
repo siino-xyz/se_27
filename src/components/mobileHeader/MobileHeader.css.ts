@@ -60,7 +60,14 @@ export const DrawerLine = style([
   },
 ]);
 
-export const MobileMenuContent = style([
+export const isHidden = style([
+  sprinkles({
+    display: "none",
+    transition: "easing",
+  }),
+]);
+
+export const isShow = style([
   sprinkles({
     position: "fixed",
     width: "size-full",

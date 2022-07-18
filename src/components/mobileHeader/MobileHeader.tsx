@@ -1,29 +1,10 @@
-import {
-  MobileHader,
-  DrawerButton,
-  DrawerLine,
-  MobileMenuContent,
-} from "./MobileHeader.css";
 import HeaderLogo from "@components/headerLogo/HeaderLogo";
 import HeaderNav from "@components/headerNav/HeaderNav";
-import { useState, useRef, CSSProperties, useEffect } from "react";
-import { sprinkles } from "@css-utils/sprinkles.css";
-import { style } from "@vanilla-extract/css";
-import { setElementVars } from "@vanilla-extract/dynamic";
-import { vars } from "@css-utils/vars.css";
+import { MobileHader, DrawerButton, DrawerLine } from "./MobileHeader.css";
+import { DrawerMenuOpener } from "@hooks/DrawerMenuOpener";
 
 const MobileHeader = () => {
-  const [open, setOpen] = useState<"none" | "block">("none");
-
-  // const mobilemenuElement = document.getElementById("mobilemenu");
-  // useEffect(() => {
-  //   switch (open) {
-  //     case "none": {
-
-  //     }
-  //   }
-  // });
-
+  const { toggleContent, open } = DrawerMenuOpener();
   return (
     <>
       <div className={MobileHader}>
@@ -35,14 +16,13 @@ const MobileHeader = () => {
           height={43}
           layout="intrinsic"
         />
-
-        <button className={DrawerButton}>
+        <button className={DrawerButton} onClick={toggleContent}>
           <span className={DrawerLine}></span>
           <span className={DrawerLine}></span>
           <span className={DrawerLine}></span>
         </button>
       </div>
-      <div id="mobilemenu" className={MobileMenuContent}>
+      <div className={open}>
         <HeaderNav />
       </div>
     </>
