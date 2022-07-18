@@ -1,23 +1,17 @@
 import { sprinkles } from "@css-utils/sprinkles.css";
-import { style } from "@vanilla-extract/css";
+import { style, assignVars, createThemeContract } from "@vanilla-extract/css";
 
-export const DesktopHeader = style([
+export const MobileMenuContent = style([
   sprinkles({
+    position: "fixed",
     width: "size-full",
-    background: "sub",
+    background: "black",
     display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
     alignItems: "center",
-    position: "sticky",
-    paddingY: "size-4",
-    paddingX: "size-2",
   }),
   {
-    top: 0,
-    left: 0,
-    zIndex: 999,
-    opacity: 0.9,
-    backdropFilter: "blur(3px)",
+    height: "100vh",
+    zIndex: 980,
   },
 ]);

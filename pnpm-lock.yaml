@@ -9,6 +9,7 @@ specifiers:
   '@types/react': ^18.0.12
   '@vanilla-extract/babel-plugin': ^1.1.7
   '@vanilla-extract/css': ^1.7.2
+  '@vanilla-extract/dynamic': ^2.0.2
   '@vanilla-extract/next-plugin': ^2.0.2
   '@vanilla-extract/recipes': ^0.2.5
   '@vanilla-extract/sprinkles': ^1.4.1
@@ -38,6 +39,7 @@ dependencies:
   '@types/node': 17.0.45
   '@vanilla-extract/babel-plugin': 1.1.7
   '@vanilla-extract/css': 1.7.2
+  '@vanilla-extract/dynamic': 2.0.2
   '@vanilla-extract/next-plugin': 2.0.2_next@12.2.2
   '@vanilla-extract/recipes': 0.2.5_@vanilla-extract+css@1.7.2
   '@vanilla-extract/sprinkles': 1.4.1_@vanilla-extract+css@1.7.2
@@ -739,6 +741,12 @@ packages:
       escape-string-regexp: 4.0.0
       media-query-parser: 2.0.2
       outdent: 0.8.0
+    dev: false
+
+  /@vanilla-extract/dynamic/2.0.2:
+    resolution: {integrity: sha512-U4nKaEQ8Kuz+exXEr51DUpyaOuzo24/S/k1YbDPQR06cYcNjQqvwFRnwWtZ+9ImocqM1wTKtzrdUgSTtLGIwAg==}
+    dependencies:
+      '@vanilla-extract/private': 1.0.3
     dev: false
 
   /@vanilla-extract/integration/5.0.0:
