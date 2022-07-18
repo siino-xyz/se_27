@@ -9,27 +9,29 @@ type Props = {
   buttonDisplay: "none" | "block";
 };
 
-const TextAndButtonBlock: React.FC<Props> = (props) => {
-  return (
-    <div
-      className={sprinkles({
-        display: "grid",
-        gridTemplateColumns: {
-          mobile: "grid-cols-1",
-          tablet: "grid-cols-2",
-          desktop: "grid-cols-2",
-        },
-        alignItems: "center",
-      })}
-    >
-      <p>{props.paragraph}</p>
-      <LinkButton
-        url={props.url}
-        text={props.buttonText}
-        buttonDisplay={props.buttonDisplay}
-      />
-    </div>
-  );
-};
+const TextAndButtonBlock: React.FC<Props> = React.memo(
+  function TextAndButtonBlockkMemo(props) {
+    return (
+      <div
+        className={sprinkles({
+          display: "grid",
+          gridTemplateColumns: {
+            mobile: "grid-cols-1",
+            tablet: "grid-cols-2",
+            desktop: "grid-cols-2",
+          },
+          alignItems: "center",
+        })}
+      >
+        <p>{props.paragraph}</p>
+        <LinkButton
+          url={props.url}
+          text={props.buttonText}
+          buttonDisplay={props.buttonDisplay}
+        />
+      </div>
+    );
+  }
+);
 
 export default TextAndButtonBlock;

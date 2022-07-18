@@ -1,7 +1,7 @@
 import styles from "../styles/layouts/blog-layout.module.scss";
-import Footer from "../components/Footer";
+import Footer from "../components/footer/Footer";
 import { pageFadein } from "../hooks/fadeIn";
-import Header from "../components/Header";
+import Header from "../components/header/Header";
 // import NextOgp from "../components/NextOgp";
 import useAsPath from "../hooks/useAsPath";
 export function BlogContainer({ children }) {

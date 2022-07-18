@@ -1,5 +1,5 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
 import { pageFadein } from "../hooks/fadeIn";
 import { sprinkles } from "@css-utils/sprinkles.css";
 
