@@ -10,3 +10,4 @@ export * from "./atoms/sectionTitle/SectionTitle";
 export * from "./organisms/staticContentUtilBlock/StaticContentUtilBlock";
 export * from "./organisms/textAndButtonBlock/TextAndButtonBlock";
 export * from "./molecules/desktopHeader/DesktopHeader";
+export * from "./atoms/categoryTag/CategoryTag";

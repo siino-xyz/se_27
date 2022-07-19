@@ -4,6 +4,7 @@ import ArticleCard from "../components/organisms/articleCard/ArticleCard";
 // import PaginationArrow from "../components/pagination/Pagination";
 import Categories from "../components/molecules/categoryTags/CategoryTags";
 import SectionTitle from "@components/atoms/sectionTitle/SectionTitle";
+import WithoutFV from "@layouts/WithoutFV";
 
 export default function Blog({ articles, categories, totalCount }) {
   return (
@@ -20,13 +21,9 @@ export default function Blog({ articles, categories, totalCount }) {
   );
 }
 
-// Blog.getLayout = function getLayout(blog) {
-//   return (
-//     <BlogLayout>
-//       <InnerLayout>{blog}</InnerLayout>
-//     </BlogLayout>
-//   );
-// };
+Blog.getLayout = function getLayout(blog) {
+  return <WithoutFV>{blog}</WithoutFV>;
+};
 
 export const getStaticProps = async () => {
   const categoryData = await client.get({ endpoint: "categories" });
