@@ -1,12 +1,10 @@
 import { client } from "../../../../libs/client";
 import { PER_PAGE } from "../../api/pager";
-import BlogLayout from "../../../layouts/BlogOuter";
-import InnerLayout from "../../../layouts/GlobalInner";
 
 // import PaginationArrow from "../../../components/pagination/Pagination";
-import ArticleCard from "@components/articleCard/ArticleCard";
-import Categories from "@components/categories/Categories";
-import SectionTitle from "@components/sectionTitle/SectionTitle";
+import ArticleCard from "@components/organisms/articleCard/ArticleCard";
+import Categories from "@components/molecules/categories/Categories";
+import SectionTitle from "@components/atoms/sectionTitle/SectionTitle";
 export const ArticlePageId = ({
   totalCount,
   currentPageNumber,
@@ -30,13 +28,13 @@ export const ArticlePageId = ({
 
 export default ArticlePageId;
 
-ArticlePageId.getLayout = function getLayout(articlepageid) {
-  return (
-    <BlogLayout>
-      <InnerLayout>{articlepageid}</InnerLayout>
-    </BlogLayout>
-  );
-};
+// ArticlePageId.getLayout = function getLayout(articlepageid) {
+//   return (
+//     // <BlogLayout>
+//     //   <InnerLayout>{articlepageid}</InnerLayout>
+//     // </BlogLayout>
+//   );
+// };
 
 export const getStaticPaths = async () => {
   const key = {

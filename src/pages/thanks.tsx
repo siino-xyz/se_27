@@ -1,13 +1,9 @@
 import Meta from "../layouts/Meta";
 import WithoutFV from "@layouts/WithoutFV";
-import ThanksContent from "@templates/thanksPage/thanksContent";
+import ThanksContent from "@components/templates/thanksPage/thanksContent";
 
 export const Thanks = () => {
-  return (
-    <>
-      <ThanksContent />
-    </>
-  );
+  return <ThanksContent />;
 };
 
 export default Thanks;

@@ -1,13 +1,9 @@
 import { client } from "../../libs/client";
 import { PER_PAGE } from "./api/pager";
-
-import InnerLayout from "../layouts/GlobalInner";
-import BlogLayout from "../layouts/BlogOuter";
-
-import ArticleCard from "../components/articleCard/ArticleCard";
+import ArticleCard from "../components/organisms/articleCard/ArticleCard";
 // import PaginationArrow from "../components/pagination/Pagination";
-import Categories from "../components/categories/Categories";
-import SectionTitle from "@components/sectionTitle/SectionTitle";
+import Categories from "../components/molecules/categories/Categories";
+import SectionTitle from "@components/atoms/sectionTitle/SectionTitle";
 
 export default function Blog({ articles, categories, totalCount }) {
   return (
@@ -24,13 +20,13 @@ export default function Blog({ articles, categories, totalCount }) {
   );
 }
 
-Blog.getLayout = function getLayout(blog) {
-  return (
-    <BlogLayout>
-      <InnerLayout>{blog}</InnerLayout>
-    </BlogLayout>
-  );
-};
+// Blog.getLayout = function getLayout(blog) {
+//   return (
+//     <BlogLayout>
+//       <InnerLayout>{blog}</InnerLayout>
+//     </BlogLayout>
+//   );
+// };
 
 export const getStaticProps = async () => {
   const categoryData = await client.get({ endpoint: "categories" });

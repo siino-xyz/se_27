@@ -1,9 +1,0 @@
-@import "../variables";
-
-.thankspage {
-  height: 100vh;
-  @include flexCol();
-  max-width: 800px;
-  @include mCenter;
-  // margin-top: 5rem;
-}

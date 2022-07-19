@@ -4,11 +4,11 @@ import dayjs from "dayjs";
 import { pageFadein } from "@hooks/fadeIn";
 
 // import ShareButtons from "@components/ShareButtons";
-import LinkButton from "@components/linkButton/LinkButton";
-import CustomImage from "@components/customImage/CustomImage";
-import NextOgp from "@components/nextOgp/NextOgp";
-import Breadcrumb from "@components/breadCrumb/Breadcrumb";
-import Header from "@components/header/Header";
+import LinkButton from "@components/atoms/linkButton/LinkButton";
+import CustomImage from "@components/atoms/customImage/CustomImage";
+import NextOgp from "@components/atoms/nextOgp/NextOgp";
+import Breadcrumb from "@components/molecules/breadCrumb/Breadcrumb";
+import Header from "@components/organisms/header/Header";
 
 const ArticlesId = ({ articles, categories }) => {
   const { ogImageUrl } = CustomImage(articles.ogp_image.url, articles.title);

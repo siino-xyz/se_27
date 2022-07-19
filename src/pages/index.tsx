@@ -1,11 +1,11 @@
-import ArticleCard from "../components/articleCard/ArticleCard";
-import LinkButton from "../components/linkButton/LinkButton";
-import SectionTitle from "../components/sectionTitle/SectionTitle";
-import TextAndButtonBlock from "../components/textAndButtonBlock/TextAndButtonBlock";
-import StaticContentUtilBlock from "../components/staticContentUtilBlock/StaticContentUtilBlock";
+import ArticleCard from "../components/organisms/articleCard/ArticleCard";
+import LinkButton from "../components/atoms/linkButton/LinkButton";
+import SectionTitle from "../components/atoms/sectionTitle/SectionTitle";
+import TextAndButtonBlock from "../components/organisms/textAndButtonBlock/TextAndButtonBlock";
+import StaticContentUtilBlock from "../components/organisms/staticContentUtilBlock/StaticContentUtilBlock";
 import Meta from "../layouts/Meta";
 import IncludingFV from "../layouts/IncludingFV";
-import Isuues from "../templates/issues/Issues";
+import Isuues from "../components/templates/issues/Issues";
 
 export default function Top({ articles }) {
   return (

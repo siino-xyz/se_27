@@ -1,12 +1,8 @@
 import Meta from "../layouts/Meta";
 import WithoutFV from "@layouts/WithoutFV";
-import JamstackDetail from "../templates/jamstackDetail/JamstackDetail";
+import JamstackDetail from "../components/templates/jamstackDetail/JamstackDetail";
 const Jamstack = () => {
-  return (
-    <>
-      <JamstackDetail />
-    </>
-  );
+  return <JamstackDetail />;
 };
 
 export default Jamstack;

@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import baseStyles from "../styles/document.css";
 
 const Document = () => {
   return (
@@ -13,7 +12,7 @@ const Document = () => {
         <link rel="icon" type="image/png" href="favicon.png" />
       </Head>
 
-      <body className={baseStyles}>
+      <body>
         <Main />
         <NextScript />
       </body>
