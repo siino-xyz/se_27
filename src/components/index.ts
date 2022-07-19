@@ -11,3 +11,4 @@ export * from "./organisms/staticContentUtilBlock/StaticContentUtilBlock";
 export * from "./organisms/textAndButtonBlock/TextAndButtonBlock";
 export * from "./molecules/desktopHeader/DesktopHeader";
 export * from "./atoms/categoryTag/CategoryTag";
+export * from "./atoms/postDate/PostDate";

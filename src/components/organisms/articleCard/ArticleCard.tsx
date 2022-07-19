@@ -3,7 +3,9 @@ import { Articles } from "src/types";
 import Image from "next/image";
 import dayjs from "dayjs";
 import { sprinkles } from "@css-utils/sprinkles.css";
-import { Card, Captions, PostTitle, DateTag } from "./ArticleCard.css";
+import { Card, Captions, PostTitle } from "./ArticleCard.css";
+import CategoryTag from "@components/atoms/categoryTag/CategoryTag";
+import PostDate from "@components/atoms/postDate/PostDate";
 
 const ArticleCard = ({ articles }: { articles: Articles[] }) => {
   return (
@@ -34,26 +36,13 @@ const ArticleCard = ({ articles }: { articles: Articles[] }) => {
                 />
 
                 <div className={Captions}>
-                  <div
-                    className={sprinkles({
-                      background: "sub",
-                      color: "black",
-                      display: "inline-block",
-                      paddingX: "size-1.5",
-                      paddingY: "size-1",
-                      fontSize: "sm",
-                      fontWeight: "bold",
-                      borderRadius: "size-1",
-                    })}
-                  >
-                    {articles.categories.name}
-                  </div>
+                  <CategoryTag
+                    name={articles.categories.name}
+                    id={articles.id}
+                  />
                   <h2 className={PostTitle}>{articles.title}</h2>
-                  <div className={DateTag}>
-                    {dayjs(articles.publishedAt)
-                      .locale("ja")
-                      .format("YYYY/MM/DD")}
-                  </div>
+
+                  <PostDate date={articles.publishedAt} />
                 </div>
               </a>
             </Link>
