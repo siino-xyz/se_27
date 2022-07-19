@@ -9,7 +9,7 @@ type CategoryTagProps = {
 
 const CategoryTag: React.FC<CategoryTagProps> = ({ name, id }) => {
   return (
-    <Link href={`/category/page/${id}`} key={id}>
+    <Link href={`/category/page/${id}`} key={id} passHref>
       <div
         className={sprinkles({
           background: { lightMode: "black", darkMode: "white" },

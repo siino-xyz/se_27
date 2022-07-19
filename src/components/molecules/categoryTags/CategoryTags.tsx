@@ -19,7 +19,13 @@ export const CategoryTags = React.memo(function CategoryTagsMemo({
       })}
     >
       {categories.map((categories) => {
-        return <CategoryTag name={categories.name} id={categories.id} />;
+        return (
+          <CategoryTag
+            name={categories.name}
+            id={categories.id}
+            key={categories.id}
+          />
+        );
       })}
     </div>
   );
