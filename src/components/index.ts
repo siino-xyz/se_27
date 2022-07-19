@@ -11,3 +11,4 @@ export * from "./linkButton/LinkButton";
 export * from "./sectionTitle/SectionTitle";
 export * from "./staticContentUtilBlock/StaticContentUtilBlock";
 export * from "./textAndButtonBlock/TextAndButtonBlock";
+export * from "./desktopHeader/DesktopHeader";

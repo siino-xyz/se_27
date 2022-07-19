@@ -1,16 +1,16 @@
 import { client } from "../../../libs/client";
 import Image from "next/image";
-import styles from "../../styles/pages/articles/articles.module.scss";
 import dayjs from "dayjs";
-import LinkButton from "../../components/linkButton/LinkButton";
-// import ShareButtons from "../../components/ShareButtons";
-import CustomImage from "../../components/customImage/CustomImage";
-import NextOgp from "../../components/nextOgp/NextOgp";
-import Breadcrumb from "../../components/breadCrumb/BreadCrumb";
-import Header from "../../components/header/Header";
-import { pageFadein } from "../../hooks/fadeIn";
+import { pageFadein } from "@hooks/fadeIn";
 
-export default function ArticlesId({ articles, categories }) {
+// import ShareButtons from "@components/ShareButtons";
+import LinkButton from "@components/linkButton/LinkButton";
+import CustomImage from "@components/customImage/CustomImage";
+import NextOgp from "@components/nextOgp/NextOgp";
+import Breadcrumb from "@components/breadCrumb/Breadcrumb";
+import Header from "@components/header/Header";
+
+const ArticlesId = ({ articles, categories }) => {
   const { ogImageUrl } = CustomImage(articles.ogp_image.url, articles.title);
   const { fadeTargetRef, domId } = pageFadein();
 
@@ -24,34 +24,27 @@ export default function ArticlesId({ articles, categories }) {
       />
 
       <Header />
-      <div
-        className={styles.innerLayout}
-        ref={fadeTargetRef}
-        id={domId}
-        style={{ opacity: 0 }}
-      >
-        <div className={styles.innerWrapper}>
+      <div ref={fadeTargetRef} id={domId} style={{ opacity: 0 }}>
+        <div>
           <Breadcrumb articles={articles} categories={categories} />
-          <div className={styles.eyeCatch}>
-            <Image
-              src={articles.eye_catch.url}
-              width={944}
-              height={465}
-              layout="responsive"
-              alt="eye_catch"
-            />
-          </div>
+          <Image
+            src={articles.eye_catch.url}
+            width={944}
+            height={465}
+            layout="responsive"
+            alt="eye_catch"
+          />
 
-          <section className={styles.contentWrapper}>
-            <div className={styles.sumally}>
-              <div className={styles.tag}>{articles.categories.name}</div>
-              <h1 className={styles.title}>{articles.title}</h1>
-              <div className={styles.date}>
+          <section>
+            <div>
+              <div>{articles.categories.name}</div>
+              <h1>{articles.title}</h1>
+              <div>
                 {dayjs(articles.publishedAt).locale("ja").format("YYYY/MM/DD")}
               </div>
             </div>
 
-            <main className={styles.richEditor}>
+            <main>
               <div
                 dangerouslySetInnerHTML={{
                   __html: `${articles.body}`,
@@ -62,7 +55,7 @@ export default function ArticlesId({ articles, categories }) {
             {/* <ShareButtons articles={articles} /> */}
             <LinkButton
               url={"/blog"}
-              text={"S他の記事も読む"}
+              text={"他の記事も読む"}
               buttonDisplay={"block"}
             />
           </section>
@@ -70,7 +63,9 @@ export default function ArticlesId({ articles, categories }) {
       </div>
     </>
   );
-}
+};
+
+export default ArticlesId;
 
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "articles" });
