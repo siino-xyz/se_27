@@ -12,7 +12,7 @@ export const pageFadein = () => {
       scrollTrigger: {
         trigger: `#${domId}`,
         start: "top",
-        markers: "false",
+        markers: false,
       },
     });
   }, []);

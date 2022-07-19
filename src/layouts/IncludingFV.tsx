@@ -3,7 +3,7 @@ import Header from "../components/organisms/header/Header";
 import Footer from "../components/organisms/footer/Footer";
 import FirstView from "../components/templates/firstView/FirstView";
 import { sprinkles } from "@css-utils/sprinkles.css";
-import { GlobalStyle } from "./layouts.css";
+import { GlobalStyle } from "../styles/layouts.css";
 
 const IncludingFV = ({ children }) => {
   const { fadeTargetRef, domId } = pageFadein();

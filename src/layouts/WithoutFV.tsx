@@ -2,7 +2,7 @@ import Header from "../components/organisms/header/Header";
 import Footer from "../components/organisms/footer/Footer";
 import { pageFadein } from "../hooks/fadeIn";
 import { sprinkles } from "@css-utils/sprinkles.css";
-import { GlobalStyle } from "./layouts.css";
+import { GlobalStyle } from "../styles/layouts.css";
 
 const WithoutFV = ({ children }) => {
   const { fadeTargetRef, domId } = pageFadein();
