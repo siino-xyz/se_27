@@ -1,6 +1,6 @@
 import { client } from "../../../libs/client";
 
-import Categories from "../../../components/molecules/categories/Categories";
+import Categories from "../../../components/molecules/categoryTags/CategoryTags";
 import ArticleCard from "../../../components/organisms/articleCard/ArticleCard";
 import LinkButton from "../../../components/atoms/linkButton/LinkButton";
 import Breadcrumb from "../../../components/molecules/breadCrumb/Breadcrumb";

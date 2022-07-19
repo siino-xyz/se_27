@@ -3,7 +3,7 @@ import { PER_PAGE } from "../../api/pager";
 
 // import PaginationArrow from "../../../components/pagination/Pagination";
 import ArticleCard from "@components/organisms/articleCard/ArticleCard";
-import Categories from "@components/molecules/categories/Categories";
+import Categories from "@components/molecules/categoryTags/CategoryTags";
 import SectionTitle from "@components/atoms/sectionTitle/SectionTitle";
 export const ArticlePageId = ({
   totalCount,

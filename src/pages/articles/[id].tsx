@@ -5,13 +5,13 @@ import { pageFadein } from "@hooks/fadeIn";
 
 // import ShareButtons from "@components/ShareButtons";
 import LinkButton from "@components/atoms/linkButton/LinkButton";
-import CustomImage from "@components/atoms/customImage/CustomImage";
-import NextOgp from "@components/atoms/nextOgp/NextOgp";
+import NextOgp from "@components/atoms/ogpImage/OgpImage";
 import Breadcrumb from "@components/molecules/breadCrumb/Breadcrumb";
 import Header from "@components/organisms/header/Header";
+import customImage from "@hooks/customImage";
 
 const ArticlesId = ({ articles, categories }) => {
-  const { ogImageUrl } = CustomImage(articles.ogp_image.url, articles.title);
+  const { ogImageUrl } = customImage(articles.ogp_image.url, articles.title);
   const { fadeTargetRef, domId } = pageFadein();
 
   return (

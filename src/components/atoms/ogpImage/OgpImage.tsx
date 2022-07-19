@@ -11,7 +11,7 @@ export type HeadType = {
   keyword?: string;
 };
 
-export const NextOgp: React.FC<HeadType> = ({
+export const OgpImage: React.FC<HeadType> = ({
   pagetitle,
   pagedescription,
   pagepath,
@@ -62,4 +62,4 @@ export const NextOgp: React.FC<HeadType> = ({
   );
 };
 
-export default NextOgp;
+export default OgpImage;

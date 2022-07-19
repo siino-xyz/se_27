@@ -2,12 +2,12 @@ import Link from "next/link";
 import * as React from "react";
 import { Category } from "src/types";
 import { sprinkles } from "@css-utils/sprinkles.css";
-import { CategoryTag } from "./Categories.css";
+import { CategoryTag } from "./CategoryTags.css";
 
-type CategoriesProps = {
+type CategoryTagsProps = {
   categories: Array<Category>;
 };
-export const Categories = ({ categories }: CategoriesProps) => {
+export const CategoryTags = ({ categories }: CategoryTagsProps) => {
   return (
     <div
       className={sprinkles({
@@ -52,6 +52,9 @@ export const Categories = ({ categories }: CategoriesProps) => {
                 </a>
               </Link>
             </div>
+            // <PostTag
+
+            // />
           );
         })}
       </div>
@@ -59,4 +62,4 @@ export const Categories = ({ categories }: CategoriesProps) => {
   );
 };
 
-export default Categories;
+export default CategoryTags;

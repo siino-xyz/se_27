@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { sprinkles } from "@css-utils/sprinkles.css";
 import { FC, memo } from "react";
 
 type HeaderLogoTypes = {

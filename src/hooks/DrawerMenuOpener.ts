@@ -4,7 +4,7 @@ import {
   isShow,
 } from "@components/molecules/mobileHeader/MobileHeader.css";
 
-export const DrawerMenuOpener = () => {
+export const drawerMenuOpener = () => {
   const [open, setOpen] = useState(isHidden);
   const toggleContent = () =>
     setOpen((menuState) => (menuState === isHidden ? isShow : isHidden));
