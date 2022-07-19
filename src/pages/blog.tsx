@@ -1,4 +1,4 @@
-import { client } from "../../libs/client";
+import { client } from "../libs/client";
 import { PER_PAGE } from "./api/pager";
 import ArticleCard from "../components/organisms/articleCard/ArticleCard";
 // import PaginationArrow from "../components/pagination/Pagination";

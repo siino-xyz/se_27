@@ -1,4 +1,4 @@
-import { client } from "../../../libs/client";
+import { client } from "../../libs/client";
 import Image from "next/image";
 import dayjs from "dayjs";
 import { pageFadein } from "@hooks/fadeIn";

@@ -1,4 +1,4 @@
-import { client } from "../../../../libs/client";
+import { client } from "../../../libs/client";
 
 import Categories from "../../../components/molecules/categories/Categories";
 import ArticleCard from "../../../components/organisms/articleCard/ArticleCard";

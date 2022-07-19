@@ -1,6 +1,6 @@
 import { sprinkles } from "@css-utils/sprinkles.css";
 import Link from "next/link";
-import { menuItems } from "libs/headerMenuItems";
+import { menuItems } from "@libs/headerMenuItems";
 
 const HeaderNav = () => {
   return (
