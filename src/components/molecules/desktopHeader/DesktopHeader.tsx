@@ -1,5 +1,5 @@
 import HeaderLogo from "@components/atoms/headerLogo/HeaderLogo";
-import HeaderNav from "@components/molecules/headerNav/HeaderNav";
+import HeaderNav from "@components/atoms/headerNav/HeaderNav";
 import { DesktopHeaderContainer } from "./DesktopHeader.css";
 import * as React from "react";
 

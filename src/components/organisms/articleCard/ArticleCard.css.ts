@@ -55,10 +55,3 @@ export const PostTitle = style([
     },
   },
 ]);
-
-export const DateTag = style([
-  sprinkles({
-    fontSize: "sm",
-    color: "white",
-  }),
-]);
