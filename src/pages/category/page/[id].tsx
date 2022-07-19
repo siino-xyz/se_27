@@ -1,6 +1,4 @@
 import { client } from "../../../../libs/client";
-import InnerLayout from "../../../layouts/GlobalInner";
-import BlogLayout from "../../../layouts/BlogOuter";
 
 import Categories from "../../../components/categories/Categories";
 import ArticleCard from "../../../components/articleCard/ArticleCard";
@@ -43,13 +41,11 @@ export const CategoryId = ({ articles, categories, name }) => {
 
 export default CategoryId;
 
-CategoryId.getLayout = function getLayout(categoryid) {
-  return (
-    <BlogLayout>
-      <InnerLayout>{categoryid}</InnerLayout>
-    </BlogLayout>
-  );
-};
+// CategoryId.getLayout = function getLayout(categoryid) {
+//   return (
+//      {categoryid}</InnerLayout>
+//   );
+// };
 
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "categories" });
