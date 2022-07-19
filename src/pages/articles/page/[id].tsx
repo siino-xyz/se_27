@@ -1,15 +1,12 @@
 import { client } from "../../../../libs/client";
 import { PER_PAGE } from "../../api/pager";
-
-import styles from "../../../styles/pages/blog.module.scss";
-
 import BlogLayout from "../../../layouts/BlogOuter";
 import InnerLayout from "../../../layouts/GlobalInner";
 
 // import PaginationArrow from "../../../components/pagination/Pagination";
-import ArticleCard from "../../../components/articleCard/ArticleCard";
-import Categories from "../../../components/categories/Categories";
-
+import ArticleCard from "@components/articleCard/ArticleCard";
+import Categories from "@components/categories/Categories";
+import SectionTitle from "@components/sectionTitle/SectionTitle";
 export const ArticlePageId = ({
   totalCount,
   currentPageNumber,
@@ -18,13 +15,9 @@ export const ArticlePageId = ({
 }) => {
   return (
     <>
-      <div className={styles.container}>
+      <div>
         <Categories categories={categories} />
-        <div className={styles.sectionTitle}>
-          <h2 className={styles.h2}>Blog</h2>
-          <div className={styles.subscript}>ブログ記事一覧</div>
-        </div>
-
+        <SectionTitle largeText="All Posts" smallText="記事一覧" />
         <ArticleCard articles={articles} />
         {/* <PaginationArrow
           currentPageNumber={currentPageNumber}

@@ -25,7 +25,7 @@
     "**/*.tsx",
     "src/pages/contact.tsx",
     "components/blogHeader.jsx",
-    "src/pages/articles/page/[id].js",
+    "src/pages/articles/page/[id].tsx",
     "components/Header.jsx",
     "components/Breadcrumb.jsx",
     "src/pages/_app.js",
