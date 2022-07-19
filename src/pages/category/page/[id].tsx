@@ -1,5 +1,4 @@
 import { client } from "../../../../libs/client";
-import styles from "../../../styles/pages/blog.module.scss";
 import InnerLayout from "../../../layouts/GlobalInner";
 import BlogLayout from "../../../layouts/BlogOuter";
 
@@ -11,9 +10,9 @@ export const CategoryId = ({ articles, categories, name }) => {
   if (articles.length === 0) {
     return (
       <>
-        <div className={styles.sectionContainer}>
-          <main className={styles.sectionInner}>
-            <div className={styles.noArticles}>
+        <div>
+          <main>
+            <div>
               <div>このカテゴリにはまだ記事がありません。ゴメンネ。</div>
               <LinkButton
                 url={"/blog"}
@@ -28,12 +27,12 @@ export const CategoryId = ({ articles, categories, name }) => {
   }
   return (
     <>
-      <div className={styles.sectionContainer}>
-        <main className={styles.sectionInner}>
+      <div>
+        <main>
           <Breadcrumb articles={articles} categories={categories} />
           <Categories categories={categories} />
-          <div className={styles.ttlWrapper}>
-            <h2 className={styles.sectionTitle}>{name}</h2>
+          <div>
+            <h2>{name}</h2>
           </div>
           <ArticleCard articles={articles} />
         </main>
