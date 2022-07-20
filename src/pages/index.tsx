@@ -1,3 +1,5 @@
+import React from "react";
+import type { ReactElement } from "react";
 import ArticleCard from "../components/organisms/articleCard/ArticleCard";
 import LinkButton from "../components/atoms/linkButton/LinkButton";
 import SectionTitle from "../components/atoms/sectionTitle/SectionTitle";
@@ -6,8 +8,10 @@ import StaticContentUtilBlock from "../components/organisms/staticContentUtilBlo
 import Meta from "../layouts/Meta";
 import IncludingFV from "../layouts/IncludingFV";
 import Isuues from "../components/templates/issues/Issues";
+import type { NextPageWithLayout } from "./_app";
+// import { ArticleCardTypes } from "src/types";
 
-export default function Top({ articles }) {
+const TopPage: NextPageWithLayout = (articles) => {
   return (
     <>
       <section>
@@ -80,13 +84,15 @@ export default function Top({ articles }) {
       </section>
 
       <SectionTitle largeText="Blog" smallText="ブログ" />
-      <ArticleCard articles={articles} />
+      {/* <ArticleCard articles={articles} /> */}
       <LinkButton url={"/blog"} text="記事一覧" buttonDisplay="block" />
     </>
   );
-}
+};
 
-Top.getLayout = function getLayout(top) {
+export default TopPage;
+
+TopPage.getLayout = function getLayout(top: ReactElement) {
   return (
     <Meta>
       <IncludingFV>{top}</IncludingFV>

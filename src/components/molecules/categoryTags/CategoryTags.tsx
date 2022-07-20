@@ -1,34 +1,36 @@
 import * as React from "react";
 import { sprinkles } from "@css-utils/sprinkles.css";
-import { Category } from "src/types";
 import CategoryTag from "@components/atoms/categoryTag/CategoryTag";
+import { ICategories } from "@types";
 
-export const CategoryTags = React.memo(function CategoryTagsMemo({
-  categories,
-}: {
-  categories: Category[];
-}) {
-  return (
-    <div
-      className={sprinkles({
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: "size-4",
-      })}
-    >
-      {categories.map((categories) => {
-        return (
-          <CategoryTag
-            name={categories.name}
-            id={categories.id}
-            key={categories.id}
-          />
-        );
-      })}
-    </div>
-  );
-});
+type CategoriesProps = {
+  categories: ICategories[];
+};
 
-export default CategoryTags;
+export const Categories: React.FC<CategoriesProps> = React.memo(
+  function CategoryTagsMemo(props) {
+    return (
+      <div
+        className={sprinkles({
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "size-4",
+        })}
+      >
+        {props.categories.map((categories) => {
+          return (
+            <CategoryTag
+              name={categories.name}
+              id={categories.id}
+              key={categories.id}
+            />
+          );
+        })}
+      </div>
+    );
+  }
+);
+
+export default Categories;

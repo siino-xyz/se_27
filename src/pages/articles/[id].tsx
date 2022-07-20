@@ -5,7 +5,7 @@ import { pageFadein } from "@hooks/fadeIn";
 
 // import ShareButtons from "@components/ShareButtons";
 import LinkButton from "@components/atoms/linkButton/LinkButton";
-import NextOgp from "@components/atoms/ogpImage/OgpImage";
+import OgpImage from "@components/atoms/ogpImage/OgpImage";
 import Breadcrumb from "@components/molecules/breadCrumb/Breadcrumb";
 import Header from "@components/organisms/header/Header";
 import customImage from "@hooks/customImage";
@@ -16,7 +16,7 @@ const ArticlesId = ({ articles, categories }) => {
 
   return (
     <>
-      <NextOgp
+      <OgpImage
         pagetitle={articles.title}
         pagedescription={articles.description}
         pagepath={`articles/${articles.id}`}
