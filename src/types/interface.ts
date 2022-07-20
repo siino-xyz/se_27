@@ -13,6 +13,7 @@ export interface IArticles extends MicroCMSListContent {
   date: string;
   ogp_image: MicroCMS_OGPImage;
   categories?: ICategories;
+  description: string;
 }
 
 export type MicroCMS_EyeCatch = {

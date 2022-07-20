@@ -8,28 +8,38 @@ import OgpImage from "@components/atoms/ogpImage/OgpImage";
 import Breadcrumb from "@components/molecules/breadCrumb/Breadcrumb";
 import Header from "@components/organisms/header/Header";
 import customImage from "@hooks/customImage";
+import * as React from "react";
+import { getContents, getContentId } from "@libs/blog";
+import { IArticles, ICategories } from "@types";
 
-import { getContents, getArticleById } from "@libs/blog";
+type ArticleProps = {
+  articles: IArticles[];
+  article: IArticles;
+  categories: ICategories;
+};
 
-const ArticlesId = ({ articles, categories }) => {
-  const { ogImageUrl } = customImage(articles.ogp_image.url, articles.title);
+const Article: React.FC<ArticleProps> = (props) => {
+  const { ogImageUrl } = customImage(
+    props.article.ogp_image.url,
+    props.article.title
+  );
   const { fadeTargetRef, domId } = pageFadein();
 
   return (
     <>
       <OgpImage
-        pagetitle={articles.title}
-        pagedescription={articles.description}
-        pagepath={`articles/${articles.id}`}
+        pagetitle={props.article.title}
+        pagedescription={props.article.description}
+        pagepath={`props.articles/${props.article.id}`}
         postimg={ogImageUrl}
       />
 
       <Header />
       <div ref={fadeTargetRef} id={domId} style={{ opacity: 0 }}>
         <div>
-          <Breadcrumb articles={articles} categories={categories} />
+          {/* <Breadcrumb articles={props.articles} categories={props.categories} /> */}
           <Image
-            src={articles.eye_catch.url}
+            src={props.article.eye_catch.url}
             width={944}
             height={465}
             layout="responsive"
@@ -38,22 +48,24 @@ const ArticlesId = ({ articles, categories }) => {
 
           <section>
             <div>
-              <div>{articles.categories.name}</div>
-              <h1>{articles.title}</h1>
+              <div>{props.article.categories.name}</div>
+              <h1>{props.article.title}</h1>
               <div>
-                {dayjs(articles.publishedAt).locale("ja").format("YYYY/MM/DD")}
+                {dayjs(props.article.publishedAt)
+                  .locale("ja")
+                  .format("YYYY/MM/DD")}
               </div>
             </div>
 
             <main>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: `${articles.body}`,
+                  __html: `${props.article.body}`,
                 }}
               />
             </main>
 
-            {/* <ShareButtons articles={articles} /> */}
+            {/* <ShareButtons props.articles={props.articles} /> */}
             <LinkButton
               url={"/blog"}
               text={"他の記事も読む"}
@@ -66,7 +78,7 @@ const ArticlesId = ({ articles, categories }) => {
   );
 };
 
-export default ArticlesId;
+export default Article;
 
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "articles" });
@@ -76,27 +88,14 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (context: GetStaticPropsContext) => {
-  const articleId: any = context.params?.articleId || "1";
-  const article = await getArticleById(articleId);
-  const { categories } = await getContents();
-
+  const { articles, categories } = await getContents();
+  const id: any = context.params?.id;
+  const article = await getContentId(id);
   return {
     props: {
       article,
+      articles,
       categories,
     },
   };
 };
-
-// export const getStaticProps = async (context) => {
-//   const id = context.params.id;
-//   const data = await client.get({ endpoint: "articles", contentId: id });
-//   const categoryData = await client.get({ endpoint: "categories" });
-
-//   return {
-//     props: {
-//       articles: data,
-//       categories: categoryData.contents,
-//     },
-//   };
-// };

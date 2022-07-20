@@ -45,10 +45,10 @@ export const getNewestArticles = async (): Promise<{
   };
 };
 
-export const getArticleById = async (articleId: string) => {
+export const getContentId = async (contentId: string) => {
   const res = await client.getListDetail<IArticles>({
     endpoint: "articles",
-    contentId: articleId,
+    contentId: contentId,
     queries: { depth: 2 },
   });
   return res;
