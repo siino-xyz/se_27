@@ -1,5 +1,5 @@
 import { sprinkles } from "src/css-utils/sprinkles.css";
-import LinkButton from "../../atoms/linkButton/LinkButton";
+import { LinkButton } from "../../atoms/linkButton/LinkButton";
 import * as React from "react";
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
   buttonDisplay: "none" | "block";
 };
 
-const TextAndButtonBlock: React.FC<Props> = React.memo(
+export const TextAndButtonBlock: React.FC<Props> = React.memo(
   function TextAndButtonBlockkMemo(props) {
     return (
       <div
@@ -33,5 +33,3 @@ const TextAndButtonBlock: React.FC<Props> = React.memo(
     );
   }
 );
-
-export default TextAndButtonBlock;

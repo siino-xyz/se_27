@@ -1,6 +1,6 @@
 import * as React from "react";
 import { sprinkles } from "@css-utils/sprinkles.css";
-import CategoryTag from "@components/atoms/categoryTag/CategoryTag";
+import { CategoryTag } from "@components/atoms/categoryTag/CategoryTag";
 import { ICategories } from "@types";
 
 type CategoriesProps = {
@@ -32,5 +32,3 @@ export const CategoiesLInks: React.FC<CategoriesProps> = React.memo(
     );
   }
 );
-
-export default CategoiesLInks;

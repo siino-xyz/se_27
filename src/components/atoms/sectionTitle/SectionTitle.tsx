@@ -6,7 +6,7 @@ type Props = {
   smallText: string;
 };
 
-const SectionTitle: React.FC<Props> = (props) => {
+export const SectionTitle: React.FC<Props> = (props) => {
   return (
     <div
       className={sprinkles({
@@ -36,5 +36,3 @@ const SectionTitle: React.FC<Props> = (props) => {
     </div>
   );
 };
-
-export default SectionTitle;

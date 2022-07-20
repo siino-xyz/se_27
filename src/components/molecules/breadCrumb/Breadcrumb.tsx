@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { ToBlogTop } from "./BreadCrumb.css";
 
-const Breadcrumb = ({ categories, articles }) => {
+export const Breadcrumb = ({ categories, articles }) => {
   const router = useRouter();
   const path = router.asPath;
   const isCategoryPage = /\/category\/.+$/.test(path);
@@ -59,5 +59,3 @@ const Breadcrumb = ({ categories, articles }) => {
     </nav>
   );
 };
-
-export default Breadcrumb;

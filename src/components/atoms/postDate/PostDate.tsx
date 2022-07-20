@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import { sprinkles } from "@css-utils/sprinkles.css";
 
-const PostDate = ({ date }: { date: string }) => {
+export const PostDate = ({ date }: { date: string }) => {
   return (
     <div
       className={sprinkles({
@@ -13,5 +13,3 @@ const PostDate = ({ date }: { date: string }) => {
     </div>
   );
 };
-
-export default PostDate;

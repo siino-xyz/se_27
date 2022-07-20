@@ -1,6 +1,5 @@
-import Meta from "../layouts/Meta";
-import WithoutFV from "@layouts/WithoutFV";
-import ThanksContent from "@components/templates/thanksPage/thanksContent";
+import {WithoutFV} from "@layouts";
+import {ThanksContent} from "@components";
 
 export const Thanks = () => {
   return <ThanksContent />;
@@ -10,8 +9,6 @@ export default Thanks;
 
 Thanks.getLayout = function getLayout(thanks) {
   return (
-    <Meta>
       <WithoutFV>{thanks}</WithoutFV>;
-    </Meta>
   );
 };

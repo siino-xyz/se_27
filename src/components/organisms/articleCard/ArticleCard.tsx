@@ -1,8 +1,8 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import CategoryTag from "@components/atoms/categoryTag/CategoryTag";
-import PostDate from "@components/atoms/postDate/PostDate";
+import { CategoryTag } from "@components/atoms/categoryTag/CategoryTag";
+import { PostDate } from "@components/atoms/postDate/PostDate";
 import { sprinkles } from "@css-utils/sprinkles.css";
 import { Card, Captions, PostTitle } from "./ArticleCard.css";
 import { IArticles } from "src/types";
@@ -11,7 +11,7 @@ type ArticleCardProps = {
   articles: Array<IArticles>;
 };
 
-const ArticleCard: React.FC<ArticleCardProps> = React.memo(
+export const ArticleCard: React.FC<ArticleCardProps> = React.memo(
   function ArticleCardMemo(props) {
     return (
       <div
@@ -54,4 +54,3 @@ const ArticleCard: React.FC<ArticleCardProps> = React.memo(
     );
   }
 );
-export default ArticleCard;

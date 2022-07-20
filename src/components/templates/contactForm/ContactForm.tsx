@@ -1,6 +1,6 @@
 import { GetForm } from "../../../hooks/getForm";
 import { sprinkles } from "@css-utils/sprinkles.css";
-import SectionTitle from "@components/atoms/sectionTitle/SectionTitle";
+import { SectionTitle } from "@components/atoms/sectionTitle/SectionTitle";
 import {
   InputBlock,
   InputLabel,
@@ -139,5 +139,3 @@ export const ContactForm = () => {
     </>
   );
 };
-
-export default ContactForm;

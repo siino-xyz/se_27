@@ -1,7 +1,7 @@
 import Script from "next/script";
 import { GA_ID, existsGaId } from "../../../libs/gtag";
 
-const GoogleAnalytics = () => {
+export const GoogleAnalytics = () => {
   return (
     <>
       {/* Google Analytics */}
@@ -32,5 +32,3 @@ const GoogleAnalytics = () => {
     </>
   );
 };
-
-export default GoogleAnalytics;

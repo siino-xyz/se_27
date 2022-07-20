@@ -7,7 +7,7 @@ type CategoryTagProps = {
   id: string;
 };
 
-const CategoryTag: React.FC<CategoryTagProps> = ({ name, id }) => {
+export const CategoryTag: React.FC<CategoryTagProps> = ({ name, id }) => {
   return (
     <Link href={`/category/page/${id}`} key={id} passHref>
       <div
@@ -27,5 +27,3 @@ const CategoryTag: React.FC<CategoryTagProps> = ({ name, id }) => {
     </Link>
   );
 };
-
-export default CategoryTag;

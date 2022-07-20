@@ -11,22 +11,20 @@ type HeaderLogoTypes = {
   href: string;
 };
 
-const HeaderLogo: FC<HeaderLogoTypes> = memo(function HeaderLogoTypesMemo(
-  props
-) {
-  return (
-    <Link href={props.href}>
-      <a>
-        <Image
-          src={props.src}
-          width={props.width}
-          height={props.height}
-          layout={props.layout}
-          alt={props.alt}
-        />
-      </a>
-    </Link>
-  );
-});
-
-export default HeaderLogo;
+export const HeaderLogo: FC<HeaderLogoTypes> = memo(
+  function HeaderLogoTypesMemo(props) {
+    return (
+      <Link href={props.href}>
+        <a>
+          <Image
+            src={props.src}
+            width={props.width}
+            height={props.height}
+            layout={props.layout}
+            alt={props.alt}
+          />
+        </a>
+      </Link>
+    );
+  }
+);

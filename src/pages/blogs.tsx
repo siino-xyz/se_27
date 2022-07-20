@@ -1,18 +1,18 @@
+import React from "react";
 import type { NextPageWithLayout } from "next";
 import { IArticles, ICategories } from "@types";
-import type { ReactElement } from "react";
 import { getContents } from "@libs/blog";
-import ArticleCard from "../components/organisms/articleCard/ArticleCard";
-import CategoriesLinks from "../components/molecules/categoriesLinks/CategoriesLinks";
-import SectionTitle from "@components/atoms/sectionTitle/SectionTitle";
-import WithoutFV from "@layouts/WithoutFV";
+import { WithoutFV } from "@layouts";
+import { ArticleCard, CategoriesLinks, SectionTitle } from "@components";
 
 type BlogProps = {
   articles: IArticles[];
   categories: ICategories[];
 };
 
-const Blog: NextPageWithLayout<BlogProps> = (props) => {
+const Blog: NextPageWithLayout<BlogProps> = React.memo(function BlogMemo(
+  props
+) {
   return (
     <>
       <CategoriesLinks categories={props.categories} />
@@ -20,11 +20,11 @@ const Blog: NextPageWithLayout<BlogProps> = (props) => {
       <ArticleCard articles={props.articles} />
     </>
   );
-};
+});
 
 export default Blog;
 
-Blog.getLayout = function getLayout(blog: ReactElement) {
+Blog.getLayout = function getLayout(blog: React.ReactElement) {
   return <WithoutFV>{blog}</WithoutFV>;
 };
 

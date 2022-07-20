@@ -1,6 +1,6 @@
 import * as React from "react";
 import { sprinkles } from "../../../css-utils/sprinkles.css";
-import LinkButton from "../../atoms/linkButton/LinkButton";
+import { LinkButton } from "../../atoms/linkButton/LinkButton";
 import Image from "next/image";
 
 type ComponentProps = {
@@ -16,7 +16,7 @@ type ComponentProps = {
   buttonDisplay: "none" | "block";
 };
 
-const StaticContentUtilBlock: React.FC<ComponentProps> = React.memo(
+export const StaticContentUtilBlock: React.FC<ComponentProps> = React.memo(
   function StaticContentUtilBlockMemo(props) {
     return (
       <>
@@ -57,5 +57,3 @@ const StaticContentUtilBlock: React.FC<ComponentProps> = React.memo(
     );
   }
 );
-
-export default StaticContentUtilBlock;

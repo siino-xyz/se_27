@@ -61,5 +61,3 @@ export const OgpImage: React.FC<HeadType> = ({
     </Head>
   );
 };
-
-export default OgpImage;

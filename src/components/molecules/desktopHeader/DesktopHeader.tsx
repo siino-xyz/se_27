@@ -1,9 +1,9 @@
-import HeaderLogo from "@components/atoms/headerLogo/HeaderLogo";
-import HeaderNav from "@components/atoms/headerNav/HeaderNav";
+import { HeaderLogo } from "@components/atoms/headerLogo/HeaderLogo";
+import { HeaderNav } from "@components/atoms/headerNav/HeaderNav";
 import { DesktopHeaderContainer } from "./DesktopHeader.css";
 import * as React from "react";
 
-const DesktopHeader = React.memo(function DesktopHeaderMemo() {
+export const DesktopHeader = React.memo(function DesktopHeaderMemo() {
   return (
     <div className={DesktopHeaderContainer}>
       <HeaderLogo
@@ -18,5 +18,3 @@ const DesktopHeader = React.memo(function DesktopHeaderMemo() {
     </div>
   );
 });
-
-export default DesktopHeader;

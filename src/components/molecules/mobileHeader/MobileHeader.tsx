@@ -1,10 +1,10 @@
-import HeaderLogo from "@components/atoms/headerLogo/HeaderLogo";
-import HeaderNav from "@components/atoms/headerNav/HeaderNav";
+import { HeaderLogo } from "@components/atoms/headerLogo/HeaderLogo";
+import { HeaderNav } from "@components/atoms/headerNav/HeaderNav";
 import { MobileHader, DrawerButton, DrawerLine } from "./MobileHeader.css";
 import * as React from "react";
 import { drawerMenuOpener } from "@hooks/drawerMenuOpener";
 
-const MobileHeader = React.memo(function MobileHeaderMemo() {
+export const MobileHeader = React.memo(function MobileHeaderMemo() {
   const { toggleContent, open } = drawerMenuOpener();
   return (
     <>
@@ -29,5 +29,3 @@ const MobileHeader = React.memo(function MobileHeaderMemo() {
     </>
   );
 });
-
-export default MobileHeader;

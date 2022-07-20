@@ -62,5 +62,3 @@ export const PaginationArrow: React.FC<P> = React.memo(
     );
   }
 );
-
-export default PaginationArrow;

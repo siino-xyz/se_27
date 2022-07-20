@@ -41,18 +41,16 @@ const Button: React.FC<ButtonTypes> = (props) => {
   );
 };
 
-const LinkButton: React.FC<ButtonTypes> = React.memo(function LinkButtonMemo(
-  props
-) {
-  return (
-    <>
-      <Button
-        url={props.url}
-        text={props.text}
-        buttonDisplay={props.buttonDisplay}
-      />
-    </>
-  );
-});
-
-export default LinkButton;
+export const LinkButton: React.FC<ButtonTypes> = React.memo(
+  function LinkButtonMemo(props) {
+    return (
+      <>
+        <Button
+          url={props.url}
+          text={props.text}
+          buttonDisplay={props.buttonDisplay}
+        />
+      </>
+    );
+  }
+);

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { sprinkles } from "@css-utils/sprinkles.css";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <div
       className={sprinkles({
