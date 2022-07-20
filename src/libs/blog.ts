@@ -44,3 +44,12 @@ export const getNewestArticles = async (): Promise<{
     articles: articles.contents,
   };
 };
+
+export const getArticleById = async (articleId: string) => {
+  const res = await client.getListDetail<IArticles>({
+    endpoint: "articles",
+    contentId: articleId,
+    queries: { depth: 2 },
+  });
+  return res;
+};

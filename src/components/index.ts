@@ -1,6 +1,6 @@
 export * from "./organisms/articleCard/ArticleCard";
 export * from "./molecules/breadCrumb/Breadcrumb";
-export * from "./molecules/categoryTags/CategoryTags";
+export * from "./molecules/categoriesLinks/CategoriesLinks";
 export * from "./organisms/footer/Footer";
 export * from "./atoms/googleAnalytics/GoogleAnalytics";
 export * from "./organisms/header/Header";

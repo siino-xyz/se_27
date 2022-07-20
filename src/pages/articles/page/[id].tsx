@@ -3,7 +3,7 @@ import { PER_PAGE } from "../../api/pager";
 
 // import PaginationArrow from "../../../components/pagination/Pagination";
 import ArticleCard from "@components/organisms/articleCard/ArticleCard";
-import Categories from "@components/molecules/categoryTags/CategoryTags";
+import CategoriesLinks from "@components/molecules/categoriesLinks/CategoriesLinks";
 import SectionTitle from "@components/atoms/sectionTitle/SectionTitle";
 export const ArticlePageId = ({
   totalCount,
@@ -14,7 +14,7 @@ export const ArticlePageId = ({
   return (
     <>
       <div>
-        <Categories categories={categories} />
+        <CategoriesLinks categories={categories} />
         <SectionTitle largeText="All Posts" smallText="記事一覧" />
         <ArticleCard articles={articles} />
         {/* <PaginationArrow

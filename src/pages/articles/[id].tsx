@@ -1,14 +1,15 @@
 import { client } from "../../libs/client";
+import { GetStaticPropsContext } from "next";
 import Image from "next/image";
 import dayjs from "dayjs";
 import { pageFadein } from "@hooks/fadeIn";
-
-// import ShareButtons from "@components/ShareButtons";
 import LinkButton from "@components/atoms/linkButton/LinkButton";
 import OgpImage from "@components/atoms/ogpImage/OgpImage";
 import Breadcrumb from "@components/molecules/breadCrumb/Breadcrumb";
 import Header from "@components/organisms/header/Header";
 import customImage from "@hooks/customImage";
+
+import { getContents, getArticleById } from "@libs/blog";
 
 const ArticlesId = ({ articles, categories }) => {
   const { ogImageUrl } = customImage(articles.ogp_image.url, articles.title);
@@ -74,15 +75,28 @@ export const getStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-export const getStaticProps = async (context) => {
-  const id = context.params.id;
-  const data = await client.get({ endpoint: "articles", contentId: id });
-  const categoryData = await client.get({ endpoint: "categories" });
+export const getStaticProps = async (context: GetStaticPropsContext) => {
+  const articleId: any = context.params?.articleId || "1";
+  const article = await getArticleById(articleId);
+  const { categories } = await getContents();
 
   return {
     props: {
-      articles: data,
-      categories: categoryData.contents,
+      article,
+      categories,
     },
   };
 };
+
+// export const getStaticProps = async (context) => {
+//   const id = context.params.id;
+//   const data = await client.get({ endpoint: "articles", contentId: id });
+//   const categoryData = await client.get({ endpoint: "categories" });
+
+//   return {
+//     props: {
+//       articles: data,
+//       categories: categoryData.contents,
+//     },
+//   };
+// };

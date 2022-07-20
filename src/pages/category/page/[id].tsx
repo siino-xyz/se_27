@@ -1,6 +1,6 @@
 import { client } from "../../../libs/client";
 
-import Categories from "../../../components/molecules/categoryTags/CategoryTags";
+import CategoriesLinks from "../../../components/molecules/categoriesLinks/CategoriesLinks";
 import ArticleCard from "../../../components/organisms/articleCard/ArticleCard";
 import LinkButton from "../../../components/atoms/linkButton/LinkButton";
 import Breadcrumb from "../../../components/molecules/breadCrumb/Breadcrumb";
@@ -28,7 +28,7 @@ export const CategoryId = ({ articles, categories, name }) => {
       <div>
         <main>
           <Breadcrumb articles={articles} categories={categories} />
-          <Categories categories={categories} />
+          <CategoriesLinks categories={categories} />
           <div>
             <h2>{name}</h2>
           </div>
