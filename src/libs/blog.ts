@@ -33,11 +33,14 @@ export const getArticles = async (limit: number) => {
   return res;
 };
 
-//最新記事を4件まで取得
-export const getNewestArticles = async () => {
-  const res = await client.getList<IArticles>({
+export const getNewestArticles = async (): Promise<{
+  articles: IArticles[];
+}> => {
+  const articles = await client.getList<IArticles>({
     endpoint: "articles",
     queries: { limit: siteConfig.defaultMinLimit },
   });
-  return res;
+  return {
+    articles: articles.contents,
+  };
 };
