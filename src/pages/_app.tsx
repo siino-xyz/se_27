@@ -1,6 +1,6 @@
 import "../styles/reset.css";
-import GoogleAnalytics from "../components/atoms/googleAnalytics/GoogleAnalytics";
-import usePageView from "../hooks/usePageView";
+import { GoogleAnalytics } from "@components";
+import { usePageView } from "@hooks";
 import type { AppPropsWithLayout } from "next/app";
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {

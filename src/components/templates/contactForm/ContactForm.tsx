@@ -1,6 +1,6 @@
-import { GetForm } from "../../../hooks/getForm";
-import { sprinkles } from "@css-utils/sprinkles.css";
-import { SectionTitle } from "@components/atoms/sectionTitle/SectionTitle";
+import { GetForm } from "@hooks";
+import { sprinkles } from "@css-utils";
+import { SectionTitle } from "@components";
 import {
   InputBlock,
   InputLabel,

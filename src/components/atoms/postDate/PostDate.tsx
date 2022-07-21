@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { sprinkles } from "@css-utils/sprinkles.css";
+import { sprinkles } from "@css-utils";
 
 export const PostDate = ({ date }: { date: string }) => {
   return (

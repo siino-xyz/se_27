@@ -1,6 +1,6 @@
-import { sprinkles } from "src/css-utils/sprinkles.css";
-import { LinkButton } from "../../atoms/linkButton/LinkButton";
 import * as React from "react";
+import { sprinkles } from "@css-utils";
+import { LinkButton } from "@components";
 
 type Props = {
   paragraph: string;

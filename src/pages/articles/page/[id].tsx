@@ -1,10 +1,7 @@
-import { client } from "../../../libs/client";
-import { PER_PAGE } from "../../api/pager";
+import { client } from "@libs/client";
+import { PER_PAGE } from "@pages/api";
+import { ArticleCard, SectionTitle, CategoriesLinks } from "@components";
 
-// import PaginationArrow from "../../../components/pagination/Pagination";
-import ArticleCard from "@components/organisms/articleCard/ArticleCard";
-import CategoriesLinks from "@components/molecules/categoriesLinks/CategoriesLinks";
-import SectionTitle from "@components/atoms/sectionTitle/SectionTitle";
 export const ArticlePageId = ({
   totalCount,
   currentPageNumber,

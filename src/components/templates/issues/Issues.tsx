@@ -1,13 +1,15 @@
+import * as React from "react";
 import Image from "next/image";
-import SectionTitle from "@components/atoms/sectionTitle/SectionTitle";
-import { sprinkles } from "src/css-utils/sprinkles.css";
+import { SectionTitle } from "@components";
+import { sprinkles } from "@css-utils";
+
 import {
   IssuesSectionTitle,
   ScrollTextInnerTitle,
   ScrollBox,
 } from "./Issues.css";
 
-export default function Isuues() {
+export const Isuues = React.memo(function IssueMemo() {
   return (
     <>
       <section>
@@ -103,4 +105,4 @@ export default function Isuues() {
       </section>
     </>
   );
-}
+});

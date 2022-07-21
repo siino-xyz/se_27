@@ -30,6 +30,7 @@ export type MicroCMS_OGPImage = {
 
 export interface ICategories extends MicroCMSListContent {
   name: string;
+  key?: string;
 }
 
 /*ここから下 リファクタが終わり次第削除 

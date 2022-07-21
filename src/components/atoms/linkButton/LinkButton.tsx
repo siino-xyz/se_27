@@ -1,6 +1,6 @@
-import Link from "next/link";
 import * as React from "react";
-import { sprinkles } from "../../../css-utils/sprinkles.css";
+import Link from "next/link";
+import { sprinkles } from "@css-utils";
 
 type ButtonTypes = {
   url: string | null;

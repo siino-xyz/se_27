@@ -1,5 +1,5 @@
 import { pageFadein } from "../hooks/fadeIn";
-import { sprinkles } from "@css-utils/sprinkles.css";
+import { sprinkles } from "@css-utils";
 import { GlobalStyle } from "../styles/layouts.css";
 import { Header, Footer, FirstView } from "@components";
 

@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 
-const previewFunc = async (req, res) => {
+export const previewFunc = async (req, res) => {
   if (!req.query.slug) {
     return res.status(404).end();
   }

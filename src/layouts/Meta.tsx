@@ -1,5 +1,5 @@
 // import NextOgp from "../components/NextOgp";
-import useAsPath from "../hooks/useAsPath";
+import { useAsPath } from "@/hooks";
 export default function Meta({ children }) {
   const { path } = useAsPath();
   return (

@@ -1,9 +1,11 @@
-import Isuues from "../issues/Issues";
-import StaticContentUtilBlock from "@components/organisms/staticContentUtilBlock/StaticContentUtilBlock";
-import TextAndButtonBlock from "@components/organisms/textAndButtonBlock/TextAndButtonBlock";
-import SectionTitle from "@components/atoms/sectionTitle/SectionTitle";
+import { Isuues } from "@components";
+import {
+  StaticContentUtilBlock,
+  TextAndButtonBlock,
+  SectionTitle,
+} from "@components";
 
-const StaticComponents = () => {
+export const StaticComponents = () => {
   return (
     <>
       <section>
@@ -77,5 +79,3 @@ const StaticComponents = () => {
     </>
   );
 };
-
-export default StaticComponents;

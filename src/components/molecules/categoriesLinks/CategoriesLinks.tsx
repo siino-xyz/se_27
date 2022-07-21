@@ -7,7 +7,7 @@ type CategoriesProps = {
   categories: ICategories[];
 };
 
-export const CategoiesLInks: React.FC<CategoriesProps> = React.memo(
+export const CategoriesLinks: React.FC<CategoriesProps> = React.memo(
   function CategoryTagsMemo(props) {
     return (
       <div

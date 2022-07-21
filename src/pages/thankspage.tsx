@@ -1,5 +1,5 @@
-import {WithoutFV} from "@layouts";
-import {ThanksContent} from "@components";
+import { WithoutFV } from "@layouts";
+import { ThanksContent } from "@components";
 
 export const Thanks = () => {
   return <ThanksContent />;
@@ -8,7 +8,5 @@ export const Thanks = () => {
 export default Thanks;
 
 Thanks.getLayout = function getLayout(thanks) {
-  return (
-      <WithoutFV>{thanks}</WithoutFV>;
-  );
+  return <WithoutFV>{thanks}</WithoutFV>;
 };

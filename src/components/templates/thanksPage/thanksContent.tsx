@@ -1,9 +1,9 @@
+import * as React from "react";
 import Image from "next/image";
-import LinkButton from "../../atoms/linkButton/LinkButton";
-import SectionTitle from "@components/atoms/sectionTitle/SectionTitle";
-import { sprinkles } from "@css-utils/sprinkles.css";
+import { LinkButton, SectionTitle } from "@components";
+import { sprinkles } from "@css-utils";
 
-export const ThanksContent = () => {
+export const ThanksContent = React.memo(function () {
   return (
     <>
       <main>
@@ -41,6 +41,4 @@ export const ThanksContent = () => {
       </main>
     </>
   );
-};
-
-export default ThanksContent;
+});

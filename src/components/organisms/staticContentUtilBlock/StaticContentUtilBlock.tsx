@@ -1,7 +1,7 @@
 import * as React from "react";
-import { sprinkles } from "../../../css-utils/sprinkles.css";
-import { LinkButton } from "../../atoms/linkButton/LinkButton";
 import Image from "next/image";
+import { sprinkles } from "@css-utils";
+import { LinkButton } from "@components";
 
 type ComponentProps = {
   title: string | null;

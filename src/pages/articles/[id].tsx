@@ -1,14 +1,10 @@
-import { client } from "../../libs/client";
+import * as React from "react";
 import { GetStaticPropsContext } from "next";
 import Image from "next/image";
 import dayjs from "dayjs";
-import { pageFadein } from "@hooks/fadeIn";
-import LinkButton from "@components/atoms/linkButton/LinkButton";
-import OgpImage from "@components/atoms/ogpImage/OgpImage";
-import Breadcrumb from "@components/molecules/breadCrumb/Breadcrumb";
-import Header from "@components/organisms/header/Header";
-import customImage from "@hooks/customImage";
-import * as React from "react";
+import { client } from "@libs/client";
+import { LinkButton, OgpImage, Header } from "@components";
+import { customImage, pageFadein } from "@hooks";
 import { getContents, getContentId } from "@libs/blog";
 import { IArticles, ICategories } from "@types";
 
