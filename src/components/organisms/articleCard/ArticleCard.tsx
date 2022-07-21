@@ -1,7 +1,7 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { PostDate, CategoriesLinks } from "@components";
+import { PostDate, CategoryLinkButton } from "@components";
 import { sprinkles } from "@css-utils";
 import { Card, Captions, PostTitle } from "./ArticleCard.css";
 import { IArticles } from "@types";
@@ -38,10 +38,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = React.memo(
                   alt="eye_catch"
                 />
                 <div className={Captions}>
-                  {/* <CategoriesLinks
-                    id={articles.id}
-                    name={articles.categories.name}
-                  /> */}
+                  <CategoryLinkButton categories={articles.categories} />
                   <h2 className={PostTitle}>{articles.title}</h2>
                   <PostDate date={articles.publishedAt} />
                 </div>

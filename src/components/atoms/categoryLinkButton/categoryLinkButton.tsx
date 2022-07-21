@@ -1,15 +1,23 @@
 import * as React from "react";
 import Link from "next/link";
 import { sprinkles } from "@css-utils";
+import { ICategories } from "@types";
 
-type CategoryTagProps = {
-  name: string;
-  id: string;
-};
+// type CategoryTagProps = {
+//   categories: ICategories;
+// };
 
-export const CategoryTag: React.FC<CategoryTagProps> = ({ name, id }) => {
+export const CategoryLinkButton = ({
+  categories,
+}: {
+  categories: ICategories;
+}) => {
   return (
-    <Link href={`/category/page/${id}`} key={id} passHref>
+    <Link
+      href={`/categories/page/${categories.id}`}
+      key={categories.id}
+      passHref
+    >
       <div
         className={sprinkles({
           background: { lightMode: "black", darkMode: "white" },
@@ -22,7 +30,7 @@ export const CategoryTag: React.FC<CategoryTagProps> = ({ name, id }) => {
           borderRadius: "size-0.5",
         })}
       >
-        {name}
+        {categories.name}
       </div>
     </Link>
   );

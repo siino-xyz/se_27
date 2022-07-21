@@ -1,3 +1,4 @@
+export * from "./atoms/categoryLinkButton/categoryLinkButton";
 export * from "./atoms/googleAnalytics/GoogleAnalytics";
 export * from "./atoms/linkButton/LinkButton";
 export * from "./atoms/sectionTitle/SectionTitle";
@@ -5,7 +6,7 @@ export * from "./atoms/postDate/PostDate";
 export * from "./atoms/ogpImage/OgpImage";
 export * from "./atoms/googleAnalytics/GoogleAnalytics";
 
-export * from "./molecules/categoriesLinks/CategoriesLinks";
+export * from "./molecules/categoriesList/CategoriesList";
 export * from "./molecules/breadCrumb/Breadcrumb";
 export * from "./molecules/pagination/Pagination";
 export * from "./molecules/desktopHeader/DesktopHeader";
