@@ -11,7 +11,7 @@ export type HeadType = {
   keyword?: string;
 };
 
-export const OgpImage: React.FC<HeadType> = ({
+export const Meta: React.FC<HeadType> = ({
   pagetitle,
   pagedescription,
   pagepath,
@@ -24,14 +24,18 @@ export const OgpImage: React.FC<HeadType> = ({
   const title = pagetitle
     ? `${pagetitle} | ${process.env.NEXT_PUBLIC_TITLE}`
     : `${process.env.NEXT_PUBLIC_TITLE}`;
+
   const description =
     pagedescription || `${process.env.NEXT_PUBLIC_DESCRIPTION}`;
+
   const url = pagepath
     ? `${process.env.NEXT_PUBLIC_URL}${pagepath}`
     : `${process.env.NEXT_PUBLIC_URL}`;
+
   const imgurl = pageimg
     ? `${process.env.NEXT_PUBLIC_URL}${pageimg}`
     : postimg || `${process.env.NEXT_PUBLIC_URL}defaultogp.svg`;
+
   const imgw = pageimgw || "1200px";
   const imgh = pageimgh || "630px";
 

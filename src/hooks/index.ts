@@ -1,4 +1,4 @@
-export * from "./customImage";
+export * from "../libs/customImage";
 export * from "./drawerMenuOpener";
 export * from "./fadeIn";
 export * from "./getForm";

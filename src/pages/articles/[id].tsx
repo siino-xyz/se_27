@@ -3,7 +3,7 @@ import { GetStaticPropsContext } from "next";
 import Image from "next/image";
 import dayjs from "dayjs";
 import { client } from "@libs/client";
-import { LinkButton, OgpImage, Header } from "@components";
+import { LinkButton, Meta, Header } from "@components";
 import { customImage, pageFadein } from "@hooks";
 import { getContents, getContentId } from "@libs/blog";
 import { IArticles, ICategories } from "@types";
@@ -23,10 +23,10 @@ const Article: React.FC<ArticleProps> = (props) => {
 
   return (
     <>
-      <OgpImage
+      <Meta
         pagetitle={props.article.title}
         pagedescription={props.article.description}
-        pagepath={`props.articles/${props.article.id}`}
+        pagepath={`articles/${props.article.id}`}
         postimg={ogImageUrl}
       />
 

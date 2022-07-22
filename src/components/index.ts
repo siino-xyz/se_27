@@ -3,8 +3,8 @@ export * from "./atoms/googleAnalytics/GoogleAnalytics";
 export * from "./atoms/linkButton/LinkButton";
 export * from "./atoms/sectionTitle/SectionTitle";
 export * from "./atoms/postDate/PostDate";
-export * from "./atoms/ogpImage/OgpImage";
 export * from "./atoms/googleAnalytics/GoogleAnalytics";
+export * from "./atoms/meta/Meta";
 
 export * from "./molecules/categoriesList/CategoriesList";
 export * from "./molecules/breadCrumb/Breadcrumb";

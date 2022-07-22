@@ -1,6 +1,6 @@
 import { client } from "@libs/client";
 import { PER_PAGE } from "@pages/api";
-import { ArticleCard, SectionTitle, CategoriesLinks } from "@components";
+import { ArticleCard, SectionTitle, CategoriesList } from "@components";
 
 export const ArticlePageId = ({
   totalCount,
@@ -11,7 +11,7 @@ export const ArticlePageId = ({
   return (
     <>
       <div>
-        <CategoriesLinks categories={categories} />
+        <CategoriesList categories={categories} />
         <SectionTitle largeText="All Posts" smallText="記事一覧" />
         <ArticleCard articles={articles} />
         {/* <PaginationArrow
