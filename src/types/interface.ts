@@ -28,14 +28,3 @@ export type MicroCMS_OGPImage = {
 export interface ICategories extends MicroCMSListContent {
   name: string;
 }
-
-export type HeadType = {
-  pagetitle?: string;
-  pagedescription?: string;
-  pagepath?: string;
-  pageimg?: string;
-  postimg?: string;
-  pageimgw?: string;
-  pageimgh?: string;
-  keyword?: string;
-};

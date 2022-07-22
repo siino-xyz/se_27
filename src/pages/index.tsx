@@ -9,6 +9,7 @@ import {
   SectionTitle,
   StaticComponents,
 } from "@components";
+
 type TopPageProps = {
   articles: IArticles[];
 };

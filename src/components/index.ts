@@ -23,3 +23,5 @@ export * from "./templates/thanksPage/thanksPageContent";
 export * from "./templates/firstView/FirstView";
 export * from "./templates/issues/Issues";
 export * from "./templates/thanksPage/thanksPageContent";
+
+export * from "./templates/seo/Seo";

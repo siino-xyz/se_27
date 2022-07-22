@@ -1,5 +1,6 @@
 import * as React from "react";
 import { GetStaticPropsContext } from "next";
+import type { NextPageWithLayout } from "next";
 import Image from "next/image";
 import dayjs from "dayjs";
 import { client } from "@libs";
@@ -7,21 +8,27 @@ import { LinkButton } from "@components";
 import { pageFadein } from "@hooks";
 import { getContents, getContentId } from "@libs/blog";
 import { IArticles, ICategories } from "@types";
+import { Seo } from "@components";
+import { WithoutFV } from "@layouts";
 
 type ArticleProps = {
   articles: IArticles[];
   article: IArticles;
   categories: ICategories;
+  layout?: React.ReactElement;
 };
 
-const Article: React.FC<ArticleProps> = (props) => {
+const Article: NextPageWithLayout<ArticleProps> = (props) => {
   const { fadeTargetRef, domId } = pageFadein();
 
   return (
     <>
+      <Seo
+        ogpurl={props.article.ogp_image.url}
+        ogptitle={props.article.title}
+      />
       <div ref={fadeTargetRef} id={domId} style={{ opacity: 0 }}>
         <div>
-          {/* <Breadcrumb articles={props.articles} categories={props.categories} /> */}
           <Image
             src={props.article.eye_catch.url}
             width={944}
@@ -63,6 +70,10 @@ const Article: React.FC<ArticleProps> = (props) => {
 };
 
 export default Article;
+
+Article.getLayout = function getLayout(page: React.ReactElement) {
+  return <WithoutFV>{page}</WithoutFV>;
+};
 
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "articles" });

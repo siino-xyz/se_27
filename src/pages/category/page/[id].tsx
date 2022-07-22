@@ -1,4 +1,5 @@
 import { client } from "@libs/client";
+import { Seo } from "@components";
 import {
   // CategoriesLinks,
   ArticleCard,
