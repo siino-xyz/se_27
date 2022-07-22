@@ -1,12 +1,14 @@
 import { WithoutFV } from "@layouts";
-import { ThanksContent } from "@components";
+import type { NextPageWithLayout } from "next";
+import { ThankPageContent } from "@components";
+import * as React from "react";
 
-export const Thanks = () => {
-  return <ThanksContent />;
-};
+const Thanks: NextPageWithLayout = React.memo(function thanksMemo() {
+  return <ThankPageContent />;
+});
 
 export default Thanks;
 
-Thanks.getLayout = function getLayout(thanks) {
+Thanks.getLayout = function getLayout(thanks: React.ReactElement) {
   return <WithoutFV>{thanks}</WithoutFV>;
 };

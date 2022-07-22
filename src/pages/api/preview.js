@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 
-export const previewFunc = async (req, res) => {
+const previewFunc = async (req, res) => {
   if (!req.query.slug) {
     return res.status(404).end();
   }
@@ -23,5 +23,4 @@ export const previewFunc = async (req, res) => {
   res.writeHead(307, { Location: `/articles/${articles.id}` });
   res.end("Preview mode enabled");
 };
-
 export default previewFunc;

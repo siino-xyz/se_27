@@ -1,9 +1,5 @@
 import { HeadType } from "@types";
 
-// type metaProps = {
-//   metas: HeadType;
-// }
-
 export const metaConditions = ({ props }: { props: HeadType }) => {
   const title = props.pagetitle
     ? `${props.pagetitle} | ${process.env.NEXT_PUBLIC_TITLE}`

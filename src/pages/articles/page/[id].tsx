@@ -1,7 +1,6 @@
 import { client } from "@libs/client";
-import { PER_PAGE } from "@pages/api";
 import { ArticleCard, SectionTitle, CategoriesList } from "@components";
-
+import pager from "@pages/api/pager";
 export const ArticlePageId = ({
   totalCount,
   currentPageNumber,
@@ -32,6 +31,7 @@ export default ArticlePageId;
 //     // </BlogLayout>
 //   );
 // };
+const { PER_PAGE } = pager();
 
 export const getStaticPaths = async () => {
   const key = {

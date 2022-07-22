@@ -3,21 +3,13 @@ import Link from "next/link";
 import { sprinkles } from "@css-utils";
 import { ICategories } from "@types";
 
-// type CategoryTagProps = {
-//   categories: ICategories;
-// };
-
 export const CategoryLinkButton = ({
   categories,
 }: {
   categories: ICategories;
 }) => {
   return (
-    <Link
-      href={`/categories/page/${categories.id}`}
-      key={categories.id}
-      passHref
-    >
+    <Link href={`/categories/page/${categories.id}`} passHref>
       <div
         className={sprinkles({
           background: { lightMode: "black", darkMode: "white" },

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { LinkButton, SectionTitle } from "@components";
 import { sprinkles } from "@css-utils";
 
-export const ThanksContent = React.memo(function () {
+export const ThankPageContent = React.memo(function thankPageContentMemo() {
   return (
     <>
       <main>

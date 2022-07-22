@@ -2,9 +2,9 @@ import * as React from "react";
 import { GetStaticPropsContext } from "next";
 import Image from "next/image";
 import dayjs from "dayjs";
-import { client } from "@libs/client";
-import { LinkButton, Meta, Header } from "@components";
-import { customImage, pageFadein } from "@hooks";
+import { client } from "@libs";
+import { LinkButton } from "@components";
+import { pageFadein } from "@hooks";
 import { getContents, getContentId } from "@libs/blog";
 import { IArticles, ICategories } from "@types";
 
@@ -15,22 +15,10 @@ type ArticleProps = {
 };
 
 const Article: React.FC<ArticleProps> = (props) => {
-  const { ogImageUrl } = customImage(
-    props.article.ogp_image.url,
-    props.article.title
-  );
   const { fadeTargetRef, domId } = pageFadein();
 
   return (
     <>
-      <Meta
-        pagetitle={props.article.title}
-        pagedescription={props.article.description}
-        pagepath={`articles/${props.article.id}`}
-        postimg={ogImageUrl}
-      />
-
-      <Header />
       <div ref={fadeTargetRef} id={domId} style={{ opacity: 0 }}>
         <div>
           {/* <Breadcrumb articles={props.articles} categories={props.categories} /> */}

@@ -19,9 +19,11 @@ export const CategoriesList: React.FC<CategoriesProps> = React.memo(
           gap: "size-4",
         })}
       >
-        {props.categories.map((category) => {
-          return <CategoryLinkButton categories={category} />;
-        })}
+        {props.categories.map((category) => (
+          <div key={category.id}>
+            <CategoryLinkButton categories={category} />;
+          </div>
+        ))}
       </div>
     );
   }

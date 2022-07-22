@@ -1,7 +1,20 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { HeadType } from "@types";
+import { HeadType, IArticles } from "@types";
+import { customImage } from "@hooks";
 
-const Document: React.FC<HeadType> = ({
+type metaHeadProps = {
+  pagetitle?: string;
+  pagedescription?: string;
+  pagepath?: string;
+  pageimg?: string;
+  postimg?: string;
+  pageimgw?: string;
+  pageimgh?: string;
+  keyword?: string;
+};
+// { meta, articles }: metaHeadProps
+
+const Document: React.FC<metaHeadProps> = ({
   pagetitle,
   pagedescription,
   pagepath,
@@ -11,6 +24,11 @@ const Document: React.FC<HeadType> = ({
   pageimgh,
   keyword,
 }) => {
+  const { ogImageUrl } = customImage(
+    "https://images.microcms-assets.io/assets/cbf9962a948443b183a1ea8a3d45ca17/94d02965c2a9420882febbb97f08790c/fa.png",
+    "zennに技術記事投稿してます"
+  );
+
   const title = pagetitle
     ? `${pagetitle} | ${process.env.NEXT_PUBLIC_TITLE}`
     : `${process.env.NEXT_PUBLIC_TITLE}`;
@@ -24,7 +42,7 @@ const Document: React.FC<HeadType> = ({
 
   const imgurl = pageimg
     ? `${process.env.NEXT_PUBLIC_URL}${pageimg}`
-    : postimg || `${process.env.NEXT_PUBLIC_URL}defaultogp.svg`;
+    : ogImageUrl || `${process.env.NEXT_PUBLIC_URL}defaultogp.svg`;
 
   const imgw = pageimgw || "1200px";
   const imgh = pageimgh || "630px";
