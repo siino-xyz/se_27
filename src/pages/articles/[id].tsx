@@ -20,6 +20,7 @@ type ArticleProps = {
 
 const Article: NextPageWithLayout<ArticleProps> = (props) => {
   const { fadeTargetRef, domId } = pageFadein();
+  console.log(Object.keys(props.article));
 
   return (
     <>

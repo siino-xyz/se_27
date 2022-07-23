@@ -21,7 +21,7 @@ export const CategoriesList: React.FC<CategoriesProps> = React.memo(
       >
         {props.categories.map((category) => (
           <div key={category.id}>
-            <CategoryLinkButton categories={category} />;
+            <CategoryLinkButton categories={category} />
           </div>
         ))}
       </div>

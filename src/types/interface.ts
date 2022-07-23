@@ -1,4 +1,8 @@
-import { MicroCMSListContent, MicroCMSQueries } from "microcms-js-sdk";
+import {
+  MicroCMSListContent,
+  MicroCMSQueries,
+  MicroCMSListResponse,
+} from "microcms-js-sdk";
 
 export type Queries = MicroCMSQueries;
 
@@ -28,3 +32,5 @@ export type MicroCMS_OGPImage = {
 export interface ICategories extends MicroCMSListContent {
   name: string;
 }
+
+export type MicroCMSResponse<T> = MicroCMSListResponse<T>;

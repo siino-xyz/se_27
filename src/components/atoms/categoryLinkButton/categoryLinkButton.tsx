@@ -9,7 +9,7 @@ export const CategoryLinkButton = ({
   categories: ICategories;
 }) => {
   return (
-    <Link href={`/categories/page/${categories.id}`} passHref>
+    <Link href={`/category/[categoryId]/page/${categories.id}`} passHref>
       <div
         className={sprinkles({
           background: { lightMode: "black", darkMode: "white" },
