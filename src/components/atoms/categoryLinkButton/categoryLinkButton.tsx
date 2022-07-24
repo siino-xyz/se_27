@@ -10,7 +10,7 @@ export const CategoryLinkButton = ({
 }) => {
   return (
     <Link
-      href={`/blog/category/${categories.name}/${categories.id} `}
+      href={`/blog/category/${categories.id} `}
       // as={`/category/${categories.id}/page/1`}
       passHref
     >

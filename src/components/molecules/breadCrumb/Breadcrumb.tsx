@@ -2,26 +2,24 @@ import { sprinkles } from "@css-utils/sprinkles.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { ToBlogTop } from "./BreadCrumb.css";
-import { ICategories, IArticles } from "@types";
+import { ICategories } from "@types";
 
 type BreadCrumbProps = {
-  article?: IArticles;
   category?: ICategories;
 };
 
-export const Breadcrumb = ({ article, category }: BreadCrumbProps) => {
+export const Breadcrumb = ({ category }: BreadCrumbProps) => {
   const router = useRouter();
   const path = router.asPath;
-  const isCategoryPage = /\/category\/.+$/.test(path);
-  console.log(path);
+  // const isCategoryPage = /\/category\/.+$/.test(path);
 
-  // const hasCategory = (category?: ICategories) => {
-  //   if (!category) {
-  //     return false;
-  //   }
-  //   return Object.keys(category).length > 0;
-  // };
-
+  const hasCategory = (category?: ICategories) => {
+    if (!category) {
+      console.log("has not category.");
+      return false;
+    }
+    return Object.keys(category).length > 0;
+  };
   return (
     <nav
       className={sprinkles({
@@ -36,7 +34,7 @@ export const Breadcrumb = ({ article, category }: BreadCrumbProps) => {
         <a className={ToBlogTop}>ブログトップ</a>
       </Link>
 
-      {isCategoryPage && (
+      {hasCategory(category) && (
         <Link
           className={sprinkles({
             color: "gray1",
@@ -46,29 +44,8 @@ export const Breadcrumb = ({ article, category }: BreadCrumbProps) => {
           as={path}
           passHref
         >
-          <a>{category.name}</a>
+          <a>{category?.name}</a>
         </Link>
-      )}
-
-      <span
-        className={sprinkles({
-          color: "gray1",
-          paddingBottom: "size-1",
-          fontSize: "sm",
-        })}
-      >
-        &gt;
-      </span>
-
-      {article && (
-        <span
-          className={sprinkles({
-            color: "gray1",
-            fontSize: "sm",
-          })}
-        >
-          {article.title}
-        </span>
       )}
     </nav>
   );

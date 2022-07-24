@@ -15,13 +15,11 @@ type ArticleProps = {
   articles: IArticles[];
   article: IArticles;
   categories: ICategories;
-
-  layout?: React.ReactElement;
+  selectedCategory: ICategories;
 };
 
 const Article: NextPageWithLayout<ArticleProps> = (props) => {
   const { fadeTargetRef, domId } = pageFadein();
-  console.log(Object.keys(props.article));
 
   return (
     <>
@@ -30,7 +28,7 @@ const Article: NextPageWithLayout<ArticleProps> = (props) => {
         ogptitle={props.article.title}
       />
       <div ref={fadeTargetRef} id={domId} style={{ opacity: 0 }}>
-        <Breadcrumb category={props.categories} article={props.article} />
+        <Breadcrumb category={props.selectedCategory} />
         <Image
           src={props.article.eye_catch.url}
           width={944}
@@ -87,11 +85,14 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
   const { articles, categories } = await getContents();
   const id: any = context.params?.id;
   const article = await getContentId(id);
+
+  const selectedCategory = categories.find((content) => content.name);
   return {
     props: {
       article,
       articles,
       categories,
+      selectedCategory,
     },
   };
 };
