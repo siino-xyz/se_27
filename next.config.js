@@ -11,9 +11,7 @@ const nextConfig = {
       poll: true,
     },
   },
-  experimental: {
-    optimizeFonts: true,
-  },
+
   images: {
     domains: ["images.microcms-assets.io"],
   },

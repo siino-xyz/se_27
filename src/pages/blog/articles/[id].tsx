@@ -79,7 +79,7 @@ Article.getLayout = function getLayout(page: React.ReactElement) {
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "articles" });
 
-  const paths = data.contents.map((content) => `/articles/${content.id}`);
+  const paths = data.contents.map((content) => `/blog/articles/${content.id}`);
   return { paths, fallback: false };
 };
 

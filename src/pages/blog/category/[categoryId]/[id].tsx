@@ -13,47 +13,48 @@ type BlogProps = {
   category: ICategories;
 };
 
-const CategoryId: NextPageWithLayout<BlogProps> = (props) => {
-  if (props.articles.length === 0) {
-    return (
-      <div>
-        <main>
-          <div>
-            <div>このカテゴリにはまだ記事がありません。</div>
-            {/* <LinkButton
-                url={"/blog"}
-                text={"ブログ一覧へもどる"}
-                buttonDisplay={"block"}
-              /> */}
-          </div>
-        </main>
-      </div>
-    );
-  }
+const CategoryPage: NextPageWithLayout<BlogProps> = (props) => {
+  // if (props.articles.length === 0) {
+  //   return (
+  //     <div>
+  //       <main>
+  //         <div>
+  //           <div>このカテゴリにはまだ記事がありません。</div>
+  //           {/* <LinkButton
+  //               url={"/blog"}
+  //               text={"ブログ一覧へもどる"}
+  //               buttonDisplay={"block"}
+  //             /> */}
+  //         </div>
+  //       </main>
+  //     </div>
+  //   );
+  // }
   return (
     <div>
       <main>
-        {props.articles.map((item) => (
+        {/* {props.articles.map((item) => (
           <h3>{item.categories.name}</h3>
-        ))}
-        <Breadcrumb category={props.category} article={props.article} />
+        ))} */}
+        {/* <Breadcrumb category={props.category} article={props.article} /> */}
         <ArticleCard articles={props.articles} />
       </main>
     </div>
   );
 };
 
-export default CategoryId;
+export default CategoryPage;
 
-CategoryId.getLayout = function getLayout(page: React.ReactElement) {
+CategoryPage.getLayout = function getLayout(page: React.ReactElement) {
   return <WithoutFV>{page}</WithoutFV>;
 };
 
 export const getStaticPaths = async () => {
-  return {
-    paths: [],
-    fallback: true,
-  };
+  const data = await getCategories();
+  const paths = data.contents.map(
+    (content) => `/blog/category/${content.name}/${content.id}`
+  );
+  return { paths, fallback: false };
 };
 
 export const getStaticProps = async (context: GetStaticPropsContext) => {

@@ -28,7 +28,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = React.memo(
       >
         {props.articles.map((articles) => (
           <article key={articles.id} className={Card}>
-            <Link href={`/articles/${articles.id}`} passHref>
+            <Link href={`/blog/articles/${articles.id}`} passHref>
               <a>
                 <Image
                   src={articles.eye_catch.url}

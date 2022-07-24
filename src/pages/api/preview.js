@@ -6,7 +6,7 @@ const previewFunc = async (req, res) => {
   }
 
   const articles = await fetch(
-    `https://kp822wg687.microcms.io/api/v1/articles/${req.query.slug}?fields=id&draftKey=${req.query.draftKey}`,
+    `https://kp822wg687.microcms.io/api/v1/blog/articles/${req.query.slug}?fields=id&draftKey=${req.query.draftKey}`,
     { headers: { "X-MICROCMS-API-KEY": process.env.MICROCMS_API_KEY || "" } }
   )
     .then((res) => res.json())
@@ -20,7 +20,7 @@ const previewFunc = async (req, res) => {
     slug: articles.id,
     draftKey: req.query.draftKey,
   });
-  res.writeHead(307, { Location: `/articles/${articles.id}` });
+  res.writeHead(307, { Location: `/blog/articles/${articles.id}` });
   res.end("Preview mode enabled");
 };
 export default previewFunc;
