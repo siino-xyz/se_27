@@ -1,9 +1,14 @@
 import React from "react";
 import type { NextPageWithLayout } from "next";
+import { WithoutFV } from "@layouts";
 import { IArticles, ICategories } from "@types";
 import { getContents } from "@libs/blog";
-import { WithoutFV } from "@layouts";
-import { ArticleCard, CategoriesList, SectionTitle } from "@components";
+import {
+  ArticleCard,
+  CategoriesList,
+  SectionTitle,
+  Breadcrumb,
+} from "@components";
 
 type BlogProps = {
   articles: IArticles[];
@@ -15,6 +20,7 @@ const Blog: NextPageWithLayout<BlogProps> = React.memo(function BlogMemo(
 ) {
   return (
     <>
+      {/* <Breadcrumb articles={props.articles} categories={props.categories} /> */}
       <CategoriesList categories={props.categories} />
       <SectionTitle largeText="Blog" smallText="ブログ記事一覧" />
       <ArticleCard articles={props.articles} />

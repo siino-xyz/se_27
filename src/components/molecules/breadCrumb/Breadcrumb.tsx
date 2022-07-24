@@ -2,11 +2,25 @@ import { sprinkles } from "@css-utils/sprinkles.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { ToBlogTop } from "./BreadCrumb.css";
+import { ICategories, IArticles } from "@types";
 
-export const Breadcrumb = ({ categories, articles }) => {
+type BreadCrumbProps = {
+  article?: IArticles;
+  category?: ICategories;
+};
+
+export const Breadcrumb = ({ article, category }: BreadCrumbProps) => {
   const router = useRouter();
   const path = router.asPath;
   const isCategoryPage = /\/category\/.+$/.test(path);
+  console.log(path);
+
+  // const hasCategory = (category?: ICategories) => {
+  //   if (!category) {
+  //     return false;
+  //   }
+  //   return Object.keys(category).length > 0;
+  // };
 
   return (
     <nav
@@ -32,7 +46,7 @@ export const Breadcrumb = ({ categories, articles }) => {
           as={path}
           passHref
         >
-          <a>{categories.name}</a>
+          <a>{category.name}</a>
         </Link>
       )}
 
@@ -46,14 +60,14 @@ export const Breadcrumb = ({ categories, articles }) => {
         &gt;
       </span>
 
-      {articles && (
+      {article && (
         <span
           className={sprinkles({
             color: "gray1",
             fontSize: "sm",
           })}
         >
-          {articles.title}
+          {article.title}
         </span>
       )}
     </nav>

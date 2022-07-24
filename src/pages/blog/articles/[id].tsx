@@ -8,13 +8,14 @@ import { LinkButton } from "@components";
 import { pageFadein } from "@hooks";
 import { getContents, getContentId } from "@libs/blog";
 import { IArticles, ICategories } from "@types";
-import { Seo } from "@components";
+import { Seo, Breadcrumb } from "@components";
 import { WithoutFV } from "@layouts";
 
 type ArticleProps = {
   articles: IArticles[];
   article: IArticles;
   categories: ICategories;
+
   layout?: React.ReactElement;
 };
 
@@ -29,42 +30,41 @@ const Article: NextPageWithLayout<ArticleProps> = (props) => {
         ogptitle={props.article.title}
       />
       <div ref={fadeTargetRef} id={domId} style={{ opacity: 0 }}>
-        <div>
-          <Image
-            src={props.article.eye_catch.url}
-            width={944}
-            height={465}
-            layout="responsive"
-            alt="eye_catch"
-          />
+        <Breadcrumb category={props.categories} article={props.article} />
+        <Image
+          src={props.article.eye_catch.url}
+          width={944}
+          height={465}
+          layout="responsive"
+          alt="eye_catch"
+        />
 
-          <section>
+        <section>
+          <div>
+            <div>{props.article.categories.name}</div>
+            <h1>{props.article.title}</h1>
             <div>
-              <div>{props.article.categories.name}</div>
-              <h1>{props.article.title}</h1>
-              <div>
-                {dayjs(props.article.publishedAt)
-                  .locale("ja")
-                  .format("YYYY/MM/DD")}
-              </div>
+              {dayjs(props.article.publishedAt)
+                .locale("ja")
+                .format("YYYY/MM/DD")}
             </div>
+          </div>
 
-            <main>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: `${props.article.body}`,
-                }}
-              />
-            </main>
-
-            {/* <ShareButtons props.articles={props.articles} /> */}
-            <LinkButton
-              url={"/blog"}
-              text={"他の記事も読む"}
-              buttonDisplay={"block"}
+          <main>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `${props.article.body}`,
+              }}
             />
-          </section>
-        </div>
+          </main>
+
+          {/* <ShareButtons props.articles={props.articles} /> */}
+          <LinkButton
+            url={"/blog"}
+            text={"他の記事も読む"}
+            buttonDisplay={"block"}
+          />
+        </section>
       </div>
     </>
   );

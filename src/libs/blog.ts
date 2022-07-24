@@ -29,7 +29,7 @@ export const getCategories = async () => {
   return res;
 };
 
-export const getArticles = async (limit: number) => {
+export const getArticles = async (limit?: number) => {
   const res = await client.getList<IArticles>({
     endpoint: "articles",
     queries: { limit: limit },
