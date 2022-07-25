@@ -3,7 +3,7 @@ import { sprinkles } from "@css-utils/sprinkles.css";
 
 export const Card = style([
   sprinkles({
-    background: { lightMode: "white", darkMode: "black" },
+    background: { darkMode: "black" },
     borderRadius: "size-1",
     padding: "size-0.5",
     borderColor: "sub",
@@ -18,14 +18,15 @@ export const Captions = style([
   sprinkles({ borderColor: "sub", paddingY: "size-2", paddingX: "size-1" }),
   {
     borderWidth: 1,
+    color: "white",
     borderStyle: "solid",
   },
 ]);
 
 export const Tag = style([
   sprinkles({
-    background: { lightMode: "sub", darkMode: "sub" },
-    color: { lightMode: "black", darkMode: "black" },
+    // background: { darkMode: "black" },
+    // color: { darkMode: "black" },
     display: "inline-block",
     paddingX: "size-1",
     paddingY: "size-4",
@@ -41,16 +42,17 @@ export const PostTitle = style([
     fontSize: "base",
     minHeight: "size-12",
     maxHeight: "size-12",
-    color: { lightMode: "white", darkMode: "black" },
+    // color: { darkMode: "black" },
     maxWidth: "size-full",
     transition: "easing",
+    textDecoration: "none",
   }),
   {
     overflowX: "hidden",
 
     selectors: {
       "&:hover": {
-        color: "sub",
+        color: "red",
       },
     },
   },

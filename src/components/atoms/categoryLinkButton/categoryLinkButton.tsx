@@ -16,8 +16,8 @@ export const CategoryLinkButton = ({
     >
       <div
         className={sprinkles({
-          background: { lightMode: "black", darkMode: "white" },
-          color: { lightMode: "white", darkMode: "black" },
+          background: { darkMode: "white" },
+          color: { darkMode: "black" },
           display: "inline-block",
           paddingX: "size-1.5",
           paddingY: "size-0.5",

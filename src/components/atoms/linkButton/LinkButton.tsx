@@ -22,12 +22,12 @@ const Button: React.FC<ButtonTypes> = (props) => {
         <a
           className={sprinkles({
             textDecoration: "none",
-            color: { lightMode: "white", darkMode: "black" },
+            background: { darkMode: "white" },
+            color: { darkMode: "black" },
             textAlign: "center",
             paddingX: "size-5",
             paddingY: "size-3",
             maxWidth: "size-11/12",
-            background: { lightMode: "black", darkMode: "white" },
             cursor: "pointer",
             fontSize: "xl",
             borderRadius: "size-1.5",

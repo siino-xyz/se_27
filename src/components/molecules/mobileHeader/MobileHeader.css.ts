@@ -71,7 +71,7 @@ export const isShow = style([
   sprinkles({
     position: "fixed",
     width: "size-full",
-    background: { lightMode: "white", darkMode: "black" },
+    background: { darkMode: "black" },
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "center",
