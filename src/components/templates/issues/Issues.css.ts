@@ -5,14 +5,14 @@ export const ScrollTextInnerTitle = style([
   sprinkles({
     paddingTop: "size-6",
     paddingBottom: "size-4",
-    color: "main",
+    color: { lightMode: "main", darkMode: "main" },
   }),
 ]);
 
 export const IssuesSectionTitle = style([
   sprinkles({
     fontSize: "5xl",
-    color: "main",
+    color: { lightMode: "main", darkMode: "main" },
     fontFamily: "display",
     textAlign: "center",
     marginX: "size-6",

@@ -10,7 +10,7 @@ export const SectionTitle: React.FC<Props> = (props) => {
   return (
     <div
       className={sprinkles({
-        color: "main",
+        color: { lightMode: "main", darkMode: "main" },
         marginBottom: "size-12",
         marginTop: "size-8",
       })}

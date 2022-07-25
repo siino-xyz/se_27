@@ -24,7 +24,7 @@ export const PaginationArrow: React.FC<P> = React.memo(
       >
         <div
           className={sprinkles({
-            background: "white",
+            background: { lightMode: "black", darkMode: "white" },
             borderRadius: "size-1",
             transition: "easing",
           })}
@@ -34,7 +34,7 @@ export const PaginationArrow: React.FC<P> = React.memo(
               <a
                 data-testid="previous"
                 className={sprinkles({
-                  color: "black",
+                  color: { lightMode: "white", darkMode: "black" },
                   fontSize: "2xl",
                 })}
               >

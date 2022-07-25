@@ -47,13 +47,7 @@ const responsiveStyles = defineProperties({
     listStyleType: ["none", "circle", "inherit"],
     cursor: ["pointer", "none"],
     position: ["absolute", "relative", "inherit", "fixed", "sticky"],
-    left: vars.sizes,
-    right: vars.sizes,
-    top: vars.sizes,
-    bottom: vars.sizes,
     lineHeight: vars.lineHeight,
-    textDecoration: vars.textDecoration,
-    borderRadius: vars.sizes,
     fontWeight: vars.fontWeight,
     borderColor: vars.color,
     transition: vars.transition,
@@ -71,7 +65,7 @@ const responsiveStyles = defineProperties({
 
 const colorStyles = defineProperties({
   conditions: {
-    lightMode: { "@media": "(prefers-color-scheme: light)" },
+    lightMode: {},
     darkMode: {},
   },
   defaultCondition: "darkMode",
@@ -81,5 +75,25 @@ const colorStyles = defineProperties({
   },
 });
 
-export const sprinkles = createSprinkles(responsiveStyles, colorStyles);
+const unresponsiveProperties = defineProperties({
+  properties: {
+    flexWrap: ["wrap", "nowrap"],
+    top: [0],
+    bottom: [0],
+    left: [0],
+    right: [0],
+    flexShrink: [0],
+    flexGrow: [0, 1],
+    zIndex: [-1, 0, 1],
+    cursor: ["pointer"],
+    borderRadius: vars.sizes,
+    textDecoration: vars.textDecoration,
+  },
+});
+
+export const sprinkles = createSprinkles(
+  responsiveStyles,
+  colorStyles,
+  unresponsiveProperties
+);
 export type Sprinkles = Parameters<typeof sprinkles>[0];

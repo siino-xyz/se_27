@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { DocumentStyles } from "@styles/document.css";
 
 const Document = () => {
   return (
@@ -12,7 +13,7 @@ const Document = () => {
         <link rel="icon" type="image/svg+xml" href="favicon.svg" />
         <link rel="icon" type="image/png" href="favicon.png" />
       </Head>
-      <body>
+      <body className={DocumentStyles}>
         <Main />
         <NextScript />
       </body>

@@ -17,7 +17,7 @@ export const InputBlock = style([
 
 export const InputLabel = style([
   sprinkles({
-    color: "white",
+    color: { lightMode: "black", darkMode: "white" },
     fontWeight: "bold",
     fontSize: "base",
     paddingY: "size-1",
@@ -26,9 +26,9 @@ export const InputLabel = style([
 
 export const ValidationMessage = style([
   sprinkles({
-    color: "white",
+    color: { lightMode: "black", darkMode: "white" },
     position: "absolute",
-    background: "error",
+    background: { lightMode: "white", darkMode: "black" },
     borderRadius: "size-2",
   }),
   {
@@ -43,7 +43,7 @@ export const InputElement = style([
     padding: "size-2",
     width: "size-full",
     borderRadius: "size-1",
-    background: "white",
+    background: { lightMode: "black", darkMode: "white" },
     paddingY: "size-3",
   }),
   {
@@ -63,7 +63,7 @@ export const InputElement = style([
 
 export const TextArea = style([
   sprinkles({
-    background: "white",
+    background: { darkMode: "white", lightMode: "white" },
     width: "size-full",
     minWidth: "size-full",
     borderRadius: "size-1",
@@ -91,7 +91,7 @@ export const SubmitButton = style([
     paddingY: "size-1",
     width: { mobile: "size-11/12", desktop: "size-11/12" },
     background: "white",
-    color: "black",
+    color: { lightMode: "white", darkMode: "black" },
     margin: "size-auto",
     fontSize: "2xl",
     fontWeight: "bold",

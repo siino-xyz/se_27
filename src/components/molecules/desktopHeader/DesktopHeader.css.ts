@@ -4,7 +4,7 @@ import { style } from "@vanilla-extract/css";
 export const DesktopHeaderContainer = style([
   sprinkles({
     width: "size-full",
-    background: "sub",
+    background: { lightMode: "sub", darkMode: "sub" },
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",

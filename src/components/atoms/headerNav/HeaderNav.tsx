@@ -15,14 +15,14 @@ export const HeaderNav = () => {
       })}
     >
       {menuItems.map((item) => (
-        <Link href={item.href} key={item.id} className={sprinkles({})}>
+        <Link href={item.href} key={item.id}>
           <a
             className={sprinkles({
               borderRadius: "size-0.5",
               paddingX: "size-4",
               paddingY: "size-1",
-              background: "white",
-              color: "black",
+              background: { lightMode: "black", darkMode: "white" },
+              color: { lightMode: "white", darkMode: "black" },
               fontSize: { mobile: "2xl", desktop: "base" },
               fontWeight: "bold",
               textDecoration: "none",

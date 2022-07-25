@@ -30,6 +30,7 @@ export const StaticContentUtilBlock: React.FC<ComponentProps> = React.memo(
         <div
           className={sprinkles({
             display: "grid",
+
             gridTemplateColumns: {
               mobile: "grid-cols-1",
               desktop: "grid-cols-2",

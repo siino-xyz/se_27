@@ -4,8 +4,6 @@ import { style } from "@vanilla-extract/css";
 export const GlobalStyle = style([
   sprinkles({
     position: "relative",
-    background: { lightMode: "white", darkMode: "black" },
-    color: { lightMode: "black", darkMode: "white" },
     fontFamily: "body",
   }),
   {

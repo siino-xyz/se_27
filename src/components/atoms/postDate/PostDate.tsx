@@ -6,7 +6,7 @@ export const PostDate = ({ date }: { date: string }) => {
     <div
       className={sprinkles({
         fontSize: "sm",
-        color: "white",
+        color: { lightMode: "black", darkMode: "white" },
       })}
     >
       {dayjs(date).locale("ja").format("YYYY/MM/DD")}

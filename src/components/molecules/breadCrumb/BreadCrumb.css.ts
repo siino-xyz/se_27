@@ -3,7 +3,7 @@ import { sprinkles } from "@css-utils/sprinkles.css";
 
 export const ToBlogTop = style([
   sprinkles({
-    color: "gray1",
+    color: { lightMode: "gray1", darkMode: "gray1" },
     fontSize: "sm",
     textDecoration: "none",
     transition: "easing",

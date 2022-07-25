@@ -38,7 +38,7 @@ export const DrawerButton = style([
 export const DrawerLine = style([
   sprinkles({
     width: "size-10/12",
-    background: "white",
+    background: { lightMode: "black", darkMode: "white" },
     borderRadius: "size-0.5",
     position: "absolute",
     cursor: "pointer",
@@ -71,7 +71,7 @@ export const isShow = style([
   sprinkles({
     position: "fixed",
     width: "size-full",
-    background: "black",
+    background: { lightMode: "white", darkMode: "black" },
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "center",

@@ -5,7 +5,8 @@ export const MobileMenuContent = style([
   sprinkles({
     position: "fixed",
     width: "size-full",
-    background: "black",
+    background: { lightMode: "white", darkMode: "black" },
+    color: { lightMode: "black", darkMode: "white" },
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "center",
